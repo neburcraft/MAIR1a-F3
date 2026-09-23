@@ -27,3 +27,22 @@ python -m pip install -r requirements.txt
 ```
 python ./main.py [--verbose] 
 ```
+The implemented classifiers are in classifiers.py. All classifier implementations and the shared Classifier base class:
+- RuleClassifier — keyword-based baseline
+- LRClassifier / MLPClassifier — logistic regression and MLP on bag-of-words features
+- FrozenEmbeddingEncoder, EmbeddedLRClassifier / EmbeddedMLPClassifier — logistic regression and MLP on frozen DistilBERT embeddings (batched, cached per unique utterance)
+
+
+## Evaluation
+```
+python evaluate.py
+```
+The evaluation reports:
+
+- Accuracy
+- Balanced accuracy
+- Macro F1-score
+- Weighted F1-score
+- Per-class precision, recall and F1-score
+- Confusion matrices
+- Misclassified examples
