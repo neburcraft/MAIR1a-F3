@@ -1,5 +1,4 @@
 import re
-from typing import override
 
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
@@ -10,6 +9,9 @@ from sklearn.neural_network import MLPClassifier as SklearnMLPClassifier
 import torch
 from transformers import AutoTokenizer, AutoModel
 
+from data import *
+
+
 
 
 class Classifier:
@@ -17,7 +19,6 @@ class Classifier:
   def run(self, msg) -> str:
     return "none"
   
-  @override
   def __str__(self) -> str:
     return "BaseClassifier"
 
@@ -42,7 +43,6 @@ class RuleClassifier(Classifier):
     "null": ["uh", "unintelligible", "um", "cough", "noise", "silence", "laughter", "oh", "sil", "sorry", "breathing", "tvnoise"]
   }
 
-  @override
   def run(self, msg) -> str:
     # Acts sorted in order of specificity
     for act in ["reqalts", "request", "reqmore", "confirm", "repeat", "thankyou", "hello", "bye", "affirm", "deny", "ack", "negate"]:
@@ -56,7 +56,6 @@ class RuleClassifier(Classifier):
 
     return "inform"
   
-  @override
   def __str__(self) -> str:
     return "RuleClassifier"
 
@@ -100,7 +99,6 @@ class LRClassifier(Classifier):
     self.model.fit(X, np.concatenate((["null"], y_train)))
     return self
 
-  @override
   def run(self, msg) -> str:
     vec = self.vectorizer.transform([self._clean_msg(msg)])
     return self.model.predict(vec)[0]
@@ -131,7 +129,6 @@ class MLPClassifier(Classifier):
     self.model.fit(X, np.concatenate((["null"], y_train)))
     return self
 
-  @override
   def run(self, msg) -> str:
     vec = self.vectorizer.transform([self._clean_msg(msg)])
     return self.model.predict(vec)[0]
@@ -224,3 +221,68 @@ class EmbeddedMLPClassifier(Classifier):
 
   def run(self, msg) -> str:
     return self.predict([msg])[0]
+
+
+
+
+def accuracy(classifier: Classifier, X_test, y_test, show_incorrect=0) -> float:
+  total = y_test.size
+  correct = 0
+  for x,y in zip(X_test, y_test):
+    pred = classifier.run(x)
+    if pred == y:
+      correct += 1
+    elif show_incorrect > 0:
+      print(f"INCORRECT ({pred} should be {y}): {x}")
+      show_incorrect -= 1
+
+  return correct / total
+
+
+
+if __name__ == "__main__":
+  data = load_data()
+  train_data, test_data = create_stratified_split(data)
+  clean_train_data, clean_test_data = create_grouped_split(data)
+
+  frozen_embedding_encoder = FrozenEmbeddingEncoder()
+
+  # 1
+  rule_classifier = RuleClassifier()
+
+  # 2a
+  lr_classifier = LRClassifier()
+  lr_classifier.fit(train_data["utterance"], train_data["act"])
+  clean_lr_classifier = LRClassifier()
+  clean_lr_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
+
+  # 2b
+  mlp_classifier = MLPClassifier()
+  mlp_classifier.fit(train_data["utterance"], train_data["act"])
+  clean_mlp_classifier = MLPClassifier()
+  clean_mlp_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
+
+  # 3a
+  embedded_lr_classifier = EmbeddedLRClassifier(frozen_embedding_encoder)
+  embedded_lr_classifier.fit(train_data["utterance"], train_data["act"])
+  clean_embedded_lr_classifier = EmbeddedLRClassifier(frozen_embedding_encoder)
+  clean_embedded_lr_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
+
+  # 3b
+  embedded_mlp_classifier = EmbeddedMLPClassifier(frozen_embedding_encoder)
+  embedded_mlp_classifier.fit(train_data["utterance"], train_data["act"])
+  clean_embedded_mlp_classifier = EmbeddedMLPClassifier(frozen_embedding_encoder)
+  clean_embedded_mlp_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
+
+  frozen_embedding_encoder.encode(test_data["utterance"])
+  frozen_embedding_encoder.encode(clean_test_data["utterance"])
+
+  print("Rule baseline:", accuracy(rule_classifier, test_data["utterance"], test_data["act"]))
+  print("BoW LR original:", accuracy(lr_classifier, test_data["utterance"], test_data["act"]))
+  print("BoW LR grouped:", accuracy(clean_lr_classifier, clean_test_data["utterance"], clean_test_data["act"]))
+  print("BoW MLP original:", accuracy(mlp_classifier, test_data["utterance"], test_data["act"]))
+  print("BoW MLP grouped:", accuracy(clean_mlp_classifier, clean_test_data["utterance"], clean_test_data["act"]))
+  print("Frozen LR original:", accuracy(embedded_lr_classifier, test_data["utterance"], test_data["act"]))
+  print("Frozen LR grouped:", accuracy(clean_embedded_lr_classifier, clean_test_data["utterance"], clean_test_data["act"]))
+  print("Frozen MLP original:", accuracy(embedded_mlp_classifier, test_data["utterance"], test_data["act"]))
+  print("Frozen MLP grouped:", accuracy(clean_embedded_mlp_classifier, clean_test_data["utterance"], clean_test_data["act"]))
