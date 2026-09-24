@@ -5,8 +5,6 @@ Evaluation results (metrics, classification reports, confusion matrices,
 predictions and errors) are saved locally under EXPERIMENTS_DIR. Re-running
 evaluation for an unchanged classifier/dataset combination reuses the saved
 result instead of recomputing it.
-
-Run directly with `python evaluate.py [path_to_held_out_file.dat]`.
 """
 
 import hashlib
