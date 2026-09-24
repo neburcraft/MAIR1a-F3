@@ -43,7 +43,7 @@ REUSE_SAVED_EVALUATIONS = True
 CLEAN_CLASSIFIER_NAMES = {"clean_lr", "clean_mlp", "clean_embedded_lr", "clean_embedded_mlp"}
 
 
-# 1. Helpers for the persistent, cached evaluation
+# Helper functions used to save and reuse evaluation results
 
 def _evaluation_name(name: str) -> str:
   """Turn a display name into a filesystem-safe folder name."""
@@ -112,7 +112,7 @@ def persist_frozen_embedding_cache(embedder: FrozenEmbeddingEncoder) -> None:
   )
 
 
-# 2. Evaluating and storing results for a single classifier/dataset pair
+# Evaluating and storing results for a single classifier/dataset pair 
 
 def evaluate_and_store(experiment_name: str, display_name: str, classifier: Classifier, data: pd.DataFrame) -> dict:
   """Evaluate one classifier on one dataset and save the full report to disk.
@@ -185,7 +185,7 @@ def evaluate_and_store(experiment_name: str, display_name: str, classifier: Clas
   return metrics
 
 
-# 3. Evaluating all classifiers at once
+# Evaluating all classifiers at once
 
 def evaluate_all(classifiers: dict[str, Classifier], test_data: pd.DataFrame, clean_test_data: pd.DataFrame) -> pd.DataFrame:
   """Evaluate every classifier on the test split it was trained for, save a
@@ -214,7 +214,7 @@ def evaluate_all(classifiers: dict[str, Classifier], test_data: pd.DataFrame, cl
   return summary
 
 
-# 4. Evaluating on a held-out test file
+# Evaluating on a held-out test file
 
 def evaluate_held_out(classifiers: dict[str, Classifier], path) -> pd.DataFrame:
   """Load a held-out .dat file (same format as dialog_acts.dat, already on
@@ -229,7 +229,7 @@ def evaluate_held_out(classifiers: dict[str, Classifier], path) -> pd.DataFrame:
   return summary
 
 
-# 5. Hand-written difficult test cases
+#  Hand-written difficult test cases
 
 # Shorter, informal utterances: spelling variation, abbreviations, rare wording.
 DIFFICULT_TEST_1 = pd.DataFrame({
