@@ -1,36 +1,31 @@
-"""Loading, splitting, and training utilities for the dialog act dataset."""
+"""Loading, cleaning, and splitting the dialog act dataset."""
 
 import re
 
-import gdown
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from classifiers import (
-  Classifier,
-  EmbeddedLRClassifier,
-  EmbeddedMLPClassifier,
-  FrozenEmbeddingEncoder,
-  LRClassifier,
-  MLPClassifier,
-  RuleClassifier,
-)
-
 DATA_PATH = "dialog_acts.dat"
-DATA_URL = "https://drive.google.com/uc?id=16GosT_JsqyijmdD6h6JdHH2e6i2GdCAk"
 
 
-def load_data(path=DATA_PATH, download=True) -> pd.DataFrame:
-  """Load and clean a dialog act .dat file (downloading it first if needed)."""
-  if download:
-    gdown.download(DATA_URL, path, quiet=False)
+#  Cleaning a single utterance
 
+def clean_utterance(text: str) -> str:
+  """Lowercase and strip an utterance of all punctuation."""
+  text = text.strip().lower()
+  return re.sub(r'[^a-zA-Z0-9\s]+', '', text)
+
+
+#  Loading the raw data
+
+def load_data(path=DATA_PATH) -> pd.DataFrame:
+  """Load and clean a dialog act .dat file that is already present on disk,
+  e.g. dialog_acts.dat, which is committed to the repository."""
   raw_data = []
   with open(path) as f:
     for line in f.readlines():
-      line = line.strip().lower()
-      line = re.sub(r'[^a-zA-Z0-9\s]+', '', line)
+      line = clean_utterance(line)
       raw_data.append(line.split(maxsplit=1))
 
   data = pd.DataFrame(np.array(raw_data))
@@ -44,6 +39,8 @@ def save_data(path, data) -> None:
       f.write(f"{row[1]} {row[2]}\n")
 
 
+#  Original stratified split
+
 def create_stratified_split(data, test_size=0.15):
   """Original 85/15 split, stratified by dialog act."""
   train_data, test_data = train_test_split(
@@ -53,6 +50,8 @@ def create_stratified_split(data, test_size=0.15):
   save_data("dialog_acts_test.dat", test_data)
   return train_data, test_data
 
+
+#  Grouped split, avoids data leakage from duplicate utterances
 
 def create_grouped_split(data, test_size=0.15):
   """85/15 split that also keeps duplicate utterances in the same split,
@@ -76,34 +75,3 @@ def create_grouped_split(data, test_size=0.15):
       acts_test[act] += count
 
   return pd.DataFrame.from_dict(train), pd.DataFrame.from_dict(test)
-
-
-def train_all(train_data, clean_train_data) -> dict[str, Classifier]:
-  """Train every classifier on both splits and return them in a dict."""
-  embedder = FrozenEmbeddingEncoder()
-
-  classifiers = {
-    "rule": RuleClassifier(),
-    "lr": LRClassifier(),
-    "clean_lr": LRClassifier(),
-    "mlp": MLPClassifier(),
-    "clean_mlp": MLPClassifier(),
-    "embedded_lr": EmbeddedLRClassifier(embedder),
-    "clean_embedded_lr": EmbeddedLRClassifier(embedder),
-    "embedded_mlp": EmbeddedMLPClassifier(embedder),
-    "clean_embedded_mlp": EmbeddedMLPClassifier(embedder),
-  }
-
-  classifiers["lr"].fit(train_data['utterance'], train_data['act'])
-  classifiers["clean_lr"].fit(clean_train_data['utterance'], clean_train_data['act'])
-
-  classifiers["mlp"].fit(train_data['utterance'], train_data['act'])
-  classifiers["clean_mlp"].fit(clean_train_data['utterance'], clean_train_data['act'])
-
-  classifiers["embedded_lr"].fit(train_data['utterance'], train_data['act'])
-  classifiers["clean_embedded_lr"].fit(clean_train_data['utterance'], clean_train_data['act'])
-
-  classifiers["embedded_mlp"].fit(train_data['utterance'], train_data['act'])
-  classifiers["clean_embedded_mlp"].fit(clean_train_data['utterance'], clean_train_data['act'])
-
-  return classifiers
