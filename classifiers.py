@@ -1,3 +1,5 @@
+"""Dialog act classifiers for the restaurant recommendation dialog system.""" 
+
 import re
 from typing import override
 
@@ -9,6 +11,7 @@ from sklearn.neural_network import MLPClassifier as SklearnMLPClassifier
 
 
 class Classifier:
+  """Common interface every dialog act classifier implements."""
   def run(self, msg) -> str:
     return "none"
   
@@ -18,6 +21,8 @@ class Classifier:
 
 
 class RuleClassifier(Classifier):
+  """Keyword-based baseline: matches chosen keywords per dialog act."""
+  
   KEYWORDS: dict[str, list[str]] = {
     "ack": ["okay", "im good", "thatll do", "good", "kay", "ok", "fine", "sure", "alright"],
     "affirm": ["yes", "right", "correct", "indeed", "true", "yeah", "perfect", "excellent"],
@@ -55,10 +60,24 @@ class RuleClassifier(Classifier):
 
 
 class LRClassifier(Classifier):
+  """Logistic regression on bag-of-words features."""
+  
   # Adaptation from https://gist.github.com/sebleier/554280
   STOP_WORDS = [
-"i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "who", "whom", "this", "that", "these", "those", "am", "was", "were", "be", "been", "being", "has", "had", "having", "do", "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "for", "above", "below", "to", "from", "on", "off", "over", "under", "then", "once", "here", "there", "all", "both", "each", "few", "more", "most", "some", "such", "nor", "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just", "don", "should"]
+      "i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your",
+      "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her",
+      "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves",
+      "who", "whom", "this", "that", "these", "those", "am", "was",
+      "were", "be", "been", "being", "has", "had", "having", "do", "does", "did", "doing",
+      "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at",
+      "by", "for", "with", "about", "against", "between", "into", "through",
+      "for", "above", "below", "to", "from", "on", "off", "over",
+      "under", "then", "once", "here", "there",
+      "all", "both", "each", "few", "more", "most", "some", "such", "nor",
+      "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just",
+      "don", "should"]
 
+  
   vectorizer: CountVectorizer
   vocabulary: set[str]
   model: LogisticRegression
@@ -82,13 +101,11 @@ class LRClassifier(Classifier):
   def run(self, msg) -> str:
     vec = self.vectorizer.transform([self._clean_msg(msg)])
     return self.model.predict(vec)[0]
-  
-  @override
-  def __str__(self) -> str:
-    return "LRClassifier"
 
 
 class MLPClassifier(Classifier):
+  """Multi-layer perceptron on bag-of-words features."""
+  
   vectorizer: CountVectorizer
   vocabulary: set[str]
   model: SklearnMLPClassifier
@@ -98,9 +115,11 @@ class MLPClassifier(Classifier):
     self.model = SklearnMLPClassifier(hidden_layer_sizes=(100,), max_iter=300, random_state=7)
 
   def _clean_msg(self, msg) -> str:
+    """Replace words unseen during training with an 'OOV' placeholder."""
     return " ".join(word if word in self.vocabulary else "OOV" for word in msg.split())
 
   def fit(self, X_train, y_train):
+    """Train the classifier on a list of utterances and their acts."""
     self.vocabulary = set()
     for utterance in X_train:
       self.vocabulary = self.vocabulary.union(set(utterance.split()))
@@ -113,6 +132,3 @@ class MLPClassifier(Classifier):
     vec = self.vectorizer.transform([self._clean_msg(msg)])
     return self.model.predict(vec)[0]
   
-  @override
-  def __str__(self) -> str:
-    return "MLPClassifier"
