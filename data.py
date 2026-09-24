@@ -1,5 +1,3 @@
-"""Loading, cleaning, and splitting the dialog act dataset."""
-
 import re
 
 import numpy as np
@@ -9,19 +7,16 @@ from sklearn.model_selection import train_test_split
 DATA_PATH = "dialog_acts.dat"
 
 
-#  Cleaning a single utterance
 
 def clean_utterance(text: str) -> str:
-  """Lowercase and strip an utterance of all punctuation."""
+  #Lowercase and strip an utterance of all punctuation.
   text = text.strip().lower()
   return re.sub(r'[^a-zA-Z0-9\s]+', '', text)
 
 
-#  Loading the raw data
 
 def load_data(path=DATA_PATH) -> pd.DataFrame:
-  """Load and clean a dialog act .dat file that is already present on disk,
-  e.g. dialog_acts.dat, which is committed to the repository."""
+  #Load and clean a dialog act .dat file that is already present on disk, for example dialog_acts.dat, which is committed to the repository
   raw_data = []
   with open(path) as f:
     for line in f.readlines():
@@ -33,16 +28,15 @@ def load_data(path=DATA_PATH) -> pd.DataFrame:
 
 
 def save_data(path, data) -> None:
-  """Write a (act, utterance) dataframe to disk in the original .dat format."""
+  #Write a (act, utterance) dataframe to disk in the original .dat format
   with open(path, "w") as f:
     for row in data.itertuples():
       f.write(f"{row[1]} {row[2]}\n")
 
 
-#  Original stratified split
 
 def create_stratified_split(data, test_size=0.15):
-  """Original 85/15 split, stratified by dialog act."""
+  #Original 85/15 split, stratified by dialog act
   train_data, test_data = train_test_split(
     data, test_size=test_size, stratify=data['act'], random_state=7
   )
@@ -51,11 +45,9 @@ def create_stratified_split(data, test_size=0.15):
   return train_data, test_data
 
 
-#  Grouped split, avoids data leakage from duplicate utterances
 
 def create_grouped_split(data, test_size=0.15):
-  """85/15 split that also keeps duplicate utterances in the same split,
-  so identical utterances never leak between train and test."""
+  #85/15 split that also keeps duplicate utterances in the same split,so identical utterances never leak between train and test
   acts = set(data['act'])
   train = {'act': [], 'utterance': []}
   test = {'act': [], 'utterance': []}

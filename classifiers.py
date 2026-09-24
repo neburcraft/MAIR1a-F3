@@ -1,5 +1,3 @@
-"""Dialog act classifiers for the restaurant recommendation dialog system.""" 
-
 import re
 from typing import override
 
@@ -9,9 +7,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier as SklearnMLPClassifier
 
+import torch
+from transformers import AutoTokenizer, AutoModel
+
+
 
 class Classifier:
-  """Common interface every dialog act classifier implements."""
+  #Common interface every dialog act classifier implements
   def run(self, msg) -> str:
     return "none"
   
@@ -21,7 +23,7 @@ class Classifier:
 
 
 class RuleClassifier(Classifier):
-  """Keyword-based baseline: matches chosen keywords per dialog act."""
+  #Keyword-based baseline: matches chosen keywords per dialog act
   
   KEYWORDS: dict[str, list[str]] = {
     "ack": ["okay", "im good", "thatll do", "good", "kay", "ok", "fine", "sure", "alright"],
@@ -60,7 +62,7 @@ class RuleClassifier(Classifier):
 
 
 class LRClassifier(Classifier):
-  """Logistic regression on bag-of-words features."""
+  #Logistic regression on bag-of-words features
   
   # Adaptation from https://gist.github.com/sebleier/554280
   STOP_WORDS = [
@@ -105,7 +107,7 @@ class LRClassifier(Classifier):
 
 
 class MLPClassifier(Classifier):
-  """Multi-layer perceptron on bag-of-words features."""
+  #Multi-layer perceptron on bag-of-words features
   
   vectorizer: CountVectorizer
   vocabulary: set[str]
@@ -116,11 +118,11 @@ class MLPClassifier(Classifier):
     self.model = SklearnMLPClassifier(hidden_layer_sizes=(100,), max_iter=300, random_state=7)
 
   def _clean_msg(self, msg) -> str:
-    """Replace words unseen during training with an 'OOV' placeholder."""
+    #Replace words unseen during training with an 'OOV' placeholder
     return " ".join(word if word in self.vocabulary else "OOV" for word in msg.split())
 
   def fit(self, X_train, y_train):
-    """Train the classifier on a list of utterances and their acts."""
+    #Train the classifier on a list of utterances and their acts
     self.vocabulary = set()
     for utterance in X_train:
       self.vocabulary = self.vocabulary.union(set(utterance.split()))
@@ -136,11 +138,8 @@ class MLPClassifier(Classifier):
   
 
 class FrozenEmbeddingEncoder:
-  """Batched DistilBERT encoder, shared across classifiers with a cache.
-
-  Utterances are only ever encoded once: repeated calls for an already-seen
-  utterance are served from `text_cache` instead of re-running the model.
-  """
+  #Batched DistilBERT encoder, shared across classifiers with a cache
+  #Utterances are only ever encoded once. repeated calls for an already seen utterance are served from text_cache instead of re-running the model
 
   def __init__(self):
     self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -153,7 +152,7 @@ class FrozenEmbeddingEncoder:
     self.text_cache = {}
 
   def encode(self, utterances, batch_size=64, description=None):
-    """Return one embedding vector per utterance, in the given order."""
+    #Return one embedding vector per utterance in the given order
     utterances = list(utterances)
 
     new_utterances = list(dict.fromkeys(u for u in utterances if u not in self.text_cache))
@@ -169,7 +168,7 @@ class FrozenEmbeddingEncoder:
 
         output = self.encoder(**tokens).last_hidden_state
 
-        # Masked mean pooling: average token vectors, ignoring padding.
+        #Masked mean pooling. average token vectors, while ignoring padding.
         mask = tokens["attention_mask"].unsqueeze(-1)
         summed = (output * mask).sum(dim=1)
         counts = mask.sum(dim=1)
@@ -184,20 +183,20 @@ class FrozenEmbeddingEncoder:
 
 
 class EmbeddedLRClassifier(Classifier):
-  """Logistic regression on frozen DistilBERT embeddings."""
+  #Logistic regression on frozen DistilBERT embeddings
 
   def __init__(self, embedder: FrozenEmbeddingEncoder):
     self.embedder = embedder
     self.model = LogisticRegression(random_state=7, max_iter=1000)
 
   def fit(self, X_train, y_train):
-    """Train the classifier on a list of utterances and their acts."""
+    #Train the classifier on a list of utterances and their acts
     embeddings = self.embedder.encode(X_train)
     self.model.fit(embeddings, y_train)
     return self
 
   def predict(self, utterances):
-    """Predict dialog acts for a batch of utterances at once."""
+    #Predict dialog acts for a batch of utterances at once
     embeddings = self.embedder.encode(utterances)
     return self.model.predict(embeddings)
 
@@ -206,20 +205,20 @@ class EmbeddedLRClassifier(Classifier):
 
 
 class EmbeddedMLPClassifier(Classifier):
-  """Multi-layer perceptron on frozen DistilBERT embeddings."""
+  #Multi-layer perceptron on frozen DistilBERT embeddings
 
   def __init__(self, embedder: FrozenEmbeddingEncoder):
     self.embedder = embedder
     self.model = SklearnMLPClassifier(hidden_layer_sizes=(100,), max_iter=300, random_state=7)
 
   def fit(self, X_train, y_train):
-    """Train the classifier on a list of utterances and their acts."""
+    #Train the classifier on a list of utterances and their acts
     embeddings = self.embedder.encode(X_train)
     self.model.fit(embeddings, y_train)
     return self
 
   def predict(self, utterances):
-    """Predict dialog acts for a batch of utterances at once."""
+    #Predict dialog acts for a batch of utterances at once
     embeddings = self.embedder.encode(utterances)
     return self.model.predict(embeddings)
 
