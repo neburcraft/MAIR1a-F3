@@ -17,7 +17,7 @@ from transformers import AutoTokenizer, AutoModel
 
 
 class Classifier:
-  #Common interface every dialog act classifier implements
+  """Common interface every dialog act classifier implements"""
   def run(self, msg) -> str:
     return "none"
   
@@ -26,7 +26,7 @@ class Classifier:
 
 
 class RuleClassifier(Classifier):
-  #Keyword-based baseline: matches chosen keywords per dialog act
+  """Keyword-based baseline: matches chosen keywords per dialog act"""
   
   KEYWORDS: dict[str, list[str]] = {
     "ack": ["okay", "im good", "thatll do", "good", "kay", "ok", "fine", "sure", "alright"],
@@ -63,7 +63,7 @@ class RuleClassifier(Classifier):
 
 
 class LRClassifier(Classifier):
-  #Logistic regression on bag-of-words features
+  """Logistic regression on bag-of-words features"""
   
   # Adaptation from https://gist.github.com/sebleier/554280
   STOP_WORDS = [
@@ -107,7 +107,7 @@ class LRClassifier(Classifier):
 
 
 class MLPClassifier(Classifier):
-  #Multi-layer perceptron on bag-of-words features
+  """Multi-layer perceptron on bag-of-words features"""
   
   vectorizer: CountVectorizer
   vocabulary: set[str]
@@ -118,11 +118,11 @@ class MLPClassifier(Classifier):
     self.model = SklearnMLPClassifier(hidden_layer_sizes=(100,), max_iter=300, random_state=7)
 
   def _clean_msg(self, msg) -> str:
-    #Replace words unseen during training with an 'OOV' placeholder
+    """Replace words unseen during training with an 'OOV' placeholder"""
     return " ".join(word if word in self.vocabulary else "OOV" for word in msg.split())
 
   def fit(self, X_train, y_train):
-    #Train the classifier on a list of utterances and their acts
+    """Train the classifier on a list of utterances and their acts"""
     self.vocabulary = set()
     for utterance in X_train:
       self.vocabulary = self.vocabulary.union(set(utterance.split()))
