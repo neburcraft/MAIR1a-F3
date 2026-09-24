@@ -96,6 +96,7 @@ class LRClassifier(Classifier):
 
     X = self.vectorizer.fit_transform(np.concatenate((["OOV"], X_train)))
     self.model.fit(X, np.concatenate((["null"], y_train)))
+    return self
 
   @override
   def run(self, msg) -> str:
@@ -126,6 +127,7 @@ class MLPClassifier(Classifier):
 
     X = self.vectorizer.fit_transform(np.concatenate((["OOV"], X_train)))
     self.model.fit(X, np.concatenate((["null"], y_train)))
+    return self
 
   @override
   def run(self, msg) -> str:
