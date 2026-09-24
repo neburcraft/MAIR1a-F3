@@ -7,7 +7,7 @@ from classifiers import Classifier
 from data import create_grouped_split, create_stratified_split, load_data, train_all
 
 
-# 1. The interactive prompt
+# The interactive prompt
 
 def run_prompt(trained_classifiers: dict[str, Classifier], model_name: str, verbose: bool) -> None:
   """Repeatedly ask for an utterance and print the predicted dialog act."""
@@ -28,7 +28,7 @@ def run_prompt(trained_classifiers: dict[str, Classifier], model_name: str, verb
       print(f"  {classifier.run(inp)}")
 
 
-# 2. Entry point: parse args, load data, train, run the prompt
+# Entry point: parse args, load data, train, run the prompt
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
