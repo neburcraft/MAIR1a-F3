@@ -1,3 +1,5 @@
+"""Dialog act classifiers for the restaurant recommendation dialog system."""
+
 import re
 
 import numpy as np
@@ -9,7 +11,7 @@ from sklearn.neural_network import MLPClassifier as SklearnMLPClassifier
 import torch
 from transformers import AutoTokenizer, AutoModel
 
-from data import *
+##from data import *
 
 
 
@@ -239,7 +241,7 @@ def accuracy(classifier: Classifier, X_test, y_test, show_incorrect=0) -> float:
   return correct / total
 
 
-
+##moet dit erin? claude zegt van niet 
 if __name__ == "__main__":
   data = load_data()
   train_data, test_data = create_stratified_split(data)
