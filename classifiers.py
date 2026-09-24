@@ -132,3 +132,94 @@ class MLPClassifier(Classifier):
     vec = self.vectorizer.transform([self._clean_msg(msg)])
     return self.model.predict(vec)[0]
   
+
+class FrozenEmbeddingEncoder:
+  """Batched DistilBERT encoder, shared across classifiers with a cache.
+
+  Utterances are only ever encoded once: repeated calls for an already-seen
+  utterance are served from `text_cache` instead of re-running the model.
+  """
+
+  def __init__(self):
+    self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    self.tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+    self.encoder = AutoModel.from_pretrained("distilbert-base-uncased")
+    self.encoder.to(self.device)
+    self.encoder.eval()
+
+    self.text_cache = {}
+
+  def encode(self, utterances, batch_size=64, description=None):
+    """Return one embedding vector per utterance, in the given order."""
+    utterances = list(utterances)
+
+    new_utterances = list(dict.fromkeys(u for u in utterances if u not in self.text_cache))
+
+    with torch.no_grad():
+      for i in range(0, len(new_utterances), batch_size):
+        batch = new_utterances[i:i + batch_size]
+
+        tokens = self.tokenizer(batch, padding=True, truncation=True, return_tensors="pt")
+
+        for key in tokens:
+          tokens[key] = tokens[key].to(self.device)
+
+        output = self.encoder(**tokens).last_hidden_state
+
+        # Masked mean pooling: average token vectors, ignoring padding.
+        mask = tokens["attention_mask"].unsqueeze(-1)
+        summed = (output * mask).sum(dim=1)
+        counts = mask.sum(dim=1)
+        embeddings = summed / counts
+
+        embeddings = embeddings.cpu().numpy()
+
+        for utterance, embedding in zip(batch, embeddings):
+          self.text_cache[utterance] = embedding
+
+    return np.array([self.text_cache[u] for u in utterances])
+
+
+class EmbeddedLRClassifier(Classifier):
+  """Logistic regression on frozen DistilBERT embeddings."""
+
+  def __init__(self, embedder: FrozenEmbeddingEncoder):
+    self.embedder = embedder
+    self.model = LogisticRegression(random_state=7, max_iter=1000)
+
+  def fit(self, X_train, y_train):
+    """Train the classifier on a list of utterances and their acts."""
+    embeddings = self.embedder.encode(X_train)
+    self.model.fit(embeddings, y_train)
+    return self
+
+  def predict(self, utterances):
+    """Predict dialog acts for a batch of utterances at once."""
+    embeddings = self.embedder.encode(utterances)
+    return self.model.predict(embeddings)
+
+  def run(self, msg):
+    return self.predict([msg])[0]
+
+
+class EmbeddedMLPClassifier(Classifier):
+  """Multi-layer perceptron on frozen DistilBERT embeddings."""
+
+  def __init__(self, embedder: FrozenEmbeddingEncoder):
+    self.embedder = embedder
+    self.model = SklearnMLPClassifier(hidden_layer_sizes=(100,), max_iter=300, random_state=7)
+
+  def fit(self, X_train, y_train):
+    """Train the classifier on a list of utterances and their acts."""
+    embeddings = self.embedder.encode(X_train)
+    self.model.fit(embeddings, y_train)
+    return self
+
+  def predict(self, utterances):
+    """Predict dialog acts for a batch of utterances at once."""
+    embeddings = self.embedder.encode(utterances)
+    return self.model.predict(embeddings)
+
+  def run(self, msg) -> str:
+    return self.predict([msg])[0]
