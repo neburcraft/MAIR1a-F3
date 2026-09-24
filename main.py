@@ -1,9 +1,5 @@
 """Interactive command-line entry point: trains all classifiers and lets
-the user classify typed utterances until they type 'stop'.
-
-Data loading, splitting and training live in data.py; this file only wires
-that together with the prompt.
-"""
+the user classify typed utterances until they type 'stop'."""
 
 import argparse
 
