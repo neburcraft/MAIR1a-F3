@@ -29,7 +29,8 @@ from sklearn.metrics import (
 )
 
 from classifiers import Classifier, FrozenEmbeddingEncoder
-from data import create_grouped_split, create_stratified_split, load_data, train_all
+from data import create_grouped_split, create_stratified_split, load_data
+from main import train_all
 
 # Local folder for all saved evaluation results.
 EXPERIMENTS_DIR = Path("experiments")
@@ -219,7 +220,7 @@ def evaluate_all(classifiers: dict[str, Classifier], test_data: pd.DataFrame, cl
 def evaluate_held_out(classifiers: dict[str, Classifier], path) -> pd.DataFrame:
   """Load a held-out .dat file (same format as dialog_acts.dat, already on
   disk, no download) and evaluate every classifier on it."""
-  held_out_data = load_data(path, download=False)
+  held_out_data = load_data(path)
   rows = []
   for name, classifier in classifiers.items():
     rows.append(evaluate_and_store(f"{name}_held_out", f"{name} (held-out)", classifier, held_out_data))
