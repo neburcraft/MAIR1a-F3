@@ -22,27 +22,38 @@ Vanilla:
 ```
 python -m pip install -r requirements.txt
 ```
+## Project structure
+- `classifiers.py`: all classifier implementations and the shared `Classifier` base class (`RuleClassifier`, `LRClassifier`, `MLPClassifier`, `FrozenEmbeddingEncoder`, `EmbeddedLRClassifier`, `EmbeddedMLPClassifier`)
+- `data.py`: loading, cleaning and splitting the dataset (stratified split and grouped split)
+- `main.py`: trains all classifiers and starts the interactive prompt
+- `evaluate.py`: trains all classifiers and evaluates them
+- `dialog_acts.dat`: the training/development dataset
 
 ## Running
 ```
 python ./main.py [--verbose] 
 ```
-The implemented classifiers are in classifiers.py. All classifier implementations and the shared Classifier base class:
-- RuleClassifier — keyword-based baseline
-- LRClassifier / MLPClassifier — logistic regression and MLP on bag-of-words features
-- FrozenEmbeddingEncoder, EmbeddedLRClassifier / EmbeddedMLPClassifier — logistic regression and MLP on frozen DistilBERT embeddings (batched, cached per unique utterance)
+Loads and splits the data, trains all classifiers, and starts a prompt where you can type an utterance to classify it. Type `stop` to quit, or `model <name>` to switch classifiers while it's running.
+
+`--model` picks which classifier is used (default `mlp`). Run `python main.py --help` for the full list of model names. `--verbose` shows every classifier's prediction per utterance instead of just one.
+
+
 
 
 ## Evaluation
 ```
 python evaluate.py
 ```
-The evaluation reports:
+Trains all classifiers and evaluates each one on the test split it belongs to (original or grouped). Pass a held-out `.dat` file as an argument to also evaluate on that file.
 
-- Accuracy
-- Balanced accuracy
-- Macro F1-score
-- Weighted F1-score
-- Per-class precision, recall and F1-score
-- Confusion matrices
-- Misclassified examples
+For each classifier/dataset combination this computes accuracy, balanced accuracy, macro F1, weighted F1, per-class precision/recall/F1, a confusion matrix, and the misclassified examples.
+
+### Where the results end up
+Everything gets saved under `experiments/`, one folder per classifier/dataset combination:
+- `metrics.json`: accuracy, balanced accuracy, macro F1, weighted F1
+- `classification_report.csv`: precision, recall, F1 per class
+- `predictions.csv`: every utterance with predicted and true label
+- `errors.csv`: just the misclassified ones
+- `confusion_matrix.png`: confusion matrix
+
+`experiments/all_experiment_results.csv` has all classifiers together, and `experiments/held_out_results.csv` has the held-out results if you ran those.
