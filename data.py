@@ -1,8 +1,4 @@
-"""Loading, splitting, and training utilities for the dialog act dataset.
-
-Only imports from classifiers.py, never from evaluate.py or main.py, so
-both of those can import this module freely without a circular import.
-"""
+"""Loading, splitting, and training utilities for the dialog act dataset."""
 
 import re
 
