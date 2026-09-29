@@ -11,6 +11,10 @@ from sklearn.neural_network import MLPClassifier as SklearnMLPClassifier
 import torch
 from transformers import AutoTokenizer, AutoModel
 
+MODEL_NAMES = [
+  "rule", "lr", "clean_lr", "mlp", "clean_mlp",
+  "embedded_lr", "clean_embedded_lr", "embedded_mlp", "clean_embedded_mlp",
+]
 
 class Classifier:
   """Common interface every dialog act classifier implements"""
@@ -43,7 +47,7 @@ class RuleClassifier(Classifier):
 
   def run(self, msg) -> str:
     # Acts sorted in order of specificity
-    for act in ["reqalts", "request", "reqmore", "confirm", "repeat", "thankyou", "hello", "bye", "affirm", "deny", "ack", "negate"]:
+    for act in ["restart", "repeat", "reqalts", "request", "reqmore", "confirm", "thankyou", "hello", "bye", "affirm", "deny", "ack", "negate"]:
       # Looking for separate words, so preceded by space or nothing and ending in space or nothing (so 'noise' is not classified as 'no')
       if any(re.search(f"(^|\\s){kw}(\\s|$)", msg) for kw in self.KEYWORDS[act]):
         return act
@@ -65,18 +69,10 @@ class LRClassifier(Classifier):
   STOP_WORDS = [
       "i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your",
       "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her",
-      "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves",
+      "hers", "herself", "it", "itself", "they", "them", "their", "theirs", "themselves",
       "who", "whom", "this", "that", "these", "those", "am", "was",
-      "were", "be", "been", "being", "has", "had", "having", "do", "does", "did", "doing",
-      "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at",
-      "by", "for", "with", "about", "against", "between", "into", "through",
-      "for", "above", "below", "to", "from", "on", "off", "over",
-      "under", "then", "once", "here", "there",
-      "all", "both", "each", "few", "more", "most", "some", "such", "nor",
-      "only", "own", "same", "so", "than", "too", "very", "s", "t", "can", "will", "just",
-      "don", "should"]
+      "were", "be", "been", "being", "has", "had", "having", "do", "does", "did", "doing"]
 
-  
   vectorizer: CountVectorizer
   vocabulary: set[str]
   model: LogisticRegression
@@ -257,7 +253,7 @@ if __name__ == "__main__":
   # 1 - Rule-based classifier
   rule_classifier = RuleClassifier()
 
-  # 2a - Logistic regression Bag-of-Words classifier (incorrectly abbreviated LR)
+  # 2a - Logistic regression Bag-of-Words classifier
   lr_classifier = LRClassifier()
   lr_classifier.fit(train_data["utterance"], train_data["act"])
   clean_lr_classifier = LRClassifier()
