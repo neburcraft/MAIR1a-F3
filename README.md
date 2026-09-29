@@ -5,7 +5,7 @@ Dialog act classification for the restaurant recommendation dialog system. Utter
 - Anouk van Ladesteijn ([a.r.vanladesteijn@uu.nl](a.r.vanladesteijn@uu.nl))
 - Huub Statius Muller ([h.b.statiusmuller@students.uu.nl](h.b.statiusmuller@students.uu.nl))
 - Yanpeng Wang ([y.wang36@students.uu.nl](y.wang36@students.uu.nl))
-- Ruben Wijmenga ([ruben.wijmenga@students.uu.nl](mailto:ruben.wijmenga@students.uu.nl))
+- Ruben Wijmenga ([ruben.wijmenga@students.uu.nl](mailto:r.wijmenga@students.uu.nl))
 
 ## Installation
 Mamba:
@@ -23,24 +23,38 @@ Vanilla:
 python -m pip install -r requirements.txt
 ```
 ## Project structure
+### Code
 - `classifiers.py`: all classifier implementations and the shared `Classifier` base class (`RuleClassifier`, `LRClassifier`, `MLPClassifier`, `FrozenEmbeddingEncoder`, `EmbeddedLRClassifier`, `EmbeddedMLPClassifier`)
 - `data.py`: loading, cleaning and splitting the dataset (stratified split and grouped split)
 - `main.py`: trains all classifiers and starts the interactive prompt
 - `evaluate.py`: trains all classifiers and evaluates them
+
+### Data
 - `dialog_acts.dat`: the training/development dataset
+- `dialog_acts_train.dat`: the generated (fixed seed) training dataset from regular stratified sampling
+- `dialog_acts_test.dat`: the generated (fixed seed) testing dataset from regular stratified sampling
+- `dialog_acts_train_grouped.dat`: the generated (fixed seed) training dataset from grouped stratified sampling
+- `dialog_acts_test_grouped.dat`: the generated (fixed seed) testing dataset from grouped stratified sampling
+
+### Miscellaneous
+- `env.yml` for installing packages with mamba or conda
+- `requirements.txt` for installing packages on a regular python installation
 
 ## Running
 ```
-python ./main.py [--verbose] 
+python ./main.py [--help] [--verbose] [--model {model}]
 ```
 Loads and splits the data, trains all classifiers, and starts a prompt where you can type an utterance to classify it. Type `stop` to quit, or `model <name>` to switch classifiers while it's running.
 
-`--model` picks which classifier is used (default `mlp`). Run `python main.py --help` for the full list of model names. `--verbose` shows every classifier's prediction per utterance instead of just one.
-
-
+`--model` picks which classifier is used (default `mlp`). Run `python main.py --help` for the full list of model names. `--verbose` shows every classifier's prediction per utterance instead of just one and gives some extra information while fitting the models.
 
 
 ## Evaluation
+```
+python classifiers.py
+```
+Trains all classifiers and evaluates each one on the test split it belongs to (original or grouped) based on the regular accuracy metric.
+
 ```
 python evaluate.py
 ```

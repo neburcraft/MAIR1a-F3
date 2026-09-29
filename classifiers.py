@@ -11,10 +11,6 @@ from sklearn.neural_network import MLPClassifier as SklearnMLPClassifier
 import torch
 from transformers import AutoTokenizer, AutoModel
 
-##from data import *
-
-
-
 
 class Classifier:
   """Common interface every dialog act classifier implements"""
@@ -92,7 +88,8 @@ class LRClassifier(Classifier):
   def _clean_msg(self, msg) -> str:
     return " ".join(word if word in self.vocabulary else "OOV" for word in msg.split())
 
-  def fit(self, X_train, y_train):
+  def fit(self, X_train, y_train, verbose=False):
+    if verbose: print("Initializing LRClassifier...")
     self.vocabulary = set()
     for utterance in X_train:
       self.vocabulary = self.vocabulary.union(set(utterance.split()))
@@ -121,8 +118,9 @@ class MLPClassifier(Classifier):
     """Replace words unseen during training with an 'OOV' placeholder"""
     return " ".join(word if word in self.vocabulary else "OOV" for word in msg.split())
 
-  def fit(self, X_train, y_train):
+  def fit(self, X_train, y_train, verbose=False):
     """Train the classifier on a list of utterances and their acts"""
+    if verbose: print("Initializing MLPClassifier...")
     self.vocabulary = set()
     for utterance in X_train:
       self.vocabulary = self.vocabulary.union(set(utterance.split()))
@@ -137,8 +135,9 @@ class MLPClassifier(Classifier):
   
 
 class FrozenEmbeddingEncoder:
-  #Batched DistilBERT encoder, shared across classifiers with a cache
-  #Utterances are only ever encoded once. repeated calls for an already seen utterance are served from text_cache instead of re-running the model
+  """Batched DistilBERT encoder, shared across classifiers with a cache
+     Utterances are only ever encoded once. repeated calls for an already seen utterance
+     are served from text_cache instead of re-running the model"""
 
   def __init__(self):
     self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -182,13 +181,14 @@ class FrozenEmbeddingEncoder:
 
 
 class EmbeddedLRClassifier(Classifier):
-  #Logistic regression on frozen DistilBERT embeddings
+  """Logistic regression on frozen DistilBERT embeddings"""
 
   def __init__(self, embedder: FrozenEmbeddingEncoder):
     self.embedder = embedder
     self.model = LogisticRegression(random_state=7, max_iter=1000)
 
-  def fit(self, X_train, y_train):
+  def fit(self, X_train, y_train, verbose=False):
+    if verbose: print("Initializing EmbeddedLRClassifier...")
     #Train the classifier on a list of utterances and their acts
     embeddings = self.embedder.encode(X_train)
     self.model.fit(embeddings, y_train)
@@ -204,13 +204,14 @@ class EmbeddedLRClassifier(Classifier):
 
 
 class EmbeddedMLPClassifier(Classifier):
-  #Multi-layer perceptron on frozen DistilBERT embeddings
+  """Multi-layer perceptron on frozen DistilBERT embeddings"""
 
   def __init__(self, embedder: FrozenEmbeddingEncoder):
     self.embedder = embedder
     self.model = SklearnMLPClassifier(hidden_layer_sizes=(100,), max_iter=300, random_state=7)
 
-  def fit(self, X_train, y_train):
+  def fit(self, X_train, y_train, verbose=False):
+    if verbose: print("Initializing EmbeddedMLPClassifier...")
     #Train the classifier on a list of utterances and their acts
     embeddings = self.embedder.encode(X_train)
     self.model.fit(embeddings, y_train)
@@ -225,9 +226,9 @@ class EmbeddedMLPClassifier(Classifier):
     return self.predict([msg])[0]
 
 
-
-
 def accuracy(classifier: Classifier, X_test, y_test, show_incorrect=0) -> float:
+  """Measure accuracy of the given classifier in the usual way:
+     accuracy = [amount correct] / [test set size]"""
   total = y_test.size
   correct = 0
   for x,y in zip(X_test, y_test):
@@ -241,36 +242,40 @@ def accuracy(classifier: Classifier, X_test, y_test, show_incorrect=0) -> float:
   return correct / total
 
 
-##moet dit erin? claude zegt van niet 
+# If `$ python ./classifiers.py` is ran, all models are trained
+# and a basic accuracy comparison is done across the models
+# (only regular accuracy implemented for now)
 if __name__ == "__main__":
+  from data import load_data, create_stratified_split, create_grouped_split
+
   data = load_data()
   train_data, test_data = create_stratified_split(data)
   clean_train_data, clean_test_data = create_grouped_split(data)
 
   frozen_embedding_encoder = FrozenEmbeddingEncoder()
 
-  # 1
+  # 1 - Rule-based classifier
   rule_classifier = RuleClassifier()
 
-  # 2a
+  # 2a - Reinforcement Learning Bag-of-Words classifier (incorrectly abbreviated LR)
   lr_classifier = LRClassifier()
   lr_classifier.fit(train_data["utterance"], train_data["act"])
   clean_lr_classifier = LRClassifier()
   clean_lr_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
 
-  # 2b
+  # 2b - Multi Layer Perceptron Bag-of-Words classifier
   mlp_classifier = MLPClassifier()
   mlp_classifier.fit(train_data["utterance"], train_data["act"])
   clean_mlp_classifier = MLPClassifier()
   clean_mlp_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
 
-  # 3a
+  # 3a - Reinforcement Learning embedded word representations classifier
   embedded_lr_classifier = EmbeddedLRClassifier(frozen_embedding_encoder)
   embedded_lr_classifier.fit(train_data["utterance"], train_data["act"])
   clean_embedded_lr_classifier = EmbeddedLRClassifier(frozen_embedding_encoder)
   clean_embedded_lr_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
 
-  # 3b
+  # 3b - Multi Layer Perceptron embedded word representations classifier
   embedded_mlp_classifier = EmbeddedMLPClassifier(frozen_embedding_encoder)
   embedded_mlp_classifier.fit(train_data["utterance"], train_data["act"])
   clean_embedded_mlp_classifier = EmbeddedMLPClassifier(frozen_embedding_encoder)
@@ -279,6 +284,7 @@ if __name__ == "__main__":
   frozen_embedding_encoder.encode(test_data["utterance"])
   frozen_embedding_encoder.encode(clean_test_data["utterance"])
 
+  # Measure and print all accuracy scores
   print("Rule baseline:", accuracy(rule_classifier, test_data["utterance"], test_data["act"]))
   print("BoW LR original:", accuracy(lr_classifier, test_data["utterance"], test_data["act"]))
   print("BoW LR grouped:", accuracy(clean_lr_classifier, clean_test_data["utterance"], clean_test_data["act"]))

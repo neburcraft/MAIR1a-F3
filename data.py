@@ -6,17 +6,14 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-DATA_PATH = "dialog_acts.dat"
-
-
 def clean_utterance(text: str) -> str:
-  """Lowercase and strip an utterance of all punctuation."""
-  text = text.strip().lower()
-  return re.sub(r'[^a-zA-Z0-9\s]+', '', text)
+  """Strip an utterance of all punctuation and convert to lowercase."""
+  text = text.lower()
+  return re.sub(r'[^a-z0-9\s]+', '', text)
 
 
-def load_data(path=DATA_PATH) -> pd.DataFrame:
-  """Load and clean a dialog act .dat file that is already present on disk, for example dialog_acts.dat, which is committed to the repository"""
+def load_data(path="dialog_acts.dat") -> pd.DataFrame:
+  """Load and clean a dialog act .dat file that is already present on disk, for example dialog_acts.dat"""
   raw_data = []
   with open(path) as f:
     for line in f.readlines():
@@ -27,14 +24,14 @@ def load_data(path=DATA_PATH) -> pd.DataFrame:
   return data.set_axis(["act", "utterance"], axis=1)
 
 
-def save_data(path, data) -> None:
+def save_data(path: str, data: pd.DataFrame) -> None:
   """Write a (act, utterance) dataframe to disk in the original .dat format"""
   with open(path, "w") as f:
     for row in data.itertuples():
       f.write(f"{row[1]} {row[2]}\n")
 
 
-def create_stratified_split(data, test_size=0.15):
+def create_stratified_split(data: pd.DataFrame, test_size=0.15):
   """Original 85/15 split, stratified by dialog act"""
   train_data, test_data = train_test_split(
     data, test_size=test_size, stratify=data['act'], random_state=7
@@ -44,8 +41,8 @@ def create_stratified_split(data, test_size=0.15):
   return train_data, test_data
 
 
-def create_grouped_split(data, test_size=0.15):
-  """85/15 split that also keeps duplicate utterances in the same split,so identical utterances never leak between train and test"""
+def create_grouped_split(data, test_size=0.15) -> tuple[pd.DataFrame, pd.DataFrame]:
+  """85/15 split that also keeps duplicate utterances in the same split, so identical utterances never leak between train and test"""
   acts = set(data['act'])
   train = {'act': [], 'utterance': []}
   test = {'act': [], 'utterance': []}
@@ -64,4 +61,9 @@ def create_grouped_split(data, test_size=0.15):
       test['act'] += [act] * count
       acts_test[act] += count
 
-  return pd.DataFrame.from_dict(train), pd.DataFrame.from_dict(test)
+  train_data = pd.DataFrame.from_dict(train)
+  test_data = pd.DataFrame.from_dict(test)
+  save_data("dialog_acts_train_grouped.dat", train_data)
+  save_data("dialog_acts_test_grouped.dat", test_data)
+
+  return train_data, test_data

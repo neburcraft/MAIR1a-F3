@@ -3,21 +3,11 @@ the user classify typed utterances until they type 'stop'. """
 
 import argparse
 
-from classifiers import (
-  Classifier,
-  EmbeddedLRClassifier,
-  EmbeddedMLPClassifier,
-  FrozenEmbeddingEncoder,
-  LRClassifier,
-  MLPClassifier,
-  RuleClassifier,
-)
+from classifiers import Classifier, EmbeddedLRClassifier, EmbeddedMLPClassifier, FrozenEmbeddingEncoder, LRClassifier, MLPClassifier, RuleClassifier
 from data import clean_utterance, create_grouped_split, create_stratified_split, load_data
 
 
-# Training all classifiers on both splits
-
-def train_all(train_data, clean_train_data) -> dict[str, Classifier]:
+def train_all(train_data, clean_train_data, verbose=False) -> dict[str, Classifier]:
   """Train every classifier on both splits and return them in a dict.
 
   Relies on fit() returning self, so each classifier can be created and
@@ -29,14 +19,14 @@ def train_all(train_data, clean_train_data) -> dict[str, Classifier]:
 
   return {
     "rule": RuleClassifier(),
-    "lr": LRClassifier().fit(utterance, act),
-    "clean_lr": LRClassifier().fit(clean_utterance_col, clean_act),
-    "mlp": MLPClassifier().fit(utterance, act),
-    "clean_mlp": MLPClassifier().fit(clean_utterance_col, clean_act),
-    "embedded_lr": EmbeddedLRClassifier(embedder).fit(utterance, act),
-    "clean_embedded_lr": EmbeddedLRClassifier(embedder).fit(clean_utterance_col, clean_act),
-    "embedded_mlp": EmbeddedMLPClassifier(embedder).fit(utterance, act),
-    "clean_embedded_mlp": EmbeddedMLPClassifier(embedder).fit(clean_utterance_col, clean_act),
+    "lr": LRClassifier().fit(utterance, act, verbose),
+    "clean_lr": LRClassifier().fit(clean_utterance_col, clean_act, verbose),
+    "mlp": MLPClassifier().fit(utterance, act, verbose),
+    "clean_mlp": MLPClassifier().fit(clean_utterance_col, clean_act, verbose),
+    "embedded_lr": EmbeddedLRClassifier(embedder).fit(utterance, act, verbose),
+    "clean_embedded_lr": EmbeddedLRClassifier(embedder).fit(clean_utterance_col, clean_act, verbose),
+    "embedded_mlp": EmbeddedMLPClassifier(embedder).fit(utterance, act, verbose),
+    "clean_embedded_mlp": EmbeddedMLPClassifier(embedder).fit(clean_utterance_col, clean_act, verbose),
   }
 
 
@@ -45,8 +35,6 @@ MODEL_NAMES = [
   "embedded_lr", "clean_embedded_lr", "embedded_mlp", "clean_embedded_mlp",
 ]
 
-
-# The interactive prompt
 
 def run_prompt(trained_classifiers: dict[str, Classifier], model_name: str, verbose: bool) -> None:
   """Repeatedly ask for an utterance and print the predicted dialog act.
@@ -87,8 +75,7 @@ def run_prompt(trained_classifiers: dict[str, Classifier], model_name: str, verb
       print(f"  {classifier.run(inp)}")
 
 
-#  Entry point: parse args, load data, train, run the prompt
-
+#  Entry point when ran as `$ python ./main.py`: parse args, load data, train, run the prompt
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("--verbose", action="store_true", help="show every classifier's prediction instead of only one")
@@ -102,5 +89,6 @@ if __name__ == "__main__":
   train_data, test_data = create_stratified_split(data)
   clean_train_data, clean_test_data = create_grouped_split(data)
 
-  trained_classifiers = train_all(train_data, clean_train_data)
+  if args.verbose: print("Starting training of the models")
+  trained_classifiers = train_all(train_data, clean_train_data, verbose=args.verbose)
   run_prompt(trained_classifiers, args.model, args.verbose)
