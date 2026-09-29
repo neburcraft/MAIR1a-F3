@@ -7,6 +7,29 @@ Dialog act classification for the restaurant recommendation dialog system. Utter
 - Yanpeng Wang ([y.wang36@students.uu.nl](y.wang36@students.uu.nl))
 - Ruben Wijmenga ([ruben.wijmenga@students.uu.nl](mailto:r.wijmenga@students.uu.nl))
 
+## TODO
+- [ ] [NAME-DATE] Address feedback on 1a
+- [ ] [NAME-DATE] Improve evaluation function
+- [ ] [NAME-DATE] Create state diagram
+- [ ] [NAME-DATE] Implement state diagram in python with state transition function
+- [ ] [NAME-DATE] Implement slot extraction - keyword matching
+- [ ] [NAME-DATE] Implement slot extraction - Lehvenstein edit distance (`python-Lehvenstein` library)
+- [ ] [NAME-DATE] Implement slot extraction - Semantic similarity via embeddings (with DistilBERT)
+- [ ] [NAME-DATE] Implement lookup function given act, filled slots and `restaurant_info_extended.csv`
+- [ ] [NAME-DATE] Implement response generation
+- [ ] [NAME-DATE] Extend dialog manager with reasoning step (6 inference rules given in assignment)
+- [ ] [NAME-DATE] Implement configurability and second comparison functionality
+- [ ] [NAME-DATE] Implement command-line interface
+- [ ] [NAME-DATE] Implement interaction logging
+- [ ] [NAME-DATE] Finalize code on cleanness, correctness, comments and README
+- [ ] [NAME-DATE] Rewrite report abstract
+- [ ] [NAME-DATE] Rewrite report introduction
+- [ ] [NAME-DATE] Rewrite report system architecture (classifier → dialog manager → reasoning; design decisions)
+- [ ] [NAME-DATE] Rewrite report experiments and results
+- [ ] [NAME-DATE] Rewrite report discussion and conclusion
+- [ ] [NAME-DATE] Update report appendices
+- [ ] [NAME-DATE] Finalize report and hand in all files
+
 ## Installation
 Mamba:
 ```
