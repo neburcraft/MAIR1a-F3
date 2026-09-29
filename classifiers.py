@@ -257,7 +257,7 @@ if __name__ == "__main__":
   # 1 - Rule-based classifier
   rule_classifier = RuleClassifier()
 
-  # 2a - Reinforcement Learning Bag-of-Words classifier (incorrectly abbreviated LR)
+  # 2a - Logistic regression Bag-of-Words classifier (incorrectly abbreviated LR)
   lr_classifier = LRClassifier()
   lr_classifier.fit(train_data["utterance"], train_data["act"])
   clean_lr_classifier = LRClassifier()
@@ -269,7 +269,7 @@ if __name__ == "__main__":
   clean_mlp_classifier = MLPClassifier()
   clean_mlp_classifier.fit(clean_train_data["utterance"], clean_train_data["act"])
 
-  # 3a - Reinforcement Learning embedded word representations classifier
+  # 3a - Logistic regression embedded word representations classifier
   embedded_lr_classifier = EmbeddedLRClassifier(frozen_embedding_encoder)
   embedded_lr_classifier.fit(train_data["utterance"], train_data["act"])
   clean_embedded_lr_classifier = EmbeddedLRClassifier(frozen_embedding_encoder)
