@@ -21,7 +21,7 @@ Each TODO should be implemented in its own branch. For testing your own addition
 - [ ] [Anouk|08-10] Implement response generation
 - [ ] [Albert|08-10] Extend dialog manager with reasoning step (6 inference rules given in assignment)
 - [ ] [Huub|09-10] Implement configurability and second comparison functionality
-- [ ] [Anouk|10-10] Update command-line interface
+- [ ] [Huub|10-10] Update command-line interface
 - [ ] [Anouk|10-10] Implement interaction logging
 - [ ] [Ruben|11-10] Finalize code on cleanness, correctness, comments and README
 - [ ] [Anouk|10-10] Rewrite report abstract
