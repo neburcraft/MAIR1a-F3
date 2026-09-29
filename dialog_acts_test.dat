@@ -1,7200 +1,3601 @@
+
 null um
-
 thankyou thank you good bye
-
 reqalts what about chinese food
-
 inform seafood
-
 inform indian
-
 request whats the address
-
 request whats the phone number
-
 inform im looking for a restaurant in the east part of the town with indian asian food
-
 inform in the east part of town
-
 inform expensive
-
 null sil
-
 inform it doesnt matter
-
 request what is the phone number
-
 request what is the phone number
-
 thankyou thank you good bye
-
 inform north
-
 null sil
-
 thankyou thank you good bye
-
 affirm ye
-
 inform cheap restaurant
-
 inform moderately priced restaurant
-
 request what is the phone number and post code
-
 reqalts anything else
-
 inform turkish food
-
 thankyou thank you good bye
-
 null unintelligible
-
 affirm yes
-
 inform i would like moroccan food
-
 bye you good bye
-
 request and the phone number
-
 request address
-
 request address
-
 request the post code
-
 inform south
-
 reqalts how about a castro pub
-
 thankyou thank you good bye
-
 reqalts what about asian oriental
-
 affirm yes
-
 inform gastropub
-
 affirm yes
-
 thankyou breath thank you goodbye
-
 inform im kind of looking for some french food
-
 request and the phone number
-
 request can i have the phone number
-
 request thank you what is the address and phone number
-
 inform asian oriental
-
 reqalts what about italian food
-
 reqalts anything else
-
 thankyou awesome thank you good bye
-
 inform steak
-
 request what is the phone number and address
-
 inform any
-
 request phone number
-
 request phone number
-
 inform dont care
-
 request price range
-
 request area
-
 null unintelligible
-
 reqalts is there anything else
-
 inform im looking for thai food
-
 request what type of food do they serve
-
 inform im looking for a moderately priced restaurant in the south part of town
-
 request could i have the address please
-
 inform im looking for a restaurant in the north part of town serving lebanese food
-
 inform looking for a cheap restaurant in the west part of town
-
 request whats the address
-
 request phone number
-
 thankyou thank you good bye
-
 inform kosher
-
 request what is the phone number
-
 negate no italian food
-
 request price range
-
 inform any
-
 inform japanese
-
 request may i have the address phone number and price range
-
 null noise
-
 inform are there mediterranean restaurants in the center of town
-
 request phone number
-
 inform thai food
-
 thankyou okay thank you good bye
-
 request whats the address
-
 request may i have its address
-
 inform im looking for a restaurant
-
 inform thai
-
 inform noise any price range
-
 request address
-
 thankyou thank you good bye
-
 inform bistro food
-
 negate no
-
 reqalts how about british type of food
-
 inform i dont care
-
 request whats the address
-
 request phone number
-
 request what is the address
-
 inform any
-
 request phone number
-
 inform i am looking for a restaurant in the east part of town
-
 confirm is it in the north part of town
-
 thankyou thank you good bye
-
 reqalts how about italian
-
 request phone number
-
 affirm yes
-
 inform moderately priced restaurant in the east
-
 thankyou thank you good bye
-
 inform asian oriental
-
 inform creative food
-
 thankyou thank you good bye
-
 reqalts how about indian food
-
 inform spanish
-
 inform north
-
 thankyou thank you goodbye
-
 request whats the phone number
-
 request can you give me the address
-
 reqalts how about spanish food
-
 affirm yes indian food
-
 null how about unintelligible
-
 inform british food
-
 inform catalan food
-
 null noise
-
 inform dont care
-
 thankyou thank you good bye
-
 request what is the phone number
-
 inform north american food
-
 request where
-
 request address
-
 inform im looking for an expensive restaurant
-
 thankyou thank you good bye
-
 inform im looking for a cheap restaurant in the west part of town
-
 request phone number
-
 inform international
-
 null sil
-
 inform catalan
-
 confirm is it in the south part of town
-
 null unintelligible
-
 inform polynesian
-
 inform any
-
 null noise
-
 inform cheap restaurant
-
 reqalts is there anything else
-
 reqalts anything else
-
 request what is the address
-
 null system
-
 null unintelligible
-
 thankyou thank you good bye
-
 inform cheap
-
 inform moderately
-
 request excellent and what is the price range of that venue
-
 request and the phone number
-
 inform thai
-
 request and its address
-
 request phone number
-
 null new
-
 reqalts how about european
-
 thankyou thank you goodbye
-
 reqalts is there anything else
-
 inform can i have an expensive restaurant
-
 inform chinese
-
 thankyou thank you good bye
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform vietnamese
-
 request phone number and address
-
 inform i want a cheap restaurant in the south part of town
-
 inform price does not matter
-
 inform im looking for a moderately priced restaurant in the south part of town
-
 request what about the area
-
 request what area of town is it in
-
 reqalts is there anything else
-
 request phone number
-
 affirm right
-
 inform north
-
 thankyou thank you good bye
-
 inform austro food
-
 thankyou thank you good bye
-
 affirm im looking yes a restaurant in the east of town
-
 inform moderate
-
 request phone number
-
 affirm yes
-
 thankyou thank you goodbye
-
 thankyou thank you good bye
-
 inform thai food
-
 thankyou thank you good bye
-
 inform im looking for an expensive restaurant that serves danish food
-
 confirm is it in the west part of town
-
 thankyou thank you good bye
-
 null noise
-
 request whats the phone number
-
 request post code
-
 request what is the address
-
 request the address
-
 inform i dont care
-
 inform i do not care
-
 reqalts what about in the west area
-
 inform korean food
-
 null sil
-
 inform in the south
-
 request and the post code
-
 inform italian food
-
 request whats the address and phone number
-
 inform the south part of town
-
 request what is the address
-
 request what is the address and phone number
-
 thankyou thank you good bye
-
 affirm right
-
 inform any
-
 request address phone number
-
 inform i am looking for a cheap restaurant that serves germ
-
 inform im looking for an indian restaurant in the east of town
-
 inform moderate price
-
 request and what about the phone number
-
 reqalts how about in the center
-
 inform i need a cheap restaurant
-
 affirm yes
-
 inform i dont care
-
 request phone number
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request whats the address
-
 request post code
-
 inform indian food noise
-
 inform west
-
 reqalts what about turkey food
-
 inform cheap
-
 request could i have the address please
-
 affirm yes
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform i need an expensive restaurant
-
 thankyou thank you goodbye
-
 inform barbecue
-
 inform moderate west
-
 null sil
-
 request phone number
-
 affirm yes cheap spanish restaurant
-
 thankyou thank you good bye
-
 affirm yes
-
 thankyou thank you good bye
-
 inform im looking for a moderately priced labonese restaruant
-
 thankyou thank you good bye
-
 inform restaurant in the west part of town that serves
-
 inform polynesian food
-
 inform airatarin
-
 request may i have the phone number
-
 inform mediterranean food
-
 inform spanish
-
 request the price range
-
 thankyou thank you good bye
-
 affirm yes
-
 null um
-
 request the phone number
-
 inform i want a cheap restaurant in the east part of town
-
 inform pub
-
 request and postcode
-
 null unintelligible
-
 inform uh italian
-
 inform malaysian
-
 inform any price range
-
 inform expensive
-
 request can i have the address of the venue
-
 thankyou thank you good bye
-
 inform catalan food
-
 request could i have its number
-
 null i would like a
-
 request price range
-
 inform noise hungarian
-
 request what is the phone number
-
 inform north part of town
-
 request phone number
-
 request could i have the phone number please
-
 request phone number
-
 request and the address
-
 request and whats the postcode
-
 null unintelligible
-
 request phone number
-
 inform unitelligible food
-
 request address
-
 inform it doesnt matter
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform tuscan food
-
 request address
-
 inform im looking for a restaurant in the center part of town
-
 inform moderately priced
-
 null sorry
-
 thankyou thank you good bye
-
 reqalts how about european food
-
 inform i dont care
-
 negate uh no oh
-
 null sil
-
 null tape
-
 request can i have the address and price range
-
 inform french
-
 request phone number
-
 null sil
-
 request postal code
-
 negate no
-
 inform it doesnt matter
-
 bye okay thank you and good bye
-
 null tell me number
-
 inform im looking for a moderately priced restaurant
-
 request and the phone number
-
 request the address
-
 inform north part of town
-
 inform russian food
-
 inform id like an expensive italian restaurant
-
 thankyou thank you good bye
-
 inform uh looking for a restaurant in any area and that needs to serve
-
 request what type of food do they serve
-
 affirm yes
-
 inform doesnt matter
-
 thankyou thank you good bye
-
 affirm yes
-
 request what is the phone number
-
 thankyou thank you good bye
-
 affirm yes
-
 inform i dont care
-
 inform any
-
 affirm yes
-
 inform i dont care
-
 affirm yes
-
 null noise
-
 request whats their address
-
 inform moderate
-
 request what type of food is it
-
 inform any
-
 thankyou thank you good bye
-
 affirm right
-
 request phone number
-
 inform moderate
-
 inform italian food
-
 inform any type of food
-
 request whats the address
-
 null what is available in the ar
-
 thankyou thank you good bye
-
 inform expensive
-
 inform thai food
-
 request phone number
-
 request price range
-
 request price range
-
 null unintelligible
-
 hello hi i want to serve a cheap restaurant that serves traditional food
-
 affirm yeah
-
 inform south
-
 request and can i get the address phone number and price range
-
 request address
-
 confirm is it hungarian food
-
 inform cheap price range
-
 thankyou thank you good bye
-
 inform any
-
 inform doesnt matter
-
 reqalts how about a place that serves portuguese food
-
 inform uh it doesnt matter
-
 inform im looking for swedish food
-
 inform i want to find a restaurant in the west part of town that serves vietnamese food
-
 inform i need a restaurant in the east part of town
-
 inform moderate
-
 thankyou thank you good bye
-
 request can i get the address phone number and post code
-
 inform i dont care
-
 request can i get address
-
 thankyou thank you
-
 reqalts how about modern european food
-
 reqalts how about asian oriental
-
 inform moderate
-
 request what is the address
-
 inform for a cheap restaurant in the south part of town
-
 reqalts how about european food
-
 request what is the address
-
 request address
-
 inform im looking for an expensive restaurant in the south part of town
-
 request phone number
-
 affirm correct
-
 thankyou thank you good bye
-
 inform japanese
-
 inform expensive
-
 inform im looking for a restaurant in the south part of town that serves indian
-
 inform just fuck every time i do it and this moron says that its indian sucks
-
 inform korean food
-
 request could i have the address phone number
-
 inform im looking for something moderate
-
 null noise
-
 inform south
-
 inform north
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform cheap price range
-
 affirm right
-
 inform mediterranean
-
 inform cheap restaurant in the south part of town
-
 inform indian indian food in the east part of town
-
 request the address
-
 request whats the phone number
-
 inform moderate
-
 inform international food in the west part of
-
 reqalts how about vietnamese
-
 request the postcode
-
 inform north part of town
-
 reqalts anything else
-
 reqalts how about british food
-
 thankyou thank you good bye
-
 inform dont care
-
 request talking whats the address
-
 request what is the address
-
 inform moderate
-
 inform dont care
-
 null sil
-
 inform in the west
-
 negate no
-
 inform japanese
-
 inform gastro pub
-
 request the address
-
 request phone number
-
 reqalts how about chinese food
-
 negate no
-
 reqalts how about chinese food
-
 request address
-
 thankyou thank you good bye
-
 request phone number
-
 request can i have the address please
-
 inform south part of town
-
 thankyou thank you goodbye
-
 null than
-
 request phone number
-
 thankyou thank you good bye
-
 inform canape
-
 thankyou thank you goodbye
-
 thankyou thank you good bye
-
 request whats the phone number
-
 null laugh you suck
-
 request whats the address phone number and post code
-
 thankyou thank you goodbye
-
 request could i get their address and phone number
-
 repeat repeat that
-
 request uh whats the phone number and post code
-
 thankyou thank you good bye
-
 inform either one
-
 inform swedish food
-
 inform im looking for a restaurant in the center that serves sea food
-
 inform any anything else
-
 thankyou thank you
-
 request may i have the address
-
 request can i have the address and post code
-
 null any thing else
-
 request could i have the phone number and type of food
-
 inform i dont care
-
 inform c h e a p cheap
-
 reqalts how about gastropub food
-
 inform i want thai food
-
 reqalts what about british
-
 negate no
-
 request address
-
 inform it doesnt matter
-
 inform moderately priced restaurant
-
 request whats the address
-
 reqalts is there anything else
-
 request expensive price range
-
 inform i dont know
-
 confirm do they serve korean food
-
 inform can you find a moderately priced restaurant
-
 reqalts how about indian type of food
-
 request area
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform lebanese
-
 reqalts what about a moderately priced restaurant in the south part of town
-
 inform center
-
 inform north
-
 null unintelligible
-
 request may i have the phone number
-
 request phone number
-
 inform i want an expensive restaurant in the east part of town
-
 request phone number
-
 request can i get the address
-
 reqalts is there another restaurant in the west of town
-
 inform any type of food
-
 affirm right
-
 inform moderately priced
-
 inform christmas food
-
 request do you have the post code
-
 thankyou thank you good bye
-
 inform french
-
 request what type of food do they serve
-
 inform american
-
 thankyou thank you good bye
-
 inform i need a restaurant serving turkish food
-
 thankyou thank you good bye
-
 inform moderately priced priced restaurant
-
 request what is the address
-
 request post code
-
 request whats the phone number
-
 inform australian
-
 inform chinese oriental
-
 thankyou thank you good bye
-
 inform south
-
 negate no
-
 request whats the address
-
 request what is the golden woks address
-
 inform dont care
-
 inform gastropub food
-
 inform indian food
-
 confirm is that in the north part of town
-
 inform catalan
-
 inform i dont care
-
 affirm yes
-
 request what is their address
-
 null unintelligible
-
 request phone number
-
 inform umh i dont care noise
-
 inform serving austrian food
-
 affirm yes
-
 request ah whats the price ran
-
 reqalts how about italian
-
 negate no im looking
-
 inform any
-
 inform brazilian food
-
 inform any price range
-
 thankyou thank you good bye
-
 repeat can you repeat that
-
 reqalts how about mediterranean food
-
 request and the phone number
-
 request address
-
 null and can
-
 negate uh no
-
 thankyou thank you good bye
-
 request what is the address and phone number
-
 affirm yes
-
 inform modern european
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request whats the address
-
 inform do not care
-
 thankyou thank you good bye
-
 affirm yes
-
 null sil
-
 reqalts how about asian oriental
-
 inform japanese
-
 inform asian oriental
-
 inform corsica
-
 inform spanish food in west area
-
 request address
-
 inform the south part of town
-
 negate no chinese
-
 request whats the address
-
 inform north
-
 inform indian food
-
 request how about phone number
-
 inform cheap restaurant south part of town
-
 inform african food in any price range
-
 request phone number
-
 inform im looking for a restaurant that serves danish food
-
 request whats the phone number
-
 request what is the address
-
 reqalts how about russian food
-
 null unintelligible
-
 request what area
-
 inform part of town that serves asian food
-
 inform the south part of town
-
 inform dont care
-
 request price range
-
 inform cheap
-
 null noise
-
 request what is the phone number
-
 inform doesnt matter
-
 null sil
-
 inform bistro
-
 inform dont care
-
 null noise
-
 request what is the address
-
 request whats the phone number
-
 thankyou thank you goodbye
-
 affirm yes
-
 reqalts how about turkish
-
 inform expensive restaurant south part of town
-
 request phone number
-
 thankyou thank you goodbye
-
 thankyou thank you good bye
-
 inform i need a moderately priced restaurant
-
 reqalts how about indian food
-
 request what is the phone number
-
 inform cheap
-
 inform im looking for an expensive restaurant that serves swiss food
-
 thankyou thank you
-
 request could have the phone number
-
 negate no singaporean
-
 inform i dont care
-
 null is there
-
 inform any price range
-
 inform im looking for a cheap restaurant with spanish food
-
 inform eritrean food
-
 reqalts how about indian food
-
 deny i dont want vietnamese food
-
 affirm yes
-
 null unintelligible
-
 inform south part of town
-
 inform gastropub food
-
 inform doesnt matter
-
 inform south part of town
-
 request phone number
-
 request noise address
-
 thankyou thank you good bye
-
 inform im looking for a cheap restaurant in the south part of town
-
 inform an expensive restaurant in the east part of town
-
 reqalts how about indian
-
 request what is the phone number
-
 thankyou thank you good bye
-
 thankyou thank you
-
 inform i need to find a moderately priced restaurant
-
 inform im looking for an expensive restaurant in the east part of town
-
 inform in a moderate price range
-
 reqalts could i have another one
-
 inform i dont care
-
 thankyou thank you good bye
-
 thankyou thank you goodbye
-
 request can you give me the phone number
-
 inform im looking for an expensive restaurant that serves basque food
-
 inform uh dont care but can it be vegetarian food
-
 thankyou thank you good bye
-
 inform french
-
 inform in the east part
-
 inform looking for caribbean food
-
 inform restaurant with corsica food
-
 inform serves cheap
-
 thankyou thank you good bye
-
 negate no
-
 ack okay just pick one for me then
-
 inform australian food
-
 request type of food
-
 inform cuban
-
 inform british
-
 inform thare are different expensive restaurants in the east part of town
-
 inform french food
-
 null okay
-
 null sil
-
 request phone number
-
 inform looking for a restaurant that serves spanish food
-
 reqalts i want another restaurant that serves spanish food
-
 hello hi im looking for a place that serves scandinavian food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform russian
-
 inform i dont care
-
 thankyou thank you good bye
-
 request uh address
-
 inform portuguese
-
 affirm yes
-
 inform cheap restaurant
-
 inform south
-
 null sil
-
 request i want to know the address and phone number
-
 inform i dont know
-
 affirm yes
-
 request could i have the address and phone number of the venue
-
 negate no
-
 inform um im trying to find a restaurant in the unintelligible of town
-
 affirm yea
-
 affirm yea
-
 request address
-
 inform the south
-
 request and the post code
-
 null noise
-
 thankyou thank you good bye
-
 inform restaurant
-
 bye okay and um thank you and good bye
-
 inform korean food
-
 inform id like a cheap restaurant in the west part of town
-
 inform i want a cheap restaurant in the north part of town
-
 null sil
-
 thankyou thank you goodbye
-
 inform i do not care about the price range im just looking for a restaurant in the center that serves korean food
-
 request address
-
 inform center part of town
-
 reqalts what about thai food
-
 request whats the address
-
 request can i have the address of the last one
-
 affirm yes
-
 affirm yes
-
 request address
-
 inform doesnt matter
-
 null unintelligible
-
 reqalts is there anything else
-
 inform any
-
 inform looking for a restaurant in the south part of town
-
 confirm is it in the center
-
 inform expensive
-
 inform west part of town
-
 inform north
-
 request i need the phone number and post code
-
 inform cantonese
-
 inform um east part of town
-
 reqalts how about vietnamese food
-
 request phone number
-
 reqalts anything else
-
 inform im looking for a cheap restaurant
-
 inform singaporean
-
 reqalts is there anything else
-
 bye ooh thank you good bye
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 inform cheap
-
 inform korean
-
 inform asian oriental
-
 thankyou okay um thank you good bye
-
 inform any spanish
-
 reqalts are there any restaurants in the south part of town that are expensive
-
 request phone number
-
 request could i get the address and post code please
-
 inform it doesnt matter
-
 null sil
-
 request what is the phone number
-
 thankyou thank you good bye
-
 null sil
-
 thankyou thank you good bye
-
 null sil
-
 thankyou thank you good bye
-
 request what is their phone number
-
 inform can i find an expensive restaurant that serves traditional food
-
 request whats the phone number
-
 null unintelligible
-
 thankyou thank you good bye
-
 affirm right
-
 null sil
-
 null unintelligible
-
 inform hold on im working hold on gastro pub
-
 thankyou thank you good bye
-
 request phone number
-
 inform i dont care
-
 inform i would like a moderately priced restaurant
-
 request phone number
-
 request phone number
-
 request phone number
-
 inform the east part of town
-
 inform spanish
-
 thankyou thank you goodbye
-
 request address
-
 inform any type of food
-
 affirm yes
-
 inform im looking for a restaurant that serves german food
-
 thankyou thank you good bye
-
 reqalts new garden do you have any other
-
 affirm yes
-
 inform i need a restaurant that serves turkish food
-
 inform i want a cheap restaurant that serves european food
-
 inform i dont care
-
 inform italian food
-
 request area of venue
-
 request address and phone number
-
 negate no
-
 request address
-
 request could i have the phone number
-
 inform turkish
-
 thankyou thank you goodbye
-
 inform north part of town
-
 thankyou thank you goodbye
-
 request phone number
-
 null unintelligible
-
 inform a cheap restaurant and it should be in the west part of town
-
 inform food
-
 request what is the address
-
 request can i get the phone number
-
 inform world food
-
 thankyou thank you goodbye
-
 inform north
-
 inform center
-
 request what kind of food
-
 thankyou thank you good bye
-
 negate no
-
 null unintelligible
-
 request the address
-
 inform scandinavian food
-
 thankyou thank you good bye
-
 request address
-
 affirm yes
-
 repeat repeat
-
 inform thai
-
 thankyou thank you good bye
-
 reqalts anything else
-
 request phone number
-
 null unintelligible
-
 request address
-
 hello hello im looking for a cheap restaurant in the west part of town
-
 inform it doesnt matter
-
 request area
-
 inform center area
-
 thankyou thank you good bye
-
 negate no
-
 negate no
-
 inform gastropub
-
 inform looking for an expensive restaurant that serves
-
 inform gastropub
-
 request whats the phone number and address
-
 negate no
-
 request phone number
-
 inform south
-
 request phone number
-
 inform what about a chinese restaurant in the north of town
-
 request can i get the area
-
 request can you give me the address and phone number
-
 request what is the price range
-
 affirm yes
-
 inform north
-
 inform indian food
-
 inform indian food
-
 request phone number
-
 inform i want a restaurant in the south part of town that serves moroccan food
-
 request address
-
 null noise
-
 null inaudible
-
 request what is the phone number
-
 inform cheap food
-
 null sil
-
 request what do they serve
-
 null i need
-
 thankyou thank you good bye
-
 null noise
-
 thankyou thank you good bye
-
 inform italian
-
 affirm yes
-
 inform british food
-
 null i need
-
 thankyou thank you
-
 request area
-
 thankyou thank you good bye
-
 request okay can i get the address
-
 bye goodbye
-
 reqalts is there anything else
-
 inform south town
-
 inform im looking for thai food
-
 inform west
-
 request what is their address and phone number
-
 thankyou thank you goodbye
-
 null sil
-
 affirm yes
-
 request whats the address
-
 request and the phone number
-
 inform breath malaysian food
-
 null noise
-
 thankyou thank you good bye
-
 inform barbecue food
-
 inform i dont care
-
 negate no
-
 inform west
-
 inform i want a restaurant in the center that serves seafood
-
 request and for good luck what is the post code
-
 thankyou thank you good bye
-
 inform ok i would like to find a restaurant that serves italian food
-
 inform thai
-
 inform im looking for a restaurant serving romanian food
-
 thankyou thank you good bye
-
 bye okay bye
-
 request can i have the address and phone number
-
 request address phone number and type of food
-
 affirm yes
-
 null sil
-
 inform west
-
 null um
-
 inform expensive restaurant
-
 inform moderately priced restaurant in the south part of town
-
 request what is the phone number
-
 inform spanish
-
 thankyou thank you good bye
-
 inform change that to any price range
-
 thankyou thank you goodbye noise
-
 request can i get the phone number
-
 inform i want a moderately priced restaurant in the north part of town
-
 thankyou thank you good bye
-
 request phone number
-
 inform any
-
 inform cheap restaurant north part of town
-
 reqalts is there a restaurant that serves gastropub food
-
 thankyou thank you good bye
-
 inform doesnt matter
-
 inform i need a restaurant serving af
-
 negate no
-
 request whats the address
-
 inform i want swedish ffood
-
 inform can i have a restaurant in the center
-
 request great whats the phone number
-
 thankyou thank you good bye
-
 request the post code as well please
-
 request can i have the phone number
-
 request what is the phone number
-
 thankyou thank you good bye
-
 inform seafood
-
 inform south
-
 inform tuscan food
-
 inform gastropub moderate
-
 request what is the phone number
-
 thankyou thank you good bye
-
 inform cheap
-
 inform vietnamese
-
 inform uh cheap restaurant in north part of town
-
 affirm yes
-
 thankyou thank you good bye
-
 inform dont care
-
 inform im looking for an expensive restaurant in the south part of town
-
 request what is the address and price range
-
 negate no
-
 reqalts is there a restaurant in the south part of town that serves italian food
-
 request the address
-
 thankyou thank you goodbye
-
 inform im looking for an expensive restaurant in the south part of town
-
 thankyou thank you good bye
-
 affirm yes
-
 request whats the phone number
-
 reqalts anything else
-
 reqalts how about italian
-
 request address
-
 inform im looking for a restaurant that serves unintelligible food
-
 affirm right
-
 request whats the phone number
-
 request and the phone number
-
 affirm yes the address
-
 reqalts how about asian food
-
 inform i want a restaurant in the center
-
 inform japanese
-
 null unintelligible
-
 inform any part of town
-
 request address
-
 reqalts how about chinese food
-
 request uh can i get the phone number
-
 request post code
-
 thankyou thank you good bye
-
 request where is it
-
 request i want to know the phone number
-
 inform im looking for a modertley priced restaurant in the south
-
 inform italian food
-
 inform im looking for romanian food
-
 inform um i need a vietnamese restaurant in any price range
-
 request can i please have the phone number
-
 request phone number
-
 request post code
-
 inform asian food
-
 request whats the address
-
 negate no
-
 request phone number
-
 inform it doesnt matter
-
 inform doesnt matter
-
 reqalts is there anything else
-
 inform cheap
-
 request post code
-
 thankyou thank you good bye
-
 inform south
-
 inform is there one in the cheap price range
-
 thankyou thank you goodbye
-
 negate no thank you goodbye
-
 affirm thats correct gastropub food
-
 request whats their phone number
-
 inform um it doesnt matter
-
 negate no
-
 request what is their address
-
 inform i dont care
-
 inform im looking for a restaurant with thai type
-
 thankyou thank you good bye
-
 inform find restaurant in south of town serving international f
-
 thankyou thank you good bye
-
 inform type food
-
 inform i want a cheap restaurant that serves cuban food
-
 inform moderately priced north part of
-
 thankyou thank you good bye
-
 reqalts is there any restaurant
-
 reqalts how about asian oriental type of food
-
 thankyou thank you good bye
-
 inform i dont care
-
 thankyou thank you
-
 thankyou thank you good bye
-
 request phone number
-
 inform expensive restaurant serving caribbean food
-
 inform tuscan food
-
 request phone number
-
 request okay can i have the address and the phone number please
-
 request whats the phone number
-
 affirm right
-
 request what is the phone number and price range
-
 inform can i find a restaurant
-
 request phone number
-
 request what is the post code
-
 request the phone number
-
 negate no
-
 inform british food
-
 request what is the address
-
 inform i dont care
-
 inform looking for african food in the center of town
-
 inform in the south part of town
-
 inform basque food
-
 request what is there address
-
 affirm yes
-
 request may i have the phone number
-
 inform gastropub food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform german food
-
 inform i dont care
-
 null noise
-
 thankyou thank you good bye
-
 null in appleton wiscon
-
 inform indian food
-
 inform gastropub
-
 inform moderately priced restaurant
-
 request whats the address
-
 request phone number
-
 request whats the address
-
 null s
-
 inform south
-
 null both
-
 request whats the phone number
-
 request what is the address and phone number
-
 null noise
-
 thankyou great thank you good bye
-
 reqalts how european food
-
 request and the phone number
-
 inform indian food
-
 thankyou thank you goodbye
-
 negate no
-
 inform im looking for a pan asian food in the south of town
-
 inform a moderately priced restaurant
-
 request address
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 inform i want to find an expensive restaurant in the south part of town
-
 inform im looking for
-
 request whats the address
-
 affirm yes id like an expensive restaurant in the east part of town
-
 inform african
-
 request post code
-
 inform eritrean food
-
 request phone number
-
 reqalts are there any other cheap restaurants in the west part of town
-
 inform i would like a cheap restaurant in the north part of town
-
 inform i dont care
-
 inform im looking for a moderately priced restaurant
-
 inform it doesnt matter
-
 request what is the phone number
-
 request what part of town is it in
-
 inform center area
-
 inform i need moderately priced restaurant that serves spanish
-
 request whats the address
-
 reqalts okay how about indian food
-
 request address
-
 request what type of food
-
 request could i have the phone number
-
 thankyou thank you good bye
-
 inform moderately priced
-
 request probably an address
-
 thankyou thank you good bye
-
 request whats the phone number
-
 inform the south part of town
-
 reqalts anything else
-
 reqalts next
-
 request whats the address
-
 request can i have the address and phone number
-
 null unintelligible
-
 inform doesnt matter
-
 thankyou okay thank you
-
 request may i have the address
-
 inform italian food
-
 hello hello
-
 thankyou thank you good bye
-
 inform i dont care
-
 inform expensive
-
 inform i dont care
-
 null unintelligible
-
 null noise
-
 request price range
-
 inform im looking for a cheap restaurant in the north part of town
-
 inform expensive restaurants
-
 inform portuguese food
-
 null okay
-
 thankyou uh thank you good bye
-
 null sil
-
 thankyou thank you goodbye
-
 request type of food
-
 request and the post code
-
 request whats the phone number and address
-
 deny wrong
-
 inform an expensive restaurant
-
 inform canapes
-
 inform i would like a moderately priced restaurant serving african food
-
 thankyou thank you good bye
-
 confirm does it serve baskey food
-
 null what is the
-
 thankyou thank you good bye
-
 confirm is there a
-
 request phone number
-
 thankyou thank you good bye
-
 inform in the inner south
-
 request could i have the address and price range please
-
 request uh phone number
-
 negate no
-
 request no the phone number
-
 null noise
-
 inform spanish
-
 inform moderately priced
-
 null unintelligible
-
 null noise
-
 reqalts how about canape
-
 inform i dont care
-
 inform steak house food
-
 thankyou okay thank you
-
 thankyou thank you good bye
-
 confirm is there a jamaican restaurant
-
 thankyou thank you good bye
-
 request and the address
-
 reqalts is there anything else
-
 reqalts what about chinese food
-
 request uh can i have the address
-
 thankyou thank you goodbye
-
 inform gastropub
-
 inform im looking for a restaurant in the north part of town serving indian food
-
 inform jamaican
-
 inform i want to find a expensive restaurant and it should serve english food
-
 inform asian oriental food
-
 affirm yes
-
 inform south
-
 request address please
-
 inform im looking for a restaurant in any area serving unintelligible
-
 request what is the phone number
-
 request could i get the phone number please
-
 request address
-
 null unintelligible
-
 inform food
-
 affirm yes
-
 request whats the phone number
-
 request phone number
-
 request phone number
-
 inform dont care
-
 request awesome um whats the number
-
 request phone number
-
 inform korean
-
 inform i need a moderately priced restaurant in the south part of town
-
 inform portugese
-
 reqalts how about italian food
-
 hello hello welcome
-
 null inaudible
-
 reqalts how about european food
-
 affirm yes
-
 affirm yeah
-
 inform danish
-
 inform im looking for spanish food
-
 inform italian
-
 negate no
-
 request whats the address
-
 request can i get the address
-
 reqalts how about any price range
-
 reqalts how about portuguese food
-
 request whats their address
-
 request phone number
-
 request what is the address
-
 request and post code
-
 affirm yes
-
 inform indian
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform south
-
 affirm yes
-
 reqalts is there anything else
-
 affirm yes
-
 request breath whats the phone number of the venue
-
 inform looking for an expensive restaurant in the east of town
-
 request phone number
-
 request what kind of food does it serve
-
 inform it doesnt matter
-
 reqalts how about moroccan food
-
 null is there any
-
 affirm yes
-
 thankyou thank you goodbye
-
 request what kind of food do they serve
-
 inform im looking for modern european food
-
 thankyou thank you goodbye
-
 inform breath i want to find a restaurant in the north part of town
-
 thankyou thank you goodbye
-
 reqalts what about italian food
-
 negate no romanian
-
 null unintelligible
-
 inform im looking for a cheap restaurant in the east part of town
-
 reqalts how about vietnamese food
-
 reqalts how about asian oriental food
-
 reqalts how about indian food
-
 inform moderate
-
 inform i dont care
-
 inform i do not care
-
 request and the post code
-
 thankyou thank you good bye
-
 inform greek food
-
 null system
-
 thankyou thank you good bye
-
 inform uh any area
-
 request what type of food do they serve
-
 request what is the address and phone number
-
 inform creative food
-
 inform french
-
 inform ok talian food
-
 request what is the address
-
 reqalts is there anything else
-
 inform im looking for a cheap restaurant in the north part of town
-
 inform portuguese
-
 request and their phone number
-
 null sil
-
 inform what about asian food
-
 request address
-
 thankyou thank you good bye
-
 inform any type is fine
-
 inform afghan food
-
 thankyou thank you good bye
-
 request what part of town
-
 thankyou thank you
-
 inform south
-
 inform is there any that serve european food
-
 inform in the center
-
 inform steak house
-
 request what food do they serve
-
 request what type of food do they serve
-
 request address
-
 inform mexican
-
 inform i want a moderately priced restaurant in the south part of town
-
 request what is the address
-
 null noise
-
 affirm yes i want the phone number
-
 thankyou thank you goodbye
-
 thankyou thank you
-
 request whats the phone number
-
 inform it doesnt matter
-
 inform um do not care
-
 inform i want to find a restaurant in any area
-
 inform chineese
-
 reqalts anything else
-
 inform are there any turkish restaurants at all
-
 thankyou thank you good bye
-
 reqalts how about italian
-
 inform creative food
-
 request any price
-
 inform expensive restaurant expensive restaurant east
-
 inform any price range
-
 inform south noise
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 inform spanish food
-
 inform i dont care
-
 inform british food
-
 inform noise taquita restaurant
-
 inform vietnamese food
-
 inform i dont care
-
 inform im looking for a cheap restaurant that serves vietnamese food
-
 request whats the price range
-
 inform uh restaurant in the west part of town
-
 inform im looking for cheap food in the north of town
-
 request and the address
-
 inform dont care
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform i would like malaysian food in the center part of
-
 request phone number
-
 null unintelligible
-
 null free
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request whats the address
-
 inform id like thai food
-
 inform i dont care
-
 hello hello
-
 inform restaurant with african food
-
 inform i need a cheap restaurant in the south part of town
-
 thankyou thank you good bye
-
 inform im looking for a cheap restaurant
-
 inform cheap
-
 inform im looking for an expensive restaurant that serves thai food
-
 request may i have the postcode
-
 null noise
-
 request post code
-
 request address
-
 thankyou thank you
-
 null nosie
-
 null sil
-
 request post code
-
 inform any
-
 thankyou thank you good bye
-
 request address
-
 inform im looking for a restaurant in the south part of town and it should serve canapes food
-
 inform modern european
-
 inform breath i want a cheap restaura
-
 reqalts anything else
-
 reqalts is there anything else
-
 reqalts is there anything else
-
 inform uh italian
-
 reqalts anything else
-
 inform dont care
-
 inform uh north
-
 inform i would like to find a cheap restaurant
-
 inform find australian restaurant in north part of town
-
 null type
-
 inform dont care
-
 request what is the phone number
-
 request okay i need the phone number and address
-
 inform i dont care
-
 request what is the address
-
 request whats the address
-
 null unintelligible
-
 inform i dont care
-
 inform a moderately priced restaurant that serves
-
 negate no
-
 inform greek food east part of town
-
 thankyou thank you good bye
-
 request in the area
-
 request whats the phone number
-
 inform british food
-
 request what is the price range
-
 reqalts how about north american food
-
 inform seafood
-
 request phone number
-
 inform portuguese
-
 inform world food
-
 negate no
-
 inform uh doesnt matter expensive
-
 request what type of food does it serve
-
 inform cuban restauran
-
 request what is the address
-
 request what is the address
-
 request okay how bout their phone number
-
 inform center part of town
-
 inform i dont care
-
 inform i dont care
-
 inform can i get an expensive
-
 request phone number
-
 thankyou thank you good bye
-
 request their phone number
-
 request address
-
 thankyou thank you good bye
-
 inform asian oriental
-
 inform im looking for a sea food restaurant
-
 reqalts anything else
-
 request offer you the phone number and address
-
 thankyou thank you good bye
-
 inform west
-
 null noise
-
 inform north
-
 reqalts anything else
-
 inform im looking for something moderately priced
-
 thankyou thank you good bye
-
 inform moderate
-
 request the phone number
-
 inform doesnt matter
-
 inform um anything else
-
 request phone number
-
 affirm yes
-
 inform south
-
 thankyou thank you good bye
-
 inform vietnamese
-
 inform expensive restaurant
-
 request what is the address
-
 request address
-
 inform south
-
 thankyou thank you good bye
-
 request what part
-
 negate no
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform expensive
-
 request their phone number
-
 inform chinses
-
 reqalts how about asian oriental food
-
 inform restaurant
-
 request phone number
-
 inform dont care
-
 thankyou thank you goodbye
-
 request may i have the address
-
 request whats the phone number
-
 thankyou thank you good bye
-
 reqalts do you have any other restaurant
-
 inform west part of town
-
 thankyou thank you good bye
-
 request whats the address and area
-
 request what is the address
-
 inform any
-
 inform caribbean food
-
 reqalts what about european food
-
 thankyou thank you good bye
-
 inform unintelligible food
-
 thankyou thank you good bye
-
 inform korean food
-
 request phone number
-
 inform fusion food
-
 request what is the address
-
 thankyou thank you good bye
-
 inform expensive
-
 inform im looking for a cheap restaurant in the south part of town
-
 inform portuguese
-
 null noise
-
 request could i have the address
-
 inform i want to find a moderately priced restaurant that serves fusion food
-
 thankyou thank you good bye
-
 request and the phone number
-
 inform im looking for indian food
-
 inform any
-
 request whats the address
-
 request whats the phone number
-
 thankyou thank you good bye
-
 request what is the phone number
-
 thankyou thank you good bye
-
 reqalts how about british food
-
 request what is the post code
-
 thankyou thank you
-
 inform west
-
 request address
-
 null inaudible
-
 inform moderately priced restaurant that serves thai food
-
 thankyou thank you good bye
-
 request what is the phone number
-
 reqalts how about chinese food
-
 inform south part of town
-
 request whats the phone number
-
 request what is the address
-
 inform south
-
 inform any
-
 inform food
-
 bye alright thank you good bye
-
 request whats the price range
-
 inform portuguese
-
 request what is the address
-
 inform how bout che italian food
-
 inform im looking for a restaurant that serves british food
-
 request whats the phone number
-
 affirm yes
-
 inform portuguese food noise
-
 inform i dont care
-
 inform if there is no such venue how about european type of food
-
 request the address
-
 request what is the phone number
-
 inform dont care
-
 reqalts anything else
-
 thankyou thank you good bye
-
 inform hi id like a moderately priced restaurant in the north
-
 null noise
-
 null noise
-
 bye you good bye
-
 inform moroccan
-
 thankyou thank you good bye
-
 request how much
-
 thankyou thank you good bye
-
 inform oh i need to be in the north
-
 inform expensive
-
 negate uh no im loo ah change it to british
-
 request phone number
-
 null cant
-
 request and can i get their address
-
 inform vietnamese
-
 reqalts how about indian food
-
 null how about
-
 inform id like a international restaurant in the north part of town
-
 reqalts how about korean food
-
 request phone number
-
 request can i have the phone number and the area
-
 inform west
-
 inform im looking for eritrean food
-
 request the address
-
 inform it doesnt matter
-
 inform i want something in the south
-
 thankyou thank you good bye
-
 reqalts how about turkish
-
 thankyou thank you good bye
-
 inform south
-
 request phone number
-
 request okay whats the phone number
-
 request what is the address
-
 inform south
-
 inform north
-
 request address
-
 inform west part of town
-
 inform turkish
-
 thankyou thank you good bye
-
 inform caribbean food
-
 request what is the address
-
 request address
-
 inform restaurant in the center serving turkish food
-
 request can i have their address
-
 inform italian
-
 request and whats the phone number
-
 inform asian oriental
-
 reqalts is there a restaurant that serves vietnamese food
-
 inform christmas food
-
 bye k you goodbye
-
 request address
-
 reqalts is there anything else
-
 thankyou thank you good bye
-
 request okay how about the phone number
-
 thankyou thank you good bye
-
 inform gastropub
-
 thankyou thank you good bye
-
 request can i have the phone number
-
 inform mediterranean
-
 inform moderate
-
 null unintelligible
-
 null im looking
-
 reqalts anything else
-
 thankyou thank you good bye
-
 repeat back
-
 thankyou thank you good bye
-
 request phone number
-
 inform north
-
 inform south
-
 thankyou thank you good bye
-
 request type of food
-
 request address
-
 request what kind of food is there
-
 inform chinese food
-
 request whats the phone number
-
 request whats the address
-
 inform moderate
-
 inform i am looking for hungarian food
-
 thankyou thank you goodbye
-
 inform i dont know
-
 request phone number
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform swedish food
-
 inform indian food
-
 inform any
-
 affirm yes
-
 null okay
-
 request whats the post code
-
 null unintelligible
-
 request what is the post code
-
 request whats the address
-
 inform im looking for a moderately priced restaurant in the south
-
 reqalts sure how about asian food
-
 affirm yes
-
 request what is the phone number
-
 inform jamaican
-
 reqalts is there anything else
-
 request phone number
-
 request may i have the address
-
 affirm yes
-
 thankyou thank you good bye
-
 inform moderately
-
 request and the phone number
-
 request whats the address
-
 reqalts what about indian food
-
 thankyou thank you
-
 inform creative food
-
 thankyou thank you good bye
-
 request what is the phone number
-
 thankyou okay thank you good bye
-
 thankyou thank you
-
 inform catalan
-
 thankyou thank you good bye
-
 null unintelligible
-
 thankyou thank you good bye
-
 thankyou thank you goodbye
-
 request and the phone number
-
 request good could you give me the phone number
-
 request what is their post code
-
 request whats the address
-
 request what type of food do they serve
-
 reqalts is there anything else
-
 request post code
-
 reqalts how about chinese food
-
 thankyou thank you goodbye
-
 request what type of food do they serve
-
 inform caribbean food
-
 request address
-
 affirm yes
-
 negate no eritrean
-
 null unintelligible
-
 reqalts how about british type of food
-
 affirm yes
-
 inform indian
-
 inform vietnamese
-
 null sil
-
 request phone number
-
 request phone number
-
 inform south
-
 request type of food
-
 ack okay um
-
 thankyou thank you good bye
-
 inform modern european food
-
 request whats the address phone number and post code
-
 null noise
-
 thankyou thank you good bye
-
 request what is the phone number
-
 request what type of food do they serve
-
 inform portuguese food any price
-
 request address
-
 inform im looking for a moderately priced restaurant serving basque food
-
 affirm yes
-
 request phone number
-
 inform any
-
 reqalts anything else
-
 request what is the address
-
 request post code
-
 thankyou thank you good bye
-
 request whats the address
-
 thankyou thank you good bye
-
 inform i dont care about the price range what about thai food
-
 inform the south part of town please
-
 inform im looking for irish food in any price range
-
 inform im looking for eritrean food
-
 reqalts dont care is there anything else
-
 affirm yes
-
 inform im looking for a moderately priced restaurant that serves
-
 null would you like something
-
 thankyou thank you good bye
-
 reqalts how about indian food
-
 request can i get the address
-
 request cool whats the address
-
 affirm yes
-
 thankyou thank you good bye
-
 inform any
-
 reqalts how about italian food
-
 request may i have the address phone number and post code
-
 request whats the address
-
 reqalts how about indian food
-
 request what is the address
-
 inform unintelligible food
-
 reqalts how about british food
-
 request okay whats the phone number
-
 inform im looking for a cheap restaurant that serves chinese food
-
 null looking for a
-
 request price range
-
 inform indian food
-
 inform restaurants
-
 inform i need a moderately priced restaurant serving fusion food
-
 inform the south part of town
-
 request could i get the address
-
 request area
-
 request what is the address
-
 thankyou okay thank you good bye
-
 request whats the address
-
 inform danish
-
 inform italian
-
 request could i have the address and phone number please
-
 request what is the post code
-
 confirm is there a cheap restaurant that serves vietnamese food
-
 affirm yea
-
 inform singapore
-
 request what is the phone number
-
 inform um dont care
-
 inform vietnamese
-
 inform dont care
-
 inform american
-
 inform im looking for a cheap restaurant
-
 inform im looking for canapes food in any price range
-
 request post code
-
 affirm yes
-
 thankyou thank you good bye
-
 request address
-
 affirm yes
-
 inform i would like australian asian food
-
 inform spanish
-
 request address
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request can i have the price range of the venue
-
 request and their phone number
-
 null system
-
 inform uh gastropub food
-
 inform uh any area
-
 inform i dont care
-
 inform i want a european restaurant in the center part of town
-
 reqalts is there a restaurant serving modern european food
-
 inform im looking for a moderately priced restaurant
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request what kind of food
-
 inform west part of town
-
 thankyou thank you good bye
-
 inform portuguese food
-
 null sil
-
 inform um asian oriental restaurant
-
 inform okay change restaurant
-
 inform hungarian
-
 inform cheap restaurant east of town
-
 inform expensive
-
 inform moderate
-
 request address
-
 inform im looking for a cheap restaurant in the west part of town
-
 inform lebanese
-
 null sil
-
 request address
-
 null noise
-
 request what is the address
-
 inform i dont care
-
 inform austrian food
-
 bye goodbye
-
 request whats the postcode
-
 thankyou okay thank you
-
 request whats the phone number
-
 inform gastro
-
 inform west part of town
-
 inform vietnamese
-
 inform change that to mediterranean food
-
 inform unintelligible food
-
 reqalts how about international type of food
-
 inform hungarian food
-
 inform cuban food
-
 inform im looking for a moderately priced restaurant and it should be in the west part of town
-
 inform moderate
-
 request phone number
-
 inform i want a basque food restaurant
-
 inform looking for a cheap restaurant in the north part of town
-
 request address
-
 inform restaurant south part of town
-
 inform find a moderately priced restaurant that serves bask food
-
 inform id like a cheap restaurant in the south part of town
-
 inform it doesnt matter
-
 null noise
-
 request okay show me the address
-
 thankyou thank you good bye
-
 inform any
-
 request whats the address and phone number
-
 request what kind of food is it
-
 request may i have the phone number please
-
 thankyou thank you goodbye
-
 inform american
-
 inform west
-
 inform i would like international food please
-
 inform south
-
 reqalts is their anything else
-
 reqalts how about asian oriental food
-
 request post code
-
 request whats the address
-
 inform can i have a restaurant in the center with spanish food
-
 inform malaysian
-
 request whats the address phone number and post code
-
 reqalts anything else
-
 thankyou thank you good bye
-
 null unintelligible
-
 inform moderately
-
 inform im looking for a moderately priced restaurant in the south part of town
-
 inform i dont care
-
 null unintelligible
-
 inform moderate
-
 inform west
-
 reqalts how about international food
-
 thankyou thank you good bye
-
 inform im looking for a cheap restaurant that serves malaysian food
-
 inform thai food
-
 inform cheap
-
 thankyou thank you good bye
-
 null prise me
-
 request post code
-
 inform okay uh forget that then can i get a restaurant serving italian food
-
 thankyou thank you good bye
-
 null unintelligible
-
 request whats the address
-
 inform looking for a cheap restaurant
-
 inform moderately priced
-
 thankyou thank you good bye
-
 request can i get the phone number
-
 request what is the phone number
-
 thankyou okay uh thank you and good bye
-
 inform center
-
 reqalts what about asian oriental food
-
 inform cheap
-
 request whats the address
-
 inform i dont care
-
 reqalts how about chinese food
-
 inform cheap restaurant
-
 thankyou thank you good bye
-
 request whats the phone number
-
 request the area of the venue
-
 inform moderately priced restaurant north part of town
-
 thankyou thank you goodbye
-
 inform cheap
-
 inform chinese food
-
 inform if there is no such venue how about vietnamese type of food
-
 inform expensive australian restaurant
-
 inform any part of town
-
 repeat again please
-
 inform south
-
 inform i dont care
-
 negate no
-
 inform cuban
-
 null expen
-
 reqalts how about asian oriental
-
 inform fine i want restaurant in the north part of town
-
 request post code
-
 reqalts how about turkish
-
 null noise
-
 inform how bout european
-
 request whats the address
-
 null id like a
-
 inform korean
-
 affirm yes
-
 reqalts what about italian food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request address
-
 request what is the address
-
 inform may i have an expensive restaurant
-
 inform cheap
-
 thankyou thank you good bye
-
 inform expensive
-
 inform i dont care
-
 null sil
-
 inform basque food
-
 inform find cheap restaurant
-
 request does it serve
-
 inform any area
-
 thankyou thank you good bye
-
 inform italian food
-
 request the address
-
 inform barbecue
-
 reqalts how about european food
-
 inform west
-
 null sil
-
 request may i have he phone number please
-
 request what is the phone number
-
 reqalts how about indian food
-
 null okay
-
 inform whats a cheap restaurant on the east part of town
-
 inform any
-
 reqalts how about asian food
-
 inform thai food
-
 request what is the address and phone number
-
 request whats the address
-
 inform i dont care
-
 inform any area
-
 null sil
-
 thankyou thank you good bye
-
 inform mexican
-
 inform katalian food
-
 inform south
-
 inform i want to find a moderately priced restaurant in the east part of town
-
 thankyou thank you good bye
-
 reqalts is there another
-
 reqalts how about european food
-
 inform im looking for a moderately priced restaurant that serves scottish food
-
 inform id like a european food
-
 thankyou thank you good bye
-
 null unintelligible
-
 inform chinese
-
 request phone number
-
 request phone number and post code
-
 request can i have the phone number
-
 reqalts how about turkish
-
 inform i want korean food
-
 inform portuguese type of food
-
 request post code
-
 thankyou thank you good bye
-
 request what is the address
-
 inform serves lebanese food
-
 reqalts what about vietnamese type of food
-
 thankyou thank you good bye
-
 request what is the phone number
-
 thankyou thank you good bye
-
 inform im looking for a moderately price restaurant that serves halo food
-
 null sil
-
 request and the phone number
-
 request could i get the post code
-
 inform bistro food
-
 request whats the address
-
 inform center
-
 null i want
-
 request what is their address
-
 request what is the post code
-
 null okay
-
 request whats the price range
-
 thankyou thank you good bye
-
 null sil
-
 inform moderately priced
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 inform looking for a restaurant in west part of town serving cantonese
-
 inform i am looking for gastropub food
-
 thankyou thank you good bye
-
 request what is the address
-
 inform im looking for a restaurant that serves gastropub food any price range
-
 inform french
-
 request address
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request what area is it in
-
 inform i need a restaurant in the west part of town
-
 request what is you gardens phone number
-
 reqalts anything else
-
 inform im looking for a restaurant in the north part of town
-
 request what is nandos address
-
 request what type of food is it
-
 inform korean food
-
 inform asian oriental
-
 null noise
-
 inform i dont care
-
 request whats the phone number
-
 null sil
-
 inform i do not care
-
 inform any
-
 inform south
-
 thankyou okay thank you good bye
-
 thankyou thank you good bye
-
 inform i want a moderate priced restaurant that serves indian food
-
 request what type of food
-
 thankyou thank you good bye
-
 request phone number
-
 inform did you see a korean restaurant
-
 request phone number
-
 request whats the address
-
 request phone number
-
 reqalts how about spanish food
-
 inform romanian food in the center
-
 affirm yes
-
 reqalts is there anything else
-
 inform south
-
 inform im looking for a cheap restaurant in the south part of town
-
 affirm yea
-
 reqalts how about cheap
-
 request phone number
-
 request price range
-
 request what is the address and phone number
-
 inform restaurant south part of town international food
-
 inform um it doesnt matter its for a cheap restaurant
-
 thankyou thank you good bye
-
 inform mediterranean food
-
 thankyou thank you good bye
-
 inform chinese
-
 null noise
-
 inform afghan food
-
 affirm yes
-
 affirm oh god uh yes mediterranean food
-
 bye okay thank you and good bye
-
 request and what area
-
 inform south part
-
 request post code
-
 affirm yes
-
 thankyou thank you good bye
-
 inform expensive french
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 request whats the address
-
 null noise
-
 thankyou thank you good bye
-
 inform cheap
-
 reqalts what about asian oriental
-
 inform i wanted moderately priced
-
 inform im looking for a moderately priced restaurant
-
 inform lebanese
-
 inform korean restaurant
-
 affirm yes
-
 request what is the phone number
-
 request the address
-
 inform portuguese
-
 inform cheap
-
 request whats the phone number
-
 request whats the post code
-
 request the post code
-
 inform any
-
 inform moderately priced restaurant in the west part of town
-
 thankyou thank you good bye
-
 inform south
-
 inform im looking for meditteranian
-
 null cough
-
 thankyou thank you good bye
-
 reqalts anything else
-
 inform modern european food
-
 negate no
-
 request address
-
 null noise
-
 thankyou thank you good bye
-
 request area
-
 inform inexpensive
-
 request type of food served
-
 reqalts how about french food
-
 inform find restaurant serving asian
-
 request and what is their phone number
-
 affirm yes
-
 null noise
-
 request what is the address
-
 thankyou thank you good bye
-
 inform i do i dont care
-
 request whats the address
-
 request what is the address
-
 thankyou thank you good bye
-
 request area
-
 null noise
-
 reqalts okay what about modern european food
-
 inform im looking for a cheap restaurant in south part of
-
 inform korean
-
 confirm does it serve baskaye food
-
 request wha what type of food
-
 inform im looking for a restaurant in any area that serves malaysian food
-
 negate no dont care
-
 inform trying to find a cheap restaurant
-
 inform chinese food east part of town
-
 request whats the phone number
-
 request phone number
-
 inform any part of town
-
 reqalts is there anything else
-
 thankyou thank you good bye
-
 inform moderate restaurant south part of town
-
 request can i have the phone number
-
 inform kosher food
-
 reqalts do you have anything else
-
 inform cheap
-
 request and the phone number
-
 thankyou thank you good bye
-
 request phone number
-
 request price range
-
 request post code
-
 inform pan asian food
-
 request whats the phone number
-
 reqalts what else do you have
-
 request whats the area
-
 reqalts is there anything else
-
 affirm yes im looking for a
-
 request and the post code
-
 inform italian food
-
 inform moderate
-
 inform thai
-
 inform welsh food
-
 inform i dont care
-
 request what type of food
-
 request and phone number please
-
 affirm yes
-
 inform im looking for asian food
-
 inform german food
-
 inform i want an expensive restaurant that serves sea food
-
 inform i dont care noise
-
 inform mediterranean food
-
 null unintelligible
-
 thankyou thank you good bye
-
 request telephone number
-
 affirm yes spanish restaurant
-
 inform im looking for swedish food
-
 request can i have the phone number
-
 inform it doesnt matter
-
 inform north
-
 affirm yes
-
 null unintelligible
-
 inform dont care whats the phone number
-
 request and what is the post code
-
 affirm yes
-
 inform cheap gastropub
-
 request what type of food
-
 inform cantonese food
-
 request phone number
-
 confirm is it in the center
-
 request can i get the phone number
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request what is the phone number
-
 request may i have the address and phone number
-
 inform expensive in the south
-
 request what is the postcode
-
 inform scottish food
-
 request what is the phone number
-
 inform expensive
-
 request can i have the phone number and type of food that
-
 affirm yes
-
 inform spanish
-
 inform it doesnt matter
-
 thankyou thank you good bye
-
 inform i dont care
-
 request what is the phone number
-
 inform i want a cheap restaurant that serves unusual food
-
 inform im looking for a restaurant in any area
-
 thankyou thank you
-
 inform british food
-
 inform italian
-
 thankyou thank you good bye
-
 reqalts anything else
-
 inform i dont care
-
 request address
-
 request address
-
 request address
-
 inform im looking for a restaurant in the east part of town
-
 thankyou thank you goodbye
-
 inform vietnamese food
-
 affirm ye
-
 thankyou thank you good bye
-
 inform korean food
-
 null unintelligible
-
 request and what type of food do they serve at pizza hutt
-
 inform food
-
 inform expensive mexican
-
 inform cheap restaurant
-
 inform any thing
-
 inform im looking for a moderately priced restaurant
-
 reqalts uh is there anything else
-
 affirm yes
-
 inform south
-
 inform cheap restaurant in th east part of town
-
 request address
-
 request phone number
-
 inform im looking for a moderate priced restaurant that serves kosher food
-
 thankyou thank you goodbye
-
 request phone number
-
 thankyou thank you goodbye
-
 inform north
-
 null unintelligible
-
 inform food
-
 request whats the phone number
-
 request can i have their address
-
 inform is there an expensive restaurant that serves korean food
-
 inform inexpensive
-
 inform seafood
-
 inform im looking for a moderately priced restaurant that serves
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request phone number
-
 inform indian food
-
 null unintelligible
-
 inform italian food
-
 request what is the phone number and post code
-
 inform im looking for a moderate priced restaurant serving jamaican food
-
 thankyou thank you goodbye
-
 thankyou thank you good bye
-
 inform i need a moderate priced restaurant in the north part of town
-
 reqalts what about european food
-
 inform thai food
-
 reqalts anything else
-
 thankyou thank you good bye
-
 affirm yes
-
 inform lebanese
-
 negate no
-
 inform im looking for an expensive restaurant in the east part of town
-
 inform could i have a moderately priced restaurant in the east part of town
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform canapes
-
 request post code
-
 request type of food do they serve
-
 request may i have the address and phone number please
-
 bye goodbye
-
 inform the east part of town
-
 inform british
-
 negate no caribbean
-
 inform chinese food
-
 reqalts how about the center area
-
 thankyou thank you good bye
-
 bye very good thank you good bye
-
 request the phone number
-
 reqalts how about the moderate price range
-
 inform it doesnt matter
-
 request whats the address
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform uh i dont care
-
 thankyou thank you good bye
-
 request phone number
-
 thankyou thank you good bye
-
 inform doesnt matter
-
 request address and phone number
-
 thankyou thank you goodbye
-
 reqalts is there another place
-
 inform french
-
 request can i get the address
-
 affirm yes
-
 inform expensive
-
 inform italian food
-
 inform north
-
 request what is the post code
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 confirm okay and is that british food
-
 inform italian
-
 request phone number
-
 request okay may i have the address and phone number
-
 inform any
-
 thankyou thank you good bye
-
 request the post code
-
 request address and phone number
-
 request phone number
-
 inform im looking a restaurant in the east part of town
-
 inform italian food
-
 affirm ye
-
 thankyou thank you good bye
-
 inform cantonese food
-
 inform cheap
-
 null sil
-
 request and the phone number
-
 inform im looking for a christmas food in the south part of town
-
 inform pan asian food
-
 inform center
-
 inform i would like a restaurant that serves gastropub food
-
 inform any type of food
-
 inform im looking for a moderately priced restaurant that serves bistro
-
 inform north american food
-
 inform the south part
-
 null unintelligible
-
 null sil
-
 bye k you goodbye
-
 inform lebanese
-
 bye alright thank you good bye
-
 inform asian
-
 affirm yes
-
 thankyou thank you good bye
-
 request whats the address
-
 inform im looking for an indian restaurant
-
 inform welsh food in the north part of town
-
 inform noise french food
-
 inform could i have the restaurant that serves asian oriental food
-
 request what is the phone number
-
 affirm yes moderate priced
-
 affirm yeah im looking for a restaurant serving kosher food
-
 inform looking for a moderately priced restaurant
-
 request phone number
-
 inform tuscan food
-
 inform im looking for a cheap restaurant in the west part of town
-
 null unintelligible
-
 request phone number
-
 inform north
-
 request may i have the phone number and postcode of this ven
-
 reqalts is there a restaurant in the east part of town that serves indian food
-
 inform west
-
 request and the phone number
-
 inform korean
-
 inform irish
-
 request address
-
 inform looking for moderately priced restaurant in the north part of town
-
 inform i want to find a moderately priced restaurant
-
 inform center
-
 inform restaurant in the center
-
 request okay and whats the post code
-
 inform any
-
 inform italian
-
 request phone number
-
 inform any
-
 affirm yea
-
 request whats the price range
-
 inform i dont care
-
 request the phone number
-
 affirm yes
-
 inform i dont care
-
 inform italian
-
 request price range
-
 request could i have the address and phone number
-
 inform i need a moderately priced restaurant in the south part of town
-
 inform im looking for a restaurant in the west part of town and it should be cheap
-
 request phone number
-
 inform moderately priced restaurant
-
 affirm yes
-
 thankyou breath thank you very much goodbye
-
 reqalts how about vietnamese food
-
 request phone number
-
 inform mediterranean food
-
 inform gastropub food
-
 inform can i find a restaurant that serves international food
-
 request whats the post code
-
 inform expensive
-
 request what type of food
-
 inform uh italian food
-
 request what is the address
-
 reqalts how about indian food
-
 inform chinese
-
 request what type of food
-
 thankyou thank you good bye
-
 affirm yes
-
 inform i want to find a cheap restaurant in the south part of town
-
 null sil
-
 reqalts is there anything else
-
 negate no thank you
-
 confirm is there a thai restaurant in the west part of town
-
 inform austria asian food
-
 inform restaurant
-
 request what is the post code
-
 affirm yes
-
 affirm yes im looking for english food
-
 inform expensive
-
 request phone number
-
 thankyou thank you good bye
-
 thankyou thank you
-
 request whats the phone number
-
 inform is there a restaurant serving indian type of food
-
 inform north
-
 request what is the address
-
 inform north
-
 request phone number
-
 request whats the post code
-
 thankyou thank you good bye
-
 request address
-
 inform asian oriental type of food
-
 request what is the phone number
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request whats the phone number
-
 null unintelligible
-
 request the phone number
-
 thankyou thank you good bye
-
 request how about the post code
-
 request what kind of food do they serve
-
 inform i dont care
-
 inform italian food
-
 null noise
-
 inform dont care
-
 inform moderately priced restaraunt
-
 inform im looking for a restaurant in the east part of town serving pan asian food
-
 affirm yes
-
 inform i dont care
-
 inform polynesian food
-
 negate no
-
 inform i want to find a moderately priced restaurant in the east part of town
-
 request and the phone number
-
 inform north
-
 thankyou thank you good bye
-
 null unintelligible
-
 request address
-
 affirm yes
-
 inform south
-
 request whats the phone number
-
 inform korean
-
 thankyou thank you good bye
-
 inform fusion food
-
 thankyou thank you
-
 reqalts how about indian
-
 inform chinese food
-
 thankyou thank you good bye
-
 request what type of food do they serve
-
 affirm right
-
 request what is the type of food
-
 request can i have the address and phone number please
-
 request phone number
-
 affirm yes
-
 affirm yes
-
 inform i need a restaurant in the center of town that includes international food
-
 request can i have the phone number and post code
-
 inform i dont care
-
 request price
-
 thankyou thank you good bye
-
 inform indian food
-
 request price range
-
 confirm does it serve african food
-
 request the phone number
-
 request type of food
-
 inform any
-
 inform portuguese
-
 request address
-
 request address
-
 request whats the address
-
 inform italian
-
 affirm yes
-
 request phone number
-
 null sil
-
 inform moderately priced restaurant
-
 inform im looking for turkish food
-
 reqalts is there anything
-
 thankyou thank you good bye
-
 inform south
-
 thankyou thank you good bye
-
 inform dont care
-
 inform south part of town
-
 inform need one in the west part of town
-
 inform i dont care
-
 inform indian
-
 inform south
-
 ack kay
-
 inform moderately priced restaurant in the south part of town
-
 request what kind of food do they serve
-
 inform basque
-
 request phone number and post code
-
 request what type of food do they serve
-
 inform cheap
-
 inform vietnamese food
-
 request may i have the phone number
-
 inform serving european food
-
 request and whats the phone number
-
 null sil
-
 reqalts is there anything else
-
 reqalts what about chinese food
-
 inform any part of town
-
 affirm ye
-
 null cough
-
 request what is the post code
-
 inform french
-
 inform im looking for a restaurant in any area
-
 inform korean food
-
 thankyou thank you good bye
-
 request can i have the address and phone number
-
 inform lebanese food
-
 reqalts how about english food in the north part of town
-
 null unintelligible
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform any
-
 negate no
-
 request address phone number and postcode
-
 inform i dont care
-
 inform any
-
 request may i have the address and phone number
-
 inform can i get a steak house restaurant in any area
-
 thankyou thank you good bye
-
 inform anything is fine
-
 thankyou thank you good bye
-
 request post code
-
 inform i dont care
-
 reqalts is there anything else
-
 inform im looking for a cheap restaurant in the south part of town
-
 inform im looking for one east part of town
-
 inform chinese food
-
 null unintelligible
-
 affirm yes
-
 thankyou thank you good bye
-
 request area
-
 request whats the address and phone number
-
 reqalts how about chinese food
-
 inform i want a moderately priced restaurant in the west part of town
-
 affirm yes
-
 request whats the phone number
-
 request the phone
-
 thankyou thank you good bye
-
 reqalts what about vietnamese food
-
 request address
-
 request what is the telephone number
-
 request type of food
-
 request whats the price range
-
 null sil
-
 thankyou thank you good bye
-
 inform um want to find a moderately priced restaurant in the
-
 thankyou thank you good bye
-
 inform restaurant in any area thats
-
 inform indonesian food east part of town
-
 inform iam looking for a restaurant in the center
-
 request address
-
 inform any
-
 inform doesnt matter
-
 reqalts how about italian food
-
 thankyou thank you good bye
-
 request what is their address
-
 inform moderate
-
 inform hungarian food
-
 request type of food
-
 inform i need a restaurant that serves african food
-
 request post code
-
 inform north
-
 deny wrong
-
 affirm yes
-
 affirm correct
-
 request can i have the phone number and price range
-
 confirm is it in the moderate price range
-
 thankyou thank you goodbye
-
 inform uh im not interested in the type
-
 inform lebanese
-
 inform i dont care
-
 inform dont care
-
 reqalts next
-
 inform english please
-
 request phone number
-
 inform moderate
-
 inform any
-
 request post code
-
 request price range
-
 request where is it
-
 request whats their address
-
 inform system im looking for expensive restaurant
-
 thankyou thank you good bye
-
 inform im looking for a restaurant in the east part of town and it should serve greek food
-
 request what type of food does it serve
-
 inform food
-
 inform expensive north american
-
 negate no there is no such venue how about portuguese food
-
 inform um west side
-
 inform dont care
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 reqalts and anything else
-
 request address
-
 bye see you good bye
-
 request whats the address
-
 thankyou thank you good bye
-
 inform i dont care
-
 inform im looking for a cheap restaurant in the east part of to
-
 inform i dont care
-
 inform um an expensive
-
 request and the address
-
 reqalts how about thai food
-
 inform i dont care
-
 request address
-
 inform doesnt matter
-
 inform expensive restaurant breath
-
 inform turkey food
-
 null sil
-
 inform west part of town
-
 thankyou thank you good bye
-
 request address
-
 inform im looking for an expensive restaurant
-
 inform im looking for a restaurant in the west part of town that serves scottish
-
 request whats their address
-
 request what is the phone number
-
 request what kind of food does it serve
-
 inform i dont care
-
 thankyou thank you good bye
-
 inform dont care
-
 ack kay um
-
 thankyou thank you good bye
-
 thankyou okay thank you goodbye
-
 request address
-
 affirm yes
-
 thankyou thank you good bye
-
 inform it doesnt matter
-
 request address
-
 inform okay im looking for moderate price range
-
 inform south part of town
-
 inform doesnt matter
-
 thankyou thank you good bye
-
 request address
-
 inform spanish food
-
 inform cheap food
-
 negate no
-
 inform south
-
 thankyou thank you goodbye
-
 inform dont care
-
 inform i dont care
-
 request can i get the address
-
 negate no
-
 thankyou thank you good bye
-
 inform cheap price range
-
 affirm yes
-
 request telephone number
-
 null noise
-
 thankyou thank you good bye
-
 request what is the post code
-
 inform i want singaporean food
-
 request can i have the address and the price range
-
 inform im looking for an expensive restaurant in the east
-
 reqalts is there anything else
-
 reqalts how about indian food
-
 inform how about in the west area
-
 thankyou thank you good bye
-
 inform it doesnt matter
-
 request type of food
-
 thankyou thank you good bye
-
 request what is the phone number
-
 inform thai
-
 null sil
-
 request phone number
-
 inform i dont care
-
 null can i get
-
 inform what about irish food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 reqalts how about turkish food
-
 inform cheap
-
 request address
-
 request can i get the address
-
 negate no moderately priced
-
 thankyou thank you good bye
-
 request and the post code
-
 request phone number tvnoise
-
 reqalts what about indian
-
 null unintelligible
-
 thankyou thank you good bye
-
 null sil
-
 thankyou thank you good bye
-
 request address
-
 inform id like thai food
-
 thankyou thank you good bye
-
 inform i dont care
-
 thankyou thank you good bye
-
 request well whats the phone number
-
 inform tailand
-
 inform greek
-
 reqalts how about indians
-
 inform uh it doesnt matter
-
 request phone number
-
 inform moderately priced
-
 inform mexican food
-
 inform cheap restaurant
-
 request address
-
 inform mexican food
-
 inform pan asian food
-
 request phone number
-
 null backgroundspeech
-
 inform portuguese food
-
 null unintelligible
-
 inform moderate
-
 confirm is it cheap
-
 request what type of food do they serve
-
 affirm yeah
-
 inform any
-
 reqalts what about chinese food
-
 inform unintelligible food
-
 inform i dont care
-
 inform dont care
-
 inform what about mediterranean food
-
 reqalts okay how about chinese food
-
 request what kind of food do they have
-
 inform i dont care
-
 inform singaporean food
-
 inform moderately priced restaurant in
-
 inform moderate
-
 inform food
-
 thankyou thank you good bye
-
 inform okay i want indian
-
 inform i dont care about the price range
-
 request the area
-
 reqalts is there anything else
-
 inform it doesnt matter
-
 thankyou thank you good bye
-
 request what is the address
-
 inform dont care
-
 thankyou thank you good bye
-
 inform doesnt matter
-
 inform moderately priced
-
 inform what european food
-
 inform cheap price range
-
 inform vietnamese food in any area
-
 thankyou thank you goodbye
-
 inform i dont care
-
 request address
-
 request phone number
-
 request whats the phone number and address
-
 affirm right
-
 inform any area
-
 negate no
-
 inform i dont care
-
 inform is doesnt matter
-
 request could i have the address
-
 affirm uh yes restaurant that serves danish food
-
 request whats the address
-
 inform moderate
-
 inform north
-
 inform north
-
 reqalts how about in any area
-
 request may i have the address and post code
-
 reqalts anything else
-
 inform any part of town
-
 null unintelligible
-
 inform chinese
-
 request what is the address
-
 thankyou thank you good bye
-
 inform im looking for a cheap restaurant in the west part of town
-
 request whats its address
-
 request can i have the phone number
-
 request phone number
-
 request what is the address
-
 request phone number
-
 inform south part
-
 thankyou thank you good bye
-
 inform uh restaurant in the west part of town with scottish food
-
 request what is the phone number
-
 null unintelligible
-
 null im looking
-
 deny wrong
-
 inform the north part
-
 inform any
-
 inform it doesnt matter
-
 inform any price range
-
 inform cheap
-
 affirm yes
-
 inform british food
-
 inform any
-
 hello hi im looking for a restaurant that serves spanish food
-
 request i want the address phone number and area
-
 thankyou thank you good bye
-
 null and whats their
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform moderate
-
 request can i get the address
-
 thankyou thank you good bye
-
 inform unusual food
-
 null sil
-
 inform south part of town
-
 inform italian food
-
 request post code
-
 inform im looking for a restaurant serving thai type of food
-
 thankyou thank you good bye
-
 inform im looking for a restaurant in the east part that serves creative food
-
 inform im looking for indian food
-
 affirm yes
-
 reqalts how about italian food
-
 request address
-
 inform thai
-
 inform indian food in the west part of town
-
 negate no
-
 inform indian
-
 inform an expensive restaurant in the south part of town
-
 thankyou thank you good bye
-
 inform id like to find a cheap restaurant serving mexican
-
 thankyou thank you good bye
-
 affirm correct
-
 request could you give me the number
-
 request what is the address
-
 inform a cheap restaurant east part of town
-
 request may i have the phone number please
-
 affirm yes
-
 inform doesnt matter
-
 inform um doesnt mater
-
 inform i dont care
-
 request post code
-
 reqalts is there anything else
-
 request post code
-
 inform i would like an expensive restaurant in the south of town
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform any
-
 inform i dont care
-
 inform i dont care
-
 reqalts how about italian food
-
 confirm does it serve hungarian food
-
 inform dont care
-
 thankyou thank you good bye
-
 reqalts how about india
-
 request what is their address
-
 inform thai food
-
 request may i have the address
-
 request phone number
-
 inform center
-
 hello hi im looking for mexican food
-
 inform cheap
-
 request phone number
-
 inform cheap
-
 request whats the address and phone number
-
 inform catalonia food
-
 thankyou thank you good bye
-
 null and
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 inform can i have a cheap restaurant in the south part of town
-
 affirm mmhm
-
 reqalts how about a turkish restaurant anywhere
-
 inform eritrean food
-
 request can i have the address and phone number please
-
 inform expensive restaurant in the south
-
 null noise
-
 affirm yes
-
 inform moderate
-
 inform i would like to find a restaurant in the north part of town that serves kosher food
-
 request what is the address
-
 inform it doesnt matter
-
 request what is the address
-
 inform im looking for a moderate priced restaurant in south part of
-
 affirm yes african food
-
 reqalts how about indian food
-
 null sil
-
 reqalts are there any restaurants serving turkish food
-
 inform asian oriental food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request whats the phone number
-
 request address
-
 thankyou thank you good bye
-
 inform food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform what about a spanish restuarant
-
 request what is the addre
-
 null unintelligible
-
 inform thai food
-
 inform for a moderately priced restaurant
-
 inform north
-
 request what type of food
-
 thankyou thank you good bye
-
 affirm yes
-
 thankyou thank you good bye
-
 reqalts how about indian food
-
 request phone number
-
 request the phone number
-
 thankyou thank you good bye
-
 inform yes uh turkish food in my area
-
 null sil
-
 inform fusion food
-
 inform cheap restaurant
-
 request area
-
 request and the phone number
-
 inform venetian
-
 reqalts how about italian food
-
 request okay can you give me the address there
-
 request phone number
-
 thankyou thank you good bye
-
 inform what about modern european food
-
 inform i dont care
-
 request and the phone number
-
 inform i do not care
-
 request phone number
-
 inform vietnamese
-
 request whats the phone number
-
 thankyou thank you good bye
-
 inform asian oriental
-
 thankyou thank you good bye
-
 inform with scottish
-
 inform any
-
 request what is the address
-
 inform west
-
 reqalts is there anything else
-
 thankyou thank you good bye
-
 negate no the north
-
 request phone
-
 request whats the address
-
 request phone number
-
 thankyou thank you good bye
-
 inform any
-
 inform im looking for a restaurant in the center of town that serves
-
 reqalts how about asian food
-
 request type of food
-
 request what kind of food
-
 affirm yes
-
 request what is the address
-
 request what is the address
-
 request whats the phone number
-
 inform im looking for cheap food
-
 inform restaurant in the south
-
 affirm yeah do you have thai food
-
 affirm yes
-
 inform i dont care
-
 request whats the phone number
-
 inform any
-
 inform any
-
 inform i dont care
-
 affirm yes
-
 inform looking for a restaurant in the east part of town
-
 inform portuguese food in the south
-
 null unintelligible
-
 inform south
-
 inform i dont care
-
 hello hi im looking for a restaurant in the west part of town
-
 thankyou thank you good bye
-
 request address
-
 inform cheap restaurant
-
 inform seafood
-
 thankyou thank you good bye
-
 hello hello
-
 inform thai
-
 request post code
-
 inform lebanese
-
 affirm yes
-
 request phone number
-
 null sil
-
 request phone number
-
 negate no not noise
-
 request may i have the phone number
-
 inform italian
-
 negate no okay thats fine what about french food
-
 reqalts how about russian food
-
 inform spanish food west part of town
-
 request whats the address
-
 reqalts how about indian
-
 inform center
-
 thankyou thank you goodbye
-
 affirm yes
-
 request addre
-
 thankyou thank you goodbye
-
 request can i have the address of the venue
-
 inform expensive
-
 thankyou thank you good bye
-
 inform uh korean food
-
 null sil
-
 inform center
-
 inform cheap restaurant
-
 request address
-
 inform italian food
-
 negate no spanish
-
 inform any
-
 inform restaurant north part of town seafood
-
 inform expensive
-
 inform im looking for a moderately priced restaurant in the north
-
 inform any
-
 inform dont care
-
 inform thai
-
 inform im looking for a restaurant in the south part of town serving austrian food
-
 inform expensive
-
 inform i dont care
-
 reqalts any more
-
 request what is the phone number
-
 thankyou thank you good bye
-
 inform a restaurant that serves
-
 null noise
-
 inform chinese food
-
 request the phone number
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform expensive
-
 inform i dont care about prices
-
 inform any
-
 request phone number
-
 inform moderate
-
 request whats their address
-
 affirm yeah
-
 inform i want a restaurant that is cheap and
-
 null what do you recommend
-
 request what is the phone number
-
 request phone number
-
 inform im looking for a restaurant in the center of town
-
 inform hungarian food
-
 request whats the address
-
 inform restaurant west
-
 reqalts is there anything else
-
 request what is the phone number and post code
-
 inform it doesnt matter
-
 request what is their phone number
-
 null noise
-
 inform looking for a moderately priced restaurant in the east part of town
-
 inform im looking for a turkish type of restaurant
-
 inform food
-
 inform looking for a restaurant in any area that serves irish food
-
 thankyou thank you good bye
-
 affirm yes
-
 inform spanish food
-
 thankyou thank you good bye
-
 reqalts what about chinese food
-
 thankyou thank you good bye
-
 inform moderate
-
 request phone number
-
 null noise
-
 request address
-
 negate no
-
 inform uh just pick a restaurant
-
 inform any price range
-
 request what is the phone number
-
 thankyou thank you good bye
-
 inform i dont care
-
 request what type of food
-
 inform south
-
 inform south
-
 request whats the post code
-
 inform turkish food
-
 thankyou thank you good bye
-
 request and the address
-
 request ts the phone number
-
 request the address
-
 inform thai food
-
 request phone number
-
 null that is all
-
 affirm yes
-
 null okay
-
 request what is the address
-
 thankyou thank you good bye
-
 inform south
-
 inform i dont care
-
 inform any
-
 inform north american food
-
 affirm yes
-
 request and the address
-
 inform i want a restaurant
-
 inform doesnt matter
-
 inform i dont care
-
 affirm yes
-
 request whats the address
-
 inform north american
-
 request what is the phone number
-
 thankyou thank you good bye
-
 request whats the address
-
 thankyou thank you good bye
-
 request what is the address
-
 request can i have the phone number and the type of food
-
 affirm uh yes im looking for a restaurant in any area that serves thai food
-
 thankyou thank you good bye
-
 request and the price range
-
 request type of food
-
 request phone number
-
 request what is their phone number
-
 reqalts how about the west area
-
 affirm yes
-
 negate breath no american food
-
 thankyou thank you good bye
-
 request address
-
 inform cheap restaurant serving chinese food
-
 thankyou okay thank you good bye
-
 request what part of town
-
 inform british food in the west part of town
-
 hello hi im looking for a moderately priced restaurant
-
 inform barbecue food
-
 thankyou okay thank you good bye
-
 inform mediterranean food
-
 request whats the phone number
-
 inform vegitarian
-
 null sil
-
 inform any price range
-
 inform vietnamese
-
 request phone number
-
 request phone number
-
 inform doesnt matter
-
 thankyou thank you good bye
-
 inform it doesnt matter
-
 thankyou thank you good bye
-
 inform im looking for a restaurant that serves turkish food
-
 inform irish food
-
 request may i have the phone number
-
 inform british
-
 request what area
-
 request what kind of food is it
-
 request whats the address phone number and area
-
 thankyou thank you good bye
-
 inform i dont care
-
 inform international
-
 inform moderately priced
-
 reqalts how about chinese food
-
 inform restaurant in the west part of town that serves airitran food
-
 inform brazilian
-
 inform id like a cheap restaurant in the south part of town
-
 inform anything cheap
-
 affirm yes in the north part of town
-
 inform center part of town
-
 inform thai food
-
 request address phone number and price range
-
 inform im looking for a moderately priced restaurant that serves tuscan food
-
 thankyou thank you good bye
-
 null noise
-
 request whats the address
-
 request may i have the address and phone number please
-
 hello hi im looking for a rerestaurant that serves cuban food
-
 inform the north
-
 null sil
-
 inform i dont care
-
 inform dont care
-
 request address
-
 inform vietnamese
-
 inform i dont care
-
 request and the price range
-
 inform vietnamese
-
 request may i have the address pleas
-
 inform im looking for a restaurant in any area serving turkish food
-
 inform scandinavian food
-
 inform it doesnt matter
-
 reqalts what about indian food
-
 inform indian type of food
-
 inform restaurant south part of town
-
 request phone number
-
 inform south of town
-
 inform expensive
-
 inform west part of town
-
 inform im looking for a restaurant in the east part of town that serves british food
-
 inform turkish food
-
 negate no
-
 inform expensive
-
 inform south
-
 inform doesnt matter
-
 reqalts anything else
-
 inform im looking for an expensive restaurant serving turkish food
-
 reqalts anything else
-
 request phone number
-
 thankyou thank you good bye
-
 inform im loooking for a restaurant serving vietnamese type of food
-
 request telephone number
-
 inform moderate
-
 request whats the address
-
 inform can i have irish food
-
 inform can i get a restaurant with vegetarian food
-
 request and the address
-
 affirm yes
-
 inform afghan food
-
 thankyou thank you good bye
-
 null i want to find
-
 inform ok i want to find a restaurant in the south part of town
-
 inform im looking for unintelligible food
-
 thankyou thank you good bye
-
 request what is the phone number
-
 thankyou thank you goodbye
-
 inform italian food
-
 inform russian
-
 inform expensive restaurant
-
 inform gastro pub
-
 reqalts how about italian
-
 affirm yes
-
 request what type of food
-
 thankyou thank you good bye
-
 inform north part of town
-
 inform im looking for a cheap restaurant in the south part of town
-
 inform any
-
 affirm yes
-
 inform doesnt matter
-
 request whats the phone number
-
 reqalts is there anything else
-
 inform korean
-
 request okay do you have the address for da vinci pizzeria
-
 request what type of food
-
 inform i dont care
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform i want a cheap restaurant in the west part of town
-
 reqalts what about international
-
 thankyou thank you good bye
-
 request address
-
 request what is the address
-
 inform vietnamese food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 request address
-
 inform i would like to find a moderately priced restaurant and it should serve greek food
-
 reqalts how about asian oriental
-
 request address
-
 null sil
-
 inform i dont care
-
 null unintelligible
-
 inform i dont care
-
 request can i have the address and the post code
-
 inform looking for a restaurant noise in the east part of town
-
 request okay and can i get the address
-
 inform i want a moderately priced restaurant in the north part of town
-
 request what is the post code
-
 request phone number
-
 request phone number
-
 request great could you tell me the address and phone number to that place
-
 inform i want to find a restaurant in the east part of town
-
 request could i get the phone number and price range
-
 request post code
-
 affirm yes
-
 inform doesnt matter
-
 inform i need to find one in the south part of town
-
 request address
-
 inform id like a moderately priced restaurant
-
 inform food
-
 affirm yes
-
 request okay might i have the address
-
 reqalts how about thai
-
 inform can i have a restaurant in the east part of town
-
 request what type of food do they serve
-
 thankyou thank you goodbye
-
 request what is the phone number
-
 request and what type of food do they serve
-
 request the address and post code
-
 inform that serves corsica
-
 inform im looking for an expensive restaurant and it should serve unusual food
-
 inform i dont care
-
 inform british food
-
 request type of food
-
 inform im looking for a restaurant in the north part of town
-
 inform chinese food
-
 request what is the area
-
 thankyou thank you good bye
-
 request and whats the phone number
-
 inform im looking for a cheap restaurant that serves brazilian
-
 request uh address
-
 request phone number and address
-
 inform im looking for seafood
-
 thankyou thank you
-
 null unintelligible
-
 null unintelligible
-
 inform north
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 affirm yes
-
 inform lets see im looking for a restaurant in the north part of town that serves vietnamese food
-
 request and can i have the address phone number and price range of the restaurant please
-
 request address phone number and area
-
 inform korean
-
 request address
-
 inform west
-
 inform chinese food
-
 request whats the phone number
-
 inform i dont care
-
 inform i want a moderately priced chinese restaurant
-
 request phone number
-
 request phone number
-
 inform im looking for a cheap restaurant in the west part of town
-
 thankyou thank you good bye
-
 request whats the address
-
 inform it doesnt matter
-
 request what is the address
-
 inform sea food
-
 request what is the area
-
 thankyou thank you good bye
-
 inform i dont care
-
 request phone number
-
 thankyou thank you good bye
-
 inform halal
-
 inform doesnt matter
-
 thankyou thank you good bye
-
 request phone number
-
 request and what kind of food do they serve
-
 reqalts how about a turkish restaurant
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 inform vietnamese
-
 inform looking for romanian food in the center of town
-
 thankyou thank you good bye
-
 null unintelligible
-
 thankyou thank you good bye
-
 inform any
-
 affirm yes
-
 request whats the phone number
-
 request phone number
-
 inform indian
-
 request whats the address
-
 request post code
-
 null sil
-
 inform expensive restaurant south part of town
-
 inform i would like to find a restaurant in any area serving international food
-
 inform food type
-
 request post code
-
 inform italian food
-
 thankyou thank you
-
 affirm uh yes international food please
-
 confirm is there a thai restaurant in the west of town
-
 inform asian oriental
-
 inform looking for a moderately priced restaurant in the east
-
 inform cheap
-
 request and whats the price range
-
 request phone number
-
 inform gastropub type of food
-
 inform moderate
-
 inform british food in the west part of town
-
 request address
-
 inform british type
-
 inform any
-
 request what is the phone number and post code
-
 request what is the phone number
-
 null breathing
-
 request could i have its phone number
-
 request what is the address and phone number
-
 request address
-
 confirm does it serve halal food
-
 negate no
-
 inform moderately priced
-
 request what is the phone number
-
 request and the address
-
 inform i want a restaurant in the north part of town
-
 request what type of food
-
 inform i would like korean food
-
 null sil
-
 thankyou thank you goodbye
-
 inform id like a moderately priced restaurant in the west part of town
-
 inform cheap
-
 affirm yes can i have an expensive restaurant
-
 inform anywhere
-
 inform i dont care
-
 thankyou thank you good bye
-
 request can i get the address and phone number
-
 inform i dont care about the price range
-
 inform moderate
-
 null noise
-
 null sil
-
 thankyou thank you goodbye
-
 null unintelligible
-
 thankyou thank you good bye
-
 request address
-
 thankyou thank you good bye
-
 reqalts anything else
-
 reqalts okay what about european
-
 inform i dont care
-
 request phone number
-
 inform italian food
-
 thankyou thank you good bye
-
 inform doesnt matter
-
 inform can i have a cheap restaurant in the west part of town
-
 inform south part of town persian food
-
 request whats the address and post code
-
 request whats the phone number
-
 request may i have the address and post code
-
 inform cheap
-
 null noise
-
 reqalts is there anything else
-
 request phone number
-
 request can i get the address
-
 reqalts how about north american food
-
 request whats the address
-
 thankyou thank you bye
-
 request and the post code
-
 inform im looking for a moderately priced restaurant that serves christmas food
-
 request what type of food do they serve
-
 inform im looking for a modreately
-
 thankyou okay thank you good bye
-
 inform expensive
-
 thankyou thank you goodbye
-
 thankyou thank you good bye
-
 inform id like to find a moderately priced restaurant in the west part of town
-
 request whats the address
-
 reqalts is there anything else
-
 reqalts how about a portuguese restaurant
-
 inform im looking for a moderately priced restaurant that serves international
-
 inform expensive restaurant that serves afghan food
-
 inform any
-
 request what is their price range
-
 affirm yes a restaurant in the east of town unintelligible serving canap
-
 thankyou thank you good bye
-
 request what kind of food does it serve
-
 request what is the phone number
-
 inform center of town
-
 thankyou thank you goodbye
-
 thankyou thank you good bye
-
 inform um im looking for a moderately priced restaurant in the south part of town
-
 inform in the east part of town
-
 thankyou thank you good bye
-
 inform south
-
 thankyou thank you good bye
-
 inform im looking for cheap japanese food
-
 inform im looking for a restaurant in the south part of town that serves pan asian food
-
 inform expensive
-
 thankyou thank you good bye
-
 request what is the signature dish
-
 inform cheap italian food
-
 affirm yes
-
 inform any
-
 inform vietnamese food
-
 reqalts how about spanish
-
 inform uh i want a restaurant that serves international food
-
 negate no
-
 null noise
-
 inform i want to find a restaurant in any area
-
 inform north
-
 thankyou thank you
-
 null unintelligible
-
 inform polynesian
-
 request what is the address
-
 null dress
-
 reqalts is there anything else
-
 thankyou thank you good bye
-
 request okay whats the address
-
 inform im looking for moroccan food
-
 thankyou thank you good bye
-
 thankyou okay thank you goodbye
-
 thankyou thank you good bye
-
 affirm yes
-
 affirm ah yes im looking for persian food and i dont care about the pri
-
 inform i dont care
-
 reqalts how about mediterranean food
-
 inform indian food
-
 hello hi im looking for a moderately priced restaurant in the west part of town
-
 null noise
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 negate no
-
 reqalts are there any restaurants serving indian food
-
 request whats the phone number
-
 request address
-
 request and the post code
-
 confirm is that the north part of town south part of town
-
 reqalts how about asian oriental
-
 affirm yes
-
 request address
-
 affirm yes
-
 reqmore more
-
 inform i dont care
-
 request can i get the address
-
 thankyou thank you goodbye
-
 thankyou thank you goodbye
-
 negate no
-
 request what type of food do they serve
-
 reqalts i dont want that give me another spanish choice
-
 inform moderate
-
 affirm yes
-
 thankyou thank you good bye
-
 inform dont care
-
 thankyou thank you good bye
-
 inform australasian food
-
 request phone number
-
 inform vietnamese
-
 inform moderate price range
-
 inform vietnamese vietnamese food
-
 request address
-
 request what is the phone number
-
 thankyou thank you good bye
-
 reqalts is there anything else
-
 request what is the address
-
 inform british food
-
 request whats its address
-
 inform moderate
-
 request what is the address and post code
-
 request phone number
-
 null sil
-
 request phone number
-
 reqalts is there anything else
-
 inform belgium food
-
 null serving
-
 inform im looking for a restaurant that serves polynesian food
-
 thankyou thank you goodbye
-
 request what is the phone number
-
 inform south
-
 thankyou okay that will be all thank you and good bye
-
 request phone number
-
 thankyou thank you good bye
-
 inform portuguese food
-
 inform i dont care
-
 request phone number
-
 thankyou thank you good bye
-
 inform i dont care
-
 inform expensive restaurant
-
 affirm yes
-
 request what is the address
-
 thankyou thank you good bye
-
 inform i need a restaurant that
-
 inform food
-
 inform moderately priced
-
 inform it doesnt matter
-
 inform south part of town
-
 request what area of town
-
 inform i would like to find a moderately priced restaurant in the north part of town
-
 inform mexican
-
 request and the postal code
-
 inform a moderately priced restaurant in the west part of town
-
 inform i do not care
-
 request phone number
-
 request post code
-
 request can i have the phone
-
 request what is the address
-
 inform any
-
 thankyou thank you good bye
-
 request and whats their price range
-
 inform i would like mexican food
-
 request what area is it
-
 thankyou thank you good bye
-
 inform center
-
 thankyou thank you good bye
-
 inform the south
-
 affirm yes
-
 request and whats the phone number
-
 request type of food
-
 thankyou thank you goodbye
-
 request okay can i have the address
-
 inform doesnt matter
-
 inform im looking for a restaurant in the north part of town that serves thai food
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 reqalts how about mediterranean
-
 reqalts is there anything else
-
 thankyou thank you goodbye
-
 thankyou thank you good bye
-
 inform i dont care
-
 affirm yes
-
 null sil
-
 inform cheap
-
 affirm yes
-
 request okay whats the phone number
-
 reqalts is there anything else
-
 inform west
-
 request and the post code
-
 inform any
-
 inform west
-
 request address
-
 inform cuban
-
 request what is the phone number
-
 negate no well how about thai
-
 request and the post code
-
 reqalts how about modern european food
-
 request what is the address
-
 thankyou thank you good bye
-
 request what type of food is it
-
 inform south part of town
-
 null unintelligible
-
 inform looking for an expensive restaurant
-
 request price range
-
 request what is the phone number
-
 request address
-
 request what is the address
-
 inform any kind of food
-
 inform austrian food
-
 inform west
-
 thankyou okay thank you good bye
-
 null sil
-
 request expensive price range
-
 thankyou thank you good bye
-
 null unintelligible
-
 inform expensive
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 null unintelligible
-
 thankyou thank you good bye
-
 inform expensive
-
 affirm yes
-
 inform turkish
-
 request what is its address phone number and area
-
 reqalts what about north american type of food
-
 inform dont care
-
 reqalts how about asian oriental
-
 inform eritrean food
-
 thankyou thank you good bye
-
 inform anything
-
 inform i am looking for a moderately priced restaurant in the
-
 null sil
-
 inform im looking for corsica food
-
 thankyou thank you good bye
-
 inform west
-
 null unintelligible
-
 inform modern european food
-
 request and phone number
-
 request and whats the telephone number
-
 request address
-
 inform serving lebanese food
-
 inform malaysian food
-
 inform is there one that serves creative food
-
 request phone number
-
 inform indian food
-
 null sil
-
 null unintelligible
-
 null tvnoise
-
 inform cheap restaurant in the south part of town
-
 null unintelligible
-
 request what type of food
-
 inform im looking for a restaurant in the west part of town
-
 affirm yes
-
 thankyou thank you good bye
-
 inform noise south part of town
-
 inform center of town
-
 null okay
-
 affirm yes good afternoon im looking for a restaurant in the north
-
 request the post code
-
 reqalts whats the next one
-
 null system
-
 request what is the post code
-
 thankyou thank you good bye
-
 request can i have the phone number address and price range
-
 request whats the address of royal spice
-
 reqalts is there anything else
-
 reqalts uh how about moderately priced
-
 reqalts how about british food
-
 affirm yes
-
 reqalts is there anything else
-
 thankyou thank you good bye
-
 inform mediterranean food
-
 inform any type of food
-
 null breathing
-
 request phone number
-
 inform moderately priced restaurant
-
 request can i get the address
-
 request what is the address
-
 inform south
-
 request whats your address
-
 null unintelligible
-
 reqalts anything else
-
 inform center
-
 request can i have the phone number
-
 null sil
-
 affirm yes
-
 inform south
-
 inform corsica food
-
 request can i get the phone number and price range
-
 request phone number
-
 thankyou thank you good bye
-
 inform im looking for a eritrean restaurant
-
 thankyou thank you good bye
-
 inform any
-
 inform gastropub
-
 request tell me the phone number
-
 request and the post code
-
 inform im looking for a cheap restaurant
-
 thankyou thank you good bye
-
 thankyou thank you good bye
-
 null oh my god
-
 reqalts another restaurant
-
 null unintelligible
-
 reqalts how about mediterranean
-
 inform swedish food expensive
-
 inform expensive
-
 inform any
-
 inform i want a moderately priced restaurant that serves mediterranean food
-
 inform portuguese food
-
 request what kind of food do they serve
-
 request what part of town
-
 inform south
-
 inform im looking for a moderately priced restaurant in the west part of town
-
 request and the phone number
-
 request phone number
-
 inform i dont care
-
 thankyou thank you good bye
-
 affirm yes
-
 request whats the address
-
 inform is doesnt matter
-
 thankyou thank you good bye
-
 inform north
-
 thankyou thank you good bye
-
 reqalts anything else
-
 thankyou thank you good bye
-
 restart reset
-
 request what is the phone number
-
 inform may i have a list of venues in the west part of town
-
 negate no im looking for an expensive restaurant in the east part of town
-
 inform thai food
-
 reqalts what about indian food
-
 inform dont care
-
 null for
-
 thankyou thank you good bye
-
 request phone number
-
 inform food
-
 affirm yes
-
 thankyou ok thanks goodbye
-
 inform indian food
-
 inform cheap restaurant
-
 request whats the phone number
-
 request address
-
 affirm yes can i have
-
 request phone number
-
 inform moderate
-
 inform any kind of food
-
 request can i get the address phone number and post code
-
 reqalts anything else
-
 inform i want a french restaurant that serves expensive food
-
 inform i dont care
-
 inform i want a moderately priced restaurant in the east
-
 null done
-
 request whats the phone number
-
 request the address
-
 affirm in the center yes
-
 request whats the phone number
-
 thankyou thank you good bye
-
 inform south
-
 inform any
-
 inform is there one serving european type food
-
 thankyou thank you good bye
-
 request phone number
-
 reqalts is there anything else
-
 inform seafood
-
 reqalts how about thai food
-
 null okay can i
-
 inform asian oriental
-
 inform world food
-
 inform unintelligible restaurant
-
 inform cheap
-
 null unintelligible
-
 null noise
-
 inform im looking for something in the south part of town that serves creative
-
 inform im looking for a cheap restaurant in the south part of town
-
 inform west
-
 confirm is it moderate priced
-
 null unintelligible
-
 thankyou thank you
-
 thankyou thank you good bye
-
 inform i dont care
-
 inform i dont care
-
 negate no french food
-
