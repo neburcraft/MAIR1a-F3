@@ -8,27 +8,27 @@ Dialog act classification for the restaurant recommendation dialog system. Utter
 - Ruben Wijmenga ([ruben.wijmenga@students.uu.nl](mailto:r.wijmenga@students.uu.nl))
 
 ## TODO
-- [ ] [NAME-DATE] Address feedback on 1a
-- [ ] [NAME-DATE] Improve evaluation function
-- [ ] [NAME-DATE] Create state diagram
-- [ ] [NAME-DATE] Implement state diagram in python with state transition function
-- [ ] [NAME-DATE] Implement slot extraction - keyword matching
-- [ ] [NAME-DATE] Implement slot extraction - Lehvenstein edit distance (`python-Lehvenstein` library)
-- [ ] [NAME-DATE] Implement slot extraction - Semantic similarity via embeddings (with DistilBERT)
-- [ ] [NAME-DATE] Implement lookup function given act, filled slots and `restaurant_info_extended.csv`
-- [ ] [NAME-DATE] Implement response generation
-- [ ] [NAME-DATE] Extend dialog manager with reasoning step (6 inference rules given in assignment)
-- [ ] [NAME-DATE] Implement configurability and second comparison functionality
-- [ ] [NAME-DATE] Implement command-line interface
-- [ ] [NAME-DATE] Implement interaction logging
-- [ ] [NAME-DATE] Finalize code on cleanness, correctness, comments and README
-- [ ] [NAME-DATE] Rewrite report abstract
-- [ ] [NAME-DATE] Rewrite report introduction
-- [ ] [NAME-DATE] Rewrite report system architecture (classifier → dialog manager → reasoning; design decisions)
-- [ ] [NAME-DATE] Rewrite report experiments and results
-- [ ] [NAME-DATE] Rewrite report discussion and conclusion
-- [ ] [NAME-DATE] Update report appendices
-- [ ] [NAME-DATE] Finalize report and hand in all files
+- [ ] [Ruben|04-10] Address feedback on 1a
+- [ ] [Huub|04-10] Improve evaluation function
+- [ ] [Anouk|03-10] Create state diagram
+- [ ] [Anouk|06-10] Implement state diagram in python with state transition function
+- [ ] [Albert|06-10] Implement slot extraction - keyword matching
+- [ ] [Albert|06-10] Implement slot extraction - Lehvenstein edit distance (`python-Lehvenstein` library)
+- [ ] [Ruben|06-10] Implement slot extraction - Semantic similarity via embeddings (with DistilBERT)
+- [ ] [Ruben|08-10] Implement lookup function given act, filled slots and `restaurant_info_extended.csv`
+- [ ] [Anouk|08-10] Implement response generation
+- [ ] [Albert|08-10] Extend dialog manager with reasoning step (6 inference rules given in assignment)
+- [ ] [Huub|09-10] Implement configurability and second comparison functionality
+- [ ] [Anouk|10-10] Update command-line interface
+- [ ] [Anouk|10-10] Implement interaction logging
+- [ ] [Ruben|11-10] Finalize code on cleanness, correctness, comments and README
+- [ ] [Anouk|10-10] Rewrite report abstract
+- [ ] [Anouk|09-10] Rewrite report introduction
+- [ ] [Albert+Anouk|09-10] Rewrite report system architecture (classifier → dialog manager → reasoning; design decisions)
+- [ ] [Huub|10-10] Rewrite report experiments and results
+- [ ] [Ruben|10-10] Rewrite report discussion and conclusion
+- [ ] [Albert+Huub|10-10] Update report appendices
+- [ ] [Ruben|11-10] Finalize report and hand in all files
 
 ## Installation
 Mamba:
