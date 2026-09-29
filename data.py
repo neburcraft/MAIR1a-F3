@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 def clean_utterance(text: str) -> str:
   """Strip an utterance of all punctuation and convert to lowercase."""
-  text = text.lower()
+  text = text.lower().strip()
   return re.sub(r'[^a-z0-9\s]+', '', text)
 
 
@@ -18,6 +18,8 @@ def load_data(path="dialog_acts.dat") -> pd.DataFrame:
   with open(path) as f:
     for line in f.readlines():
       line = clean_utterance(line)
+      if len(line) == 0:
+        continue
       raw_data.append(line.split(maxsplit=1))
 
   data = pd.DataFrame(np.array(raw_data))
@@ -27,8 +29,12 @@ def load_data(path="dialog_acts.dat") -> pd.DataFrame:
 def save_data(path: str, data: pd.DataFrame) -> None:
   """Write a (act, utterance) dataframe to disk in the original .dat format"""
   with open(path, "w") as f:
-    for row in data.itertuples():
-      f.write(f"{row[1]} {row[2]}\n")
+    for i,act,utterance in data.itertuples():
+      if len(act) == 0 or len(utterance) == 0:
+        continue
+      if i > 0:
+        f.write("\n")
+      f.write(f"{act} {utterance}")
 
 
 def create_stratified_split(data: pd.DataFrame, test_size=0.15):

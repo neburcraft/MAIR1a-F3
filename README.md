@@ -10,7 +10,7 @@ Dialog act classification for the restaurant recommendation dialog system. Utter
 ## TODO
 Each TODO should be implemented in its own branch. For testing your own additions, create a new file - do not edit main.py unless you need to. Merge whenever your part is finished and say in WhatsApp if you encounter any merge conflicts.
 
-- [ ] [Ruben|04-10] Address feedback on 1a
+- [x] [Ruben|04-10] Address feedback on 1a
 - [ ] [Huub|04-10] Improve evaluation function
 - [ ] [Anouk|03-10] Create state diagram
 - [ ] [Anouk|06-10] Implement state diagram in python with state transition function
