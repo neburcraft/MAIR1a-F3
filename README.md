@@ -17,7 +17,7 @@ Each TODO should be implemented in its own branch. For testing your own addition
 - [ ] [Albert|06-10] Implement slot extraction - keyword matching
 - [ ] [Albert|06-10] Implement slot extraction - Lehvenstein edit distance (`python-Lehvenstein` library)
 - [ ] [Ruben|06-10] Implement slot extraction - Semantic similarity via embeddings (with DistilBERT)
-- [ ] [Ruben|08-10] Implement lookup function given act, filled slots and `restaurant_info_extended.csv`
+- [x] [Ruben|08-10] Implement lookup function given act, filled slots and `restaurant_info_extended.csv`
 - [ ] [Anouk|08-10] Implement response generation
 - [ ] [Albert|08-10] Extend dialog manager with reasoning step (6 inference rules given in assignment)
 - [ ] [Huub|09-10] Implement configurability and second comparison functionality
