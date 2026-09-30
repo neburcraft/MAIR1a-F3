@@ -1,0 +1,31 @@
+from typing import TypedDict
+
+import pandas as pd
+
+RestaurantInfo = TypedDict(
+    'RestaurantInfo', {
+        "restaurantname": str,
+        "pricerange": str,
+        "area": str,
+        "food": str,
+        "phone": str,
+        "addr": str,
+        "postcode": str,
+        "food quality": str,
+        "crowdedness": str,
+        "length of stay": str
+    }, total=False)
+
+
+def load_restaurants(path: str = "restaurant_info_extended.csv") -> pd.DataFrame:
+   return pd.read_csv(path)
+
+def lookup_restaurant(restaurants, requirements: RestaurantInfo, max_dist=0) -> pd.DataFrame:
+    restaurants['dist'] = 0
+    for key in requirements.keys():
+      # Add 1 (boolean True) to each restaurant that doesn't match perfectly
+      restaurants['dist'] += restaurants[key] != requirements[key]
+
+    results = restaurants[restaurants['dist'] <= max_dist]
+    # Return only the ones that match the best (all minimum distance results)
+    return results[results['dist']==results['dist'].min()]
