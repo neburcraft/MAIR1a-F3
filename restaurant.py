@@ -26,6 +26,7 @@ def lookup_restaurant(restaurants, requirements: RestaurantInfo, max_dist=0) -> 
       # Add 1 (boolean True) to each restaurant that doesn't match perfectly
       restaurants['dist'] += restaurants[key] != requirements[key]
 
-    results = restaurants[restaurants['dist'] <= max_dist]
+    if max_dist >= 0:
+        restaurants = restaurants[restaurants['dist'] <= max_dist]
     # Return only the ones that match the best (all minimum distance results)
-    return results[results['dist']==results['dist'].min()]
+    return restaurants[restaurants['dist']==restaurants['dist'].min()]
