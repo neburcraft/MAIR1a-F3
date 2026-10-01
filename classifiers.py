@@ -1,5 +1,6 @@
 """Dialog act classifiers for the restaurant recommendation dialog system."""
 
+from enum import Enum
 import re
 
 import numpy as np
@@ -16,10 +17,28 @@ MODEL_NAMES = [
   "embedded_lr", "clean_embedded_lr", "embedded_mlp", "clean_embedded_mlp",
 ]
 
+class Act(Enum):
+  NULL = "null"
+  ACK = "ack"
+  AFFIRM = "affirm"
+  BYE = "bye"
+  CONFIRM = "confirm"
+  DENY = "deny"
+  HELLO = "hello"
+  NEGATE = "negate"
+  REPEAT = "repeat"
+  REQALTS = "reqalts"
+  REQMORE = "reqmore"
+  REQUEST = "request"
+  RESTART = "restart"
+  THANKYOU = "thankyou"
+  INFORM = "inform"
+
+
 class Classifier:
   """Common interface every dialog act classifier implements"""
-  def run(self, msg) -> str:
-    return "none"
+  def run(self, msg) -> Act:
+    return Act.NULL
   
   def __str__(self) -> str:
     return "BaseClassifier"
@@ -28,35 +47,35 @@ class Classifier:
 class RuleClassifier(Classifier):
   """Keyword-based baseline: matches chosen keywords per dialog act"""
   
-  KEYWORDS: dict[str, list[str]] = {
-    "ack": ["okay", "im good", "thatll do", "good", "kay", "ok", "fine", "sure", "alright"],
-    "affirm": ["yes", "right", "correct", "indeed", "true", "yeah", "perfect", "excellent"],
-    "bye": ["goodbye", "good bye", "bye", "thats all", "done", "finished"],
-    "confirm": ["is it", "is that", "are they", "does it", "does that", "do they", "has it", "has that", "have they"],
-    "deny": ["dont", "incorrect", "false", "not", "wrong"],
-    "hello": ["hi", "hello", "halo", "good morning", "goodmorning", "good afternoon", "goodafternoon", "good evening", "goodevening"],
-    "negate": ["no"],
-    "repeat": ["back", "repeat", "again"],
-    "reqalts": ["anything else", "anything different", "what about", "how about", "instead"],
-    "reqmore": ["more"],
-    "request": ["whats", "what is", "could", "can", "what", "address", "phone number", "price", "type", "area", "neighborhood", "post code", "postal code"],
-    "restart": ["reset", "start over", "start again"],
-    "thankyou": ["thank you", "thanks", "thank"],
-    "null": ["uh", "unintelligible", "um", "cough", "noise", "silence", "laughter", "oh", "sil", "sorry", "breathing", "tvnoise"]
+  KEYWORDS: dict[Act, list[str]] = {
+    Act.ACK: ["okay", "im good", "thatll do", "good", "kay", "ok", "fine", "sure", "alright"],
+    Act.AFFIRM: ["yes", "right", "correct", "indeed", "true", "yeah", "perfect", "excellent"],
+    Act.BYE: ["goodbye", "good bye", "bye", "thats all", "done", "finished"],
+    Act.CONFIRM: ["is it", "is that", "are they", "does it", "does that", "do they", "has it", "has that", "have they"],
+    Act.DENY: ["dont", "incorrect", "false", "not", "wrong"],
+    Act.HELLO: ["hi", "hello", "halo", "good morning", "goodmorning", "good afternoon", "goodafternoon", "good evening", "goodevening"],
+    Act.NEGATE: ["no"],
+    Act.REPEAT: ["back", "repeat", "again"],
+    Act.REQALTS: ["anything else", "anything different", "what about", "how about", "instead"],
+    Act.REQMORE: ["more"],
+    Act.REQUEST: ["whats", "what is", "could", "can", "what", "address", "phone number", "price", "type", "area", "neighborhood", "post code", "postal code"],
+    Act.RESTART: ["reset", "start over", "start again"],
+    Act.THANKYOU: ["thank you", "thanks", "thank"],
+    Act.NULL: ["uh", "unintelligible", "um", "cough", "noise", "silence", "laughter", "oh", "sil", "sorry", "breathing", "tvnoise"]
   }
 
-  def run(self, msg) -> str:
+  def run(self, msg) -> Act:
     # Acts sorted in order of specificity
-    for act in ["restart", "repeat", "reqalts", "request", "reqmore", "confirm", "thankyou", "hello", "bye", "affirm", "deny", "ack", "negate"]:
+    for act in [Act.RESTART, Act.REPEAT, Act.REQALTS, Act.REQUEST, Act.REQMORE, Act.CONFIRM, Act.THANKYOU, Act.HELLO, Act.BYE, Act.AFFIRM, Act.DENY, Act.ACK, Act.NEGATE]:
       # Looking for separate words, so preceded by space or nothing and ending in space or nothing (so 'noise' is not classified as 'no')
       if any(re.search(f"(^|\\s){kw}(\\s|$)", msg) for kw in self.KEYWORDS[act]):
         return act
 
     # The 'null' keywords are exact message matches, so they don't need re.search
-    if msg in self.KEYWORDS["null"]:
-      return "null"
+    if msg in self.KEYWORDS[Act.NULL]:
+      return Act.NULL
 
-    return "inform"
+    return Act.INFORM
   
   def __str__(self) -> str:
     return "RuleClassifier"
@@ -94,9 +113,9 @@ class LRClassifier(Classifier):
     self.model.fit(X, np.concatenate((["null"], y_train)))
     return self
 
-  def run(self, msg) -> str:
+  def run(self, msg) -> Act:
     vec = self.vectorizer.transform([self._clean_msg(msg)])
-    return self.model.predict(vec)[0]
+    return Act[self.model.predict(vec)[0].upper()]
 
 
 class MLPClassifier(Classifier):
@@ -125,9 +144,9 @@ class MLPClassifier(Classifier):
     self.model.fit(X, np.concatenate((["null"], y_train)))
     return self
 
-  def run(self, msg) -> str:
+  def run(self, msg) -> Act:
     vec = self.vectorizer.transform([self._clean_msg(msg)])
-    return self.model.predict(vec)[0]
+    return Act[self.model.predict(vec)[0].upper()]
   
 
 class FrozenEmbeddingEncoder:
@@ -195,8 +214,8 @@ class EmbeddedLRClassifier(Classifier):
     embeddings = self.embedder.encode(utterances)
     return self.model.predict(embeddings)
 
-  def run(self, msg):
-    return self.predict([msg])[0]
+  def run(self, msg) -> Act:
+    return Act[self.predict([msg])[0].upper()]
 
 
 class EmbeddedMLPClassifier(Classifier):
@@ -218,8 +237,8 @@ class EmbeddedMLPClassifier(Classifier):
     embeddings = self.embedder.encode(utterances)
     return self.model.predict(embeddings)
 
-  def run(self, msg) -> str:
-    return self.predict([msg])[0]
+  def run(self, msg) -> Act:
+    return Act[self.predict([msg])[0].upper()]
 
 
 def accuracy(classifier: Classifier, X_test, y_test, show_incorrect=0) -> float:
