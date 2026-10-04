@@ -2,6 +2,7 @@ from enum import Enum
 
 from classifiers import Act, Classifier, RuleClassifier
 from data import clean_utterance
+from reasoning import extract_additional_requirements, explain_recommendation, filter_candidates
 from responses import PROMPTS
 from restaurant import RestaurantInfo, load_restaurants, lookup_restaurant
 
@@ -17,10 +18,11 @@ class State(Enum):
   FOOD_CONFIRM = 5
   PRICE_ASK = 6
   PRICE_CONFIRM = 7
-  SUGGEST_REST = 8
-  NO_REST = 9
-  INFORM_REST = 10
-  FINISHED = 11
+  ADDITIONAL_ASK = 8
+  SUGGEST_REST = 9
+  NO_REST = 10
+  INFORM_REST = 11
+  FINISHED = 12
 
 
 class Suggestion:
@@ -83,6 +85,7 @@ class Manager:
   state: State
   preferences: RestaurantInfo
   errors: dict[str, Suggestion]
+  additional_requirements: dict[str, bool]
   prompt: str
   current = None  # the restaurant we are talking about
   shown = None  # names we already suggested in this search
@@ -92,6 +95,7 @@ class Manager:
     self.state = State.WELCOME
     self.preferences = RestaurantInfo()
     self.errors = {}
+    self.additional_requirements = {}
     self.prompt = ""
     
 
@@ -164,18 +168,35 @@ class Manager:
       if self.errors.get("pricerange"):
         return State.PRICE_CONFIRM, PROMPTS["ask_confirm"].format(*self.errors["pricerange"])
       return State.PRICE_ASK, PROMPTS["price_ask_invalid"].format(*self.errors["pricerange"])
-    # All preference information gathered, find suitable restaurants
-    rest = load_restaurants()
-    options = lookup_restaurant(rest, self.preferences, max_dist=-1)
-    print(f"\033[93m{options}\033[0m")
+    # Base preferences are complete. Ask about the four derived properties
+    # before choosing the final restaurant.
+    return State.ADDITIONAL_ASK, PROMPTS["additional_ask"]
+
+  def _recommend(self) -> tuple[State, str]:
+    options = lookup_restaurant(load_restaurants(), self.preferences, max_dist=-1)
+    options = filter_candidates(options, self.additional_requirements)
     # nothing found, so there is nothing to suggest
     if len(options) == 0:
       return State.NO_REST, PROMPTS["no_rest"]
     # Choose a random suitable restaurant and suggest it to the user
     suggested: RestaurantInfo = options.sample(1).iloc[0].to_dict()
+    self.current = suggested
+    self.shown = {suggested["restaurantname"]}
     response = PROMPTS["suggest"].format(suggested["restaurantname"])
-    # TODO: Implement every state after this
+    explanation = explain_recommendation(suggested, self.additional_requirements)
+    if explanation:
+      response += " " + explanation
     return State.SUGGEST_REST, response
+
+  def _from_additional_ask(self, act: Act, utterance: str) -> tuple[State, str]:
+    requirements = extract_additional_requirements(utterance)
+    if requirements:
+      self.additional_requirements = requirements
+      return self._recommend()
+    if act == Act.NEGATE or utterance in ["no", "none", "no preference"]:
+      self.additional_requirements = {}
+      return self._recommend()
+    return State.ADDITIONAL_ASK, PROMPTS["additional_ask_invalid"]
 
 
   def _from_price_confirm(self, act: Act, utterance: str) -> tuple[State, str]:
@@ -189,15 +210,16 @@ class Manager:
   def _lookup(self) -> list[RestaurantInfo]:
     # the same search as in _from_price_ask, but as a plain list we can walk through
     options = lookup_restaurant(load_restaurants(), self.preferences, max_dist=-1)
+    options = filter_candidates(options, self.additional_requirements)
     return options.to_dict("records")
 
   def _start_search(self, act: Act, utterance: str) -> tuple[State, str]:
-    # forget what we showed and let _from_price_ask suggest a restaurant again
+    # Forget what we showed and suggest again with the same extra requirements.
     self.current = None
     self.shown = None
     if not self._lookup():
       return State.NO_REST, PROMPTS["no_rest"]
-    return self._from_price_ask(act, utterance)
+    return self._recommend()
 
   def _current_restaurant(self) -> RestaurantInfo:
     # _from_price_ask does not store which restaurant it picked, but its name
@@ -224,7 +246,11 @@ class Manager:
         return State.NO_REST, PROMPTS["no_more_rest"]
       self.current = unseen[0]
       self.shown.add(self.current["restaurantname"])
-      return State.SUGGEST_REST, PROMPTS["suggest"].format(self.current["restaurantname"])
+      response = PROMPTS["suggest"].format(self.current["restaurantname"])
+      explanation = explain_recommendation(self.current, self.additional_requirements)
+      if explanation:
+        response += " " + explanation
+      return State.SUGGEST_REST, response
     # user asks for details
     if act == Act.REQUEST:
       return self._from_inform_rest(act, utterance)
@@ -295,6 +321,7 @@ class Manager:
       case State.FOOD_CONFIRM: state, prompt = self._from_food_confirm(act, utterance)
       case State.PRICE_ASK: state, prompt = self._from_price_ask(act, utterance)
       case State.PRICE_CONFIRM: state, prompt = self._from_price_confirm(act, utterance)
+      case State.ADDITIONAL_ASK: state, prompt = self._from_additional_ask(act, utterance)
       case State.SUGGEST_REST: state, prompt = self._from_suggest_rest(act, utterance)
       case State.INFORM_REST: state, prompt = self._from_inform_rest(act, utterance)
       case State.NO_REST: state, prompt = self._from_no_rest(act, utterance)
