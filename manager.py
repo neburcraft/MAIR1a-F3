@@ -165,11 +165,18 @@ class Manager:
     rest = load_restaurants()
     options = lookup_restaurant(rest, self.preferences, max_dist=-1)
     print(f"\033[93m{options}\033[0m")
-    # Choose a random suitable restaurant and suggest it to the user
-    suggested: RestaurantInfo = options.sample(1).iloc[0].to_dict()
-    response = PROMPTS["suggest"].format(suggested["restaurantname"])
-    # TODO: Implement every state after this
+
+    #aangepast want stel er wordt niks gevonden dan
+    # dan valt er ook niks voor te stellen
+    if len(options) == 0:
+      self.options = []
+      return State.NO_REST, PROMPTS["no_rest"]
+    # eenmaal schudden en de hele lijst bewaren, reqalts loopt hier later doorheen
+    self.options = options.sample(frac=1).to_dict("records")
+    self.option_index = 0
+    response = PROMPTS["suggest"].format(self.options[0]["restaurantname"])
     return State.SUGGEST_REST, response
+    
 
   def _from_price_confirm(self, act: Act, utterance: str) -> tuple[State, str]:
     # Functions identically to area_confirm, but for pricerange
@@ -190,6 +197,10 @@ class Manager:
     # _from_<state>() functions
     if act in [Act.NULL, Act.REPEAT]:
       return self.state, self.prompt
+
+    # bye kan altijd, het maakt niet uit in welke state we zitten, dus dan altijd finishen
+    if act == Act.BYE:
+      return State.FINISHED, PROMPTS["goodbye"]
 
     # Request preferences. TODO: Implement the rest of the states and think about
     # speech-acts that influence the flow in ways that are not yet accounted for
@@ -219,6 +230,7 @@ class Manager:
       clean_inp = clean_utterance(inp)
       act = self.classifier.run(clean_inp)
       self.state, self.prompt = self.transition_state(act, clean_inp)
+    print(self.prompt)
 
 
 if __name__ == "__main__":
