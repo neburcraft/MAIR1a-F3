@@ -298,6 +298,9 @@ class Manager:
       case State.FOOD_CONFIRM: state, prompt = self._from_food_confirm(act, utterance)
       case State.PRICE_ASK: state, prompt = self._from_price_ask(act, utterance)
       case State.PRICE_CONFIRM: state, prompt = self._from_price_confirm(act, utterance)
+      case State.SUGGEST_REST: state, prompt = self._from_suggest_rest(act, utterance)
+      case State.INFORM_REST: state, prompt = self._from_inform_rest(act, utterance)
+      case State.NO_REST: state, prompt = self._from_no_rest(act, utterance)
       case _: raise NotImplementedError()
 
     print(f"  \033[93mDEBUG: new preferences{self.preferences}\033[0m")
