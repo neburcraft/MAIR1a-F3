@@ -168,18 +168,15 @@ class Manager:
     rest = load_restaurants()
     options = lookup_restaurant(rest, self.preferences, max_dist=-1)
     print(f"\033[93m{options}\033[0m")
-
-    #aangepast want stel er wordt niks gevonden dan
-    # dan valt er ook niks voor te stellen
+    # nothing found, so there is nothing to suggest
     if len(options) == 0:
-      self.options = []
       return State.NO_REST, PROMPTS["no_rest"]
-    # eenmaal schudden en de hele lijst bewaren, reqalts loopt hier later doorheen
-    self.options = options.sample(frac=1).to_dict("records")
-    self.option_index = 0
-    response = PROMPTS["suggest"].format(self.options[0]["restaurantname"])
+    # Choose a random suitable restaurant and suggest it to the user
+    suggested: RestaurantInfo = options.sample(1).iloc[0].to_dict()
+    response = PROMPTS["suggest"].format(suggested["restaurantname"])
+    # TODO: Implement every state after this
     return State.SUGGEST_REST, response
-    
+
 
   def _from_price_confirm(self, act: Act, utterance: str) -> tuple[State, str]:
     # Functions identically to area_confirm, but for pricerange
