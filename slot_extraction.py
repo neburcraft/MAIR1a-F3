@@ -10,6 +10,7 @@ import re
 from pathlib import Path
 
 import pandas as pd
+from Levenshtein import distance as levenshtein_distance
 
 from restaurant import RestaurantInfo
 
@@ -37,6 +38,14 @@ PRICE_ALIASES = {
   "moderately priced": "moderate",
   "moderate price": "moderate",
   "mid priced": "moderate",
+}
+
+# Common words are not useful typo candidates.  Ignoring them also prevents a
+# short word such as "the" from being mapped to an unrelated cuisine.
+STOPWORDS = {
+  "a", "an", "and", "any", "at", "be", "food", "for", "i", "in", "is",
+  "it", "like", "looking", "me", "of", "please", "priced", "restaurant",
+  "serving", "something", "the", "to", "want", "with", "would",
 }
 
 
@@ -100,6 +109,66 @@ def extract_keywords(
   return result
 
 
+def _phrases(text: str, size: int) -> list[str]:
+  """Return candidate phrases containing ``size`` words."""
+  words = re.findall(r"[a-z]+", text.lower())
+  result = []
+  for start in range(len(words) - size + 1):
+    phrase_words = words[start:start + size]
+    if all(word in STOPWORDS for word in phrase_words):
+      continue
+    result.append(" ".join(phrase_words))
+  return result
+
+
+def _acceptable_distance(candidate: str, value: str, distance: int) -> bool:
+  """Use a small length-dependent threshold to avoid random corrections."""
+  longest = max(len(candidate), len(value))
+  max_edits = 1 if longest <= 5 else 2 if longest <= 10 else 3
+  return distance <= max_edits and distance / longest <= 0.34
+
+
+def _closest_value(
+    utterance: str,
+    values: tuple[str, ...],
+) -> Suggestion | None:
+  """Find the best plausible typo correction for one slot."""
+  best: tuple[int, str, str] | None = None
+  for value in values:
+    word_count = len(value.split())
+    for candidate in _phrases(utterance, word_count):
+      if candidate == value:
+        continue
+      distance = levenshtein_distance(candidate, value)
+      if not _acceptable_distance(candidate, value, distance):
+        continue
+      if best is None or distance < best[0]:
+        best = (distance, candidate, value)
+
+  if best is None:
+    return None
+  return Suggestion(best[1], best[2])
+
+
+def extract_with_levenshtein(
+    utterance: str,
+    ontology: dict[str, tuple[str, ...]] | None = None,
+) -> tuple[RestaurantInfo, dict[str, Suggestion]]:
+  """Run exact matching first, then suggest close spellings for missing slots."""
+  values = ontology or load_ontology()
+  exact = extract_keywords(utterance, values)
+  suggestions: dict[str, Suggestion] = {}
+
+  for slot in ("area", "food", "pricerange"):
+    if slot in exact:
+      continue
+    suggestion = _closest_value(utterance, values[slot])
+    if suggestion is not None:
+      suggestions[slot] = suggestion
+
+  return exact, suggestions
+
+
 def slot_extraction(
     act,
     utterance: str,
@@ -112,4 +181,4 @@ def slot_extraction(
   can also contain a new value.
   """
   del act
-  return extract_keywords(utterance, ontology), {}
+  return extract_with_levenshtein(utterance, ontology)
