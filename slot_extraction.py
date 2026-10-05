@@ -33,6 +33,7 @@ class Suggestion:
 AREA_VALUES = ("north", "east", "south", "west", "centre")
 PRICE_VALUES = ("cheap", "moderate", "expensive")
 
+# NOTE: See notes from albert-slot-keyword as well
 AREA_ALIASES = {"center": "centre", "central": "centre"}
 PRICE_ALIASES = {
   "moderately priced": "moderate",
@@ -42,6 +43,8 @@ PRICE_ALIASES = {
 
 # Common words are not useful typo candidates.  Ignoring them also prevents a
 # short word such as "the" from being mapped to an unrelated cuisine.
+# NOTE: the word pricey (expensive) might also be ignored if 'priced'
+#       is included in this list, which we don't want?
 STOPWORDS = {
   "a", "an", "and", "any", "at", "be", "food", "for", "i", "in", "is",
   "it", "like", "looking", "me", "of", "please", "priced", "restaurant",
@@ -111,6 +114,8 @@ def extract_keywords(
 
 def _phrases(text: str, size: int) -> list[str]:
   """Return candidate phrases containing ``size`` words."""
+  # NOTE: This is overkill. Considering the text is already cleaned, just do
+  #       `words = text.split()`
   words = re.findall(r"[a-z]+", text.lower())
   result = []
   for start in range(len(words) - size + 1):
@@ -124,6 +129,7 @@ def _phrases(text: str, size: int) -> list[str]:
 def _acceptable_distance(candidate: str, value: str, distance: int) -> bool:
   """Use a small length-dependent threshold to avoid random corrections."""
   longest = max(len(candidate), len(value))
+  # NOTE: This 'and' seems a bit double, would just `longest // distance >= 4` not be enough?
   max_edits = 1 if longest <= 5 else 2 if longest <= 10 else 3
   return distance <= max_edits and distance / longest <= 0.34
 
@@ -135,8 +141,11 @@ def _closest_value(
   """Find the best plausible typo correction for one slot."""
   best: tuple[int, str, str] | None = None
   for value in values:
+    # NOTE: This doesn't work with typing errors such as 'moderneuropean' where they missed a space
     word_count = len(value.split())
     for candidate in _phrases(utterance, word_count):
+      # NOTE: This will never pass, because `extract_with_levenshtein` already
+      #       checks for exact matches first, right?
       if candidate == value:
         continue
       distance = levenshtein_distance(candidate, value)

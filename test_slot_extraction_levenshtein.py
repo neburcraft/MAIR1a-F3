@@ -1,3 +1,4 @@
+# NOTE: See note on test files from albert-slot-keyword
 import unittest
 
 from slot_extraction import extract_with_levenshtein, load_ontology
