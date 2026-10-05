@@ -84,6 +84,8 @@ class Manager:
   preferences: RestaurantInfo
   errors: dict[str, Suggestion]
   prompt: str
+  # NOTE: Define as non-initialized typed attributes
+  # i.e. `current: Option[RestaurantInfo]` and `shown: set[str]`
   current = None  # the restaurant we are talking about
   shown = None  # names we already suggested in this search
 
@@ -93,6 +95,8 @@ class Manager:
     self.preferences = RestaurantInfo()
     self.errors = {}
     self.prompt = ""
+    # NOTE: initialize attributes here instead
+    # i.e. `self.current = None` and `self.show = set()`
     
 
   def _update_preferences(self, act: Act, utterance: str):
@@ -105,6 +109,7 @@ class Manager:
         self.errors[key] = err
 
   def _from_welcome(self, act: Act, utterance: str) -> tuple[State, str]:
+    # TODO for Ruben (optional) - change behevior to not be _from_welcome but just _welcome
     # Each state (rectangle in the diagram) has a _from_<state> function
     # that takes the speech act and utterance as parameters
     # and returns the next state and the message to the user
@@ -174,7 +179,6 @@ class Manager:
     # Choose a random suitable restaurant and suggest it to the user
     suggested: RestaurantInfo = options.sample(1).iloc[0].to_dict()
     response = PROMPTS["suggest"].format(suggested["restaurantname"])
-    # TODO: Implement every state after this
     return State.SUGGEST_REST, response
 
 
@@ -200,6 +204,8 @@ class Manager:
     return self._from_price_ask(act, utterance)
 
   def _current_restaurant(self) -> RestaurantInfo:
+    # NOTE: This is a very hacky solution, the better alternative would be to
+    #       edit the _from_price_ask function so we don't need this function
     # _from_price_ask does not store which restaurant it picked, but its name
     # is in the last thing we said, so find it there the first time. This looks
     # at all restaurants, because the preferences may already have changed
@@ -211,6 +217,7 @@ class Manager:
     return self.current
 
   def _from_suggest_rest(self, act: Act, utterance: str) -> tuple[State, str]:
+    # NOTE: considering the previous note, this can be removed (just using self.current in this function)
     current = self._current_restaurant()
     # user wants something else
     if act == Act.REQALTS:
@@ -234,11 +241,13 @@ class Manager:
     return State.SUGGEST_REST, PROMPTS["suggest"].format(current["restaurantname"])
 
   def _from_inform_rest(self, act: Act, utterance: str) -> tuple[State, str]:
-    rest = self._current_restaurant()
+    rest = self._current_restaurant() # NOTE: no longer needed when self.current is always up-to-date
     name = rest["restaurantname"]
+    # NOTE: Act.BYE will never be encountered here, als it is already accounted for in the main loop
     if act in [Act.THANKYOU, Act.BYE]:
       return State.FINISHED, PROMPTS["goodbye"]
     # the temporary slot extraction cannot tell what was asked, so look for words
+    # TODO: change this once slot extraction is implemented - Albert should keep this in mind when implementing
     answers = []
     if "address" in utterance:
       answers.append(PROMPTS["info_addr"].format(name, rest["addr"]))
@@ -249,15 +258,21 @@ class Manager:
     if "food" in utterance or "type" in utterance:
       answers.append(PROMPTS["info_food"].format(name, rest["food"]))
     # nothing recognised, so ask what they want to know
+    # NOTE: I would expect that all information is given if the user didn't ask for anythin explicitly
     if not answers:
       return State.INFORM_REST, PROMPTS["info_ask"].format(name)
     return State.INFORM_REST, " ".join(answers)
 
   def _from_no_rest(self, act: Act, utterance: str) -> tuple[State, str]:
+    # NOTE: Act.BYE will never be encountered here, als it is already accounted for in the main loop
     if act in [Act.THANKYOU, Act.BYE]:
       return State.FINISHED, PROMPTS["goodbye"]
     # new information can make restaurants available that we have not shown yet
     if act in [Act.INFORM, Act.REQALTS]:
+      # NOTE: This implementation does not allow for suggestions when a word is not recognized
+      #       Ruben will change the implementation of the suggestions to account for this
+      # NOTE: Ideally, self.shown should never be None so you don't need this hack.
+      #       Have it be an empty set() instead on initialization and clear
       unseen = [o for o in self._lookup() if o["restaurantname"] not in (self.shown or set())]
       if unseen:
         return self._start_search(act, utterance)
@@ -277,6 +292,7 @@ class Manager:
     if act in [Act.NULL, Act.REPEAT]:
       return self.state, self.prompt
 
+    # NOTE: keep code comments in English :)
     # bye kan altijd, het maakt niet uit in welke state we zitten, dus dan altijd finishen
     if act == Act.BYE:
       return State.FINISHED, PROMPTS["goodbye"]
