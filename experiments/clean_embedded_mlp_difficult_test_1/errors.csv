@@ -1,0 +1,5 @@
+utterance,act,prediction,correct
+"okay thanks, bye",bye,thankyou,False
+I wanna try something new.,reqalts,inform,False
+Repeat the phone number,repeat,request,False
+Is there a double 0 in the phone number?,confirm,request,False

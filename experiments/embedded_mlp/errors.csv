@@ -1,0 +1,92 @@
+utterance,act,prediction,correct
+what about chinese food,reqalts,inform,False
+where,request,null,False
+im looking yes a restaurant in the east of town,affirm,inform,False
+what about turkey food,reqalts,inform,False
+tell me number,null,request,False
+hi i want to serve a cheap restaurant that serves traditional food,hello,inform,False
+just fuck every time i do it and this moron says that its indian sucks,inform,confirm,False
+expensive price range,request,inform,False
+do they serve korean food,confirm,inform,False
+what about a moderately priced restaurant in the south part of town,reqalts,inform,False
+is there another restaurant in the west of town,reqalts,inform,False
+i dont want vietnamese food,deny,inform,False
+okay just pick one for me then,ack,deny,False
+type of food,request,inform,False
+i want another restaurant that serves spanish food,reqalts,inform,False
+hi im looking for a place that serves scandinavian food,hello,inform,False
+okay and um thank you and good bye,bye,thankyou,False
+what about thai food,reqalts,inform,False
+ooh thank you good bye,bye,thankyou,False
+are there any restaurants in the south part of town that are expensive,reqalts,inform,False
+hello im looking for a cheap restaurant in the west part of town,hello,inform,False
+what do they serve,request,null,False
+is there a restaurant in the south part of town that serves italian food,reqalts,inform,False
+thats correct gastropub food,affirm,inform,False
+is there any restaurant,reqalts,inform,False
+in appleton wiscon,null,inform,False
+how european food,reqalts,inform,False
+yes id like an expensive restaurant in the east part of town,affirm,inform,False
+are there any other cheap restaurants in the west part of town,reqalts,inform,False
+type of food,request,inform,False
+is there a,confirm,null,False
+what about chinese food,reqalts,inform,False
+any price,request,inform,False
+free,null,inform,False
+in the area,request,inform,False
+what about european food,reqalts,inform,False
+cant,null,inform,False
+is there a restaurant that serves vietnamese food,reqalts,inform,False
+type of food,request,inform,False
+what about indian food,reqalts,inform,False
+type of food,request,inform,False
+looking for a,null,inform,False
+is there a cheap restaurant that serves vietnamese food,confirm,inform,False
+is there a restaurant serving modern european food,reqalts,inform,False
+what about asian oriental food,reqalts,inform,False
+expen,null,inform,False
+does it serve,request,confirm,False
+type of food served,request,inform,False
+no dont care,negate,inform,False
+what about european food,reqalts,inform,False
+yeah im looking for a restaurant serving kosher food,affirm,inform,False
+is there a thai restaurant in the west part of town,confirm,inform,False
+type of food,request,inform,False
+what about chinese food,reqalts,inform,False
+how about english food in the north part of town,reqalts,inform,False
+what about vietnamese food,reqalts,inform,False
+type of food,request,inform,False
+type of food,request,inform,False
+uh im not interested in the type,inform,null,False
+kay um,ack,inform,False
+how about in the west area,inform,reqalts,False
+type of food,request,inform,False
+what about chinese food,reqalts,inform,False
+uh yes restaurant that serves danish food,affirm,inform,False
+hi im looking for mexican food,hello,inform,False
+mmhm,affirm,null,False
+are there any restaurants serving turkish food,reqalts,inform,False
+yes uh turkish food in my area,inform,affirm,False
+type of food,request,inform,False
+any more,reqalts,deny,False
+what about chinese food,reqalts,inform,False
+type of food,request,inform,False
+hi im looking for a rerestaurant that serves cuban food,hello,inform,False
+what about indian food,reqalts,inform,False
+okay do you have the address for da vinci pizzeria,request,inform,False
+type of food,request,inform,False
+is there a thai restaurant in the west of town,confirm,inform,False
+yes a restaurant in the east of town unintelligible serving canap,affirm,inform,False
+dress,null,inform,False
+ah yes im looking for persian food and i dont care about the pri,affirm,inform,False
+are there any restaurants serving indian food,reqalts,inform,False
+i dont want that give me another spanish choice,reqalts,deny,False
+okay that will be all thank you and good bye,thankyou,bye,False
+type of food,request,inform,False
+expensive price range,request,inform,False
+what about north american type of food,reqalts,inform,False
+whats the next one,reqalts,null,False
+uh how about moderately priced,reqalts,inform,False
+another restaurant,reqalts,inform,False
+what about indian food,reqalts,inform,False
+ok thanks goodbye,thankyou,bye,False

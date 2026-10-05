@@ -1,0 +1,17 @@
+utterance,act,prediction,correct
+"yeah, that sounds right",affirm,affirm,True
+"nope, not that one",negate,negate,True
+what's the address again?,request,request,True
+any other options?,reqalts,reqalts,True
+"actually, let's start over",restart,restart,True
+"okay thanks, bye",bye,thankyou,False
+sth. more expensive plz.,inform,inform,True
+Repeat that plz.,repeat,repeat,True
+Which direction is it in the city?,request,request,True
+Repeat what you said please.,repeat,repeat,True
+Chinese food.,inform,inform,True
+Hangzhoucai please.,inform,inform,True
+I love Sushi. Recommend.,inform,inform,True
+I wanna try something new.,reqalts,inform,False
+Repeat the phone number,repeat,request,False
+Is there a double 0 in the phone number?,confirm,request,False

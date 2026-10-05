@@ -1,0 +1,50 @@
+utterance,act,prediction,correct
+price does not matter,inform,request,False
+im looking yes a restaurant in the east of town,affirm,inform,False
+noise hungarian,inform,null,False
+tell me number,null,request,False
+any anything else,inform,reqalts,False
+any thing else,null,reqalts,False
+what about a moderately priced restaurant in the south part of town,reqalts,inform,False
+i dont want vietnamese food,deny,inform,False
+i want another restaurant that serves spanish food,reqalts,inform,False
+ooh thank you good bye,bye,thankyou,False
+hello im looking for a cheap restaurant in the west part of town,hello,inform,False
+is there one in the cheap price range,inform,request,False
+thats correct gastropub food,affirm,inform,False
+in appleton wiscon,null,inform,False
+how european food,reqalts,inform,False
+is there a,confirm,null,False
+what about asian food,inform,reqalts,False
+yes i want the phone number,affirm,request,False
+any price,request,inform,False
+how bout che italian food,inform,reqalts,False
+looking for a,null,inform,False
+is there a cheap restaurant that serves vietnamese food,confirm,reqalts,False
+okay uh thank you and good bye,thankyou,bye,False
+does it serve,request,confirm,False
+no dont care,negate,inform,False
+dont care whats the phone number,inform,request,False
+is there an expensive restaurant that serves korean food,inform,reqalts,False
+yeah im looking for a restaurant serving kosher food,affirm,inform,False
+is there a thai restaurant in the west part of town,confirm,inform,False
+is there a restaurant serving indian type of food,inform,reqalts,False
+uh im not interested in the type,inform,null,False
+how about in the west area,inform,reqalts,False
+what about irish food,inform,reqalts,False
+what about mediterranean food,inform,reqalts,False
+mmhm,affirm,null,False
+are there any restaurants serving turkish food,reqalts,inform,False
+what about a spanish restuarant,inform,reqalts,False
+yes uh turkish food in my area,inform,affirm,False
+what about modern european food,inform,reqalts,False
+what do you recommend,null,reqalts,False
+hi im looking for a rerestaurant that serves cuban food,hello,inform,False
+is there a thai restaurant in the west of town,confirm,inform,False
+yes a restaurant in the east of town unintelligible serving canap,affirm,negate,False
+ah yes im looking for persian food and i dont care about the pri,affirm,inform,False
+is that the north part of town south part of town,confirm,inform,False
+i dont want that give me another spanish choice,reqalts,deny,False
+okay that will be all thank you and good bye,thankyou,bye,False
+reset,restart,null,False
+ok thanks goodbye,thankyou,bye,False

@@ -1,0 +1,54 @@
+utterance,act,prediction,correct
+how about a castro pub,reqalts,null,False
+price does not matter,inform,request,False
+tell me number,null,request,False
+what is available in the ar,null,request,False
+just fuck every time i do it and this moron says that its indian sucks,inform,null,False
+either one,inform,null,False
+any anything else,inform,reqalts,False
+what about a moderately priced restaurant in the south part of town,reqalts,inform,False
+part of town that serves asian food,inform,request,False
+i dont want vietnamese food,deny,inform,False
+okay just pick one for me then,ack,null,False
+hi im looking for a place that serves scandinavian food,hello,inform,False
+um im trying to find a restaurant in the unintelligible of town,inform,null,False
+ooh thank you good bye,bye,thankyou,False
+are there any restaurants in the south part of town that are expensive,reqalts,inform,False
+thats correct gastropub food,affirm,inform,False
+how european food,reqalts,inform,False
+does it serve baskey food,confirm,request,False
+is there a,confirm,null,False
+is there a jamaican restaurant,confirm,inform,False
+awesome um whats the number,request,null,False
+is there any,null,inform,False
+is there any that serve european food,inform,confirm,False
+chinses,inform,null,False
+how bout che italian food,inform,reqalts,False
+looking for a,null,inform,False
+restaurants,inform,null,False
+is there a cheap restaurant that serves vietnamese food,confirm,inform,False
+okay change restaurant,inform,ack,False
+does it serve,request,null,False
+does it serve baskaye food,confirm,request,False
+dont care whats the phone number,inform,request,False
+is there a restaurant serving indian type of food,inform,reqalts,False
+anything is fine,inform,reqalts,False
+uh im not interested in the type,inform,null,False
+no there is no such venue how about portuguese food,negate,reqalts,False
+how about in the west area,inform,reqalts,False
+what about irish food,inform,reqalts,False
+tailand,inform,null,False
+how about indians,reqalts,null,False
+um doesnt mater,inform,null,False
+mmhm,affirm,null,False
+what about a spanish restuarant,inform,reqalts,False
+yes uh turkish food in my area,inform,affirm,False
+any more,reqalts,inform,False
+i dont care about prices,inform,null,False
+i want a restaurant that is cheap and,inform,confirm,False
+that is all,null,confirm,False
+ah yes im looking for persian food and i dont care about the pri,affirm,inform,False
+is that the north part of town south part of town,confirm,inform,False
+okay that will be all thank you and good bye,thankyou,bye,False
+whats the next one,reqalts,null,False
+ok thanks goodbye,thankyou,bye,False

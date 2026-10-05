@@ -1,0 +1,2 @@
+experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
+clean_embedded_mlp,Frozen embeddings + MLP - grouped split,3748,0.9773212379935966,0.6920807199922522,0.7156109055566632,0.9727184458535468

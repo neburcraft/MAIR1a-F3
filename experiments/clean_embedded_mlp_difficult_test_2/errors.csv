@@ -1,0 +1,11 @@
+utterance,act,prediction,correct
+I do not want to try this one,deny,inform,False
+I need this restaurant address and recommend me another restaurant,reqalts,request,False
+Recommend me three restaurants which are all with good food quality,reqalts,inform,False
+What time I can go to the restaurant that is not crowded,request,inform,False
+"We need to stay from 17 to 20 o'clock, is it possible?",confirm,null,False
+"BTW, is the restaurant not crowded at 18?",confirm,request,False
+We can to go the restaurananant you recommend. Thank you.,thankyou,inform,False
+Just please give me three names that are Italian ones.,reqalts,inform,False
+"Okay, we will try the first one.",affirm,null,False
+"Not south, north please.",inform,negate,False

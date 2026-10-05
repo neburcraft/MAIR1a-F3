@@ -1,0 +1,2 @@
+experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
+rule,Rule classifier,3600,0.89,0.902689323647204,0.7960478889819975,0.9069701078350967

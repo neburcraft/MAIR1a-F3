@@ -1,0 +1,2 @@
+experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
+lr,BoW Logistic Regression - original split,3600,0.98,0.7466937702740398,0.7721049851561302,0.9794499847552944

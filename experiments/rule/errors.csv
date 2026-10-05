@@ -1,0 +1,397 @@
+utterance,act,prediction,correct
+ye,affirm,inform,False
+dont care,inform,deny,False
+noise any price range,inform,request,False
+i dont care,inform,deny,False
+how about unintelligible,null,reqalts,False
+dont care,inform,deny,False
+where,request,inform,False
+system,null,inform,False
+new,null,inform,False
+can i have an expensive restaurant,inform,request,False
+i dont care,inform,deny,False
+price does not matter,inform,request,False
+what about the area,request,reqalts,False
+i dont care,inform,deny,False
+i do not care,inform,deny,False
+moderate price,inform,request,False
+and what about the phone number,request,reqalts,False
+i dont care,inform,deny,False
+and postcode,request,inform,False
+any price range,inform,request,False
+i would like a,null,inform,False
+i dont care,inform,deny,False
+tape,null,inform,False
+okay thank you and good bye,bye,thankyou,False
+tell me number,null,inform,False
+uh looking for a restaurant in any area and that needs to serve,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+any type of food,inform,request,False
+what is available in the ar,null,request,False
+cheap price range,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+cheap price range,inform,request,False
+the postcode,request,inform,False
+dont care,inform,deny,False
+dont care,inform,deny,False
+than,null,inform,False
+laugh you suck,null,inform,False
+any anything else,inform,reqalts,False
+any thing else,null,inform,False
+i dont care,inform,deny,False
+i dont know,inform,deny,False
+can you find a moderately priced restaurant,inform,request,False
+i dont care,inform,deny,False
+is there another restaurant in the west of town,reqalts,inform,False
+any type of food,inform,request,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+umh i dont care noise,inform,deny,False
+any price range,inform,request,False
+and can,null,request,False
+do not care,inform,deny,False
+spanish food in west area,inform,request,False
+how about phone number,request,reqalts,False
+african food in any price range,inform,request,False
+dont care,inform,deny,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+is there,null,inform,False
+any price range,inform,request,False
+in a moderate price range,inform,request,False
+could i have another one,reqalts,request,False
+i dont care,inform,deny,False
+uh dont care but can it be vegetarian food,inform,request,False
+okay,null,ack,False
+i want another restaurant that serves spanish food,reqalts,inform,False
+i dont care,inform,deny,False
+i dont know,inform,deny,False
+yea,affirm,inform,False
+yea,affirm,inform,False
+okay and um thank you and good bye,bye,thankyou,False
+i do not care about the price range im just looking for a restaurant in the center that serves korean food,inform,request,False
+ooh thank you good bye,bye,thankyou,False
+are there any restaurants in the south part of town that are expensive,reqalts,inform,False
+can i find an expensive restaurant that serves traditional food,inform,request,False
+i dont care,inform,deny,False
+any type of food,inform,request,False
+new garden do you have any other,reqalts,inform,False
+i dont care,inform,deny,False
+center area,inform,request,False
+what about a chinese restaurant in the north of town,inform,reqalts,False
+inaudible,null,inform,False
+i need,null,inform,False
+i need,null,inform,False
+i dont care,inform,deny,False
+ok i would like to find a restaurant that serves italian food,inform,ack,False
+change that to any price range,inform,request,False
+is there a restaurant that serves gastropub food,reqalts,inform,False
+can i have a restaurant in the center,inform,request,False
+dont care,inform,deny,False
+is there a restaurant in the south part of town that serves italian food,reqalts,inform,False
+yes the address,affirm,request,False
+where is it,request,confirm,False
+um i need a vietnamese restaurant in any price range,inform,request,False
+is there one in the cheap price range,inform,request,False
+no thank you goodbye,negate,thankyou,False
+i dont care,inform,deny,False
+im looking for a restaurant with thai type,inform,request,False
+type food,inform,request,False
+is there any restaurant,reqalts,inform,False
+i dont care,inform,deny,False
+can i find a restaurant,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+in appleton wiscon,null,inform,False
+s,null,inform,False
+both,null,inform,False
+how european food,reqalts,inform,False
+are there any other cheap restaurants in the west part of town,reqalts,inform,False
+i dont care,inform,deny,False
+center area,inform,request,False
+next,reqalts,inform,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+okay,null,ack,False
+what is the,null,request,False
+is there a,confirm,inform,False
+i dont care,inform,deny,False
+is there a jamaican restaurant,confirm,inform,False
+im looking for a restaurant in any area serving unintelligible,inform,request,False
+dont care,inform,deny,False
+inaudible,null,inform,False
+i dont care,inform,deny,False
+is there any,null,inform,False
+i dont care,inform,deny,False
+i do not care,inform,deny,False
+system,null,inform,False
+uh any area,inform,request,False
+ok talian food,inform,ack,False
+what about asian food,inform,reqalts,False
+any type is fine,inform,request,False
+yes i want the phone number,affirm,request,False
+um do not care,inform,deny,False
+i want to find a restaurant in any area,inform,request,False
+any price range,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+free,null,inform,False
+i dont care,inform,deny,False
+may i have the postcode,request,inform,False
+nosie,null,inform,False
+dont care,inform,deny,False
+type,null,request,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+can i get an expensive,inform,request,False
+um anything else,inform,reqalts,False
+dont care,inform,deny,False
+do you have any other restaurant,reqalts,inform,False
+inaudible,null,inform,False
+alright thank you good bye,bye,thankyou,False
+i dont care,inform,deny,False
+if there is no such venue how about european type of food,inform,reqalts,False
+dont care,inform,deny,False
+hi id like a moderately priced restaurant in the north,inform,hello,False
+how much,request,inform,False
+cant,null,inform,False
+how about,null,reqalts,False
+is there a restaurant that serves vietnamese food,reqalts,inform,False
+okay how about the phone number,request,reqalts,False
+im looking,null,inform,False
+i dont know,inform,deny,False
+i dont care,inform,deny,False
+okay,null,ack,False
+portuguese food any price,inform,request,False
+i dont care about the price range what about thai food,inform,reqalts,False
+im looking for irish food in any price range,inform,request,False
+would you like something,null,inform,False
+looking for a,null,inform,False
+is there a cheap restaurant that serves vietnamese food,confirm,inform,False
+yea,affirm,inform,False
+um dont care,inform,deny,False
+dont care,inform,deny,False
+im looking for canapes food in any price range,inform,request,False
+system,null,inform,False
+uh any area,inform,request,False
+i dont care,inform,deny,False
+is there a restaurant serving modern european food,reqalts,inform,False
+okay change restaurant,inform,ack,False
+i dont care,inform,deny,False
+can i have a restaurant in the center with spanish food,inform,request,False
+i dont care,inform,deny,False
+prise me,null,inform,False
+okay uh forget that then can i get a restaurant serving italian food,inform,request,False
+i dont care,inform,deny,False
+if there is no such venue how about vietnamese type of food,inform,reqalts,False
+i dont care,inform,deny,False
+expen,null,inform,False
+fine i want restaurant in the north part of town,inform,ack,False
+id like a,null,inform,False
+i dont care,inform,deny,False
+does it serve,request,confirm,False
+any area,inform,request,False
+okay,null,ack,False
+whats a cheap restaurant on the east part of town,inform,request,False
+i dont care,inform,deny,False
+any area,inform,request,False
+is there another,reqalts,inform,False
+portuguese type of food,inform,request,False
+im looking for a moderately price restaurant that serves halo food,inform,request,False
+i want,null,inform,False
+okay,null,ack,False
+im looking for a restaurant that serves gastropub food any price range,inform,request,False
+i dont care,inform,deny,False
+i do not care,inform,deny,False
+yea,affirm,inform,False
+okay thank you and good bye,bye,thankyou,False
+i do i dont care,inform,deny,False
+im looking for a restaurant in any area that serves malaysian food,inform,request,False
+no dont care,negate,deny,False
+what else do you have,reqalts,request,False
+i dont care,inform,deny,False
+i dont care noise,inform,deny,False
+telephone number,request,inform,False
+dont care whats the phone number,inform,request,False
+i dont care,inform,deny,False
+im looking for a restaurant in any area,inform,request,False
+i dont care,inform,deny,False
+ye,affirm,inform,False
+could i have a moderately priced restaurant in the east part of town,inform,request,False
+very good thank you good bye,bye,thankyou,False
+i dont care,inform,deny,False
+uh i dont care,inform,deny,False
+is there another place,reqalts,inform,False
+ye,affirm,inform,False
+any type of food,inform,request,False
+alright thank you good bye,bye,thankyou,False
+could i have the restaurant that serves asian oriental food,inform,request,False
+is there a restaurant in the east part of town that serves indian food,reqalts,inform,False
+yea,affirm,inform,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+can i find a restaurant that serves international food,inform,request,False
+no thank you,negate,thankyou,False
+is there a thai restaurant in the west part of town,confirm,inform,False
+is there a restaurant serving indian type of food,inform,request,False
+asian oriental type of food,inform,request,False
+how about the post code,request,reqalts,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+is there anything,reqalts,inform,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+ye,affirm,inform,False
+im looking for a restaurant in any area,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+can i get a steak house restaurant in any area,inform,request,False
+anything is fine,inform,ack,False
+i dont care,inform,deny,False
+the phone,request,inform,False
+restaurant in any area thats,inform,request,False
+is it in the moderate price range,confirm,request,False
+uh im not interested in the type,inform,request,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+next,reqalts,inform,False
+where is it,request,confirm,False
+no there is no such venue how about portuguese food,negate,reqalts,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+okay im looking for moderate price range,inform,request,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+cheap price range,inform,request,False
+telephone number,request,inform,False
+how about in the west area,inform,reqalts,False
+i dont care,inform,deny,False
+can i get,null,request,False
+what about irish food,inform,reqalts,False
+i dont care,inform,deny,False
+backgroundspeech,null,inform,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+what about mediterranean food,inform,reqalts,False
+i dont care,inform,deny,False
+okay i want indian,inform,ack,False
+i dont care about the price range,inform,request,False
+dont care,inform,deny,False
+what european food,inform,request,False
+cheap price range,inform,request,False
+vietnamese food in any area,inform,request,False
+i dont care,inform,deny,False
+any area,inform,request,False
+i dont care,inform,deny,False
+im looking,null,inform,False
+any price range,inform,request,False
+and whats their,null,request,False
+im looking for a restaurant serving thai type of food,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+and,null,inform,False
+can i have a cheap restaurant in the south part of town,inform,request,False
+mmhm,affirm,inform,False
+are there any restaurants serving turkish food,reqalts,inform,False
+what about a spanish restuarant,inform,reqalts,False
+yes uh turkish food in my area,inform,request,False
+what about modern european food,inform,reqalts,False
+i dont care,inform,deny,False
+i do not care,inform,deny,False
+phone,request,inform,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+no not noise,negate,deny,False
+no okay thats fine what about french food,negate,reqalts,False
+addre,request,inform,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+any more,reqalts,reqmore,False
+i dont care about prices,inform,deny,False
+what do you recommend,null,request,False
+im looking for a turkish type of restaurant,inform,request,False
+looking for a restaurant in any area that serves irish food,inform,request,False
+any price range,inform,request,False
+i dont care,inform,deny,False
+that is all,null,inform,False
+okay,null,ack,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+uh yes im looking for a restaurant in any area that serves thai food,affirm,request,False
+any price range,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+i dont care,inform,deny,False
+im looking for a restaurant in any area serving turkish food,inform,request,False
+indian type of food,inform,request,False
+im loooking for a restaurant serving vietnamese type of food,inform,request,False
+telephone number,request,inform,False
+can i have irish food,inform,request,False
+can i get a restaurant with vegetarian food,inform,request,False
+i want to find,null,inform,False
+ok i want to find a restaurant in the south part of town,inform,ack,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+can i have a restaurant in the east part of town,inform,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i would like to find a restaurant in any area serving international food,inform,request,False
+food type,inform,request,False
+is there a thai restaurant in the west of town,confirm,inform,False
+gastropub type of food,inform,request,False
+british type,inform,request,False
+yes can i have an expensive restaurant,affirm,request,False
+i dont care,inform,deny,False
+i dont care about the price range,inform,request,False
+i dont care,inform,deny,False
+can i have a cheap restaurant in the west part of town,inform,request,False
+i want to find a restaurant in any area,inform,request,False
+dress,null,inform,False
+i dont care,inform,deny,False
+are there any restaurants serving indian food,reqalts,inform,False
+i dont care,inform,deny,False
+i dont want that give me another spanish choice,reqalts,deny,False
+dont care,inform,deny,False
+moderate price range,inform,request,False
+serving,null,inform,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False
+i do not care,inform,deny,False
+i dont care,inform,deny,False
+no well how about thai,negate,reqalts,False
+dont care,inform,deny,False
+okay,null,ack,False
+yes good afternoon im looking for a restaurant in the north,affirm,hello,False
+whats the next one,reqalts,request,False
+system,null,inform,False
+any type of food,inform,request,False
+oh my god,null,inform,False
+another restaurant,reqalts,inform,False
+i dont care,inform,deny,False
+dont care,inform,deny,False
+for,null,inform,False
+yes can i have,affirm,request,False
+i dont care,inform,deny,False
+done,null,bye,False
+is there one serving european type food,inform,request,False
+okay can i,null,request,False
+i dont care,inform,deny,False
+i dont care,inform,deny,False

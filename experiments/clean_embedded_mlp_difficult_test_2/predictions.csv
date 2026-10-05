@@ -1,0 +1,17 @@
+utterance,act,prediction,correct
+I do not want to try this one,deny,inform,False
+"Thanx, and tell me the exact location please",request,request,True
+Maybe could you tell me something else? I do not like this one,reqalts,reqalts,True
+I need this restaurant address and recommend me another restaurant,reqalts,request,False
+Recommend me three restaurants which are all with good food quality,reqalts,inform,False
+What time I can go to the restaurant that is not crowded,request,inform,False
+"We need to stay from 17 to 20 o'clock, is it possible?",confirm,null,False
+"BTW, is the restaurant not crowded at 18?",confirm,request,False
+We can to go the restaurananant you recommend. Thank you.,thankyou,inform,False
+That will be fine. Thank you so much.,thankyou,thankyou,True
+Would you please tell me the phone number of these two restaurant?,request,request,True
+Just please give me three names that are Italian ones.,reqalts,inform,False
+"One of my friends said he does not like Indian food, please let me try Thai food.",inform,inform,True
+"We will go to the park in the south, would you please recommend me a restaurant in the south?",inform,inform,True
+"Okay, we will try the first one.",affirm,null,False
+"Not south, north please.",inform,negate,False

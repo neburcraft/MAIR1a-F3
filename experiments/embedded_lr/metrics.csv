@@ -1,0 +1,2 @@
+experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
+embedded_lr,Frozen embeddings + LR - original split,3600,0.9863888888888889,0.8798581358794103,0.8859332170906,0.9862041582634126
