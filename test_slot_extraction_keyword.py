@@ -1,3 +1,5 @@
+# NOTE: Same comment here as in the albert-reasoning branch - no need for extensive unit testing
+
 import unittest
 
 from slot_extraction import extract_keywords, load_ontology, slot_extraction
