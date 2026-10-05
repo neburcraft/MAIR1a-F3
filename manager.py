@@ -172,7 +172,18 @@ class Manager:
     # before choosing the final restaurant.
     return State.ADDITIONAL_ASK, PROMPTS["additional_ask"]
 
+  def _from_price_confirm(self, act: Act, utterance: str) -> tuple[State, str]:
+    # Functions identically to area_confirm, but for pricerange
+    if act in [Act.AFFIRM, Act.ACK]:
+      self.preferences["pricerange"] = self.errors["pricerange"].suggest
+    elif not (self.preferences.get("pricerange") or self.errors.get("pricerange")):
+      return State.PRICE_ASK, PROMPTS["price_ask"]
+    return self._from_price_ask(act, utterance)
+
   def _recommend(self) -> tuple[State, str]:
+    # NOTE: This has a lot of duplicate functionality with another state
+    #       and it should not be part of the 'additional' ask behavior, but of the SUGGEST_REST state.
+    #       Ruben will change this when refactoring the _from_state behavior to _on_state.
     options = lookup_restaurant(load_restaurants(), self.preferences, max_dist=-1)
     options = filter_candidates(options, self.additional_requirements)
     # nothing found, so there is nothing to suggest
@@ -193,19 +204,12 @@ class Manager:
     if requirements:
       self.additional_requirements = requirements
       return self._recommend()
+    # NOTE: This is not a correct check, only check for acts as the classifier should already understand these
+    # Replace with `act in [Act.NEGATE, Act.DENY]`
     if act == Act.NEGATE or utterance in ["no", "none", "no preference"]:
       self.additional_requirements = {}
       return self._recommend()
     return State.ADDITIONAL_ASK, PROMPTS["additional_ask_invalid"]
-
-
-  def _from_price_confirm(self, act: Act, utterance: str) -> tuple[State, str]:
-    # Functions identically to area_confirm, but for pricerange
-    if act in [Act.AFFIRM, Act.ACK]:
-      self.preferences["pricerange"] = self.errors["pricerange"].suggest
-    elif not (self.preferences.get("pricerange") or self.errors.get("pricerange")):
-      return State.PRICE_ASK, PROMPTS["price_ask"]
-    return self._from_price_ask(act, utterance)
 
   def _lookup(self) -> list[RestaurantInfo]:
     # the same search as in _from_price_ask, but as a plain list we can walk through

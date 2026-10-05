@@ -1,3 +1,8 @@
+# NOTE: While this is good practice, ensuring full test coverage is beyond the scope of the assignment
+#       Just manually testing with `if __name__=="__main__"` in manager.py should be enough
+#       See Implementation note from the assignment: "The number of source code files is limited"
+#       (I made this mistake myself too, and will remove test_feedback.py and test_lookup.py - Ruben)
+
 import unittest
 
 import pandas as pd

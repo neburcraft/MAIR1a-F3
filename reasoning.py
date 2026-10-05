@@ -54,6 +54,11 @@ def matches_requirements(restaurant: dict, requirements: dict[str, bool]) -> boo
   is not used for that requirement because the system cannot make a reliable
   claim to the user.
   """
+  # NOTE: It should, however, in the explanation it should be addressed
+  #       "Having a restaurant {for children} and {romantic} is not possible because
+  #       one requires {a short stay} and the other requires {a long stay}"
+  #       Then, the conflicting rule preferences should both be cleared
+  #       and the manager should know this and go to a clarification state to choose which the user prefers.
   values = derived_values(apply_rules(restaurant))
   for property_name, requested_value in requirements.items():
     if values.get(property_name) != {requested_value}:
@@ -68,6 +73,7 @@ def filter_candidates(
   """Filter lookup results by the user's additional requirements."""
   if not requirements:
     return restaurants.copy()
+  # DataFrames are cool and support `return restaurants.where(lambda r: matches_requirements(r, requirements))`
   keep = [
     matches_requirements(row.to_dict(), requirements)
     for _, row in restaurants.iterrows()
@@ -84,6 +90,8 @@ PROPERTY_PHRASES = {
 
 
 def extract_additional_requirements(utterance: str) -> dict[str, bool]:
+  # NOTE: This should not be done here, it should be part of keyword extraction
+  #       (both keyword and Lehvenstein implementations)
   """Extract simple positive or negative additional requirements."""
   text = utterance.lower()
   result = {}
@@ -108,6 +116,7 @@ def explain_recommendation(
     return ""
   for inference in apply_rules(restaurant):
     if requirements.get(inference.property) == inference.value:
+      # NOTE: This can be a constant defined at the top of the file, no need to define it here
       claims = {
         ("touristic", True): "It is touristic",
         ("touristic", False): "It is not touristic",
