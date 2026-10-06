@@ -13,6 +13,9 @@ import pandas as pd
 from Levenshtein import distance as levenshtein_distance
 
 from restaurant import RestaurantInfo
+import numpy as np
+from classifiers import FrozenEmbeddingEncoder
+from sentence_transformers import SentenceTransformer
 
 
 @dataclass
@@ -181,6 +184,7 @@ def extract_with_levenshtein(
 def slot_extraction(
     act,
     utterance: str,
+    method: str = "levenshtein",
     ontology: dict[str, tuple[str, ...]] | None = None,
 ) -> tuple[RestaurantInfo, dict[str, Suggestion]]:
   """Manager-compatible wrapper for keyword-based slot extraction.
@@ -190,4 +194,152 @@ def slot_extraction(
   can also contain a new value.
   """
   del act
-  return extract_with_levenshtein(utterance, ontology)
+  if method == "semantic":
+    if embedder is None:
+      embedder = FrozenEmbeddingEncoder()
+
+    return extract_with_semantic(utterance, embedder, ontology)
+  
+  else:
+    return extract_with_levenshtein(utterance, ontology)
+
+
+
+
+
+def cosine_similarity(candidate_embedding, ontology_embedding):
+    dot_product = np.dot(candidate_embedding, ontology_embedding)
+
+    #magnitude of vectors
+    candidate_length = np.linalg.norm(candidate_embedding)
+    ontology_length = np.linalg.norm(ontology_embedding)
+
+    #creates it in degrees
+    cosine_similarity = dot_product / (candidate_length * ontology_length)
+
+    return cosine_similarity
+
+
+
+
+
+def semantic_candidates(utterance):
+  words = utterance.lower().strip().split()
+  candidates = []
+
+  for phrase_size in (1, 2, 3):
+    number_of_phrases = len(words) - phrase_size + 1
+
+    for start in range(number_of_phrases):
+      end = start + phrase_size
+      phrase_words = words[start:end]
+
+      if all(word in STOPWORDS for word in phrase_words):
+        continue
+
+      phrase = " ".join(phrase_words)
+      candidates.append(phrase)
+
+  return candidates
+
+
+
+def closest_semantic_value(utterance, ontology_values, embedder, threshold: float = 0.7):
+
+  candidates = semantic_candidates(utterance)
+
+  #little safeguard
+  if len(candidates) == 0:
+    return None
+  
+  ontology_values_list = list(ontology_values)
+
+  #combine the candiates and ontology values to send everything through distilbert in one call
+  texts_to_encode = candidates + ontology_values_list
+  embeddings = embedder.encode(texts_to_encode)
+
+  number_of_candidates = len(candidates)
+
+  #retrieve candidate and ontology embeddings
+  candidate_embeddings = embeddings[:number_of_candidates]
+  ontology_embeddings = embeddings[number_of_candidates:]
+
+  #current best, not possible best
+  best_similarity = -1
+  best_candidate = None
+  best_ontology_value = None
+
+  for candidate_text, candidate_embedding in zip(candidates, candidate_embeddings):
+    for ontology_value, ontology_embedding in zip(ontology_values_list, ontology_embeddings):
+
+      similarity = cosine_similarity(candidate_embedding, ontology_embedding)
+
+      if ontology_value in ["cheap","moderate","expensive"]:
+        print(f"candidate text: {candidate_text}, ontology value: {ontology_value}, similarity: {similarity}")
+
+      if similarity > best_similarity:
+        best_similarity = similarity
+        best_candidate = candidate_text
+        best_ontology_value = ontology_value
+  print(f"best candidate: {best_candidate}, best ontology value: {best_ontology_value} best similarity: {best_similarity}")
+  
+  if best_similarity < threshold:
+    print("best similarity rejected")
+    return None
+
+  return Suggestion(best_candidate, best_ontology_value)
+
+
+
+
+def extract_with_semantic(utterance, embedder, ontology: dict[str, tuple[str, ...]] | None = None, threshold: float = 0.7) -> tuple[RestaurantInfo, dict[str, Suggestion]]:
+
+  values = ontology or load_ontology()
+  keyword_matches = extract_keywords(utterance, values)
+
+  suggestions: dict[str, Suggestion] = {}
+
+  for slot in ("area", "food", "pricerange"):
+    #If exact keyword matching already found the slot, skip the semantic matching
+    if slot in keyword_matches:
+      continue
+
+    suggestion = closest_semantic_value(utterance, values[slot], embedder, threshold)
+
+    #if the suggestion is not below the threshold
+    if suggestion is not None:
+      suggestions[slot] = suggestion
+
+  return keyword_matches, suggestions
+
+
+class SemanticEncoder:
+    def __init__(self):
+        self.model = SentenceTransformer("all-MiniLM-L6-v2")
+
+    def encode(self, texts):
+        return self.model.encode(texts)
+
+
+if __name__ == "__main__":
+  embedder = SemanticEncoder()
+
+  test_sentences = [
+    "I want somewhere fancy",
+    "I want something inexpensive",
+    "I want chinese food",
+    "I want a restaurant in the centre",
+    "I want somewhere cheap",
+  ]
+
+#   test_sentences = [
+#     "fancy",
+#     "inexpensive",
+# ]
+
+  for sentence in test_sentences:
+    exact, suggestions = extract_with_semantic(sentence, embedder)
+
+    print("\nSentence:", sentence)
+    print("Exact:", exact)
+    print("Suggestions:", suggestions)
