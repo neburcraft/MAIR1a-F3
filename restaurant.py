@@ -13,16 +13,19 @@ RestaurantInfo = TypedDict(
         "postcode": str,
         "food quality": str,
         "crowdedness": str,
-        "length of stay": str
+        "length of stay": str,
+        "additions": str
     }, total=False)
 
 
 def load_restaurants(path: str = "restaurant_info_extended.csv") -> pd.DataFrame:
    return pd.read_csv(path)
 
-def lookup_restaurant(restaurants, requirements: RestaurantInfo, max_dist=0) -> pd.DataFrame:
+def lookup_restaurant(restaurants: pd.DataFrame, requirements: RestaurantInfo, max_dist=0) -> pd.DataFrame:
     restaurants['dist'] = 0
     for key in requirements.keys():
+      if key == "additions":
+         continue
       # Add 1 (boolean True) to each restaurant that doesn't match perfectly
       restaurants['dist'] += restaurants[key] != requirements[key]
 
