@@ -196,7 +196,7 @@ def slot_extraction(
   del act
   if method == "semantic":
     if embedder is None:
-      embedder = FrozenEmbeddingEncoder()
+      embedder = SemanticEncoder()
 
     return extract_with_semantic(utterance, embedder, ontology)
   
