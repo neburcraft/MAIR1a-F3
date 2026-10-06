@@ -1,12 +1,14 @@
 from enum import Enum
 from typing import Optional
 import pandas as pd
+import argparse
 
 from classifiers import Act, Classifier, RuleClassifier
 from data import clean_utterance
 from reasoning import extract_additional_requirements, explain_recommendation, filter_candidates
 from responses import Prompts
 from restaurant import RestaurantInfo, load_restaurants, lookup_restaurant
+from tts import TTS
 
 
 class State(Enum):
@@ -88,7 +90,7 @@ class Manager:
   shown: set[str]
   max_dist: int
 
-  def __init__(self, classifier: Classifier):
+  def __init__(self, classifier: Classifier, tts = None):
     self.classifier = classifier
     self.state = State.WELCOME
     self.preferences = RestaurantInfo()
@@ -100,10 +102,15 @@ class Manager:
     self.current = None
     self.shown = set()
     self.max_dist = 0
+    self.tts = tts
 
   def _send_pompt(self, prompt) -> tuple[Act, str]:
       self.prompt = prompt
-      inp = input(self.prompt + "\n> ")
+      if self.tts:
+        self.tts.say(self.prompt)
+      else:
+        print(self.prompt)
+      inp = input("> ")
       clean_inp = clean_utterance(inp)
       act = self.classifier.run(clean_inp)
       return act, clean_inp
@@ -300,9 +307,16 @@ class Manager:
 
 
 if __name__ == "__main__":
-  # Quick testing function ran with `python manager2.py`
+  parser = argparse.ArgumentParser()
+  parser.add_argument("--tts", action="store_true", help="Use text-to-speech (pyttsx3) instead of text output")
+  args = parser.parse_args()
+
   classifier = RuleClassifier()
-  manager = Manager(classifier)
+  if args.tts:
+    tts = TTS()
+    manager = Manager(classifier, tts)
+  else:
+    manager = Manager(classifier)
   while manager.state != State.FINISHED:
     manager.transition_state()
   manager.finish()
