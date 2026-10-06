@@ -118,15 +118,17 @@ class Manager:
   def _update_preferences(self, act: Act, utterance: str, suggest: bool = True):
     # Run slot extraction with the user's last utterance
     # Update preferences and suggestions (where applicable)
+    # TODO (Ruben): switch to use real slot extraction once it is finished
     new_prefs, new_suggests = slot_extraction(act, utterance)
     self.preferences.update(new_prefs)
     if suggest:
       self.suggestions.update(new_suggests)
 
-  def _apply_reasoning(self):
-    # TODO: update self.preferences according to additional requirements
+  def _apply_reasoning(self) -> Optional[State]:
+    # TODO (Albert): update self.preferences according to additional requirements
     # Also deal with conflicting preferences - this means removing both and self.explanation and going back to the thing the user prefers
-    # so, if price=expensive and additions=touristic, ask which is more important and apply the newly entered one
+    # so, if price=expensive and additions=touristic, ask which is more important and apply the newly entered one:
+    # `del preferences[conflict1]; del preferences[conflict2];`
     # i.e. if touristic filter on pricerange==cheap, quality==good, food!=romanian
     # self.candidates = self.candidates[self.candidates["pricerange"] == "cheap"]
     # Should also set self.explanation to the explanation
@@ -245,8 +247,8 @@ class Manager:
     return State.SUGGEST_REST
 
   def _inform_rest(self) -> State:
-    # TODO: add recognition for 'address', 'phone', 'post', 'food' in slot extraction
-    # TODO: add correct language formatting for prompt
+    # TODO (Albert): add recognition for 'address', 'phone', 'post', 'food' in slot extraction
+    # TODO (Ruben, afterwards): add correct language formatting for prompt
     prompt = Prompts.inform.format(self.current)
     act, utterance = self._send_pompt(prompt)
     if act in [Act.REPEAT, Act.NULL]: return self.state
@@ -283,8 +285,6 @@ class Manager:
     # Main state transition function
     print(f"  \033[92mDEBUG: preferences{self.preferences}\033[0m")
 
-    # Request preferences. TODO: Implement the rest of the states and think about
-    # speech-acts that influence the flow in ways that are not yet accounted for
     # (This match can be replaced with fancy python if we want to, but the
     #  professors may not like it)
     # Either have the state enum values be the functions and then `self.state(act, utterance)`
@@ -302,8 +302,6 @@ class Manager:
       case State.SUGGEST_REST: self.state = self._suggest_rest()
       case State.INFORM_REST: self.state = self._inform_rest()
       case State.NO_REST: self.state = self._no_rest()
-
-    print(f"  \033[93mDEBUG: new preferences{self.preferences}\033[0m")
 
 
 if __name__ == "__main__":
