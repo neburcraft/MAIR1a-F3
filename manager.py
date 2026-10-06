@@ -1,12 +1,14 @@
 from enum import Enum
 from typing import Optional
 import pandas as pd
+import argparse
 
 from classifiers import Act, Classifier, RuleClassifier
 from data import clean_utterance
 from reasoning import extract_additional_requirements, explain_recommendation, filter_candidates
 from responses import Prompts
 from restaurant import RestaurantInfo, load_restaurants, lookup_restaurant
+from tts import TTS
 
 
 class State(Enum):
@@ -88,7 +90,7 @@ class Manager:
   shown: set[str]
   max_dist: int
 
-  def __init__(self, classifier: Classifier):
+  def __init__(self, classifier: Classifier, tts = None):
     self.classifier = classifier
     self.state = State.WELCOME
     self.preferences = RestaurantInfo()
@@ -100,10 +102,15 @@ class Manager:
     self.current = None
     self.shown = set()
     self.max_dist = 0
+    self.tts = tts
 
   def _send_pompt(self, prompt) -> tuple[Act, str]:
       self.prompt = prompt
-      inp = input(self.prompt + "\n> ")
+      if self.tts:
+        self.tts.say(self.prompt)
+      else:
+        print(self.prompt)
+      inp = input("> ")
       clean_inp = clean_utterance(inp)
       act = self.classifier.run(clean_inp)
       return act, clean_inp
@@ -111,15 +118,17 @@ class Manager:
   def _update_preferences(self, act: Act, utterance: str, suggest: bool = True):
     # Run slot extraction with the user's last utterance
     # Update preferences and suggestions (where applicable)
+    # TODO (Ruben): switch to use real slot extraction once it is finished
     new_prefs, new_suggests = slot_extraction(act, utterance)
     self.preferences.update(new_prefs)
     if suggest:
       self.suggestions.update(new_suggests)
 
-  def _apply_reasoning(self):
-    # TODO: update self.preferences according to additional requirements
+  def _apply_reasoning(self) -> Optional[State]:
+    # TODO (Albert): update self.preferences according to additional requirements
     # Also deal with conflicting preferences - this means removing both and self.explanation and going back to the thing the user prefers
-    # so, if price=expensive and additions=touristic, ask which is more important and apply the newly entered one
+    # so, if price=expensive and additions=touristic, ask which is more important and apply the newly entered one:
+    # `del preferences[conflict1]; del preferences[conflict2];`
     # i.e. if touristic filter on pricerange==cheap, quality==good, food!=romanian
     # self.candidates = self.candidates[self.candidates["pricerange"] == "cheap"]
     # Should also set self.explanation to the explanation
@@ -238,8 +247,8 @@ class Manager:
     return State.SUGGEST_REST
 
   def _inform_rest(self) -> State:
-    # TODO: add recognition for 'address', 'phone', 'post', 'food' in slot extraction
-    # TODO: add correct language formatting for prompt
+    # TODO (Albert): add recognition for 'address', 'phone', 'post', 'food' in slot extraction
+    # TODO (Ruben, afterwards): add correct language formatting for prompt
     prompt = Prompts.inform.format(self.current)
     act, utterance = self._send_pompt(prompt)
     if act in [Act.REPEAT, Act.NULL]: return self.state
@@ -276,8 +285,6 @@ class Manager:
     # Main state transition function
     print(f"  \033[92mDEBUG: preferences{self.preferences}\033[0m")
 
-    # Request preferences. TODO: Implement the rest of the states and think about
-    # speech-acts that influence the flow in ways that are not yet accounted for
     # (This match can be replaced with fancy python if we want to, but the
     #  professors may not like it)
     # Either have the state enum values be the functions and then `self.state(act, utterance)`
@@ -296,13 +303,18 @@ class Manager:
       case State.INFORM_REST: self.state = self._inform_rest()
       case State.NO_REST: self.state = self._no_rest()
 
-    print(f"  \033[93mDEBUG: new preferences{self.preferences}\033[0m")
-
 
 if __name__ == "__main__":
-  # Quick testing function ran with `python manager2.py`
+  parser = argparse.ArgumentParser()
+  parser.add_argument("--tts", action="store_true", help="Use text-to-speech (pyttsx3) instead of text output")
+  args = parser.parse_args()
+
   classifier = RuleClassifier()
-  manager = Manager(classifier)
+  if args.tts:
+    tts = TTS()
+    manager = Manager(classifier, tts)
+  else:
+    manager = Manager(classifier)
   while manager.state != State.FINISHED:
     manager.transition_state()
   manager.finish()
