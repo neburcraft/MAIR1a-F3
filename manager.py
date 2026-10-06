@@ -128,7 +128,7 @@ class Manager:
   def _welcome(self) -> State:
     act, utterance = self._send_pompt(Prompts.welcome)
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return State.AREA_ASK
 
@@ -140,14 +140,14 @@ class Manager:
       return State.AREA_CONFIRM
     act, utterance = self._send_pompt(Prompts.area_ask_invalid if repeat else Prompts.area_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return self._area_ask(repeat=True)
 
   def _area_confirm(self) -> State:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["area"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance, suggest=False)
     if act in [Act.AFFIRM, Act.ACK] and "area" not in self.preferences:
       self.preferences["area"] = self.suggestions["area"].suggest
@@ -160,14 +160,14 @@ class Manager:
       return State.FOOD_CONFIRM
     act, utterance = self._send_pompt(Prompts.food_ask_invalid if repeat else Prompts.food_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return self._food_ask(repeat=True)
 
   def _food_confirm(self) -> State:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["food"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance, suggest=False)
     if act in [Act.AFFIRM, Act.ACK] and "food" not in self.preferences:
       self.preferences["food"] = self.suggestions["food"].suggest
@@ -180,14 +180,14 @@ class Manager:
       return State.PRICE_CONFIRM
     act, utterance = self._send_pompt(Prompts.price_ask_invalid if repeat else Prompts.price_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return self._price_ask(repeat=True)
   
   def _price_confirm(self) -> State:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["pricerange"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance, suggest=False)
     if act in [Act.AFFIRM, Act.ACK] and "pricerange" not in self.preferences:
       self.preferences["pricerange"] = self.suggestions["pricerange"].suggest
@@ -201,7 +201,7 @@ class Manager:
       return State.ADDITIONS_CONFIRM
     act, utterance = self._send_pompt(Prompts.additions_ask_invalid if repeat else Prompts.additions_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     if act in [Act.DENY, Act.NEGATE]:
       return State.SUGGEST_REST
@@ -210,7 +210,7 @@ class Manager:
   def _additions_confirm(self) -> State:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["additions"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act == Act.BYE: return self.finish()
+    if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance, suggest=False)
     if act in [Act.AFFIRM, Act.ACK] and "additions" not in self.preferences:
       self.preferences["additions"] = self.suggestions["additions"].suggest
@@ -229,7 +229,7 @@ class Manager:
       prompt += " " + self.explanation
     act, utterance = self._send_pompt(prompt.format(self.current["restaurantname"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act in [Act.THANKYOU, Act.BYE]: return self.finish()
+    if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
     # TODO: Deal with when the user wants to change something 'I want a cheap restaurant instead"
     if act == Act.REQALTS:
       return self._suggest_rest(new=True)
@@ -243,14 +243,14 @@ class Manager:
     prompt = Prompts.inform.format(self.current)
     act, utterance = self._send_pompt(prompt)
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act in [Act.THANKYOU, Act.BYE]: return self.finish()
+    if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
     return State.INFORM_REST
 
   def _no_rest(self) -> State:
     new_prefs = []
     act, utterance = self._send_pompt(Prompts.no_restaurant)
     if act in [Act.REPEAT, Act.NULL]: return self.state
-    if act in [Act.THANKYOU, Act.BYE]: return self.finish()
+    if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
     # User changes their preferences
     if act in [Act.INFORM, Act.REQALTS]:
       new_prefs, new_suggests = slot_extraction(act, utterance)
