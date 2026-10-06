@@ -1,4 +1,3 @@
-## {0} is what the user typed, {1} our suggestion 
 
 PROMPTS = {
     "welcome": "Welcome to restaurantpicker9000! What kind of restaurant are you looking for?",
