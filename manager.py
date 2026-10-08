@@ -306,7 +306,7 @@ class Manager:
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
-  parser.add_argument("--tts", action="store_true", help="Use text-to-speech (pyttsx3) instead of text output")
+  parser.add_argument("--tts", action="store_true", help="Use text-to-speech instead of text output")
   args = parser.parse_args()
 
   classifier = RuleClassifier()
