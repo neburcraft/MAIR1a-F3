@@ -1,4 +1,5 @@
 *.zip
+vits-piper-en_US-amy-low/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,73 @@
+utterance,act,prediction,correct
+new,null,inform,False
+noise hungarian,inform,null,False
+tell me number,null,request,False
+what is available in the ar,null,request,False
+just fuck every time i do it and this moron says that its indian sucks,inform,null,False
+either one,inform,null,False
+any anything else,inform,reqalts,False
+any thing else,null,reqalts,False
+what about a moderately priced restaurant in the south part of town,reqalts,inform,False
+i dont want vietnamese food,deny,inform,False
+okay just pick one for me then,ack,null,False
+um im trying to find a restaurant in the unintelligible of town,inform,null,False
+ooh thank you good bye,bye,thankyou,False
+new garden do you have any other,reqalts,inform,False
+hello im looking for a cheap restaurant in the west part of town,hello,inform,False
+thats correct gastropub food,affirm,inform,False
+is there any restaurant,reqalts,inform,False
+s,null,inform,False
+how european food,reqalts,inform,False
+is there a,confirm,null,False
+is there a jamaican restaurant,confirm,inform,False
+is there any,null,inform,False
+what about asian food,inform,reqalts,False
+is there any that serve european food,inform,confirm,False
+yes i want the phone number,affirm,request,False
+any price,request,inform,False
+free,null,inform,False
+um anything else,inform,reqalts,False
+what part,request,inform,False
+chinses,inform,null,False
+do you have any other restaurant,reqalts,inform,False
+how about,null,reqalts,False
+okay um,ack,null,False
+i dont care about the price range what about thai food,inform,reqalts,False
+looking for a,null,inform,False
+restaurants,inform,null,False
+is there a cheap restaurant that serves vietnamese food,confirm,inform,False
+is there a restaurant serving modern european food,reqalts,inform,False
+okay uh thank you and good bye,thankyou,bye,False
+again please,repeat,null,False
+does it serve,request,null,False
+dont care whats the phone number,inform,request,False
+very good thank you good bye,bye,thankyou,False
+yeah im looking for a restaurant serving kosher food,affirm,inform,False
+is there a thai restaurant in the west part of town,confirm,inform,False
+is there a restaurant serving indian type of food,inform,reqalts,False
+kay,ack,inform,False
+anything is fine,inform,confirm,False
+uh im not interested in the type,inform,null,False
+how about in the west area,inform,reqalts,False
+what about irish food,inform,reqalts,False
+tailand,inform,null,False
+what about mediterranean food,inform,reqalts,False
+mmhm,affirm,null,False
+what about a spanish restuarant,inform,reqalts,False
+yes uh turkish food in my area,inform,affirm,False
+what about modern european food,inform,reqalts,False
+any more,reqalts,inform,False
+i want a restaurant that is cheap and,inform,confirm,False
+that is all,null,confirm,False
+is there a thai restaurant in the west of town,confirm,inform,False
+ah yes im looking for persian food and i dont care about the pri,affirm,inform,False
+is that the north part of town south part of town,confirm,inform,False
+more,reqmore,null,False
+okay that will be all thank you and good bye,thankyou,bye,False
+is there one that serves creative food,inform,reqalts,False
+reset,restart,inform,False
+may i have a list of venues in the west part of town,inform,request,False
+for,null,inform,False
+ok thanks goodbye,thankyou,bye,False
+done,null,inform,False
+is there one serving european type food,inform,reqalts,False

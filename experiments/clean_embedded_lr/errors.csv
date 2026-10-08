@@ -1,0 +1,164 @@
+utterance,act,prediction,correct
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+i dont know,inform,null,False
+i dont know,inform,null,False
+i dont know,inform,null,False
+i dont know,inform,null,False
+i dont know,inform,null,False
+i dont know,inform,null,False
+i dont know,inform,null,False
+where,request,null,False
+where,request,null,False
+where,request,null,False
+creative,inform,null,False
+creative,inform,null,False
+creative,inform,null,False
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
+kay,ack,null,False
+kay,ack,null,False
+kay,ack,null,False
+dont want that,deny,inform,False
+dont want that,deny,inform,False
+no moderately priced,negate,inform,False
+no moderately priced,negate,inform,False
+what about modern european,inform,reqalts,False
+what about modern european,inform,reqalts,False
+hi i want to find a moderately priced restaurant in the north part of town,hello,inform,False
+can you do anything else beside repeat yourself,inform,reqalts,False
+can you change romanian food to something else,deny,inform,False
+can we start over,restart,null,False
+how bout chinese food,inform,reqalts,False
+how bout asian,reqalts,inform,False
+i am looking for,inform,null,False
+i dont care thank you good bye,inform,thankyou,False
+i want another restaurant that serves spanish food,reqalts,inform,False
+if theres no persian food about about chinese,inform,reqalts,False
+is their korean food,inform,confirm,False
+is there a thai restaurant in the west part of town,confirm,inform,False
+is there any serving spanish food,inform,reqalts,False
+is there anything serving international food,reqalts,inform,False
+nandos restaurant type of food,request,inform,False
+okay show me the least,ack,null,False
+anything house,reqalts,inform,False
+popular dish,request,inform,False
+something else,reqalts,null,False
+and the price code,request,null,False
+does it serve,request,confirm,False
+the type of food is lebanese,inform,request,False
+uh im not interested in the type,inform,null,False
+unintelligible east,inform,null,False
+well what about chinese food,inform,reqalts,False
+what about kosher food,inform,reqalts,False
+what about other areas,inform,reqalts,False
+what part of town is chiquito mexican restaurant in,request,inform,False
+what type food,inform,request,False
+yea in the east part of town,affirm,inform,False
+yes i want the phone number,affirm,request,False
+expensive price restaurant,request,inform,False

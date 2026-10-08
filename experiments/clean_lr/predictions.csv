@@ -1,0 +1,3749 @@
+utterance,act,prediction,correct
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+address,request,request,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+sil,null,null,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+thank you goodbye,thankyou,thankyou,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+any,inform,inform,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+anything else,reqalts,reqalts,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+thank you,thankyou,thankyou,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+west,inform,inform,True
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+italian,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+any price range,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+west part of town,inform,inform,True
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+moderately,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+im looking for an expensive restaurant in the south part of town,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+seafood,inform,inform,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+yeah,affirm,affirm,True
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+correct,affirm,null,False
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+i do not care,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+im looking for a cheap restaurant in the east part of town,inform,inform,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+telephone number,request,request,True
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+polynesian food,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+canapes,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+creative food,inform,inform,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+what kind of food do they serve,request,request,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+in the east part of town,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+scandinavian food,inform,inform,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+and the area,request,request,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+im looking for a restaurant in the east part of town,inform,inform,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+where is it,request,request,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+cuban food,inform,inform,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+im looking for,inform,inform,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+phone number and address,request,request,True
+south part,inform,inform,True
+south part,inform,inform,True
+south part,inform,inform,True
+south part,inform,inform,True
+south part,inform,inform,True
+south part,inform,inform,True
+south part,inform,inform,True
+south part,inform,inform,True
+south part,inform,inform,True
+i dont care about the price range,inform,inform,True
+i dont care about the price range,inform,inform,True
+i dont care about the price range,inform,inform,True
+i dont care about the price range,inform,inform,True
+i dont care about the price range,inform,inform,True
+i dont care about the price range,inform,inform,True
+i dont care about the price range,inform,inform,True
+i dont care about the price range,inform,inform,True
+and whats the post code,request,request,True
+and whats the post code,request,request,True
+and whats the post code,request,request,True
+and whats the post code,request,request,True
+and whats the post code,request,request,True
+and whats the post code,request,request,True
+and whats the post code,request,request,True
+and whats the post code,request,request,True
+greek food,inform,inform,True
+greek food,inform,inform,True
+greek food,inform,inform,True
+greek food,inform,inform,True
+greek food,inform,inform,True
+greek food,inform,inform,True
+greek food,inform,inform,True
+greek food,inform,inform,True
+corsica food,inform,inform,True
+corsica food,inform,inform,True
+corsica food,inform,inform,True
+corsica food,inform,inform,True
+corsica food,inform,inform,True
+corsica food,inform,inform,True
+corsica food,inform,inform,True
+corsica food,inform,inform,True
+no thank you good bye,negate,negate,True
+no thank you good bye,negate,negate,True
+no thank you good bye,negate,negate,True
+no thank you good bye,negate,negate,True
+no thank you good bye,negate,negate,True
+no thank you good bye,negate,negate,True
+no thank you good bye,negate,negate,True
+moderately priced restaurant in the south part of town,inform,inform,True
+moderately priced restaurant in the south part of town,inform,inform,True
+moderately priced restaurant in the south part of town,inform,inform,True
+moderately priced restaurant in the south part of town,inform,inform,True
+moderately priced restaurant in the south part of town,inform,inform,True
+moderately priced restaurant in the south part of town,inform,inform,True
+moderately priced restaurant in the south part of town,inform,inform,True
+may i have the phone number please,request,request,True
+may i have the phone number please,request,request,True
+may i have the phone number please,request,request,True
+may i have the phone number please,request,request,True
+may i have the phone number please,request,request,True
+may i have the phone number please,request,request,True
+may i have the phone number please,request,request,True
+malaysian food,inform,inform,True
+malaysian food,inform,inform,True
+malaysian food,inform,inform,True
+malaysian food,inform,inform,True
+malaysian food,inform,inform,True
+malaysian food,inform,inform,True
+malaysian food,inform,inform,True
+i dont know,inform,inform,True
+i dont know,inform,inform,True
+i dont know,inform,inform,True
+i dont know,inform,inform,True
+i dont know,inform,inform,True
+i dont know,inform,inform,True
+i dont know,inform,inform,True
+could i have the address and phone number please,request,request,True
+could i have the address and phone number please,request,request,True
+could i have the address and phone number please,request,request,True
+could i have the address and phone number please,request,request,True
+could i have the address and phone number please,request,request,True
+could i have the address and phone number please,request,request,True
+could i have the address and phone number please,request,request,True
+brazilian,inform,inform,True
+brazilian,inform,inform,True
+brazilian,inform,inform,True
+brazilian,inform,inform,True
+brazilian,inform,inform,True
+brazilian,inform,inform,True
+whats the address phone number and post code,request,request,True
+whats the address phone number and post code,request,request,True
+whats the address phone number and post code,request,request,True
+whats the address phone number and post code,request,request,True
+whats the address phone number and post code,request,request,True
+whats the address phone number and post code,request,request,True
+looking for a cheap restaurant in the west part of town,inform,inform,True
+looking for a cheap restaurant in the west part of town,inform,inform,True
+looking for a cheap restaurant in the west part of town,inform,inform,True
+looking for a cheap restaurant in the west part of town,inform,inform,True
+looking for a cheap restaurant in the west part of town,inform,inform,True
+looking for a cheap restaurant in the west part of town,inform,inform,True
+venetian,inform,inform,True
+venetian,inform,inform,True
+venetian,inform,inform,True
+venetian,inform,inform,True
+venetian,inform,inform,True
+venetian,inform,inform,True
+okay and can i get the address,request,request,True
+okay and can i get the address,request,request,True
+okay and can i get the address,request,request,True
+okay and can i get the address,request,request,True
+okay and can i get the address,request,request,True
+can you repeat that,repeat,repeat,True
+can you repeat that,repeat,repeat,True
+can you repeat that,repeat,repeat,True
+can you repeat that,repeat,repeat,True
+can you repeat that,repeat,repeat,True
+caribbean,inform,inform,True
+caribbean,inform,inform,True
+caribbean,inform,inform,True
+caribbean,inform,inform,True
+caribbean,inform,inform,True
+looking for a moderately priced restaurant in the east part of town,inform,inform,True
+looking for a moderately priced restaurant in the east part of town,inform,inform,True
+looking for a moderately priced restaurant in the east part of town,inform,inform,True
+looking for a moderately priced restaurant in the east part of town,inform,inform,True
+looking for a moderately priced restaurant in the east part of town,inform,inform,True
+whats the phone number and post code,request,request,True
+whats the phone number and post code,request,request,True
+whats the phone number and post code,request,request,True
+whats the phone number and post code,request,request,True
+whats the phone number and post code,request,request,True
+cheap restaurant south part of town,inform,inform,True
+cheap restaurant south part of town,inform,inform,True
+cheap restaurant south part of town,inform,inform,True
+cheap restaurant south part of town,inform,inform,True
+cheap restaurant south part of town,inform,inform,True
+i need a moderately priced restaurant in the south part of town,inform,inform,True
+i need a moderately priced restaurant in the south part of town,inform,inform,True
+i need a moderately priced restaurant in the south part of town,inform,inform,True
+i need a moderately priced restaurant in the south part of town,inform,inform,True
+i need a moderately priced restaurant in the south part of town,inform,inform,True
+can i have the address of the venue,request,request,True
+can i have the address of the venue,request,request,True
+can i have the address of the venue,request,request,True
+can i have the address of the venue,request,request,True
+can i have the address of the venue,request,request,True
+uh italian,inform,inform,True
+uh italian,inform,inform,True
+uh italian,inform,inform,True
+uh italian,inform,inform,True
+uh italian,inform,inform,True
+may i have the phone number and address,request,request,True
+may i have the phone number and address,request,request,True
+may i have the phone number and address,request,request,True
+may i have the phone number and address,request,request,True
+may i have the phone number and address,request,request,True
+bistro,inform,inform,True
+bistro,inform,inform,True
+bistro,inform,inform,True
+bistro,inform,inform,True
+bistro,inform,inform,True
+belgian food,inform,inform,True
+belgian food,inform,inform,True
+belgian food,inform,inform,True
+belgian food,inform,inform,True
+no thai food,negate,negate,True
+no thai food,negate,negate,True
+no thai food,negate,negate,True
+no thai food,negate,negate,True
+no spanish,negate,negate,True
+no spanish,negate,negate,True
+no spanish,negate,negate,True
+no spanish,negate,negate,True
+no chinese,negate,negate,True
+no chinese,negate,negate,True
+no chinese,negate,negate,True
+no chinese,negate,negate,True
+looking for a cheap restaurant,inform,inform,True
+looking for a cheap restaurant,inform,inform,True
+looking for a cheap restaurant,inform,inform,True
+looking for a cheap restaurant,inform,inform,True
+okay what is the address,request,request,True
+okay what is the address,request,request,True
+okay what is the address,request,request,True
+okay what is the address,request,request,True
+im looking for singaporean food,inform,inform,True
+im looking for singaporean food,inform,inform,True
+im looking for singaporean food,inform,inform,True
+im looking for singaporean food,inform,inform,True
+what is the address phone number and price range,request,request,True
+what is the address phone number and price range,request,request,True
+what is the address phone number and price range,request,request,True
+what is the address phone number and price range,request,request,True
+im looking for a restaurant in the west part of town that serves,inform,inform,True
+im looking for a restaurant in the west part of town that serves,inform,inform,True
+im looking for a restaurant in the west part of town that serves,inform,inform,True
+im looking for a restaurant in the west part of town that serves,inform,inform,True
+i need a moderately priced restaurant,inform,inform,True
+i need a moderately priced restaurant,inform,inform,True
+i need a moderately priced restaurant,inform,inform,True
+i need a moderately priced restaurant,inform,inform,True
+does not matter,inform,inform,True
+does not matter,inform,inform,True
+does not matter,inform,inform,True
+does not matter,inform,inform,True
+where,request,request,True
+where,request,request,True
+where,request,request,True
+creative,inform,inform,True
+creative,inform,inform,True
+creative,inform,inform,True
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
+i want to find a restaurant in any area,inform,inform,True
+i want to find a restaurant in any area,inform,inform,True
+i want to find a restaurant in any area,inform,inform,True
+im looking for a thai restaurant,inform,inform,True
+im looking for a thai restaurant,inform,inform,True
+im looking for a thai restaurant,inform,inform,True
+can i get the address phone number and post code,request,request,True
+can i get the address phone number and post code,request,request,True
+can i get the address phone number and post code,request,request,True
+im looking for a restaurant in the south part of town that serves,inform,inform,True
+im looking for a restaurant in the south part of town that serves,inform,inform,True
+im looking for a restaurant in the south part of town that serves,inform,inform,True
+i need a restaurant in the east part of town,inform,inform,True
+i need a restaurant in the east part of town,inform,inform,True
+i need a restaurant in the east part of town,inform,inform,True
+im looking for an expensive restaurant in the east,inform,inform,True
+im looking for an expensive restaurant in the east,inform,inform,True
+im looking for an expensive restaurant in the east,inform,inform,True
+im looking for unintelligible food,inform,inform,True
+im looking for unintelligible food,inform,inform,True
+im looking for unintelligible food,inform,inform,True
+can i have their address,request,request,True
+can i have their address,request,request,True
+can i have their address,request,request,True
+indian food noise,inform,inform,True
+indian food noise,inform,inform,True
+indian food noise,inform,inform,True
+kay,ack,inform,False
+kay,ack,inform,False
+kay,ack,inform,False
+may i have the address phone number and post code,request,request,True
+may i have the address phone number and post code,request,request,True
+may i have the address phone number and post code,request,request,True
+looking for a restaurant in the south part of town,inform,inform,True
+looking for a restaurant in the south part of town,inform,inform,True
+looking for a restaurant in the south part of town,inform,inform,True
+moderately priced food,inform,inform,True
+moderately priced food,inform,inform,True
+moderately priced food,inform,inform,True
+hi im looking for a moderately priced restaurant,hello,hello,True
+hi im looking for a moderately priced restaurant,hello,hello,True
+hi im looking for a moderately priced restaurant,hello,hello,True
+no any area,negate,negate,True
+no any area,negate,negate,True
+no any area,negate,negate,True
+hello and welcome to the cambridge,hello,hello,True
+hello and welcome to the cambridge,hello,hello,True
+hello and welcome to the cambridge,hello,hello,True
+noise address,request,request,True
+noise address,request,request,True
+noise address,request,request,True
+no north,negate,negate,True
+no north,negate,negate,True
+no north,negate,negate,True
+no indian,negate,negate,True
+no indian,negate,negate,True
+no indian,negate,negate,True
+no im looking for thai food,negate,negate,True
+no im looking for thai food,negate,negate,True
+no im looking for thai food,negate,negate,True
+no french food,negate,negate,True
+no french food,negate,negate,True
+no french food,negate,negate,True
+no caribbean,negate,negate,True
+no caribbean,negate,negate,True
+no caribbean,negate,negate,True
+any where,inform,inform,True
+any where,inform,inform,True
+any where,inform,inform,True
+and what is the address,request,request,True
+and what is the address,request,request,True
+and what is the address,request,request,True
+swiss,inform,inform,True
+swiss,inform,inform,True
+swiss,inform,inform,True
+whats its number,request,request,True
+whats its number,request,request,True
+whats its number,request,request,True
+im looking for a restaurant in the west,inform,inform,True
+im looking for a restaurant in the west,inform,inform,True
+dont want that,deny,inform,False
+dont want that,deny,inform,False
+im looking for a restaurant in the east part of town that serves traditional food,inform,inform,True
+im looking for a restaurant in the east part of town that serves traditional food,inform,inform,True
+i want a cheap restaurant in the west part of town,inform,inform,True
+i want a cheap restaurant in the west part of town,inform,inform,True
+id like an expensive restaurant,inform,inform,True
+id like an expensive restaurant,inform,inform,True
+can i get their address and phone number,request,request,True
+can i get their address and phone number,request,request,True
+i want to find a cheap,inform,inform,True
+i want to find a cheap,inform,inform,True
+i want a restaurant in the center of town,inform,inform,True
+i want a restaurant in the center of town,inform,inform,True
+could i get their phone number,request,request,True
+could i get their phone number,request,request,True
+im looking for a restaurant in the north part of town serving italian food,inform,inform,True
+im looking for a restaurant in the north part of town serving italian food,inform,inform,True
+im looking for an expensive restaurant and it should be in the south part of town,inform,inform,True
+im looking for an expensive restaurant and it should be in the south part of town,inform,inform,True
+can i have the phone number and price range,request,request,True
+can i have the phone number and price range,request,request,True
+im looking for an expensive restaurant and it should be east part of town,inform,inform,True
+im looking for an expensive restaurant and it should be east part of town,inform,inform,True
+chinese foo,inform,inform,True
+chinese foo,inform,inform,True
+i want to find a restaurant,inform,inform,True
+i want to find a restaurant,inform,inform,True
+im looking for a cheap restaurant that serves malaysian food,inform,inform,True
+im looking for a cheap restaurant that serves malaysian food,inform,inform,True
+i need a restaurant serving modern european food,inform,inform,True
+i need a restaurant serving modern european food,inform,inform,True
+im looking for a cheap restaurant that serves chinese food,inform,inform,True
+im looking for a cheap restaurant that serves chinese food,inform,inform,True
+im looking for a restaurant that serves gastropub food,inform,inform,True
+im looking for a restaurant that serves gastropub food,inform,inform,True
+im looking for a moderately priced restaurant that serves european food,inform,inform,True
+im looking for a moderately priced restaurant that serves european food,inform,inform,True
+im looking for a chinese restaurant,inform,inform,True
+im looking for a chinese restaurant,inform,inform,True
+i need the address,request,request,True
+i need the address,request,request,True
+gastro pub food,inform,inform,True
+gastro pub food,inform,inform,True
+i want chinese food,inform,inform,True
+i want chinese food,inform,inform,True
+does it serve gastropub,confirm,confirm,True
+does it serve gastropub,confirm,confirm,True
+im looking for a moderate priced restaurant that serves indian food,inform,inform,True
+im looking for a moderate priced restaurant that serves indian food,inform,inform,True
+jamcian food,inform,inform,True
+jamcian food,inform,inform,True
+looking for a cheap restaurant in the south part of town,inform,inform,True
+looking for a cheap restaurant in the south part of town,inform,inform,True
+malyasian,inform,null,False
+malyasian,inform,null,False
+may i have the address and area,request,request,True
+may i have the address and area,request,request,True
+moderate restaurant kosher food,inform,inform,True
+moderate restaurant kosher food,inform,inform,True
+no asian oriental,negate,negate,True
+no asian oriental,negate,negate,True
+are there any that serves portuguese food,inform,inform,True
+are there any that serves portuguese food,inform,inform,True
+no canapes,negate,negate,True
+no canapes,negate,negate,True
+no british food,negate,negate,True
+no british food,negate,negate,True
+no hungarian food,negate,negate,True
+no hungarian food,negate,negate,True
+no moderately priced,negate,negate,True
+no moderately priced,negate,negate,True
+no spanish food,negate,negate,True
+no spanish food,negate,negate,True
+noise phone number,request,request,True
+noise phone number,request,request,True
+are there mediterranean restaurants in the center of town,inform,inform,True
+are there mediterranean restaurants in the center of town,inform,inform,True
+okay how about the address,request,request,True
+okay how about the address,request,request,True
+postal code,request,request,True
+postal code,request,request,True
+restaurant in the east part of town,inform,inform,True
+restaurant in the east part of town,inform,inform,True
+serving cuban food,inform,inform,True
+serving cuban food,inform,inform,True
+and what kind of food do they serve,request,request,True
+and what kind of food do they serve,request,request,True
+the north part,inform,inform,True
+the north part,inform,inform,True
+the postcode,request,request,True
+the postcode,request,request,True
+uh dont care,inform,inform,True
+uh dont care,inform,inform,True
+and can i have the post code,request,request,True
+and can i have the post code,request,request,True
+um dont care,inform,inform,True
+um dont care,inform,inform,True
+west area,inform,inform,True
+west area,inform,inform,True
+what about modern european,inform,reqalts,False
+what about modern european,inform,reqalts,False
+what area is it located,request,request,True
+what area is it located,request,request,True
+address and postcode,request,request,True
+address and postcode,request,request,True
+address phone number and price range,request,request,True
+address phone number and price range,request,request,True
+what type of food do they ser,request,request,True
+what type of food do they ser,request,request,True
+where is the area,request,request,True
+where is the area,request,request,True
+expensive mediterranean food,inform,inform,True
+expensive food in the south of town,inform,inform,True
+expensive restaurant romanian food,inform,inform,True
+cheap restaurant mediterranean food,inform,inform,True
+expensive restaurant breath,inform,inform,True
+expensive restaurant welsh food,inform,inform,True
+expensive restaurant serving portuguese food,inform,inform,True
+find gastro pub type food,inform,inform,True
+find a restaurant serving cannabis food,inform,inform,True
+find moderately priced restaurant in the west part of town,inform,inform,True
+find me an expensive persian restaurant,inform,inform,True
+food in the south part of town,inform,inform,True
+find restaurant serving asian,inform,inform,True
+for restaurant,inform,inform,True
+gastropub of food,inform,inform,True
+french food any part of town,inform,inform,True
+cheap portuguese food,inform,inform,True
+cheap indian food,inform,inform,True
+good could you give me the phone number,request,request,True
+greek restaurant north of town,inform,inform,True
+hi i want to find a moderately priced restaurant in the north part of town,hello,inform,False
+hello im looking for a cheap restaurant in the west part of town,hello,hello,True
+hi im looking for a restaurant,hello,hello,True
+hi im looking for a cheap restaurant with lebanese food,hello,inform,False
+hi id like a moderately priced restaurant in the north,inform,inform,True
+hi im looking for mexican food,hello,hello,True
+hi im looking for a restaurant that serves spanish food,hello,hello,True
+central inaudible,inform,null,False
+can you do anything else beside repeat yourself,inform,reqalts,False
+can you change romanian food to something else,deny,inform,False
+can we start over,restart,inform,False
+can you give me its post code,request,request,True
+can i please have the phone number,request,request,True
+how bout chinese food,inform,inform,True
+how bout asian,reqalts,inform,False
+can i have the address of it,request,request,True
+can i have the phone number and address of the venue,request,request,True
+how bout italian foo,inform,inform,True
+i am looking for a cheap restaurant in the west part of town,inform,inform,True
+i am looking for,inform,inform,True
+i am looking for a restaurant in the center of town serving turkish food,inform,inform,True
+i am looking for a moderately priced restaurant in the south,inform,inform,True
+i am looking for an expensive restaurant on the east part of town,inform,inform,True
+i am looking for a restaurant in the west part of town,inform,inform,True
+i cant answer in spanish,inform,inform,True
+i am looking for hungarian food,inform,inform,True
+i dont care is there anything else,reqalts,reqalts,True
+i dont care bye,inform,inform,True
+i got to find a cheap restaurant that serves mexican food,inform,inform,True
+i dont want chinese,deny,inform,False
+i dont care thank you good bye,inform,thankyou,False
+i need a cheap restaurant that serves christmas food,inform,inform,True
+i need a moderately priced restaurant that serves bask food,inform,inform,True
+can i have the address phone number and the type of food,request,request,True
+i need a moderately priced restaurant in the north part,inform,inform,True
+i need a restaurant in the moderate price range,inform,inform,True
+i need a restaurant in the,inform,inform,True
+i need a restaurant serving asian oriental in the north part of town,inform,inform,True
+i need cheap hungarian restaurant,inform,inform,True
+i need a restaurant that serves turkish food,inform,inform,True
+i need the phone number and post code,request,request,True
+i need moderately priced restaurant that serves spanish,inform,inform,True
+i want a cheap restaurant in the north,inform,inform,True
+i need to find one in the south part of town,inform,inform,True
+i want a jamaican food restaurant in the center part of town,inform,inform,True
+i want a cheap restaurant that serves italian food,inform,inform,True
+i want a moderately priced restaurant that serves mediterranean food,inform,inform,True
+i want a moderate priced restaurant that serves indian food,inform,inform,True
+i want a restaurant in the center that serves seafood,inform,inform,True
+i want a polynesian restaurant in the west part of town,inform,inform,True
+i want a restaurant in the west part of town serving australian food,inform,inform,True
+i want a restaurant in the north part of town that serves moroccan food,inform,inform,True
+i want a scandinavian restaurant thats expensive,inform,inform,True
+i want a restaurant that serves british food,inform,inform,True
+i want an italian restaurant,inform,inform,True
+i want an expensive restaurant that serves african food,inform,inform,True
+i want i want indian food,inform,inform,True
+i want expensive food in the east part of town,inform,inform,True
+i want another restaurant that serves spanish food,reqalts,reqalts,True
+i want swedish ffood,inform,inform,True
+can i have french food in the center,inform,inform,True
+can i have the address and the phone number of the venue,request,request,True
+i want korean food,inform,inform,True
+i want to find a cheap re,inform,inform,True
+i want to find a moderately priced restaurant in the south part of time,inform,inform,True
+i want to find a moderately,inform,inform,True
+i want to find a restaurant in the center that serves irish,inform,inform,True
+i want to find a moderately priced restaurant that serves moroccan food,inform,inform,True
+i want to find a restaurant serving world food,inform,inform,True
+i want to find a restaurant in the south part of town,inform,inform,True
+i want to know the address,request,request,True
+i want to find chinese food,inform,inform,True
+i want to find an expensive restaurant on the east part of town,inform,inform,True
+i would like a cheap,inform,inform,True
+i would like an expensive restaurant in the south of town,inform,inform,True
+i would like a restaurant that serves thai food,inform,inform,True
+i would like mexican food,inform,inform,True
+i would like gastropub,inform,inform,True
+i would like to find a moderately priced restaurant in the east part of,inform,inform,True
+i would like to find a cheap restaurant and it should be in the south,inform,inform,True
+i would like to find an expensive restaurant in the south part of town,inform,inform,True
+i would like to find a restaurant in the north part of town that serves kosher food,inform,inform,True
+i would like to find a moderately priced restaurant in the north part of town please,inform,inform,True
+iam looking for a restaurant that serves bistro food,inform,inform,True
+i would like traditional food in the south part of town,inform,inform,True
+id like a moderately price,inform,inform,True
+id like a cheap italian restaurant,inform,inform,True
+id like a restaurant in south part of town that serves japanese,inform,inform,True
+id like a moderately priced restaurant that serves thai food,inform,inform,True
+id like a restaurant that serves australian asian food,inform,inform,True
+id like a restaurant in the north part of town that serves tur,inform,inform,True
+id like an indian restaurant,inform,inform,True
+id like to know the phone number,request,request,True
+id like to find a spanish restaurant in the center,inform,inform,True
+can i have a moderately priced restaurant in the west part of town,inform,inform,True
+can i have moderately priced restaurant,inform,inform,True
+id like to find a restaurant in the north part of town serving french food,inform,inform,True
+if theres no persian food about about chinese,inform,reqalts,False
+im looking for a cheap pan asian food,inform,inform,True
+im looking chineese food,inform,inform,True
+im looking for a cheap restaurant in the south,inform,inform,True
+im looking for a cheap restaurant in east part of town,inform,inform,True
+im looking for a cheap restaurant serving modern european type of food,inform,inform,True
+im looking for a cheap restaurant it should serve japanese food,inform,inform,True
+im looking for a cheap restaurant that serves italian food,inform,inform,True
+im looking for a cheap restaurant that serves brazilian,inform,inform,True
+im looking for a expensive restaurant serving mediterranean food,inform,inform,True
+im looking for a cheap restaurant with spanish food,inform,inform,True
+im looking for a moderate priced restaurant serving jamaican food,inform,inform,True
+im looking for a korean restaurant in the expensive price range,inform,inform,True
+im looking for a moderately priced restaurant and it should be in the west part of town,inform,inform,True
+can i get the post code please,request,request,True
+can i have a restaurant in the center with spanish food,inform,inform,True
+im looking for a moderately priced restaurant that serves british food,inform,inform,True
+im looking for a moderately priced restaurant serving creative food,inform,inform,True
+im looking for a moderately priced restaurant that serves spanish food,inform,inform,True
+im looking for a moderately priced restaurant that serves greek foo,inform,inform,True
+im looking for a pan asian food in the south of town,inform,inform,True
+im looking for a moderately priced restaurant uh serving halal food,inform,inform,True
+im looking for a restaurant in any area that serves cantonese food,inform,inform,True
+im looking for a restaurant in any area of town that serves belgium food,inform,inform,True
+im looking for a restaurant in the center and it should serve swedish food,inform,inform,True
+im looking for a restaurant in any area that serves swedish food,inform,inform,True
+im looking for a restaurant in the center serving african food,inform,inform,True
+im looking for a restaurant in the center of town that serves mediterranean,inform,inform,True
+im looking for a restaurant in the east part of town serving japanese food,inform,inform,True
+im looking for a restaurant in the center that serves sea food,inform,inform,True
+im looking for a restaurant in the east part of town that serves spanish food,inform,inform,True
+im looking for a restaurant in the east part of town that serves british food,inform,inform,True
+im looking for a restaurant in the north part of town and it should serve indo,inform,inform,True
+im looking for a restaurant in the north part of town that serves traditional food,inform,inform,True
+im looking for a restaurant in the north part of town that serves christmas food,inform,inform,True
+im looking for a restaurant in the north part of town serving kosher food,inform,inform,True
+im looking for a restaurant in the south part of town and it should serve scandinavian food,inform,inform,True
+im looking for a restaurant in the south,inform,inform,True
+im looking for a restaurant in the south part of town that serves jamaican food,inform,inform,True
+im looking for a restaurant in the south part of town that,inform,inform,True
+im looking for a restaurant in the west part of town that serves corsica food,inform,inform,True
+im looking for a restaurant in the west part of town and it should be cheap,inform,inform,True
+can i get the address and type of food,request,request,True
+can i have a british restaurant,inform,inform,True
+im looking for a restaurant in the south part of town with creative food,inform,inform,True
+im looking for a restaurant in the west part of town with,inform,inform,True
+im looking for a restaurant in the west part of town that serves danish food,inform,inform,True
+im looking for a restaurant serving vegetarian food,inform,inform,True
+im looking for a restaurant that serves indian food,inform,inform,True
+im looking for a restaurant that serves british food,inform,inform,True
+im looking for a restaurant that serves singaporean food,inform,inform,True
+im looking for a restaurant that serves japanese food in the north part of town,inform,inform,True
+im looking for a romanian restaurant,inform,inform,True
+im looking for a restaurant that serves unintelligible food,inform,inform,True
+im looking for am expensive restaurant in the south part,inform,inform,True
+im looking for a turkish restaurant in the east part of town,inform,inform,True
+im looking for an expensive restaurant in the east part,inform,inform,True
+im looking for an expensive restaurant and it should serve fus,inform,inform,True
+im looking for an expensive restaurant serving turkish food,inform,inform,True
+im looking for an expensive restaurant in the south part of tow,inform,inform,True
+im looking for an expensive restaurant that serves irish food,inform,inform,True
+can i get the address phone number and price of food,request,request,True
+im looking for an expensive restaurant that serves french food,inform,inform,True
+im looking for barbecue food,inform,inform,True
+im looking for an indian restaurant in the east of town,inform,inform,True
+im looking for english food in the west part of town,inform,inform,True
+im looking for cheap polynesian food,inform,inform,True
+im looking for indian food in the east part of town,inform,inform,True
+im looking for expensive welsh food,inform,inform,True
+im looking for moderately priced in the north part of town,inform,inform,True
+im looking for kitalian food in an expensive res,inform,inform,True
+im looking for restaurant that serves portuguese food,inform,inform,True
+im looking for north american food,inform,inform,True
+im looking for something serving vegetarian food,inform,inform,True
+im looking for seafood,inform,inform,True
+im looking for venison food cross talk,inform,inform,True
+can i find something in the west part of town,inform,inform,True
+im looking for thai,inform,inform,True
+im searching for a restaurant in the south part of town that serves,inform,inform,True
+in the centre of town,inform,inform,True
+in an expensive restaurant,inform,inform,True
+in the north part,inform,inform,True
+indian food in the south part of town,inform,inform,True
+in what area,request,request,True
+can i get a restaurant in the east part of town that serves italian food,inform,inform,True
+in the west of town,inform,inform,True
+international food in the east part of town,inform,inform,True
+is it serving french food,confirm,inform,False
+breath price range,request,request,True
+can i find a restaurant that serves international food,inform,inform,True
+is it in the east of town,confirm,confirm,True
+is their korean food,inform,confirm,False
+is the anything else,reqalts,reqalts,True
+is it the east part of town,confirm,confirm,True
+is there a chinese restaurant,confirm,reqalts,False
+is there a restaurant that serves european food,reqalts,reqalts,True
+is there a restaurant in the south part of town that serves indian food,reqalts,reqalts,True
+is there an indian restaurant in the south of town,inform,inform,True
+is there a thai restaurant in the west part of town,confirm,inform,False
+is there any serving spanish food,inform,inform,True
+is there any other restaurant that serves turkish food,reqalts,reqalts,True
+is there anything serving international food,reqalts,reqalts,True
+is there anything in the cheap price range,inform,inform,True
+is there anyone else,reqalts,reqalts,True
+is there one that serves indian food,inform,reqalts,False
+itailian,inform,inform,True
+it has to serve unusual,inform,null,False
+a cheap restaurant in the north part of town,inform,inform,True
+its a type of food,request,request,True
+italian food please,inform,inform,True
+breath id like a cheap restaurant in the south part of town,inform,inform,True
+breath whats the phone number of the venue,request,request,True
+kosher for in the central,inform,inform,True
+korea,inform,null,False
+lebanse,inform,null,False
+looking for a cheap restaurant that serves steak house food,inform,inform,True
+like to find a restaurant in the east part of town and it should serve indian food,inform,inform,True
+looking for a moderately priced restaurant that serves british food,inform,inform,True
+looking for a japanese restaurant in the center,inform,inform,True
+looking for a restaurant in the north of town,inform,inform,True
+looking for a restaurant in any area that serves mediterranean,inform,inform,True
+looking for a restaurant that serves portuguese food,inform,inform,True
+breath european,inform,inform,True
+breath no american food,negate,negate,True
+a restaurant in,inform,inform,True
+looking for expensive tuscan food,inform,inform,True
+looking for an expensive restaurant that serves,inform,inform,True
+looking for african food in the center of town,inform,inform,True
+a post code,request,request,True
+looking for something cheap,inform,inform,True
+looking for moderately priced restaurant in the north part of town,inform,inform,True
+looking in the west of town moderately priced,inform,inform,True
+may i have an expensive restaurant,inform,inform,True
+may i have a phone number and postcode,request,request,True
+may i have the address and type of food,request,request,True
+breath i want to find a restaurant in the north part of town,inform,inform,True
+breath how bout north part of town,inform,inform,True
+may i have the address and phone number and post code,request,request,True
+may i have the phone number and postcode of this ven,request,request,True
+chinese restaurant,inform,inform,True
+breath a cheap restaurant in the north part of town,inform,inform,True
+moderate priced in the north part of town,inform,inform,True
+moderate moderate moderate moderate,inform,inform,True
+moderately pri,inform,inform,True
+could i get the phone number and,request,request,True
+moderately priced restaraunt,inform,inform,True
+moderately priced in the north part of town,inform,inform,True
+moderately priced food in the north part of town,inform,inform,True
+moderately priced restaurant in the west,inform,inform,True
+moderately priced restaurant halal food,inform,inform,True
+moderately priced serving gastro pub,inform,inform,True
+moderately priced restaurant serving moroccan food,inform,inform,True
+nandos restaurant type of food,request,inform,False
+music hello,hello,hello,True
+modern european type food,inform,inform,True
+new garden do you have any other,reqalts,reqalts,True
+no eritrean,negate,negate,True
+no corsica food,negate,negate,True
+are there any that serve vietnamese food,inform,reqalts,False
+city center,inform,inform,True
+no i would like a cuban restaurant,negate,negate,True
+no i am looking for a vietnamese restaurant,negate,negate,True
+no im looking for pan asian,negate,negate,True
+no im looking for a unintelligible that serves english food,negate,negate,True
+no noise,negate,negate,True
+no indian restaurant,negate,negate,True
+no south part of town,negate,negate,True
+no not noise,negate,negate,True
+no there is no such venue how about portuguese food,negate,negate,True
+could i have a restaurant that serves european food,inform,inform,True
+noise can you repeat the post code please,request,request,True
+noise any area,inform,inform,True
+noise i want to find a restaurant that ser,inform,null,False
+noise food,inform,inform,True
+noise south part of town,inform,inform,True
+are there any british rest british food,inform,inform,True
+area of venue,request,request,True
+noise no,negate,negate,True
+noise looking for an expensive restaurant in the south part of town,inform,inform,True
+north american restaurant expensive,inform,inform,True
+north part of town turkish food,inform,inform,True
+oh i need to be in the north,inform,inform,True
+could i get the post code,request,request,True
+ok is there any restaurant that serves chinese food in the east part of town,reqalts,inform,False
+ok i want to find a restaurant in the south part of town,inform,inform,True
+oh so what is the phone number,request,request,True
+okay address,request,request,True
+okay and uh can i get the address,request,request,True
+could i have the address and price range please,request,request,True
+okay and whats the phone number,request,request,True
+okay can i have the phone number and the post code please,request,request,True
+okay good whats the address for that one,request,request,True
+okay expensive,inform,inform,True
+are there any restaurants that serve english food,reqalts,reqalts,True
+okay could you give me the phone number,request,request,True
+okay how about thai food,reqalts,reqalts,True
+okay how about an expensive,reqalts,reqalts,True
+okay is it in the north side of town,confirm,confirm,True
+okay international food,inform,inform,True
+okay how bout their phone number,request,request,True
+okay show me the least,ack,null,False
+okay is there any others,reqalts,reqalts,True
+okay then any part of town,inform,inform,True
+could i have their phone number and the type of food,request,request,True
+could i have the restaurant that serves asian oriental food,inform,inform,True
+okay what is their address,request,request,True
+okay whats the post code,request,request,True
+are their any other restaurants that serve turkish food,inform,reqalts,False
+anything house,reqalts,inform,False
+cheap restaurant serves spanish food,inform,inform,True
+please let me have the address,request,request,True
+cheap restaurant on the east part of town,inform,inform,True
+any restaurants,inform,inform,True
+portugeuse food,inform,inform,True
+popular dish,request,null,False
+price over food west part of town,inform,inform,True
+portuguese food in the south part of town,inform,inform,True
+prices,request,inform,False
+restaurant in south part of town serves,inform,inform,True
+restaurant in any area,inform,inform,True
+restaurant and it should be,inform,inform,True
+restaurant in the east side of town,inform,inform,True
+could i have the phone number and post code,request,request,True
+any kind of food id like a cheap restaurant,inform,inform,True
+cuban restauran,inform,inform,True
+restaurant in the west part of town that serves,inform,inform,True
+restaurant in the south part of town caribbean food,inform,inform,True
+restaurant south part of town international food,inform,inform,True
+restaurant north part of town seafood,inform,inform,True
+restaurants,inform,null,False
+scandanavian,inform,null,False
+serves cheap,inform,inform,True
+could you repeat the name,request,request,True
+sells english food,inform,inform,True
+serving lebanese food,inform,inform,True
+serving austrian food,inform,inform,True
+something else,reqalts,reqalts,True
+and what is the post code again,request,request,True
+did you see a korean restaurant,inform,inform,True
+south noise,inform,inform,True
+spanish restaurant in the south part of town,inform,inform,True
+south side,inform,inform,True
+and the type of food at gourmet burger kitchen,request,request,True
+curry prince address and phone number,request,request,True
+test food,inform,inform,True
+thank you and whats the address,request,request,True
+do you have any asian oriental food,inform,inform,True
+that serves chinese food,inform,inform,True
+that serves turkish food,inform,inform,True
+and what area is it in,request,request,True
+do you have a restaurant that serves turkish food,reqalts,inform,False
+that serves restaurant in south part of town,inform,inform,True
+thats fine give me the address,request,request,True
+the indian food,inform,inform,True
+do they serve cuban,confirm,confirm,True
+the post code as well please,request,request,True
+and its in the west part of town,inform,inform,True
+and the price code,request,request,True
+does it serve,request,null,False
+the type of food is lebanese,inform,request,False
+the south part of town greek food,inform,inform,True
+there is no such venue harbor indian type of food,inform,inform,True
+turkish restaurant in the center of town,inform,inform,True
+and can i have the address and phone number please,request,request,True
+type of food they served,request,request,True
+type food,inform,inform,True
+do you have the phone number and post code,request,request,True
+uh african food,inform,inform,True
+uh cheap restaurant in the north part of town,inform,inform,True
+uh can i have the phone number please,request,request,True
+uh how about chinese food,reqalts,reqalts,True
+uh find a restaurant in the west part of town and,inform,inform,True
+uh doesnt matter expensive,inform,inform,True
+uh i dont mind,inform,inform,True
+uh im not interested in the type,inform,null,False
+uh id like steakhouse food,inform,inform,True
+uh mediterranean food,inform,inform,True
+an expensive restaurant serving cantonese food,inform,inform,True
+and can you tell me the post code,request,request,True
+does it serve chinese type of food,confirm,request,False
+uh okay how about french food,reqalts,reqalts,True
+uh north american food,inform,inform,True
+uh no thats it thank you and good bye,negate,negate,True
+uh that serves catalan food,inform,inform,True
+uh whats the phone number and post code,request,request,True
+uh yes can i find a moderately priced restaurant and it serve it should serve brazilian food,affirm,affirm,True
+uh yes mexican please,affirm,affirm,True
+uh yes im looking for a restaurant in the center that serves lebanese food,affirm,affirm,True
+um could i have the address,request,request,True
+um asian oriental restaurant,inform,inform,True
+um how about a restaurant in the center with int,reqalts,reqalts,True
+does it serve asian oriental,confirm,inform,False
+um gastropub food,inform,inform,True
+um do not care,inform,inform,True
+um i want a restaurant in the north side of town and i want to eat christmas food,inform,inform,True
+um italian,inform,inform,True
+um im trying to find a restaurant in the unintelligible of town,inform,null,False
+um what about chinese,reqalts,reqalts,True
+um then im looking for european food,inform,inform,True
+does it serve sea food,confirm,confirm,True
+unintelligible east,inform,inform,True
+um yes,affirm,affirm,True
+and address,request,request,True
+um world food,inform,inform,True
+unintelligible i dont care,inform,inform,True
+well what about chinese food,inform,reqalts,False
+vietnamese vietnamese food,inform,inform,True
+west part,inform,inform,True
+ah where is it,request,request,True
+does it serve indian food,confirm,inform,False
+welsh food in the north part of town,inform,inform,True
+what about a modern europene type of food,reqalts,reqalts,True
+what about a chinese restaurant in the north of town,inform,inform,True
+what about center area,reqalts,reqalts,True
+what about indian food in the cheap price range,reqalts,reqalts,True
+ah could you give me the address,request,request,True
+alright can i get chinese food,inform,inform,True
+what about expensive,reqalts,reqalts,True
+what about kosher food,inform,reqalts,False
+what about swedish,reqalts,reqalts,True
+what about other areas,inform,reqalts,False
+what are the address,request,request,True
+what about turkey food,reqalts,reqalts,True
+what asian oriental type of food,inform,request,False
+what are the price ranges available,request,request,True
+cheap restaurant that serves vegetarian food,inform,inform,True
+address price range,request,request,True
+ah i dont care,inform,inform,True
+what is prezzos address,request,request,True
+what is the address of the,request,request,True
+cheap restaurant serving unintellgible food,inform,inform,True
+what is the address and phone number worth,request,request,True
+what is the golden woks address,request,request,True
+afghan noise,inform,null,False
+what is the address please,request,request,True
+what is the post co,request,request,True
+what is the phone number and addre,request,request,True
+a restaurant that serves german food,inform,inform,True
+address phone number prices,request,request,True
+what kind of food do they serve there,request,request,True
+what is their special dish,request,request,True
+english please,inform,inform,True
+what part of town is chiquito mexican restaurant in,request,request,True
+what no,negate,negate,True
+what type of food does the venue serve,request,request,True
+a restaurant in the east part of town that serves caribbean food,inform,inform,True
+what type food,inform,request,False
+whats phone number,request,request,True
+whats the address phone number and area of the venue,request,request,True
+expensive australian restaurant,inform,inform,True
+whats the phone number for that place,request,request,True
+whats the next one,reqalts,reqalts,True
+a restaurant that serves,inform,inform,True
+a restaurant in the south part of town that serves italian food,inform,inform,True
+whats the address to that please,request,request,True
+whats the phone number talking,request,request,True
+where is the address and phone number,request,request,True
+world food any price range,inform,inform,True
+yea in the east part of town,affirm,inform,False
+yea im looking for an expensive,inform,inform,True
+yea id like a cheap restaurant in the north part of town,inform,inform,True
+yeah im looking for a moderately priced restaurant,affirm,inform,False
+yea you can give me the address,affirm,request,False
+yes can i have an expensive restaurant in the east,affirm,affirm,True
+yes and in french please,affirm,affirm,True
+yes i want the phone number,affirm,request,False
+yes danish food,affirm,affirm,True
+european european,inform,inform,True
+yes in the cheap price range,affirm,affirm,True
+yes knocking,affirm,affirm,True
+expensive price restaurant,request,inform,False
+a cheap restaurant serving caribbean food,inform,inform,True
+yes moderately priced,affirm,affirm,True
+yes that sells korean food,affirm,affirm,True
+signapore,inform,null,False

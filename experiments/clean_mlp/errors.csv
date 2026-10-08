@@ -1,0 +1,227 @@
+utterance,act,prediction,correct
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+right,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+yea,affirm,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+seafood,inform,null,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+okay thank you and good bye,bye,thankyou,False
+brazilian,inform,null,False
+brazilian,inform,null,False
+brazilian,inform,null,False
+brazilian,inform,null,False
+brazilian,inform,null,False
+brazilian,inform,null,False
+venetian,inform,null,False
+venetian,inform,null,False
+venetian,inform,null,False
+venetian,inform,null,False
+venetian,inform,null,False
+venetian,inform,null,False
+caribbean,inform,null,False
+caribbean,inform,null,False
+caribbean,inform,null,False
+caribbean,inform,null,False
+caribbean,inform,null,False
+bistro,inform,null,False
+bistro,inform,null,False
+bistro,inform,null,False
+bistro,inform,null,False
+bistro,inform,null,False
+creative,inform,null,False
+creative,inform,null,False
+creative,inform,null,False
+hello and welcome to the cambridge,hello,null,False
+hello and welcome to the cambridge,hello,null,False
+hello and welcome to the cambridge,hello,null,False
+swiss,inform,null,False
+swiss,inform,null,False
+swiss,inform,null,False
+malyasian,inform,null,False
+malyasian,inform,null,False
+central inaudible,inform,null,False
+can you do anything else beside repeat yourself,inform,reqalts,False
+can you change romanian food to something else,deny,inform,False
+how bout asian,reqalts,inform,False
+i am looking for,inform,null,False
+i dont care thank you good bye,inform,thankyou,False
+if theres no persian food about about chinese,inform,negate,False
+is their korean food,inform,confirm,False
+is there anyone else,reqalts,null,False
+it has to serve unusual,inform,null,False
+korea,inform,null,False
+lebanse,inform,null,False
+nandos restaurant type of food,request,inform,False
+are there any that serve vietnamese food,inform,reqalts,False
+no there is no such venue how about portuguese food,negate,reqalts,False
+are there any british rest british food,inform,reqalts,False
+ok is there any restaurant that serves chinese food in the east part of town,reqalts,inform,False
+okay good whats the address for that one,request,ack,False
+okay show me the least,ack,null,False
+are their any other restaurants that serve turkish food,inform,reqalts,False
+anything house,reqalts,inform,False
+popular dish,request,null,False
+price over food west part of town,inform,request,False
+restaurants,inform,null,False
+scandanavian,inform,null,False
+do you have a restaurant that serves turkish food,reqalts,inform,False
+does it serve,request,null,False
+the type of food is lebanese,inform,confirm,False
+uh i dont mind,inform,null,False
+uh im not interested in the type,inform,ack,False
+um im trying to find a restaurant in the unintelligible of town,inform,null,False
+well what about chinese food,inform,reqalts,False
+does it serve indian food,confirm,inform,False
+what about a modern europene type of food,reqalts,request,False
+what about indian food in the cheap price range,reqalts,inform,False
+what about kosher food,inform,reqalts,False
+what about other areas,inform,reqalts,False
+what asian oriental type of food,inform,request,False
+what type food,inform,request,False
+whats the next one,reqalts,null,False
+signapore,inform,null,False

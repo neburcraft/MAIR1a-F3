@@ -1,0 +1,2 @@
+experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
+clean_mlp,BoW MLP - grouped split,3748,0.9397011739594451,0.8187545969029582,0.8245804181346835,0.9346863947947145

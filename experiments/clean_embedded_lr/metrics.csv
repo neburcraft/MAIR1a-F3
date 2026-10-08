@@ -1,0 +1,2 @@
+experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
+clean_embedded_lr,Frozen embeddings + LR - grouped split,3748,0.9565101387406617,0.6833440417336899,0.6972465360803198,0.9519352420094542
