@@ -1,3 +1,7 @@
+# RUBEN: Cleanup code
+# RUBEN: Add docstrings/comments
+# RUBEN: Update README
+
 """Interactive command-line entry point: trains all classifiers and lets
 the user classify typed utterances until they type 'stop'. """
 
@@ -33,6 +37,7 @@ def train_all(train_data, clean_train_data, verbose=False) -> dict[str, Classifi
 
 #  Entry point when ran as `$ python ./main.py`: parse args, load data, train, run the prompt
 if __name__ == "__main__":
+  # RUBEN: Update CLI
   parser = argparse.ArgumentParser()
   parser.add_argument("--verbose", action="store_true", help="show every classifier's prediction instead of only one")
   parser.add_argument(

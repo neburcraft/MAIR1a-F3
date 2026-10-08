@@ -5,7 +5,7 @@ import argparse
 
 from classifiers import Act, Classifier, RuleClassifier
 from data import clean_utterance
-from reasoning import extract_additional_requirements, explain_recommendation, filter_candidates
+from slot_extraction import slot_extraction
 from responses import Prompts
 from restaurant import RestaurantInfo, load_restaurants, lookup_restaurant
 from tts import TTS
@@ -46,35 +46,35 @@ class Suggestion:
     return iter([self.inp, self.suggest])
 
 
-# TODO: replace with import to real slot extraction
-# This version asks for the input to the slots literally (like a form) after the real user input
-def slot_extraction(act: Act, utterance: str) -> tuple[RestaurantInfo, dict[str, Suggestion]]:
-  errors: dict[str, Suggestion] = {}
-  result: RestaurantInfo = {}
-  # Area
-  area = input("area: ").strip().lower()
-  # Slot extraction should place anything that is certainly correct in result
-  if area in ["north", "east", "south", "west", "centre"]:
-    result["area"] = area
-  # Anything that is misspelled and corrected is added as a Suggestion(original, suggestion)
-  elif area == "center":
-    errors["area"] = Suggestion(area, "centre")
-  # Food
-  food = input("food: ").strip().lower()
-  if len(food) > 0:
-    result["food"] = food
-  # Pricerange
-  price = input("price: ").strip().lower()
-  if price in ["cheap", "moderate", "expensive"]:
-    result["pricerange"] = price
-  elif price == "ceap":
-    errors["pricerange"] = Suggestion(price, "cheap")
-  # Additional requirements
-  additions = input("additional requirements: ").strip().lower()
-  if additions in ["touristic", "assigned seats", "children", "romantic"]:
-    result["additions"] = additions
-  # Return definitely correct results and errors/suggestions
-  return result, errors
+# # TODO: replace with import to real slot extraction
+# # This version asks for the input to the slots literally (like a form) after the real user input
+# def slot_extraction(act: Act, utterance: str) -> tuple[RestaurantInfo, dict[str, Suggestion]]:
+#   errors: dict[str, Suggestion] = {}
+#   result: RestaurantInfo = {}
+#   # Area
+#   area = input("area: ").strip().lower()
+#   # Slot extraction should place anything that is certainly correct in result
+#   if area in ["north", "east", "south", "west", "centre"]:
+#     result["area"] = area
+#   # Anything that is misspelled and corrected is added as a Suggestion(original, suggestion)
+#   elif area == "center":
+#     errors["area"] = Suggestion(area, "centre")
+#   # Food
+#   food = input("food: ").strip().lower()
+#   if len(food) > 0:
+#     result["food"] = food
+#   # Pricerange
+#   price = input("price: ").strip().lower()
+#   if price in ["cheap", "moderate", "expensive"]:
+#     result["pricerange"] = price
+#   elif price == "ceap":
+#     errors["pricerange"] = Suggestion(price, "cheap")
+#   # Additional requirements
+#   additions = input("additional requirements: ").strip().lower()
+#   if additions in ["touristic", "assigned seats", "children", "romantic"]:
+#     result["additions"] = additions
+#   # Return definitely correct results and errors/suggestions
+#   return result, errors
 
 
 class Manager:
@@ -118,13 +118,13 @@ class Manager:
   def _update_preferences(self, act: Act, utterance: str, suggest: bool = True):
     # Run slot extraction with the user's last utterance
     # Update preferences and suggestions (where applicable)
-    # TODO (Ruben): switch to use real slot extraction once it is finished
     new_prefs, new_suggests = slot_extraction(act, utterance)
     self.preferences.update(new_prefs)
     if suggest:
       self.suggestions.update(new_suggests)
 
   def _apply_reasoning(self) -> Optional[State]:
+    # RUBEN: Implement
     # TODO (Albert): update self.preferences according to additional requirements
     # Also deal with conflicting preferences - this means removing both and self.explanation and going back to the thing the user prefers
     # so, if price=expensive and additions=touristic, ask which is more important and apply the newly entered one:
@@ -134,9 +134,14 @@ class Manager:
     # Should also set self.explanation to the explanation
     pass
 
+  def restart(self) -> State:
+    self.__init__(self.classifier, self.tts)
+    return State.WELCOME
+
   def _welcome(self) -> State:
     act, utterance = self._send_pompt(Prompts.welcome)
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return State.AREA_ASK
@@ -149,6 +154,7 @@ class Manager:
       return State.AREA_CONFIRM
     act, utterance = self._send_pompt(Prompts.area_ask_invalid if repeat else Prompts.area_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return self._area_ask(repeat=True)
@@ -156,9 +162,10 @@ class Manager:
   def _area_confirm(self) -> State:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["area"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance, suggest=False)
-    if act in [Act.AFFIRM, Act.ACK] and "area" not in self.preferences:
+    if act in [Act.AFFIRM, Act.ACK, Act.CONFIRM] and "area" not in self.preferences:
       self.preferences["area"] = self.suggestions["area"].suggest
     return self._area_ask(repeat=True)
 
@@ -169,6 +176,7 @@ class Manager:
       return State.FOOD_CONFIRM
     act, utterance = self._send_pompt(Prompts.food_ask_invalid if repeat else Prompts.food_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return self._food_ask(repeat=True)
@@ -177,8 +185,9 @@ class Manager:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["food"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
     if act == Act.BYE: return State.FINISHED
+    if act == Act.RESTART: return self.restart()
     self._update_preferences(act, utterance, suggest=False)
-    if act in [Act.AFFIRM, Act.ACK] and "food" not in self.preferences:
+    if act in [Act.AFFIRM, Act.ACK, Act.CONFIRM] and "food" not in self.preferences:
       self.preferences["food"] = self.suggestions["food"].suggest
     return self._food_ask(repeat=True)
 
@@ -189,6 +198,7 @@ class Manager:
       return State.PRICE_CONFIRM
     act, utterance = self._send_pompt(Prompts.price_ask_invalid if repeat else Prompts.price_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     return self._price_ask(repeat=True)
@@ -196,9 +206,10 @@ class Manager:
   def _price_confirm(self) -> State:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["pricerange"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance, suggest=False)
-    if act in [Act.AFFIRM, Act.ACK] and "pricerange" not in self.preferences:
+    if act in [Act.AFFIRM, Act.ACK, Act.CONFIRM] and "pricerange" not in self.preferences:
       self.preferences["pricerange"] = self.suggestions["pricerange"].suggest
     return self._price_ask(repeat=True)
 
@@ -210,6 +221,7 @@ class Manager:
       return State.ADDITIONS_CONFIRM
     act, utterance = self._send_pompt(Prompts.additions_ask_invalid if repeat else Prompts.additions_ask)
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance)
     if act in [Act.DENY, Act.NEGATE]:
@@ -219,9 +231,10 @@ class Manager:
   def _additions_confirm(self) -> State:
     act, utterance = self._send_pompt(Prompts.ask_confirm.format(*self.suggestions["additions"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act == Act.BYE: return State.FINISHED
     self._update_preferences(act, utterance, suggest=False)
-    if act in [Act.AFFIRM, Act.ACK] and "additions" not in self.preferences:
+    if act in [Act.AFFIRM, Act.ACK, Act.CONFIRM] and "additions" not in self.preferences:
       self.preferences["additions"] = self.suggestions["additions"].suggest
     return self._additions_ask(repeat=True)
 
@@ -238,6 +251,7 @@ class Manager:
       prompt += " " + self.explanation
     act, utterance = self._send_pompt(prompt.format(self.current["restaurantname"]))
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
     # TODO: Deal with when the user wants to change something 'I want a cheap restaurant instead"
     if act == Act.REQALTS:
@@ -247,11 +261,13 @@ class Manager:
     return State.SUGGEST_REST
 
   def _inform_rest(self) -> State:
+    # RUBEN: Implement
     # TODO (Albert): add recognition for 'address', 'phone', 'post', 'food' in slot extraction
     # TODO (Ruben, afterwards): add correct language formatting for prompt
     prompt = Prompts.inform.format(self.current)
     act, utterance = self._send_pompt(prompt)
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
     return State.INFORM_REST
 
@@ -259,6 +275,7 @@ class Manager:
     new_prefs = []
     act, utterance = self._send_pompt(Prompts.no_restaurant)
     if act in [Act.REPEAT, Act.NULL]: return self.state
+    if act == Act.RESTART: return self.restart()
     if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
     # User changes their preferences
     if act in [Act.INFORM, Act.REQALTS]:
@@ -282,6 +299,8 @@ class Manager:
     exit()
   
   def transition_state(self):
+    # ANOUK: Update state diagram
+
     # Main state transition function
     print(f"  \033[92mDEBUG: preferences{self.preferences}\033[0m")
 

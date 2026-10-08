@@ -1,3 +1,4 @@
+# RUBEN: Improve
 class Prompts:
   welcome = "Welcome to restaurantpicker9000! What kind of restaurant are you looking for?"
   ask_confirm = "Did you mean '{1}' instead of '{0}'?"
