@@ -23,12 +23,11 @@ def load_restaurants(path: str = "restaurant_info_extended.csv") -> pd.DataFrame
 
 def lookup_restaurant(restaurants: pd.DataFrame, requirements: RestaurantInfo, max_dist=0) -> pd.DataFrame:
     restaurants['dist'] = 0
-    # RUBEN: Implement dontcare option
-    for key in requirements.keys():
-      if key == "additions":
+    for key, req in requirements.items():
+      if key == "additions" or req == "dontcare":
          continue
       # Add 1 (boolean True) to each restaurant that doesn't match perfectly
-      restaurants['dist'] += restaurants[key] != requirements[key]
+      restaurants['dist'] += restaurants[key] != req
 
     if max_dist >= 0:
         restaurants = restaurants[restaurants['dist'] <= max_dist]
