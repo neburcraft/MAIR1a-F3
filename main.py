@@ -8,48 +8,105 @@ the user classify typed utterances until they type 'stop'. """
 import argparse
 
 from classifiers import MODEL_NAMES, Classifier, EmbeddedLRClassifier, EmbeddedMLPClassifier, FrozenEmbeddingEncoder, LRClassifier, MLPClassifier, RuleClassifier
-from cli import run_prompt
-from data import create_grouped_split, create_stratified_split, load_data
+from data import clean_utterance, create_grouped_split, create_stratified_split, load_data
+from manager import Manager, State
+from slot_extraction import SlotExtract
+from tts import TTS
 
 
-def train_all(train_data, clean_train_data, verbose=False) -> dict[str, Classifier]:
-  """Train every classifier on both splits and return them in a dict.
+class CLI:
+  def __init__(self, args):
+    self.model: str = args.model
+    self.extractor: SlotExtract = SlotExtract(args.extractor)
+    self.verbose: bool = args.verbose
+    self.tts: bool = args.tts
 
-  Relies on fit() returning self, so each classifier can be created and
-  trained in one expression instead of two separate steps.
-  """
-  embedder = FrozenEmbeddingEncoder()
-  utterance, act = train_data['utterance'], train_data['act']
-  clean_utterance_col, clean_act = clean_train_data['utterance'], clean_train_data['act']
+    data = load_data()
+    self.train_data, self.test_data = create_stratified_split(data)
+    self.clean_train_data, self.clean_test_data = create_grouped_split(data)
+    self.classifier = self.get_classifier()
+    
 
-  return {
-    "rule": RuleClassifier(),
-    "lr": LRClassifier().fit(utterance, act, verbose),
-    "clean_lr": LRClassifier().fit(clean_utterance_col, clean_act, verbose),
-    "mlp": MLPClassifier().fit(utterance, act, verbose),
-    "clean_mlp": MLPClassifier().fit(clean_utterance_col, clean_act, verbose),
-    "embedded_lr": EmbeddedLRClassifier(embedder).fit(utterance, act, verbose),
-    "clean_embedded_lr": EmbeddedLRClassifier(embedder).fit(clean_utterance_col, clean_act, verbose),
-    "embedded_mlp": EmbeddedMLPClassifier(embedder).fit(utterance, act, verbose),
-    "clean_embedded_mlp": EmbeddedMLPClassifier(embedder).fit(clean_utterance_col, clean_act, verbose),
-  }
+  def get_classifier(self) -> Classifier:
+    embedder = FrozenEmbeddingEncoder()
+    utterance, act = self.train_data['utterance'], self.train_data['act']
+    clean_utterance_col, clean_act = self.clean_train_data['utterance'], self.clean_train_data['act']
+
+    match self.model:
+      case "rule": return RuleClassifier()
+      case "lr": return LRClassifier().fit(utterance, act, self.verbose)
+      case "clean_lr": return LRClassifier().fit(clean_utterance_col, clean_act, self.verbose)
+      case "mlp": return MLPClassifier().fit(utterance, act, self.verbose)
+      case "clean_mlp": return MLPClassifier().fit(clean_utterance_col, clean_act, self.verbose)
+      case "embedded_lr": return EmbeddedLRClassifier(embedder).fit(utterance, act, self.verbose)
+      case "clean_embedded_lr": return EmbeddedLRClassifier(embedder).fit(clean_utterance_col, clean_act, self.verbose)
+      case "embedded_mlp": return EmbeddedMLPClassifier(embedder).fit(utterance, act, self.verbose)
+      case "clean_embedded_mlp": return EmbeddedMLPClassifier(embedder).fit(clean_utterance_col, clean_act, self.verbose)
+      case _:
+        print("  \033[91WARN: Unknown classifier, falling back to rule-based classifier.\033[0m")
+        return RuleClassifier()
+  
+
+  def run_classifier(self):
+    """Repeatedly ask for an utterance and print the predicted dialog act.
+
+    Ask for utterances and print the predicted dialog act until the user types 'stop'. 
+    Typing 'model <name>' switches to a different classifier
+      
+    """
+    print(f"Using model: {self.model}")
+    print("Type an utterance to classify it, '!model <name>' to switch models, or '!stop' to quit.")
+    print(f"Available models: {', '.join(MODEL_NAMES)}")
+
+    while True:
+      try:
+        inp = input("> ").strip().lower()
+      except EOFError:
+        print("Stopping")
+        return
+
+      if len(inp) == 0:
+        continue
+      if inp == "!stop":
+        print("Stopping")
+        return
+
+      if inp.startswith("!model "):
+        self.model = inp[len("!model "):].strip()
+        self.classifier = self.get_classifier()
+
+      # Clean the same way the training data was cleaned, so live input matches what the classifiers were trained on.
+      inp = clean_utterance(inp)
+      if len(inp) == 0:
+        continue
+      print(f"  Classified as: {self.classifier.run(inp)}")
+
+
+  def run_manager(self):
+    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None)
+    while manager.state != State.FINISHED:
+      manager.transition_state()
+    manager.finish()
 
 
 #  Entry point when ran as `$ python ./main.py`: parse args, load data, train, run the prompt
 if __name__ == "__main__":
-  # RUBEN: Update CLI
   parser = argparse.ArgumentParser()
-  parser.add_argument("--verbose", action="store_true", help="show every classifier's prediction instead of only one")
   parser.add_argument(
     "--model", default="mlp", choices=MODEL_NAMES,
-    help="which classifier to use when --verbose is off (default: mlp); can also be changed at runtime with 'model <name>'",
+    help="Which classifier to use (default: mlp); can also be changed at runtime with '!model <name>'"
   )
+  parser.add_argument(
+      "--extractor", default="levenshtein", choices=["levenshtein", "similarity"],
+      help="Which slot extraction method to use (levenshtein distance or DistilBERT cosine similarity)"
+  )
+  parser.add_argument("--classify", action="store_true", help="Only run the classifier, not the entire chatbot")
+  parser.add_argument("--tts", action="store_true", help="Use text-to-speech instead of text output")
+  parser.add_argument("--verbose", action="store_true", help="Show more detailed reasoning information")
   args = parser.parse_args()
 
-  data = load_data()
-  train_data, test_data = create_stratified_split(data)
-  clean_train_data, clean_test_data = create_grouped_split(data)
-
-  if args.verbose: print("Starting training of the models")
-  trained_classifiers = train_all(train_data, clean_train_data, verbose=args.verbose)
-  run_prompt(trained_classifiers, args.model, args.verbose)
+  cli = CLI(args)
+  if args.classify:
+    cli.run_classifier()
+  else:
+    cli.run_manager()

@@ -2,32 +2,16 @@
 
 import re
 from dataclasses import dataclass
-from typing import Any, Literal, TYPE_CHECKING
-
+from typing import Literal
+import numpy as np
 import pandas as pd
+from Levenshtein import distance as levenshtein_distance
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+
+from data import clean_utterance
 from restaurant import RestaurantInfo
-
-if TYPE_CHECKING:
-  from classifiers import Act
-else:
-  Act = Any
-
-try:
-  from Levenshtein import distance as levenshtein_distance
-except ImportError:
-  # Small fallback so keyword extraction still works before dependencies are installed.
-  def levenshtein_distance(first: str, second: str) -> int:
-    previous = list(range(len(second) + 1))
-    for row, first_char in enumerate(first, start=1):
-      current = [row]
-      for column, second_char in enumerate(second, start=1):
-        current.append(min(
-          current[-1] + 1,
-          previous[column] + 1,
-          previous[column - 1] + (first_char != second_char),
-        ))
-      previous = current
-    return previous[-1]
+from classifiers import Act
 
 
 @dataclass
@@ -41,28 +25,24 @@ class Suggestion:
     return bool(self.suggest)
 
   def __iter__(self):
+    # Allows using the splat operator in str.format(*suggestion)
     return iter((self.inp, self.suggest))
 
 
 class SlotExtract:
   AREA_VALUES = ["north", "east", "south", "west", "centre"]
   PRICE_VALUES = ["cheap", "moderate", "expensive"]
-  ADDITION_PHRASES = {
-    "touristic": ("touristic", "touristy"),
-    "assigned seats": ("assigned seats", "assigned seating"),
-    "children": ("children", "child", "kids", "kid"),
-    "romantic": ("romantic", "romance"),
-  }
+  ADDITION_VALUES = ["touristic", "assigned seats", "children", "romantic"]
   INFO_KEYWORDS = {
     "addr": ("address", "location", "located"),
     "phone": ("phone", "telephone", "phone number"),
     "postcode": ("postcode", "post code", "postal code", "zip code"),
     "food": ("food", "cuisine", "serves"),
   }
-  DONTCARE_PHRASES = (
-    "dontcare", "don't care", "do not care", "doesn't matter",
-    "does not matter", "no preference", "anything is fine", "any is fine",
-  )
+  DONTCARE_PHRASES = [
+    "dontcare", "don't care", "do not care", "doesn't matter", "anywhere", "anything",
+    "does not matter", "no preference", "anything is fine", "any is fine", "whatever"
+  ]
   SLOT_HINTS = {
     "area": ("area", "part of town", "location"),
     "food": ("food", "cuisine"),
@@ -74,14 +54,15 @@ class SlotExtract:
     "something", "the", "to", "want", "with", "would",
   }
 
+  ontology: dict[str, list[str]]
+  exact: RestaurantInfo
+  embedder: SentenceTransformer | None = None
+
   def __init__(self, mode: Literal["levenshtein", "similarity"] = "levenshtein"):
-    self.mode = mode
     self.load_ontology()
     self.exact = RestaurantInfo()
     self.embedder = None
     if mode == "similarity":
-      # Loading DistilBERT is expensive, so only do it when that mode is used.
-      from sentence_transformers import SentenceTransformer
       self.embedder = SentenceTransformer("sentence-transformers/multi-qa-distilbert-cos-v1")
 
   def load_ontology(self, path: str = "restaurant_info_extended.csv"):
@@ -93,67 +74,63 @@ class SlotExtract:
       "area": self.AREA_VALUES,
       "food": food_values,
       "pricerange": self.PRICE_VALUES,
+      "additions": self.ADDITION_VALUES
     }
 
-  def _contains_phrase(self, text: str, phrase: str) -> bool:
-    return re.search(rf"(?<!\w){re.escape(phrase)}(?!\w)", text) is not None
-
-  def _has_dontcare(self, text: str) -> bool:
-    return any(self._contains_phrase(text, phrase) for phrase in self.DONTCARE_PHRASES)
+  def contains_phrase(self, text: str, phrase: str) -> bool:
+    phrase = clean_utterance(phrase)
+    return re.search(f"(^|\\s){phrase}(\\s|$)", text) is not None
 
   def extract_keywords(self, utterance: str, expected_slot: str | None = None) -> RestaurantInfo:
     """Extract exact slot values, additions and a slot-specific dontcare value."""
     text = utterance.lower().strip()
     result = RestaurantInfo()
 
+    if any(self.contains_phrase(text, phrase) for phrase in self.DONTCARE_PHRASES) and expected_slot:
+      result[expected_slot] = "dontcare"
+    
     for area in self.ontology["area"]:
-      if self._contains_phrase(text, area):
+      if self.contains_phrase(text, area):
         result["area"] = area
         break
     for price in self.ontology["pricerange"]:
-      if self._contains_phrase(text, price):
+      if self.contains_phrase(text, price):
         result["pricerange"] = price
         break
     for food in self.ontology["food"]:
-      if self._contains_phrase(text, food):
+      if self.contains_phrase(text, food):
         result["food"] = food
         break
-
-    for addition, phrases in self.ADDITION_PHRASES.items():
-      if any(self._contains_phrase(text, phrase) for phrase in phrases):
+    for addition in self.ADDITION_VALUES:
+      if self.contains_phrase(text, addition):
         result["additions"] = addition
         break
-
-    if self._has_dontcare(text):
-      slot = expected_slot
-      if slot is None:
-        for name, hints in self.SLOT_HINTS.items():
-          if any(self._contains_phrase(text, hint) for hint in hints):
-            slot = name
-            break
-      if slot in ("area", "food", "pricerange"):
-        result[slot] = "dontcare"
 
     return result
 
   def extract_requested_fields(self, utterance: str) -> list[str]:
     """Return restaurant details explicitly requested by the user."""
-    text = utterance.lower().strip()
-    return [
-      field for field, keywords in self.INFO_KEYWORDS.items()
-      if any(self._contains_phrase(text, keyword) for keyword in keywords)
-    ]
+    result = []
+    for field, keywords in self.INFO_KEYWORDS.items():
+      if any(self.contains_phrase(utterance, key) for key in keywords):
+        result.append(field)
+    return result
 
   def _phrases(self, text: str, size: int) -> list[str]:
-    words = re.findall(r"[a-z]+", text.lower())
-    words = [word for word in words if word not in self.STOPWORDS]
-    return [" ".join(words[start:start + size]) for start in range(len(words) - size + 1)]
+    """Return candidate phrases containing ``size`` non-stopwords."""
+    words = [w for w in text.split() if w not in self.STOPWORDS]
+    result = []
+    for start in range(len(words) - size + 1):
+      phrase_words = words[start:start + size]
+      result.append(" ".join(phrase_words))
+    return result
 
   def _acceptable_distance(self, candidate: str, value: str, distance: int) -> bool:
     longest = max(len(candidate), len(value))
-    return longest > 0 and distance / longest <= 0.34
+    return distance / longest <= 0.34
 
   def _closest_value(self, utterance: str, values: list[str]) -> Suggestion | None:
+    """Find the best plausible typo correction for one slot."""
     best: tuple[int, str, str] | None = None
     candidates = self._phrases(utterance, 1) + self._phrases(utterance, 2) + self._phrases(utterance, 3)
     for value in values:
@@ -163,24 +140,24 @@ class SlotExtract:
           continue
         if best is None or distance < best[0]:
           best = (distance, candidate, value)
-    return None if best is None else Suggestion(best[1], best[2])
+    if best:
+      return Suggestion(best[1], best[2])
+    return None
 
   def extract_with_levenshtein(self, utterance: str) -> dict[str, Suggestion]:
-    suggestions = {}
-    for slot in ("area", "food", "pricerange"):
+    """Run exact matching first, then suggest close spellings for missing slots."""
+    suggestions: dict[str, Suggestion] = {}
+    for slot in ("area", "food", "pricerange", "additions"):
       if slot in self.exact:
         continue
       suggestion = self._closest_value(utterance, self.ontology[slot])
-      if suggestion is not None:
+      if suggestion:
         suggestions[slot] = suggestion
     return suggestions
 
   def closest_semantic_value(self, utterance: str, options: list[str], threshold: float) -> Suggestion | None:
-    import numpy as np
-    from sklearn.metrics.pairwise import cosine_similarity
-
     candidates = self._phrases(utterance, 1) + self._phrases(utterance, 2) + self._phrases(utterance, 3)
-    if not candidates:
+    if len(candidates) == 0:
       return None
     similarities = cosine_similarity(self.embedder.encode(candidates), self.embedder.encode(options))
     if similarities.max() < threshold:
@@ -199,30 +176,9 @@ class SlotExtract:
     return suggestions
 
   def slot_extraction(
-    self, act: Act, utterance: str, expected_slot: str | None = None,
+      self, act: Act, utterance: str, expected_slot: str | None = None,
   ) -> tuple[RestaurantInfo, dict[str, Suggestion]]:
     self.exact = self.extract_keywords(utterance, expected_slot)
-    if self.mode == "similarity":
+    if self.embedder:
       return self.exact, self.extract_with_semantic(utterance)
     return self.exact, self.extract_with_levenshtein(utterance)
-
-
-_default_extractor: SlotExtract | None = None
-
-
-def get_default_extractor() -> SlotExtract:
-  global _default_extractor
-  if _default_extractor is None:
-    _default_extractor = SlotExtract("levenshtein")
-  return _default_extractor
-
-
-def slot_extraction(
-  act: Act, utterance: str, expected_slot: str | None = None,
-) -> tuple[RestaurantInfo, dict[str, Suggestion]]:
-  """Compatibility wrapper used by the dialog manager."""
-  return get_default_extractor().slot_extraction(act, utterance, expected_slot)
-
-
-def extract_requested_fields(utterance: str) -> list[str]:
-  return get_default_extractor().extract_requested_fields(utterance)
