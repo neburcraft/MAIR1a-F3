@@ -70,7 +70,7 @@ class Manager:
     act = self.classifier.run(clean_input)
     if self.logger:
       restaurant = self.current["restaurantname"] if self.current else ""
-      self.logger.log_turn(self.state.name, prompt, clean_input, act.name, dict(self.preferences), restaurant
+      self.logger.log_turn(self.state.name, prompt, clean_input, act.name, dict(self.preferences), restaurant)
     if self.verbose:
       print(f"  \033[92mINFO (manager.py): Input classified as {act.name}\033[0m")
     return act, clean_input
