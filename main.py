@@ -12,6 +12,7 @@ from data import clean_utterance, create_grouped_split, create_stratified_split,
 from manager import Manager, State
 from slot_extraction import SlotExtract
 from tts import TTS
+from logger import InteractionLogger
 
 
 class CLI:
@@ -20,6 +21,8 @@ class CLI:
     self.extractor: SlotExtract = SlotExtract(args.extractor)
     self.verbose: bool = args.verbose
     self.tts: bool = args.tts
+    self.participant: str | None = args.participant   ## without participants in the code there is nothing to log
+    self.condition: str = args.condition   ## we don't know yet, but this is needed and would be clear in part 2?
 
     data = load_data()
     self.train_data, self.test_data = create_stratified_split(data)
@@ -83,7 +86,8 @@ class CLI:
 
 
   def run_manager(self):
-    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None)
+    logger = InteractionLogger(self.participant, self.condition) if self.participant else None
+    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None, logger)
     while manager.state != State.FINISHED:
       manager.transition_state()
     manager.finish()
@@ -103,6 +107,8 @@ if __name__ == "__main__":
   parser.add_argument("--classify", action="store_true", help="Only run the classifier, not the entire chatbot")
   parser.add_argument("--tts", action="store_true", help="Use text-to-speech instead of text output")
   parser.add_argument("--verbose", action="store_true", help="Show more detailed reasoning information")
+  parser.add_argument("--participant", default=None, help="Participant id; turns logging on")
+  parser.add_argument("--condition", default="default", help="Name of the experimental condition")
   args = parser.parse_args()
 
   cli = CLI(args)
