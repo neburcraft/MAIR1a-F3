@@ -7,16 +7,16 @@ PROMPTS = {
     "price_ask": "What price range are you looking for?",
     "food_ask": "What kind of food would you like?",
     
-    # we don't know what the typer meant with what he typed
+    # we can't yell what the user meant
     "area_ask_invalid": "'{0}' is not a valid area, choose north, east, south, west or centre. What area do you prefer?",
     "food_ask_invalid": "Sorry, I am not familiar with '{0}'. What kind of food would you like?",
     "price_ask_invalid": "'{0}' is not a valid price, choose cheap, moderate or expensive. What price range are you looking for?",
     "ask_confirm": "Sorry I don't understand. Did you mean '{1}' instead of '{0}'?",
 
-    # the recommandation 
+    # the recommendation 
     "suggest": "I suggest {0}.",
 
-    # no restaurant availble
+    # no restaurant available
     "no_rest": "I could not find a restaurant that matches. Would you like to change the area, food or price range?",
     "no_more_rest": "I'm afraid that there are no other restaurants that match. Would you like to change the area, food or price range?",
 
