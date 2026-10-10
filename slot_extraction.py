@@ -36,12 +36,13 @@ class SlotExtract:
   INFO_KEYWORDS = {
     "addr": ("address", "location", "located"),
     "phone": ("phone", "telephone", "phone number"),
-    "postcode": ("postcode", "post code", "postal code", "zip code"),
+    "postcode": ("postcode", "post code", "postal code", "zip code", "post"),
     "food": ("food", "cuisine", "serves"),
   }
   DONTCARE_PHRASES = [
     "dontcare", "don't care", "do not care", "doesn't matter", "anywhere", "anything",
-    "does not matter", "no preference", "anything is fine", "any is fine", "whatever"
+    "does not matter", "no preference", "anything is fine", "any is fine", "whatever",
+    "i don't mind", "i do not mind", "any area", "any food", "any price"
   ]
   SLOT_HINTS = {
     "area": ("area", "part of town", "location"),
@@ -83,26 +84,25 @@ class SlotExtract:
 
   def extract_keywords(self, utterance: str, expected_slot: str | None = None) -> RestaurantInfo:
     """Extract exact slot values, additions and a slot-specific dontcare value."""
-    text = utterance.lower().strip()
     result = RestaurantInfo()
 
-    if any(self.contains_phrase(text, phrase) for phrase in self.DONTCARE_PHRASES) and expected_slot:
+    if any(self.contains_phrase(utterance, phrase) for phrase in self.DONTCARE_PHRASES) and expected_slot:
       result[expected_slot] = "dontcare"
     
     for area in self.ontology["area"]:
-      if self.contains_phrase(text, area):
+      if self.contains_phrase(utterance, area):
         result["area"] = area
         break
     for price in self.ontology["pricerange"]:
-      if self.contains_phrase(text, price):
+      if self.contains_phrase(utterance, price):
         result["pricerange"] = price
         break
     for food in self.ontology["food"]:
-      if self.contains_phrase(text, food):
+      if self.contains_phrase(utterance, food):
         result["food"] = food
         break
     for addition in self.ADDITION_VALUES:
-      if self.contains_phrase(text, addition):
+      if self.contains_phrase(utterance, addition):
         result["additions"] = addition
         break
 

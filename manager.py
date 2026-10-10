@@ -120,10 +120,10 @@ class Manager:
   ) -> bool:
     """Ask which of two conflicting requirements should be kept. Returns True if succeeded, False when it deleted both requirements."""
     _, answer = self._send_pompt(Prompts.conflict.format(label_a, label_b))
-    if self.extractor.contains_phrase(label_a, answer):
+    if self.extractor.contains_phrase(answer, label_a):
       del self.preferences[key_b]
       return True
-    if self.extractor.contains_phrase(label_b, answer):
+    if self.extractor.contains_phrase(answer, label_b):
       del self.preferences[key_a]
       return True
 
@@ -153,7 +153,7 @@ class Manager:
 
     # Start again from all restaurants, then apply the derived requirements.
     self.candidates = self.filter_candidates(load_restaurants(), self.preferences.get("additions", None))
-    self.explanation = ""
+    self.explanation = EXPLANATION[self.preferences.get("additions", "")]
     return None
 
   def restart(self) -> State:
