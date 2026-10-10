@@ -14,18 +14,10 @@ import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import sys
-from pathlib import Path
-
-import joblib
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 from sklearn.metrics import accuracy_score, balanced_accuracy_score, classification_report, confusion_matrix, ConfusionMatrixDisplay, f1_score
 
-from classifiers import Classifier, RuleClassifier, LRClassifier, MLPClassifier, FrozenEmbeddingEncoder, EmbeddedLRClassifier, EmbeddedMLPClassifier
+from classifiers import RuleClassifier, LRClassifier, MLPClassifier, FrozenEmbeddingEncoder, EmbeddedLRClassifier, EmbeddedMLPClassifier
 from data import load_data, create_stratified_split, create_grouped_split
-from main import train_all
 
 
 EXPERIMENTS_DIR = Path("experiments")
@@ -45,7 +37,7 @@ def predict_labels(classifier, utterances):
 
   predictions = []
   for utterance in utterances:
-    predictions.append(classifier.run(utterance))
+    predictions.append(classifier.run(utterance).value)
 
   return np.array(predictions)
 
@@ -295,7 +287,20 @@ if __name__ == "__main__":
   if MODELS_PATH.exists():
     classifiers = load_models()
   else:
-    classifiers = train_all(train_data, clean_train_data)
+    embedder = FrozenEmbeddingEncoder()
+    utterance, act = train_data['utterance'], train_data['act']
+    clean_utterance_col, clean_act = clean_train_data['utterance'], clean_train_data['act']
+    classifiers = {
+      "rule": RuleClassifier(),
+      "lr": LRClassifier().fit(utterance, act),
+      "clean_lr": LRClassifier().fit(clean_utterance_col, clean_act),
+      "mlp": MLPClassifier().fit(utterance, act),
+      "clean_mlp": MLPClassifier().fit(clean_utterance_col, clean_act),
+      "embedded_lr": EmbeddedLRClassifier(embedder).fit(utterance, act),
+      "clean_embedded_lr": EmbeddedLRClassifier(embedder).fit(clean_utterance_col, clean_act),
+      "embedded_mlp": EmbeddedMLPClassifier(embedder).fit(utterance, act),
+      "clean_embedded_mlp": EmbeddedMLPClassifier(embedder).fit(clean_utterance_col, clean_act)
+    }
     save_models(classifiers)
 
   evaluate_all(classifiers, test_data, clean_test_data)
