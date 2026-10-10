@@ -43,7 +43,7 @@ class Manager:
   max_dist: int
   tts: TTS | None
 
-  def __init__(self, classifier: Classifier, extractor: SlotExtract, verbose: bool = False, tts=None):
+  def __init__(self, classifier: Classifier, extractor: SlotExtract, verbose: bool = False, tts=None, logger=None):
     self.classifier = classifier
     self.extractor = extractor
     self.verbose = verbose
@@ -58,6 +58,7 @@ class Manager:
     self.shown = set()
     self.max_dist = 1
     self.tts = tts
+    self.logger = logger
 
   def _send_pompt(self, prompt) -> tuple[Act, str]:
     self.prompt = prompt
@@ -67,6 +68,9 @@ class Manager:
       print(prompt)
     clean_input = clean_utterance(input("> "))
     act = self.classifier.run(clean_input)
+    if self.logger:
+      restaurant = self.current["restaurantname"] if self.current else ""
+      self.logger.log_turn(self.state.name, prompt, clean_input, act.name, dict(self.preferences), restaurant
     if self.verbose:
       print(f"  \033[92mINFO (manager.py): Input classified as {act.name}\033[0m")
     return act, clean_input
@@ -157,7 +161,7 @@ class Manager:
     return None
 
   def restart(self) -> State:
-    self.__init__(self.classifier, self.extractor, self.verbose, self.tts)
+    self.__init__(self.classifier, self.extractor, self.verbose, self.tts, self.logger)
     if self.verbose:
       print(f"  \033[92mINFO (manager.py): {self.preferences=}")
       print(f"  INFO (manager.py): {self.suggestions=}")
