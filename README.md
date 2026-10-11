@@ -1,5 +1,10 @@
-# INFOMAIR Project part 1a
-Dialog act classification for the restaurant recommendation dialog system. Utterances from the DSTC 2 dataset are classified into one of 15 dialog acts, using a rule-based baseline and machine learning classifiers such as logistic regression and MLP. Each classifier was trained and evaluated on a stratified split and a grouped split that prevents duplicate utterances from leaking between train and test.
+# INFOMAIR Project part 1
+Implementation of the INFOMAIR project by group F3.
+
+Includes from part 1a: Dialog act classification for the restaurant recommendation dialog system. Utterances from the DSTC 2 dataset are classified into one of 15 dialog acts, using a rule-based baseline and machine learning classifiers such as logistic regression and MLP. Each classifier was trained and evaluated on a stratified split and a grouped split that prevents duplicate utterances from leaking between train and test.
+
+Includes from part 2a: Full restaurant recommendation engine with state manager, slot extraction and an optional text-to-speech mode. Slot extraction is implemented using keyword matching, Levenshtein distance and cosine similarity for word embeddings.
+
 
 ## Group F3
 - Anouk van Ladesteijn ([a.r.vanladesteijn@uu.nl](a.r.vanladesteijn@uu.nl))
@@ -7,30 +12,6 @@ Dialog act classification for the restaurant recommendation dialog system. Utter
 - Yanpeng Wang ([y.wang36@students.uu.nl](y.wang36@students.uu.nl))
 - Ruben Wijmenga ([ruben.wijmenga@students.uu.nl](mailto:r.wijmenga@students.uu.nl))
 
-## TODO
-Each TODO should be implemented in its own branch. For testing your own additions, create a new file - do not edit main.py unless you need to. Merge whenever your part is finished and say in WhatsApp if you encounter any merge conflicts.
-
-- [x] [Ruben|04-10] Address feedback on 1a
-- [ ] [Huub|04-10] Improve evaluation function
-- [ ] [Anouk|03-10] Create state diagram
-- [ ] [Anouk|06-10] Implement state diagram in python with state transition function
-- [ ] [Albert|06-10] Implement slot extraction - keyword matching
-- [ ] [Albert|06-10] Implement slot extraction - Lehvenstein edit distance (`python-Lehvenstein` library)
-- [ ] [Ruben|06-10] Implement slot extraction - Semantic similarity via embeddings (with DistilBERT)
-- [x] [Ruben|08-10] Implement lookup function given act, filled slots and `restaurant_info_extended.csv`
-- [ ] [Anouk|08-10] Implement response generation
-- [ ] [Albert|08-10] Extend dialog manager with reasoning step (6 inference rules given in assignment)
-- [ ] [Huub|09-10] Implement configurability and second comparison functionality
-- [ ] [Huub|10-10] Update command-line interface
-- [ ] [Anouk|10-10] Implement interaction logging
-- [ ] [Ruben|11-10] Finalize code on cleanness, correctness, comments and README
-- [ ] [Anouk|10-10] Rewrite report abstract
-- [ ] [Anouk|09-10] Rewrite report introduction
-- [ ] [Albert+Anouk|09-10] Rewrite report system architecture (classifier → dialog manager → reasoning; design decisions)
-- [ ] [Huub|10-10] Rewrite report experiments and results
-- [ ] [Ruben|10-10] Rewrite report discussion and conclusion
-- [ ] [Albert+Huub|10-10] Update report appendices
-- [ ] [Ruben|11-10] Finalize report and hand in all files
 
 ## Installation
 Mamba:
@@ -47,12 +28,19 @@ Vanilla:
 ```
 python -m pip install -r requirements.txt
 ```
+
+
 ## Project structure
 ### Code
 - `classifiers.py`: all classifier implementations and the shared `Classifier` base class (`RuleClassifier`, `LRClassifier`, `MLPClassifier`, `FrozenEmbeddingEncoder`, `EmbeddedLRClassifier`, `EmbeddedMLPClassifier`)
-- `data.py`: loading, cleaning and splitting the dataset (stratified split and grouped split)
-- `main.py`: trains all classifiers and starts the interactive prompt
-- `evaluate.py`: trains all classifiers and evaluates them
+- `data.py`: for loading, cleaning and splitting the dataset (stratified split and grouped split)
+- `evaluate.py`: evaluates all classifiers and stores the result to ./experiments/
+- `main.py`: contains the command line interface for the entire system
+- `manager.py`: contains the full restaurant reccomendation pipeline
+- `responses.py`: formatted natural language prompts to send to the user (either by tts or in the console)
+- `restaurant.py`: helper functions for loading and filtering the restaurants defined in the csv files
+- `slot_extraction.py`: functions for extracting user preference from an utterance using keyword matching, Levenshtein distance and cosine similarity
+- `tts.py`: wrapper for the sherpa_onnx text-to-speech engine
 
 ### Data
 - `dialog_acts.dat`: the training/development dataset
@@ -60,36 +48,44 @@ python -m pip install -r requirements.txt
 - `dialog_acts_test.dat`: the generated (fixed seed) testing dataset from regular stratified sampling
 - `dialog_acts_train_grouped.dat`: the generated (fixed seed) training dataset from grouped stratified sampling
 - `dialog_acts_test_grouped.dat`: the generated (fixed seed) testing dataset from grouped stratified sampling
+- `restaurant_info.csv`: the restaurant info dataset without reasoning information
+- `restaurant_info_extended.csv`: the restaurant info dataset with reasoning information
 
 ### Miscellaneous
 - `env.yml` for installing packages with mamba or conda
 - `requirements.txt` for installing packages on a regular python installation
 
+
 ## Running
 ```
-python ./main.py [--help] [--verbose] [--model {model}]
-```
-Loads and splits the data, trains all classifiers, and starts a prompt where you can type an utterance to classify it. Type `stop` to quit, or `model <name>` to switch classifiers while it's running.
+python main.py [-h] [--model {rule,lr,clean_lr,mlp,clean_mlp,embedded_lr,clean_embedded_lr,embedded_mlp,clean_embedded_mlp}]
+                    [--extractor {levenshtein,similarity}] [--classify] [--evaluate [PATH]] [--tts] [--verbose]
 
-`--model` picks which classifier is used (default `mlp`). Run `python main.py --help` for the full list of model names. `--verbose` shows every classifier's prediction per utterance instead of just one and gives some extra information while fitting the models.
+options:
+  -h, --help            show this help message and exit
+  --model {rule,lr,clean_lr,mlp,clean_mlp,embedded_lr,clean_embedded_lr,embedded_mlp,clean_embedded_mlp}
+                        Which classifier to use (default: mlp); can also be changed at runtime with '!model <name>'
+  --extractor {levenshtein,similarity}
+                        Which slot extraction method to use (levenshtein distance or DistilBERT cosine similarity)
+  --classify            Only run the classifier, not the entire chatbot
+  --evaluate [PATH]     Only run evaluation of all classifiers before exiting, optionally using a held-out dataset when [PATH] is given
+  --tts                 Use text-to-speech instead of text output
+  --verbose             Show more detailed reasoning information
+```
+
+
+## Classification
+`--classify` lets you enter sentences for the model to classify.
+
+Use `!stop` to stop the program and `!model <modelname>` to choose a classifier, where `modelname` is one of `rule, lr, clean_lr, mlp, clean_mlp, embedded_lr, clean_embedded_lr, embedded_mlp, clean_embedded_mlp`
 
 
 ## Evaluation
-```
-python classifiers.py
-```
-Trains all classifiers and evaluates each one on the test split it belongs to (original or grouped) based on the regular accuracy metric.
+`--evaluate` computes for each classifier/dataset combination the accuracy, balanced accuracy, macro F1,
+weighted F1, per-class precision/recall/F1, a confusion matrix, and misclassified examples.
 
-```
-python evaluate.py
-```
-Trains all classifiers and evaluates each one on the test split it belongs to (original or grouped). Pass a held-out `.dat` file as an argument to also evaluate on that file.
-
-For each classifier/dataset combination this computes accuracy, balanced accuracy, macro F1, weighted F1, per-class precision/recall/F1, a confusion matrix, and the misclassified examples.
-
-### Where the results end up
 Everything gets saved under `experiments/`, one folder per classifier/dataset combination:
-- `metrics.json`: accuracy, balanced accuracy, macro F1, weighted F1
+- `metrics.csv`: accuracy, balanced accuracy, macro F1, weighted F1
 - `classification_report.csv`: precision, recall, F1 per class
 - `predictions.csv`: every utterance with predicted and true label
 - `errors.csv`: just the misclassified ones
