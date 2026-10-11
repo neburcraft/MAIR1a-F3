@@ -1,0 +1,5 @@
+session_id,participant_id,condition,turn,state,system_utterance,user_utterance,act,area,food,pricerange,additions,restaurant
+20261011-093227,p01,baseline,1,WELCOME,Welcome to MAIR - Manager of Awesome Interesting Restaurants! What kind of restaurant are you looking for?,cheap restaurant in the north,INFORM,,,,,
+20261011-093227,p01,baseline,2,FOOD_ASK,What kind of food would you like?,italian,INFORM,north,,cheap,,
+20261011-093227,p01,baseline,3,ADDITIONS_ASK,"Do you have an additional requirement: touristic, assigned seats, children or romantic? You can also say no.",no,NEGATE,north,italian,cheap,,
+20261011-093227,p01,baseline,4,SUGGEST_REST,I suggest Da vinci pizzeria.,thankyou bye,BYE,north,italian,cheap,,da vinci pizzeria
