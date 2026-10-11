@@ -3545,7 +3545,7 @@ thank you good bye,thankyou,thankyou,True
 reset,restart,null,False
 what is the phone number,request,request,True
 may i have a list of venues in the west part of town,inform,inform,True
-no im looking for an expensive restaurant in the east part of town,negate,negate,True
+no im looking for an expensive restaurant in the east part of town,negate,inform,False
 thai food,inform,inform,True
 what about indian food,reqalts,reqalts,True
 dont care,inform,inform,True

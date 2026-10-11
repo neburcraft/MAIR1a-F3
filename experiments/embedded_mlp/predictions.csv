@@ -1,7 +1,7 @@
 utterance,act,prediction,correct
 um,null,null,True
 thank you good bye,thankyou,thankyou,True
-what about chinese food,reqalts,inform,False
+what about chinese food,reqalts,reqalts,True
 seafood,inform,inform,True
 indian,inform,inform,True
 whats the address,request,request,True
@@ -122,7 +122,7 @@ dont care,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 what is the phone number,request,request,True
 north american food,inform,inform,True
-where,request,null,False
+where,request,request,True
 address,request,request,True
 im looking for an expensive restaurant,inform,inform,True
 thank you good bye,thankyou,thankyou,True
@@ -162,7 +162,7 @@ thank you good bye,thankyou,thankyou,True
 vietnamese,inform,inform,True
 phone number and address,request,request,True
 i want a cheap restaurant in the south part of town,inform,inform,True
-price does not matter,inform,inform,True
+price does not matter,inform,request,False
 im looking for a moderately priced restaurant in the south part of town,inform,inform,True
 what about the area,request,request,True
 what area of town is it in,request,request,True
@@ -220,7 +220,7 @@ whats the address,request,request,True
 post code,request,request,True
 indian food noise,inform,inform,True
 west,inform,inform,True
-what about turkey food,reqalts,inform,False
+what about turkey food,reqalts,reqalts,True
 cheap,inform,inform,True
 could i have the address please,request,request,True
 yes,affirm,affirm,True
@@ -339,7 +339,7 @@ phone number,request,request,True
 price range,request,request,True
 price range,request,request,True
 unintelligible,null,null,True
-hi i want to serve a cheap restaurant that serves traditional food,hello,inform,False
+hi i want to serve a cheap restaurant that serves traditional food,hello,hello,True
 yeah,affirm,affirm,True
 south,inform,inform,True
 and can i get the address phone number and price range,request,request,True
@@ -434,7 +434,7 @@ could i get their address and phone number,request,request,True
 repeat that,repeat,repeat,True
 uh whats the phone number and post code,request,request,True
 thank you good bye,thankyou,thankyou,True
-either one,inform,inform,True
+either one,inform,reqalts,False
 swedish food,inform,inform,True
 im looking for a restaurant in the center that serves sea food,inform,inform,True
 any anything else,inform,inform,True
@@ -454,16 +454,16 @@ it doesnt matter,inform,inform,True
 moderately priced restaurant,inform,inform,True
 whats the address,request,request,True
 is there anything else,reqalts,reqalts,True
-expensive price range,request,inform,False
+expensive price range,request,request,True
 i dont know,inform,inform,True
-do they serve korean food,confirm,inform,False
-can you find a moderately priced restaurant,inform,inform,True
+do they serve korean food,confirm,confirm,True
+can you find a moderately priced restaurant,inform,reqalts,False
 how about indian type of food,reqalts,reqalts,True
 area,request,request,True
 i dont care,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 lebanese,inform,inform,True
-what about a moderately priced restaurant in the south part of town,reqalts,inform,False
+what about a moderately priced restaurant in the south part of town,reqalts,reqalts,True
 center,inform,inform,True
 north,inform,inform,True
 unintelligible,null,null,True
@@ -472,7 +472,7 @@ phone number,request,request,True
 i want an expensive restaurant in the east part of town,inform,inform,True
 phone number,request,request,True
 can i get the address,request,request,True
-is there another restaurant in the west of town,reqalts,inform,False
+is there another restaurant in the west of town,reqalts,reqalts,True
 any type of food,inform,inform,True
 right,affirm,affirm,True
 moderately priced,inform,inform,True
@@ -623,19 +623,19 @@ restaurant with corsica food,inform,inform,True
 serves cheap,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 no,negate,negate,True
-okay just pick one for me then,ack,deny,False
+okay just pick one for me then,ack,ack,True
 australian food,inform,inform,True
-type of food,request,inform,False
+type of food,request,request,True
 cuban,inform,inform,True
 british,inform,inform,True
-thare are different expensive restaurants in the east part of town,inform,inform,True
+thare are different expensive restaurants in the east part of town,inform,reqalts,False
 french food,inform,inform,True
 okay,null,null,True
 sil,null,null,True
 phone number,request,request,True
 looking for a restaurant that serves spanish food,inform,inform,True
 i want another restaurant that serves spanish food,reqalts,inform,False
-hi im looking for a place that serves scandinavian food,hello,inform,False
+hi im looking for a place that serves scandinavian food,hello,hello,True
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
 russian,inform,inform,True
@@ -670,7 +670,7 @@ thank you goodbye,thankyou,thankyou,True
 i do not care about the price range im just looking for a restaurant in the center that serves korean food,inform,inform,True
 address,request,request,True
 center part of town,inform,inform,True
-what about thai food,reqalts,inform,False
+what about thai food,reqalts,reqalts,True
 whats the address,request,request,True
 can i have the address of the last one,request,request,True
 yes,affirm,affirm,True
@@ -702,7 +702,7 @@ korean,inform,inform,True
 asian oriental,inform,inform,True
 okay um thank you good bye,thankyou,thankyou,True
 any spanish,inform,inform,True
-are there any restaurants in the south part of town that are expensive,reqalts,inform,False
+are there any restaurants in the south part of town that are expensive,reqalts,reqalts,True
 phone number,request,request,True
 could i get the address and post code please,request,request,True
 it doesnt matter,inform,inform,True
@@ -778,7 +778,7 @@ anything else,reqalts,reqalts,True
 phone number,request,request,True
 unintelligible,null,null,True
 address,request,request,True
-hello im looking for a cheap restaurant in the west part of town,hello,inform,False
+hello im looking for a cheap restaurant in the west part of town,hello,hello,True
 it doesnt matter,inform,inform,True
 area,request,request,True
 center area,inform,inform,True
@@ -809,7 +809,7 @@ inaudible,null,null,True
 what is the phone number,request,request,True
 cheap food,inform,inform,True
 sil,null,null,True
-what do they serve,request,null,False
+what do they serve,request,request,True
 i need,null,null,True
 thank you good bye,thankyou,thankyou,True
 noise,null,null,True
@@ -896,7 +896,7 @@ dont care,inform,inform,True
 im looking for an expensive restaurant in the south part of town,inform,inform,True
 what is the address and price range,request,request,True
 no,negate,negate,True
-is there a restaurant in the south part of town that serves italian food,reqalts,inform,False
+is there a restaurant in the south part of town that serves italian food,reqalts,reqalts,True
 the address,request,request,True
 thank you goodbye,thankyou,thankyou,True
 im looking for an expensive restaurant in the south part of town,inform,inform,True
@@ -941,10 +941,10 @@ cheap,inform,inform,True
 post code,request,request,True
 thank you good bye,thankyou,thankyou,True
 south,inform,inform,True
-is there one in the cheap price range,inform,inform,True
+is there one in the cheap price range,inform,request,False
 thank you goodbye,thankyou,thankyou,True
 no thank you goodbye,negate,negate,True
-thats correct gastropub food,affirm,inform,False
+thats correct gastropub food,affirm,confirm,False
 whats their phone number,request,request,True
 um it doesnt matter,inform,inform,True
 no,negate,negate,True
@@ -958,7 +958,7 @@ type food,inform,inform,True
 i want a cheap restaurant that serves cuban food,inform,inform,True
 moderately priced north part of,inform,inform,True
 thank you good bye,thankyou,thankyou,True
-is there any restaurant,reqalts,inform,False
+is there any restaurant,reqalts,reqalts,True
 how about asian oriental type of food,reqalts,reqalts,True
 thank you good bye,thankyou,thankyou,True
 i dont care,inform,inform,True
@@ -1021,12 +1021,12 @@ is there anything else,reqalts,reqalts,True
 i want to find an expensive restaurant in the south part of town,inform,inform,True
 im looking for,inform,inform,True
 whats the address,request,request,True
-yes id like an expensive restaurant in the east part of town,affirm,inform,False
+yes id like an expensive restaurant in the east part of town,affirm,affirm,True
 african,inform,inform,True
 post code,request,request,True
 eritrean food,inform,inform,True
 phone number,request,request,True
-are there any other cheap restaurants in the west part of town,reqalts,inform,False
+are there any other cheap restaurants in the west part of town,reqalts,reqalts,True
 i would like a cheap restaurant in the north part of town,inform,inform,True
 i dont care,inform,inform,True
 im looking for a moderately priced restaurant,inform,inform,True
@@ -1070,7 +1070,7 @@ okay,null,null,True
 uh thank you good bye,thankyou,thankyou,True
 sil,null,null,True
 thank you goodbye,thankyou,thankyou,True
-type of food,request,inform,False
+type of food,request,request,True
 and the post code,request,request,True
 whats the phone number and address,request,request,True
 wrong,deny,deny,True
@@ -1103,7 +1103,7 @@ is there a jamaican restaurant,confirm,confirm,True
 thank you good bye,thankyou,thankyou,True
 and the address,request,request,True
 is there anything else,reqalts,reqalts,True
-what about chinese food,reqalts,inform,False
+what about chinese food,reqalts,reqalts,True
 uh can i have the address,request,request,True
 thank you goodbye,thankyou,thankyou,True
 gastropub,inform,inform,True
@@ -1197,7 +1197,7 @@ im looking for a cheap restaurant in the north part of town,inform,inform,True
 portuguese,inform,inform,True
 and their phone number,request,request,True
 sil,null,null,True
-what about asian food,inform,inform,True
+what about asian food,inform,reqalts,False
 address,request,request,True
 thank you good bye,thankyou,thankyou,True
 any type is fine,inform,inform,True
@@ -1225,11 +1225,11 @@ um do not care,inform,inform,True
 i want to find a restaurant in any area,inform,inform,True
 chineese,inform,inform,True
 anything else,reqalts,reqalts,True
-are there any turkish restaurants at all,inform,inform,True
+are there any turkish restaurants at all,inform,reqalts,False
 thank you good bye,thankyou,thankyou,True
 how about italian,reqalts,reqalts,True
 creative food,inform,inform,True
-any price,request,inform,False
+any price,request,request,True
 expensive restaurant expensive restaurant east,inform,inform,True
 any price range,inform,inform,True
 south noise,inform,inform,True
@@ -1252,7 +1252,7 @@ thank you good bye,thankyou,thankyou,True
 i would like malaysian food in the center part of,inform,inform,True
 phone number,request,request,True
 unintelligible,null,null,True
-free,null,inform,False
+free,null,null,True
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
 whats the address,request,request,True
@@ -1270,7 +1270,7 @@ noise,null,null,True
 post code,request,request,True
 address,request,request,True
 thank you,thankyou,thankyou,True
-nosie,null,null,True
+nosie,null,request,False
 sil,null,null,True
 post code,request,request,True
 any,inform,inform,True
@@ -1301,7 +1301,7 @@ a moderately priced restaurant that serves,inform,inform,True
 no,negate,negate,True
 greek food east part of town,inform,inform,True
 thank you good bye,thankyou,thankyou,True
-in the area,request,inform,False
+in the area,request,request,True
 whats the phone number,request,request,True
 british food,inform,inform,True
 what is the price range,request,request,True
@@ -1373,7 +1373,7 @@ whats the address and area,request,request,True
 what is the address,request,request,True
 any,inform,inform,True
 caribbean food,inform,inform,True
-what about european food,reqalts,inform,False
+what about european food,reqalts,reqalts,True
 thank you good bye,thankyou,thankyou,True
 unintelligible food,inform,inform,True
 thank you good bye,thankyou,thankyou,True
@@ -1441,7 +1441,7 @@ oh i need to be in the north,inform,inform,True
 expensive,inform,inform,True
 uh no im loo ah change it to british,negate,negate,True
 phone number,request,request,True
-cant,null,inform,False
+cant,null,null,True
 and can i get their address,request,request,True
 vietnamese,inform,inform,True
 how about indian food,reqalts,reqalts,True
@@ -1476,7 +1476,7 @@ can i have their address,request,request,True
 italian,inform,inform,True
 and whats the phone number,request,request,True
 asian oriental,inform,inform,True
-is there a restaurant that serves vietnamese food,reqalts,inform,False
+is there a restaurant that serves vietnamese food,reqalts,reqalts,True
 christmas food,inform,inform,True
 k you goodbye,bye,bye,True
 address,request,request,True
@@ -1499,7 +1499,7 @@ phone number,request,request,True
 north,inform,inform,True
 south,inform,inform,True
 thank you good bye,thankyou,thankyou,True
-type of food,request,inform,False
+type of food,request,request,True
 address,request,request,True
 what kind of food is there,request,request,True
 chinese food,inform,inform,True
@@ -1534,7 +1534,7 @@ thank you good bye,thankyou,thankyou,True
 moderately,inform,inform,True
 and the phone number,request,request,True
 whats the address,request,request,True
-what about indian food,reqalts,inform,False
+what about indian food,reqalts,reqalts,True
 thank you,thankyou,thankyou,True
 creative food,inform,inform,True
 thank you good bye,thankyou,thankyou,True
@@ -1569,7 +1569,7 @@ sil,null,null,True
 phone number,request,request,True
 phone number,request,request,True
 south,inform,inform,True
-type of food,request,inform,False
+type of food,request,request,True
 okay um,ack,ack,True
 thank you good bye,thankyou,thankyou,True
 modern european food,inform,inform,True
@@ -1656,7 +1656,7 @@ uh gastropub food,inform,inform,True
 uh any area,inform,inform,True
 i dont care,inform,inform,True
 i want a european restaurant in the center part of town,inform,inform,True
-is there a restaurant serving modern european food,reqalts,inform,False
+is there a restaurant serving modern european food,reqalts,reqalts,True
 im looking for a moderately priced restaurant,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
@@ -1739,7 +1739,7 @@ cheap,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 prise me,null,null,True
 post code,request,request,True
-okay uh forget that then can i get a restaurant serving italian food,inform,inform,True
+okay uh forget that then can i get a restaurant serving italian food,inform,affirm,False
 thank you good bye,thankyou,thankyou,True
 unintelligible,null,null,True
 whats the address,request,request,True
@@ -1750,7 +1750,7 @@ can i get the phone number,request,request,True
 what is the phone number,request,request,True
 okay uh thank you and good bye,thankyou,thankyou,True
 center,inform,inform,True
-what about asian oriental food,reqalts,inform,False
+what about asian oriental food,reqalts,reqalts,True
 cheap,inform,inform,True
 whats the address,request,request,True
 i dont care,inform,inform,True
@@ -1771,13 +1771,13 @@ south,inform,inform,True
 i dont care,inform,inform,True
 no,negate,negate,True
 cuban,inform,inform,True
-expen,null,inform,False
+expen,null,null,True
 how about asian oriental,reqalts,reqalts,True
 fine i want restaurant in the north part of town,inform,inform,True
 post code,request,request,True
 how about turkish,reqalts,reqalts,True
 noise,null,null,True
-how bout european,inform,inform,True
+how bout european,inform,reqalts,False
 whats the address,request,request,True
 id like a,null,null,True
 korean,inform,inform,True
@@ -1795,7 +1795,7 @@ i dont care,inform,inform,True
 sil,null,null,True
 basque food,inform,inform,True
 find cheap restaurant,inform,inform,True
-does it serve,request,confirm,False
+does it serve,request,request,True
 any area,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 italian food,inform,inform,True
@@ -1959,7 +1959,7 @@ noise,null,null,True
 thank you good bye,thankyou,thankyou,True
 area,request,request,True
 inexpensive,inform,inform,True
-type of food served,request,inform,False
+type of food served,request,request,True
 how about french food,reqalts,reqalts,True
 find restaurant serving asian,inform,inform,True
 and what is their phone number,request,request,True
@@ -2027,7 +2027,7 @@ it doesnt matter,inform,inform,True
 north,inform,inform,True
 yes,affirm,affirm,True
 unintelligible,null,null,True
-dont care whats the phone number,inform,inform,True
+dont care whats the phone number,inform,request,False
 and what is the post code,request,request,True
 yes,affirm,affirm,True
 cheap gastropub,inform,inform,True
@@ -2091,7 +2091,7 @@ unintelligible,null,null,True
 food,inform,inform,True
 whats the phone number,request,request,True
 can i have their address,request,request,True
-is there an expensive restaurant that serves korean food,inform,inform,True
+is there an expensive restaurant that serves korean food,inform,reqalts,False
 inexpensive,inform,inform,True
 seafood,inform,inform,True
 im looking for a moderately priced restaurant that serves,inform,inform,True
@@ -2106,7 +2106,7 @@ im looking for a moderate priced restaurant serving jamaican food,inform,inform,
 thank you goodbye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
 i need a moderate priced restaurant in the north part of town,inform,inform,True
-what about european food,reqalts,inform,False
+what about european food,reqalts,reqalts,True
 thai food,inform,inform,True
 anything else,reqalts,reqalts,True
 thank you good bye,thankyou,thankyou,True
@@ -2193,7 +2193,7 @@ noise french food,inform,inform,True
 could i have the restaurant that serves asian oriental food,inform,inform,True
 what is the phone number,request,request,True
 yes moderate priced,affirm,affirm,True
-yeah im looking for a restaurant serving kosher food,affirm,inform,False
+yeah im looking for a restaurant serving kosher food,affirm,affirm,True
 looking for a moderately priced restaurant,inform,inform,True
 phone number,request,request,True
 tuscan food,inform,inform,True
@@ -2251,7 +2251,7 @@ i want to find a cheap restaurant in the south part of town,inform,inform,True
 sil,null,null,True
 is there anything else,reqalts,reqalts,True
 no thank you,negate,negate,True
-is there a thai restaurant in the west part of town,confirm,inform,False
+is there a thai restaurant in the west part of town,confirm,confirm,True
 austria asian food,inform,inform,True
 restaurant,inform,inform,True
 what is the post code,request,request,True
@@ -2262,7 +2262,7 @@ phone number,request,request,True
 thank you good bye,thankyou,thankyou,True
 thank you,thankyou,thankyou,True
 whats the phone number,request,request,True
-is there a restaurant serving indian type of food,inform,inform,True
+is there a restaurant serving indian type of food,inform,reqalts,False
 north,inform,inform,True
 what is the address,request,request,True
 north,inform,inform,True
@@ -2322,7 +2322,7 @@ indian food,inform,inform,True
 price range,request,request,True
 does it serve african food,confirm,confirm,True
 the phone number,request,request,True
-type of food,request,inform,False
+type of food,request,request,True
 any,inform,inform,True
 portuguese,inform,inform,True
 address,request,request,True
@@ -2357,7 +2357,7 @@ serving european food,inform,inform,True
 and whats the phone number,request,request,True
 sil,null,null,True
 is there anything else,reqalts,reqalts,True
-what about chinese food,reqalts,inform,False
+what about chinese food,reqalts,reqalts,True
 any part of town,inform,inform,True
 ye,affirm,affirm,True
 cough,null,null,True
@@ -2368,7 +2368,7 @@ korean food,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 can i have the address and phone number,request,request,True
 lebanese food,inform,inform,True
-how about english food in the north part of town,reqalts,inform,False
+how about english food in the north part of town,reqalts,reqalts,True
 unintelligible,null,null,True
 i dont care,inform,inform,True
 thank you good bye,thankyou,thankyou,True
@@ -2399,10 +2399,10 @@ yes,affirm,affirm,True
 whats the phone number,request,request,True
 the phone,request,request,True
 thank you good bye,thankyou,thankyou,True
-what about vietnamese food,reqalts,inform,False
+what about vietnamese food,reqalts,reqalts,True
 address,request,request,True
 what is the telephone number,request,request,True
-type of food,request,inform,False
+type of food,request,request,True
 whats the price range,request,request,True
 sil,null,null,True
 thank you good bye,thankyou,thankyou,True
@@ -2419,7 +2419,7 @@ thank you good bye,thankyou,thankyou,True
 what is their address,request,request,True
 moderate,inform,inform,True
 hungarian food,inform,inform,True
-type of food,request,inform,False
+type of food,request,request,True
 i need a restaurant that serves african food,inform,inform,True
 post code,request,request,True
 north,inform,inform,True
@@ -2481,7 +2481,7 @@ what kind of food does it serve,request,request,True
 i dont care,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 dont care,inform,inform,True
-kay um,ack,inform,False
+kay um,ack,ack,True
 thank you good bye,thankyou,thankyou,True
 okay thank you goodbye,thankyou,thankyou,True
 address,request,request,True
@@ -2518,7 +2518,7 @@ how about indian food,reqalts,reqalts,True
 how about in the west area,inform,reqalts,False
 thank you good bye,thankyou,thankyou,True
 it doesnt matter,inform,inform,True
-type of food,request,inform,False
+type of food,request,request,True
 thank you good bye,thankyou,thankyou,True
 what is the phone number,request,request,True
 thai,inform,inform,True
@@ -2526,7 +2526,7 @@ sil,null,null,True
 phone number,request,request,True
 i dont care,inform,inform,True
 can i get,null,null,True
-what about irish food,inform,inform,True
+what about irish food,inform,reqalts,False
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
 how about turkish food,reqalts,reqalts,True
@@ -2568,7 +2568,7 @@ is it cheap,confirm,confirm,True
 what type of food do they serve,request,request,True
 yeah,affirm,affirm,True
 any,inform,inform,True
-what about chinese food,reqalts,inform,False
+what about chinese food,reqalts,reqalts,True
 unintelligible food,inform,inform,True
 i dont care,inform,inform,True
 dont care,inform,inform,True
@@ -2606,7 +2606,7 @@ no,negate,negate,True
 i dont care,inform,inform,True
 is doesnt matter,inform,inform,True
 could i have the address,request,request,True
-uh yes restaurant that serves danish food,affirm,inform,False
+uh yes restaurant that serves danish food,affirm,affirm,True
 whats the address,request,request,True
 moderate,inform,inform,True
 north,inform,inform,True
@@ -2697,7 +2697,7 @@ thai food,inform,inform,True
 may i have the address,request,request,True
 phone number,request,request,True
 center,inform,inform,True
-hi im looking for mexican food,hello,inform,False
+hi im looking for mexican food,hello,hello,True
 cheap,inform,inform,True
 phone number,request,request,True
 cheap,inform,inform,True
@@ -2725,7 +2725,7 @@ im looking for a moderate priced restaurant in south part of,inform,inform,True
 yes african food,affirm,affirm,True
 how about indian food,reqalts,reqalts,True
 sil,null,null,True
-are there any restaurants serving turkish food,reqalts,inform,False
+are there any restaurants serving turkish food,reqalts,reqalts,True
 asian oriental food,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
@@ -2735,7 +2735,7 @@ thank you good bye,thankyou,thankyou,True
 food,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
-what about a spanish restuarant,inform,inform,True
+what about a spanish restuarant,inform,reqalts,False
 what is the addre,request,request,True
 unintelligible,null,null,True
 thai food,inform,inform,True
@@ -2760,7 +2760,7 @@ how about italian food,reqalts,reqalts,True
 okay can you give me the address there,request,request,True
 phone number,request,request,True
 thank you good bye,thankyou,thankyou,True
-what about modern european food,inform,inform,True
+what about modern european food,inform,reqalts,False
 i dont care,inform,inform,True
 and the phone number,request,request,True
 i do not care,inform,inform,True
@@ -2784,7 +2784,7 @@ thank you good bye,thankyou,thankyou,True
 any,inform,inform,True
 im looking for a restaurant in the center of town that serves,inform,inform,True
 how about asian food,reqalts,reqalts,True
-type of food,request,inform,False
+type of food,request,request,True
 what kind of food,request,request,True
 yes,affirm,affirm,True
 what is the address,request,request,True
@@ -2852,7 +2852,7 @@ thai,inform,inform,True
 im looking for a restaurant in the south part of town serving austrian food,inform,inform,True
 expensive,inform,inform,True
 i dont care,inform,inform,True
-any more,reqalts,deny,False
+any more,reqalts,reqalts,True
 what is the phone number,request,request,True
 thank you good bye,thankyou,thankyou,True
 a restaurant that serves,inform,inform,True
@@ -2869,7 +2869,7 @@ moderate,inform,inform,True
 whats their address,request,request,True
 yeah,affirm,affirm,True
 i want a restaurant that is cheap and,inform,inform,True
-what do you recommend,null,null,True
+what do you recommend,null,reqalts,False
 what is the phone number,request,request,True
 phone number,request,request,True
 im looking for a restaurant in the center of town,inform,inform,True
@@ -2889,7 +2889,7 @@ thank you good bye,thankyou,thankyou,True
 yes,affirm,affirm,True
 spanish food,inform,inform,True
 thank you good bye,thankyou,thankyou,True
-what about chinese food,reqalts,inform,False
+what about chinese food,reqalts,reqalts,True
 thank you good bye,thankyou,thankyou,True
 moderate,inform,inform,True
 phone number,request,request,True
@@ -2912,7 +2912,7 @@ ts the phone number,request,request,True
 the address,request,request,True
 thai food,inform,inform,True
 phone number,request,request,True
-that is all,null,null,True
+that is all,null,inform,False
 yes,affirm,affirm,True
 okay,null,null,True
 what is the address,request,request,True
@@ -2938,7 +2938,7 @@ can i have the phone number and the type of food,request,request,True
 uh yes im looking for a restaurant in any area that serves thai food,affirm,affirm,True
 thank you good bye,thankyou,thankyou,True
 and the price range,request,request,True
-type of food,request,inform,False
+type of food,request,request,True
 phone number,request,request,True
 what is their phone number,request,request,True
 how about the west area,reqalts,reqalts,True
@@ -3004,7 +3004,7 @@ may i have the address pleas,request,request,True
 im looking for a restaurant in any area serving turkish food,inform,inform,True
 scandinavian food,inform,inform,True
 it doesnt matter,inform,inform,True
-what about indian food,reqalts,inform,False
+what about indian food,reqalts,reqalts,True
 indian type of food,inform,inform,True
 restaurant south part of town,inform,inform,True
 phone number,request,request,True
@@ -3054,7 +3054,7 @@ doesnt matter,inform,inform,True
 whats the phone number,request,request,True
 is there anything else,reqalts,reqalts,True
 korean,inform,inform,True
-okay do you have the address for da vinci pizzeria,request,inform,False
+okay do you have the address for da vinci pizzeria,request,affirm,False
 what type of food,request,request,True
 i dont care,inform,inform,True
 thank you good bye,thankyou,thankyou,True
@@ -3101,11 +3101,11 @@ thank you goodbye,thankyou,thankyou,True
 what is the phone number,request,request,True
 and what type of food do they serve,request,request,True
 the address and post code,request,request,True
-that serves corsica,inform,inform,True
+that serves corsica,inform,null,False
 im looking for an expensive restaurant and it should serve unusual food,inform,inform,True
 i dont care,inform,inform,True
 british food,inform,inform,True
-type of food,request,inform,False
+type of food,request,request,True
 im looking for a restaurant in the north part of town,inform,inform,True
 chinese food,inform,inform,True
 what is the area,request,request,True
@@ -3173,7 +3173,7 @@ post code,request,request,True
 italian food,inform,inform,True
 thank you,thankyou,thankyou,True
 uh yes international food please,affirm,affirm,True
-is there a thai restaurant in the west of town,confirm,inform,False
+is there a thai restaurant in the west of town,confirm,confirm,True
 asian oriental,inform,inform,True
 looking for a moderately priced restaurant in the east,inform,inform,True
 cheap,inform,inform,True
@@ -3284,7 +3284,7 @@ thank you,thankyou,thankyou,True
 unintelligible,null,null,True
 polynesian,inform,inform,True
 what is the address,request,request,True
-dress,null,inform,False
+dress,null,null,True
 is there anything else,reqalts,reqalts,True
 thank you good bye,thankyou,thankyou,True
 okay whats the address,request,request,True
@@ -3302,11 +3302,11 @@ noise,null,null,True
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
 no,negate,negate,True
-are there any restaurants serving indian food,reqalts,inform,False
+are there any restaurants serving indian food,reqalts,reqalts,True
 whats the phone number,request,request,True
 address,request,request,True
 and the post code,request,request,True
-is that the north part of town south part of town,confirm,confirm,True
+is that the north part of town south part of town,confirm,request,False
 how about asian oriental,reqalts,reqalts,True
 yes,affirm,affirm,True
 address,request,request,True
@@ -3386,7 +3386,7 @@ thank you good bye,thankyou,thankyou,True
 the south,inform,inform,True
 yes,affirm,affirm,True
 and whats the phone number,request,request,True
-type of food,request,inform,False
+type of food,request,request,True
 thank you goodbye,thankyou,thankyou,True
 okay can i have the address,request,request,True
 doesnt matter,inform,inform,True
@@ -3429,7 +3429,7 @@ austrian food,inform,inform,True
 west,inform,inform,True
 okay thank you good bye,thankyou,thankyou,True
 sil,null,null,True
-expensive price range,request,inform,False
+expensive price range,request,request,True
 thank you good bye,thankyou,thankyou,True
 unintelligible,null,null,True
 expensive,inform,inform,True
@@ -3441,7 +3441,7 @@ expensive,inform,inform,True
 yes,affirm,affirm,True
 turkish,inform,inform,True
 what is its address phone number and area,request,request,True
-what about north american type of food,reqalts,inform,False
+what about north american type of food,reqalts,reqalts,True
 dont care,inform,inform,True
 how about asian oriental,reqalts,reqalts,True
 eritrean food,inform,inform,True
@@ -3459,7 +3459,7 @@ and whats the telephone number,request,request,True
 address,request,request,True
 serving lebanese food,inform,inform,True
 malaysian food,inform,inform,True
-is there one that serves creative food,inform,inform,True
+is there one that serves creative food,inform,null,False
 phone number,request,request,True
 indian food,inform,inform,True
 sil,null,null,True
@@ -3483,7 +3483,7 @@ thank you good bye,thankyou,thankyou,True
 can i have the phone number address and price range,request,request,True
 whats the address of royal spice,request,request,True
 is there anything else,reqalts,reqalts,True
-uh how about moderately priced,reqalts,inform,False
+uh how about moderately priced,reqalts,reqalts,True
 how about british food,reqalts,reqalts,True
 yes,affirm,affirm,True
 is there anything else,reqalts,reqalts,True
@@ -3518,7 +3518,7 @@ im looking for a cheap restaurant,inform,inform,True
 thank you good bye,thankyou,thankyou,True
 thank you good bye,thankyou,thankyou,True
 oh my god,null,null,True
-another restaurant,reqalts,inform,False
+another restaurant,reqalts,reqalts,True
 unintelligible,null,null,True
 how about mediterranean,reqalts,reqalts,True
 swedish food expensive,inform,inform,True
@@ -3547,7 +3547,7 @@ what is the phone number,request,request,True
 may i have a list of venues in the west part of town,inform,inform,True
 no im looking for an expensive restaurant in the east part of town,negate,negate,True
 thai food,inform,inform,True
-what about indian food,reqalts,inform,False
+what about indian food,reqalts,reqalts,True
 dont care,inform,inform,True
 for,null,null,True
 thank you good bye,thankyou,thankyou,True

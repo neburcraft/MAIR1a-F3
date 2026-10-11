@@ -136,7 +136,6 @@ can you change romanian food to something else,deny,inform,False
 can we start over,restart,null,False
 how bout chinese food,inform,reqalts,False
 how bout asian,reqalts,inform,False
-i am looking for,inform,null,False
 i dont care thank you good bye,inform,thankyou,False
 i want another restaurant that serves spanish food,reqalts,inform,False
 if theres no persian food about about chinese,inform,reqalts,False
@@ -160,5 +159,6 @@ what about other areas,inform,reqalts,False
 what part of town is chiquito mexican restaurant in,request,inform,False
 what type food,inform,request,False
 yea in the east part of town,affirm,inform,False
+yeah im looking for a moderately priced restaurant,affirm,inform,False
 yes i want the phone number,affirm,request,False
 expensive price restaurant,request,inform,False

@@ -47,4 +47,5 @@ is that the north part of town south part of town,confirm,inform,False
 i dont want that give me another spanish choice,reqalts,deny,False
 okay that will be all thank you and good bye,thankyou,bye,False
 reset,restart,null,False
+no im looking for an expensive restaurant in the east part of town,negate,inform,False
 ok thanks goodbye,thankyou,bye,False

@@ -1,4 +1,5 @@
 utterance,act,prediction,correct
+"actually, let's start over",restart,null,False
 "okay thanks, bye",bye,thankyou,False
 I wanna try something new.,reqalts,inform,False
 Repeat the phone number,repeat,request,False

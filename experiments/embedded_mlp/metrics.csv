@@ -1,2 +1,2 @@
 experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
-embedded_mlp,Frozen embeddings + MLP - original split,3600,0.9747222222222223,0.8844169753721081,0.9040686278611283,0.9743709033588256
+embedded_mlp,Frozen embeddings + MLP - original split,3600,0.9869444444444444,0.9540272134162531,0.9575362399898818,0.9869461507272305

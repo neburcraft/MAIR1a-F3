@@ -3294,7 +3294,7 @@ can i have the address of it,request,request,True
 can i have the phone number and address of the venue,request,request,True
 how bout italian foo,inform,inform,True
 i am looking for a cheap restaurant in the west part of town,inform,inform,True
-i am looking for,inform,null,False
+i am looking for,inform,inform,True
 i am looking for a restaurant in the center of town serving turkish food,inform,inform,True
 i am looking for a moderately priced restaurant in the south,inform,inform,True
 i am looking for an expensive restaurant on the east part of town,inform,inform,True
@@ -3733,7 +3733,7 @@ world food any price range,inform,inform,True
 yea in the east part of town,affirm,inform,False
 yea im looking for an expensive,inform,inform,True
 yea id like a cheap restaurant in the north part of town,inform,inform,True
-yeah im looking for a moderately priced restaurant,affirm,affirm,True
+yeah im looking for a moderately priced restaurant,affirm,inform,False
 yea you can give me the address,affirm,affirm,True
 yes can i have an expensive restaurant in the east,affirm,affirm,True
 yes and in french please,affirm,affirm,True
