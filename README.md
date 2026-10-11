@@ -3,7 +3,7 @@ Implementation of the INFOMAIR project by group F3.
 
 Includes from part 1a: Dialog act classification for the restaurant recommendation dialog system. Utterances from the DSTC 2 dataset are classified into one of 15 dialog acts, using a rule-based baseline and machine learning classifiers such as logistic regression and MLP. Each classifier was trained and evaluated on a stratified split and a grouped split that prevents duplicate utterances from leaking between train and test.
 
-Includes from part 2a: Full restaurant recommendation engine with state manager, slot extraction and an optional text-to-speech mode. Slot extraction is implemented using keyword matching, Levenshtein distance and cosine similarity for word embeddings.
+Includes from part 2a: Full restaurant recommendation engine with state manager, slot extraction and an optional text-to-speech mode. Slot extraction is implemented using keyword matching, Levenshtein distance and cosine similarity for word embeddings. Adds options for text-to-speech, explanation of choices and interaction logging, as well as a (debug) verbose mode.
 
 
 ## Group F3
@@ -72,6 +72,10 @@ options:
   --tts                 Use text-to-speech instead of text output
   --explain             Explain why a restaurant is chosen
   --verbose             Show more detailed reasoning information
+  --participant PARTICIPANT
+                        Participant id; turns logging on
+  --condition CONDITION
+                        Name of the experimental condition
 ```
 
 

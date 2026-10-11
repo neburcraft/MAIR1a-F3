@@ -46,14 +46,14 @@ class Manager:
   max_dist: int
   tts: TTS | None
   explain: bool
-  logger: InteractionLogger
+  logger: InteractionLogger | None
 
   def __init__(self,
                classifier: Classifier,
                extractor: SlotExtract,
                verbose: bool = False,
                tts: TTS | None = None,
-               explain: bool = False
+               explain: bool = False,
                logger: InteractionLogger | None = None):
     self.classifier = classifier
     self.extractor = extractor
@@ -247,6 +247,7 @@ class Manager:
     del self.suggestions["area"]
     self._update_preferences(act, utterance, suggest=False)
     # Go back to the `_area_ask` execution path with repeat phrasing if needed
+    self.state = State.AREA_ASK
     return self._area_ask(repeat=True)
 
   def _food_ask(self, repeat=False) -> State:
@@ -270,6 +271,7 @@ class Manager:
       self.preferences["food"] = self.suggestions["food"].suggest
     del self.suggestions["food"]
     self._update_preferences(act, utterance, suggest=False)
+    self.state = State.FOOD_ASK
     return self._food_ask(repeat=True)
 
   def _price_ask(self, repeat=False) -> State:
@@ -293,6 +295,7 @@ class Manager:
       self.preferences["pricerange"] = self.suggestions["pricerange"].suggest
     del self.suggestions["pricerange"]
     self._update_preferences(act, utterance, suggest=False)
+    self.state = State.PRICE_ASK
     return self._price_ask(repeat=True)
 
   def _additions_ask(self, repeat=False) -> State:
@@ -321,6 +324,7 @@ class Manager:
       self.preferences["additions"] = addition
     del self.suggestions["additions"]
     self._update_preferences(act, utterance, suggest=False)
+    self.state = State.ADDITIONS_ASK
     return self._additions_ask(repeat=True)
 
   def _restaurant_reqalts(self, utterance: str) -> tuple[State | None, bool]:
@@ -353,7 +357,7 @@ class Manager:
     # Tell the user about the (new) restaurant with an explanation if an additional requirement was requested
     self.explanation = EXPLANATION[self.preferences.get("additions", "")]
     prompt = Prompts.suggest_new if new else Prompts.suggest
-    if self.max_dist > 0:
+    if self.current["dist"] > 0:
       prompt = Prompts.imperfect_prefix + prompt.lower()
     prompt = prompt.format(
         self.current["restaurantname"].capitalize(),
@@ -420,7 +424,9 @@ class Manager:
       confirm, changed = self._restaurant_reqalts(utterance)
       if changed: self.current = None
       if confirm: return confirm
-      if act == Act.REQALTS: return self._suggest_rest(new=True)
+      if act == Act.REQALTS:
+        self.state = State.SUGGEST_REST
+        return self._suggest_rest(new=True)
     if act == Act.REQUEST:
       # `_update_preferences` used to update `requested_fields` again to answer the new question
       self._update_preferences(act, utterance, suggest=False)

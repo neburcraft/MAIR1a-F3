@@ -11,7 +11,6 @@ from classifiers import (MODEL_NAMES, Classifier, EmbeddedLRClassifier, Embedded
                          FrozenEmbeddingEncoder, LRClassifier, MLPClassifier, RuleClassifier)
 from data import clean_utterance, create_grouped_split, create_stratified_split, load_data
 from slot_extraction import SlotExtract
-from tts import TTS
 from logger import InteractionLogger
 
 
@@ -22,8 +21,8 @@ class CLI:
     self.model: str = args.model
     self.extractor: SlotExtract = SlotExtract(args.extractor)
     self.tts: bool = args.tts
-    self.participant: str | None = args.participant   ## without participants in the code there is nothing to log
-    self.condition: str = args.condition   ## we don't know yet, but this is needed and would be clear in part 2?
+    self.participant: str | None = args.participant
+    self.condition: str = args.condition
     self.explain: bool = args.explain
     self.verbose: bool = args.verbose
 
@@ -130,6 +129,7 @@ class CLI:
     from manager import Manager, State
     from tts import TTS
 
+    # Initialize logging if a participant id was given using `--participant <id>`
     logger = InteractionLogger(self.participant, self.condition) if self.participant else None
     manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None, self.explain, logger)
     while manager.state != State.FINISHED:

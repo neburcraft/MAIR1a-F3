@@ -1,7 +1,8 @@
-"""Logs the dialog to a csv file in logs/, so the results can be analysed in part 2.
+"""
+Logs the dialog to a csv file in `logs/`, so the results can be analysed in part 2
 
-One file per run: logs/<session>_<participant>.csv, with one row for every turn.
-The columns are explained in docs/logging.md.
+One file per run: `logs/<session>_<participant>.csv`, with one row for every turn
+The columns are explained in `docs/logging.md`
 """
 
 import csv
@@ -14,14 +15,13 @@ LOG_DIR = Path("logs")
 SLOTS = ["area", "food", "pricerange", "additions"]
 
 TURN_FIELDS = [
-  "session_id", "participant_id", "condition", "turn", "state",
-  "system_utterance", "user_utterance", "act", "area", "food",
-  "pricerange", "additions", "restaurant",
+    "session_id", "participant_id", "condition", "turn", "state", "system_utterance",
+    "user_utterance", "act", "area", "food", "pricerange", "additions", "restaurant"
 ]
 
 
 class InteractionLogger:
-  """One logger per session, so make a new one every time the program starts."""
+  """One logger per session, so make a new one every time the program starts"""
 
   def __init__(self, participant_id="anonymous", condition="default", log_dir=LOG_DIR):
     self.participant_id = participant_id
@@ -44,15 +44,15 @@ class InteractionLogger:
     self.turn += 1
 
     row = {
-      "session_id": self.session_id,
-      "participant_id": self.participant_id,
-      "condition": self.condition,
-      "turn": self.turn,
-      "state": state,
-      "system_utterance": system_utterance,
-      "user_utterance": user_utterance,
-      "act": act,
-      "restaurant": restaurant,
+        "session_id": self.session_id,
+        "participant_id": self.participant_id,
+        "condition": self.condition,
+        "turn": self.turn,
+        "state": state,
+        "system_utterance": system_utterance,
+        "user_utterance": user_utterance,
+        "act": act,
+        "restaurant": restaurant,
     }
 
     # One column per slot, and an empty cell when it is not known yet
