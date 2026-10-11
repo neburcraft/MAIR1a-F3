@@ -11,6 +11,8 @@ from classifiers import (MODEL_NAMES, Classifier, EmbeddedLRClassifier, Embedded
                          FrozenEmbeddingEncoder, LRClassifier, MLPClassifier, RuleClassifier)
 from data import clean_utterance, create_grouped_split, create_stratified_split, load_data
 from slot_extraction import SlotExtract
+from tts import TTS
+from logger import InteractionLogger
 
 
 class CLI:
@@ -20,6 +22,8 @@ class CLI:
     self.model: str = args.model
     self.extractor: SlotExtract = SlotExtract(args.extractor)
     self.tts: bool = args.tts
+    self.participant: str | None = args.participant   ## without participants in the code there is nothing to log
+    self.condition: str = args.condition   ## we don't know yet, but this is needed and would be clear in part 2?
     self.explain: bool = args.explain
     self.verbose: bool = args.verbose
 
@@ -126,7 +130,8 @@ class CLI:
     from manager import Manager, State
     from tts import TTS
 
-    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None, self.explain)
+    logger = InteractionLogger(self.participant, self.condition) if self.participant else None
+    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None, self.explain, logger)
     while manager.state != State.FINISHED:
       manager.transition_state()
     manager.finish()
@@ -151,6 +156,8 @@ if __name__ == "__main__":
   parser.add_argument("--tts", action="store_true", help="Use text-to-speech instead of text output")
   parser.add_argument("--explain", action="store_true", help="Explain why a restaurant is chosen")
   parser.add_argument("--verbose", action="store_true", help="Show more detailed reasoning information")
+  parser.add_argument("--participant", default=None, help="Participant id; turns logging on")
+  parser.add_argument("--condition", default="default", help="Name of the experimental condition")
   args = parser.parse_args()
 
   cli = CLI(args)

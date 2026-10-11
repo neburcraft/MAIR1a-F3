@@ -10,6 +10,7 @@ from responses import Prompts, EXPLANATION
 from restaurant import RestaurantInfo, load_restaurants, lookup_restaurant
 from slot_extraction import Suggestion, SlotExtract
 from tts import TTS
+from logger import InteractionLogger
 
 
 class State(Enum):
@@ -45,13 +46,15 @@ class Manager:
   max_dist: int
   tts: TTS | None
   explain: bool
+  logger: InteractionLogger
 
   def __init__(self,
                classifier: Classifier,
                extractor: SlotExtract,
                verbose: bool = False,
                tts: TTS | None = None,
-               explain: bool = False):
+               explain: bool = False
+               logger: InteractionLogger | None = None):
     self.classifier = classifier
     self.extractor = extractor
     self.verbose = verbose
@@ -67,6 +70,7 @@ class Manager:
     self.max_dist = 0
     self.tts = tts
     self.explain = explain
+    self.logger = logger
 
   def _send_pompt(self, prompt: str) -> tuple[Act, str]:
     """
@@ -86,6 +90,9 @@ class Manager:
     except EOFError:
       return Act.BYE, ""
     act = self.classifier.run(clean_input)
+    if self.logger:
+      restaurant = self.current["restaurantname"] if self.current else ""
+      self.logger.log_turn(self.state.name, prompt, clean_input, act.name, dict(self.preferences), restaurant)
     if self.verbose:
       print(f"  \033[92mINFO (manager.py): Input classified as {act.name}\033[0m")
     return act, clean_input
@@ -181,7 +188,7 @@ class Manager:
 
   def restart(self) -> State:
     """Fully re-initialize the manager to start over cleanly"""
-    self.__init__(self.classifier, self.extractor, self.verbose, self.tts, self.explain)
+    self.__init__(self.classifier, self.extractor, self.verbose, self.tts, self.explain, self.logger)
     if self.verbose:
       print(f"  \033[92mINFO (manager.py): {self.preferences=}")
       print(f"  INFO (manager.py): {self.suggestions=}")
