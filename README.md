@@ -35,6 +35,7 @@ python -m pip install -r requirements.txt
 - `classifiers.py`: all classifier implementations and the shared `Classifier` base class (`RuleClassifier`, `LRClassifier`, `MLPClassifier`, `FrozenEmbeddingEncoder`, `EmbeddedLRClassifier`, `EmbeddedMLPClassifier`)
 - `data.py`: for loading, cleaning and splitting the dataset (stratified split and grouped split)
 - `evaluate.py`: evaluates all classifiers and stores the result to ./experiments/
+- `logger.py`: logs interaction with the user and saves it to ./logs/
 - `main.py`: contains the command line interface for the entire system
 - `manager.py`: contains the full restaurant reccomendation pipeline
 - `responses.py`: formatted natural language prompts to send to the user (either by tts or in the console)
@@ -52,6 +53,8 @@ python -m pip install -r requirements.txt
 - `restaurant_info_extended.csv`: the restaurant info dataset with reasoning information
 
 ### Miscellaneous
+- `docs/example_log.csv`: an example interaction log generated from using the system
+- `docs/logging.md`: more detailed information on how the interaction logging works
 - `env.yml` for installing packages with mamba or conda
 - `requirements.txt` for installing packages on a regular python installation
 
