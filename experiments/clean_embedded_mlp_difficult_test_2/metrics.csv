@@ -1,2 +1,2 @@
 experiment,model,examples,accuracy,balanced_accuracy,macro_f1,weighted_f1
-clean_embedded_mlp_difficult_test_2,clean_embedded_mlp on difficult test 2,16,0.625,0.53125,0.4604377104377105,0.5776515151515151
+clean_embedded_mlp_difficult_test_2,clean_embedded_mlp on difficult test 2,16,0.6875,0.6875,0.574074074074074,0.6666666666666666

@@ -44,12 +44,14 @@ class Manager:
   shown: set[str]
   max_dist: int
   tts: TTS | None
+  explain: bool
 
   def __init__(self,
                classifier: Classifier,
                extractor: SlotExtract,
                verbose: bool = False,
-               tts=None):
+               tts: TTS | None = None,
+               explain: bool = False):
     self.classifier = classifier
     self.extractor = extractor
     self.verbose = verbose
@@ -64,6 +66,7 @@ class Manager:
     self.shown = set()
     self.max_dist = 0
     self.tts = tts
+    self.explain = explain
 
   def _send_pompt(self, prompt: str) -> tuple[Act, str]:
     """
@@ -78,7 +81,10 @@ class Manager:
     else:
       print(prompt)
 
-    clean_input = clean_utterance(input("> "))
+    try:
+      clean_input = clean_utterance(input("> "))
+    except EOFError:
+      return Act.BYE, ""
     act = self.classifier.run(clean_input)
     if self.verbose:
       print(f"  \033[92mINFO (manager.py): Input classified as {act.name}\033[0m")
@@ -175,7 +181,7 @@ class Manager:
 
   def restart(self) -> State:
     """Fully re-initialize the manager to start over cleanly"""
-    self.__init__(self.classifier, self.extractor, self.verbose, self.tts)
+    self.__init__(self.classifier, self.extractor, self.verbose, self.tts, self.explain)
     if self.verbose:
       print(f"  \033[92mINFO (manager.py): {self.preferences=}")
       print(f"  INFO (manager.py): {self.suggestions=}")
@@ -310,6 +316,22 @@ class Manager:
     self._update_preferences(act, utterance, suggest=False)
     return self._additions_ask(repeat=True)
 
+  def _restaurant_reqalts(self, utterance: str) -> tuple[State | None, bool]:
+    """Update preferences when another restaurant is requested"""
+    new_prefs, new_suggests = self.extractor.slot_extraction(utterance)
+    self.preferences.update(new_prefs)
+    if "additions" in new_prefs:
+      return self._additions_ask(), True
+    if "area" in new_suggests:
+      return State.AREA_CONFIRM, True
+    if "food" in new_suggests:
+      return State.FOOD_CONFIRM, True
+    if "pricerange" in new_suggests:
+      return State.PRICE_CONFIRM, True
+    if "additions" in new_suggests:
+      return State.ADDITIONS_CONFIRM, True
+    return None, bool(new_prefs)
+
   def _suggest_rest(self, new=False) -> State:
     """All preferences have been collected, suggest a restaurant matching the preferences"""
     if self.current is None or new:
@@ -324,14 +346,27 @@ class Manager:
     # Tell the user about the (new) restaurant with an explanation if an additional requirement was requested
     self.explanation = EXPLANATION[self.preferences.get("additions", "")]
     prompt = Prompts.suggest_new if new else Prompts.suggest
-    if self.explanation:
+    if self.max_dist > 0:
+      prompt = Prompts.imperfect_prefix + prompt.lower()
+    prompt = prompt.format(
+        self.current["restaurantname"].capitalize(),
+        self.current["pricerange"],
+        self.current["food"],
+        self.current["area"]
+    )
+    if self.explanation and self.explain:
       prompt += " " + self.explanation
-    act, utterance = self._send_pompt(prompt.format(self.current["restaurantname"].capitalize()))
+    act, utterance = self._send_pompt(prompt)
 
     if act in [Act.REPEAT, Act.NULL]: return self.state
     if act == Act.RESTART: return self.restart()
     if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
-    if act == Act.REQALTS: return self._suggest_rest(new=True)
+    # User changes their preferences
+    if act in [Act.INFORM, Act.REQALTS]:
+      confirm, changed = self._restaurant_reqalts(utterance)
+      if changed: self.current = None
+      if confirm: return confirm
+      if act == Act.REQALTS: return self._suggest_rest(new=True)
     if act == Act.REQUEST:
       # `_update_preferences` used here to update `requested_fields` used by `_information_prompt`
       self._update_preferences(act, utterance, suggest=False)
@@ -373,7 +408,12 @@ class Manager:
     if act in [Act.REPEAT, Act.NULL]: return self.state
     if act == Act.RESTART: return self.restart()
     if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
-    if act == Act.REQALTS: return self._suggest_rest(new=True)
+    # User changes their preferences
+    if act in [Act.INFORM, Act.REQALTS]:
+      confirm, changed = self._restaurant_reqalts(utterance)
+      if changed: self.current = None
+      if confirm: return confirm
+      if act == Act.REQALTS: return self._suggest_rest(new=True)
     if act == Act.REQUEST:
       # `_update_preferences` used to update `requested_fields` again to answer the new question
       self._update_preferences(act, utterance, suggest=False)
@@ -381,31 +421,28 @@ class Manager:
 
   def _no_rest(self) -> State:
     """Tell the user no restaurant could be found and let them change preferences"""
-    new_prefs = []
-    act, utterance = self._send_pompt(Prompts.no_restaurant)
+    prefs = ", ".join(f"{key}={value}" for key,value in self.preferences.items())
+    act, utterance = self._send_pompt(Prompts.no_restaurant.format(prefs))
     if act in [Act.REPEAT, Act.NULL]: return self.state
     if act == Act.RESTART: return self.restart()
     if act in [Act.THANKYOU, Act.BYE]: return State.FINISHED
+    self.current = None
+    changed = False
     # User changes their preferences
     if act in [Act.INFORM, Act.REQALTS]:
-      new_prefs, new_suggests = self.extractor.slot_extraction(utterance)
-      self.preferences.update(new_prefs)
-      if "area" in new_suggests:
-        return State.AREA_CONFIRM
-      if "food" in new_suggests:
-        return State.FOOD_CONFIRM
-      if "pricerange" in new_suggests:
-        return State.PRICE_CONFIRM
-      if "additions" in new_suggests:
-        return State.ADDITIONS_CONFIRM
+      confirm, changed = self._restaurant_reqalts(utterance)
+      if confirm: return confirm
     # If user did not change their preferences, increase allowed distance
-    if len(new_prefs) == 0:
+    if not changed:
       self.max_dist += 1
     return State.SUGGEST_REST
 
   def finish(self):
     """Print the goodbye message"""
-    print(Prompts.goodbye)
+    if self.tts:
+      self.tts.say(Prompts.goodbye)
+    else:
+      print(Prompts.goodbye)
 
   def transition_state(self):
     if self.verbose:

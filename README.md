@@ -64,12 +64,13 @@ python main.py [-h] [--model {rule,lr,clean_lr,mlp,clean_mlp,embedded_lr,clean_e
 options:
   -h, --help            show this help message and exit
   --model {rule,lr,clean_lr,mlp,clean_mlp,embedded_lr,clean_embedded_lr,embedded_mlp,clean_embedded_mlp}
-                        Which classifier to use (default: mlp); can also be changed at runtime with '!model <name>'
+                        Which classifier to use (default: clean_mlp); can also be changed at runtime with '!model <name>'
   --extractor {levenshtein,similarity}
                         Which slot extraction method to use (levenshtein distance or DistilBERT cosine similarity)
   --classify            Only run the classifier, not the entire chatbot
   --evaluate [PATH]     Only run evaluation of all classifiers before exiting, optionally using a held-out dataset when [PATH] is given
   --tts                 Use text-to-speech instead of text output
+  --explain             Explain why a restaurant is chosen
   --verbose             Show more detailed reasoning information
 ```
 

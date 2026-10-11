@@ -154,8 +154,8 @@ class LRClassifier(Classifier):
       self.vocabulary = self.vocabulary.union(set(utterance.split()))
 
     # Fit the model with an OOV token included in the vectorizer
-    X = self.vectorizer.fit_transform(["OOV"] + X_train)
-    self.model.fit(X, ["null"] + y_train)
+    X = self.vectorizer.fit_transform(np.concatenate((["OOV"], X_train)))
+    self.model.fit(X, np.concatenate((["null"], y_train)))
     return self
 
   def run(self, msg: str) -> Act:

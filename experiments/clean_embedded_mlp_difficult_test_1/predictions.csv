@@ -3,7 +3,7 @@ utterance,act,prediction,correct
 "nope, not that one",negate,negate,True
 what's the address again?,request,request,True
 any other options?,reqalts,reqalts,True
-"actually, let's start over",restart,restart,True
+"actually, let's start over",restart,null,False
 "okay thanks, bye",bye,thankyou,False
 sth. more expensive plz.,inform,inform,True
 Repeat that plz.,repeat,repeat,True

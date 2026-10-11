@@ -2494,35 +2494,35 @@ yea,affirm,affirm,True
 yea,affirm,affirm,True
 yea,affirm,affirm,True
 yea,affirm,affirm,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
-moderately,inform,inform,True
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
 im looking for an expensive restaurant in the south part of town,inform,inform,True
 im looking for an expensive restaurant in the south part of town,inform,inform,True
 im looking for an expensive restaurant in the south part of town,inform,inform,True
@@ -2819,26 +2819,26 @@ cuban food,inform,inform,True
 cuban food,inform,inform,True
 cuban food,inform,inform,True
 cuban food,inform,inform,True
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
-im looking for,inform,inform,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+is it expensive,confirm,confirm,True
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
 phone number and address,request,request,True
 phone number and address,request,request,True
 phone number and address,request,request,True
@@ -3060,9 +3060,9 @@ where,request,null,False
 creative,inform,null,False
 creative,inform,null,False
 creative,inform,null,False
-if there is no such venue how about french type of food,inform,inform,True
-if there is no such venue how about french type of food,inform,inform,True
-if there is no such venue how about french type of food,inform,inform,True
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
 i want to find a restaurant in any area,inform,inform,True
 i want to find a restaurant in any area,inform,inform,True
 i want to find a restaurant in any area,inform,inform,True
@@ -3143,8 +3143,8 @@ whats its number,request,request,True
 whats its number,request,request,True
 im looking for a restaurant in the west,inform,inform,True
 im looking for a restaurant in the west,inform,inform,True
-dont want that,deny,inform,False
-dont want that,deny,inform,False
+dont want that,deny,deny,True
+dont want that,deny,deny,True
 im looking for a restaurant in the east part of town that serves traditional food,inform,inform,True
 im looking for a restaurant in the east part of town that serves traditional food,inform,inform,True
 i want a cheap restaurant in the west part of town,inform,inform,True
@@ -3213,8 +3213,8 @@ no british food,negate,negate,True
 no british food,negate,negate,True
 no hungarian food,negate,negate,True
 no hungarian food,negate,negate,True
-no moderately priced,negate,inform,False
-no moderately priced,negate,inform,False
+no moderately priced,negate,negate,True
+no moderately priced,negate,negate,True
 no spanish food,negate,negate,True
 no spanish food,negate,negate,True
 noise phone number,request,request,True
@@ -3275,12 +3275,12 @@ cheap portuguese food,inform,inform,True
 cheap indian food,inform,inform,True
 good could you give me the phone number,request,request,True
 greek restaurant north of town,inform,inform,True
-hi i want to find a moderately priced restaurant in the north part of town,hello,inform,False
-hello im looking for a cheap restaurant in the west part of town,hello,inform,False
+hi i want to find a moderately priced restaurant in the north part of town,hello,hello,True
+hello im looking for a cheap restaurant in the west part of town,hello,hello,True
 hi im looking for a restaurant,hello,hello,True
 hi im looking for a cheap restaurant with lebanese food,hello,hello,True
 hi id like a moderately priced restaurant in the north,inform,inform,True
-hi im looking for mexican food,hello,inform,False
+hi im looking for mexican food,hello,hello,True
 hi im looking for a restaurant that serves spanish food,hello,hello,True
 central inaudible,inform,inform,True
 can you do anything else beside repeat yourself,inform,reqalts,False
@@ -3304,7 +3304,7 @@ i am looking for hungarian food,inform,inform,True
 i dont care is there anything else,reqalts,reqalts,True
 i dont care bye,inform,inform,True
 i got to find a cheap restaurant that serves mexican food,inform,inform,True
-i dont want chinese,deny,inform,False
+i dont want chinese,deny,deny,True
 i dont care thank you good bye,inform,thankyou,False
 i need a cheap restaurant that serves christmas food,inform,inform,True
 i need a moderately priced restaurant that serves bask food,inform,inform,True
@@ -3340,7 +3340,7 @@ can i have the address and the phone number of the venue,request,request,True
 i want korean food,inform,inform,True
 i want to find a cheap re,inform,inform,True
 i want to find a moderately priced restaurant in the south part of time,inform,inform,True
-i want to find a moderately,inform,inform,True
+i want to find a moderately,inform,null,False
 i want to find a restaurant in the center that serves irish,inform,inform,True
 i want to find a moderately priced restaurant that serves moroccan food,inform,inform,True
 i want to find a restaurant serving world food,inform,inform,True
@@ -3463,17 +3463,17 @@ is it serving french food,confirm,confirm,True
 breath price range,request,request,True
 can i find a restaurant that serves international food,inform,inform,True
 is it in the east of town,confirm,confirm,True
-is their korean food,inform,inform,True
-is the anything else,reqalts,reqalts,True
-is it the east part of town,confirm,inform,False
-is there a chinese restaurant,confirm,inform,False
+is their korean food,inform,confirm,False
+is the anything else,reqalts,null,False
+is it the east part of town,confirm,confirm,True
+is there a chinese restaurant,confirm,confirm,True
 is there a restaurant that serves european food,reqalts,reqalts,True
 is there a restaurant in the south part of town that serves indian food,reqalts,reqalts,True
 is there an indian restaurant in the south of town,inform,inform,True
-is there a thai restaurant in the west part of town,confirm,inform,False
+is there a thai restaurant in the west part of town,confirm,confirm,True
 is there any serving spanish food,inform,inform,True
 is there any other restaurant that serves turkish food,reqalts,reqalts,True
-is there anything serving international food,reqalts,inform,False
+is there anything serving international food,reqalts,reqalts,True
 is there anything in the cheap price range,inform,inform,True
 is there anyone else,reqalts,reqalts,True
 is there one that serves indian food,inform,inform,True
@@ -3532,15 +3532,15 @@ no eritrean,negate,negate,True
 no corsica food,negate,negate,True
 are there any that serve vietnamese food,inform,inform,True
 city center,inform,inform,True
-no i would like a cuban restaurant,negate,inform,False
-no i am looking for a vietnamese restaurant,negate,inform,False
+no i would like a cuban restaurant,negate,negate,True
+no i am looking for a vietnamese restaurant,negate,negate,True
 no im looking for pan asian,negate,negate,True
 no im looking for a unintelligible that serves english food,negate,negate,True
 no noise,negate,negate,True
 no indian restaurant,negate,negate,True
 no south part of town,negate,negate,True
 no not noise,negate,negate,True
-no there is no such venue how about portuguese food,negate,inform,False
+no there is no such venue how about portuguese food,negate,negate,True
 could i have a restaurant that serves european food,inform,inform,True
 noise can you repeat the post code please,request,request,True
 noise any area,inform,inform,True
@@ -3569,7 +3569,7 @@ are there any restaurants that serve english food,reqalts,reqalts,True
 okay could you give me the phone number,request,request,True
 okay how about thai food,reqalts,reqalts,True
 okay how about an expensive,reqalts,reqalts,True
-okay is it in the north side of town,confirm,inform,False
+okay is it in the north side of town,confirm,confirm,True
 okay international food,inform,inform,True
 okay how bout their phone number,request,request,True
 okay show me the least,ack,null,False
@@ -3604,7 +3604,7 @@ restaurant north part of town seafood,inform,inform,True
 restaurants,inform,inform,True
 scandanavian,inform,inform,True
 serves cheap,inform,inform,True
-could you repeat the name,request,request,True
+could you repeat the name,request,repeat,False
 sells english food,inform,inform,True
 serving lebanese food,inform,inform,True
 serving austrian food,inform,inform,True
@@ -3618,7 +3618,7 @@ and the type of food at gourmet burger kitchen,request,request,True
 curry prince address and phone number,request,request,True
 test food,inform,inform,True
 thank you and whats the address,request,request,True
-do you have any asian oriental food,inform,inform,True
+do you have any asian oriental food,inform,reqalts,False
 that serves chinese food,inform,inform,True
 that serves turkish food,inform,inform,True
 and what area is it in,request,request,True
@@ -3626,12 +3626,12 @@ do you have a restaurant that serves turkish food,reqalts,reqalts,True
 that serves restaurant in south part of town,inform,inform,True
 thats fine give me the address,request,request,True
 the indian food,inform,inform,True
-do they serve cuban,confirm,inform,False
+do they serve cuban,confirm,confirm,True
 the post code as well please,request,request,True
 and its in the west part of town,inform,inform,True
 and the price code,request,null,False
-does it serve,request,request,True
-the type of food is lebanese,inform,inform,True
+does it serve,request,null,False
+the type of food is lebanese,inform,request,False
 the south part of town greek food,inform,inform,True
 there is no such venue harbor indian type of food,inform,inform,True
 turkish restaurant in the center of town,inform,inform,True
@@ -3663,7 +3663,7 @@ uh yes im looking for a restaurant in the center that serves lebanese food,affir
 um could i have the address,request,request,True
 um asian oriental restaurant,inform,inform,True
 um how about a restaurant in the center with int,reqalts,reqalts,True
-does it serve asian oriental,confirm,inform,False
+does it serve asian oriental,confirm,confirm,True
 um gastropub food,inform,inform,True
 um do not care,inform,inform,True
 um i want a restaurant in the north side of town and i want to eat christmas food,inform,inform,True
@@ -3672,15 +3672,15 @@ um im trying to find a restaurant in the unintelligible of town,inform,inform,Tr
 um what about chinese,reqalts,inform,False
 um then im looking for european food,inform,inform,True
 does it serve sea food,confirm,confirm,True
-unintelligible east,inform,inform,True
+unintelligible east,inform,null,False
 um yes,affirm,affirm,True
-and address,request,request,True
+and address,request,null,False
 um world food,inform,inform,True
 unintelligible i dont care,inform,inform,True
 well what about chinese food,inform,reqalts,False
 vietnamese vietnamese food,inform,inform,True
 west part,inform,inform,True
-ah where is it,request,request,True
+ah where is it,request,ack,False
 does it serve indian food,confirm,confirm,True
 welsh food in the north part of town,inform,inform,True
 what about a modern europene type of food,reqalts,inform,False

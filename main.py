@@ -20,6 +20,7 @@ class CLI:
     self.model: str = args.model
     self.extractor: SlotExtract = SlotExtract(args.extractor)
     self.tts: bool = args.tts
+    self.explain: bool = args.explain
     self.verbose: bool = args.verbose
 
     data = load_data()
@@ -29,7 +30,6 @@ class CLI:
 
   def get_classifier(self, name: str) -> Classifier:
     """Initializes and returns the classifier with the given `name`"""
-    embedder = FrozenEmbeddingEncoder()
     utterance, act = self.train_data['utterance'], self.train_data['act']
     clean_utterance_col = self.clean_train_data['utterance']
     clean_act = self.clean_train_data['act']
@@ -46,16 +46,20 @@ class CLI:
       case "clean_mlp":
         return MLPClassifier().fit(clean_utterance_col, clean_act, self.verbose)
       case "embedded_lr":
+        embedder = FrozenEmbeddingEncoder()
         return EmbeddedLRClassifier(embedder).fit(utterance, act, self.verbose)
       case "clean_embedded_lr":
+        embedder = FrozenEmbeddingEncoder()
         return EmbeddedLRClassifier(embedder).fit(clean_utterance_col, clean_act, self.verbose)
       case "embedded_mlp":
+        embedder = FrozenEmbeddingEncoder()
         return EmbeddedMLPClassifier(embedder).fit(utterance, act, self.verbose)
       case "clean_embedded_mlp":
+        embedder = FrozenEmbeddingEncoder()
         return EmbeddedMLPClassifier(embedder).fit(clean_utterance_col, clean_act, self.verbose)
       case _:
         if self.verbose:
-          print("  \033[91WARN: Unknown classifier, falling back to rule-based classifier.\033[0m")
+          print("  \033[91mWARN: Unknown classifier, falling back to rule-based classifier.\033[0m")
         return RuleClassifier()
 
   def run_evaluate(self, path: str = ""):
@@ -122,7 +126,7 @@ class CLI:
     from manager import Manager, State
     from tts import TTS
 
-    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None)
+    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None, self.explain)
     while manager.state != State.FINISHED:
       manager.transition_state()
     manager.finish()
@@ -132,8 +136,8 @@ class CLI:
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument(
-      "--model", default="mlp", choices=MODEL_NAMES,
-      help="Which classifier to use (default: mlp); can also be changed at runtime with '!model <name>'"
+      "--model", default="clean_mlp", choices=MODEL_NAMES,
+      help="Which classifier to use (default: clean_mlp); can also be changed at runtime with '!model <name>'"
   )
   parser.add_argument(
       "--extractor", default="levenshtein", choices=["levenshtein", "similarity"],
@@ -145,6 +149,7 @@ if __name__ == "__main__":
       help="Only run evaluation of all classifiers before exiting, optionally using a held-out dataset when [PATH] is given"
   )
   parser.add_argument("--tts", action="store_true", help="Use text-to-speech instead of text output")
+  parser.add_argument("--explain", action="store_true", help="Explain why a restaurant is chosen")
   parser.add_argument("--verbose", action="store_true", help="Show more detailed reasoning information")
   args = parser.parse_args()
 

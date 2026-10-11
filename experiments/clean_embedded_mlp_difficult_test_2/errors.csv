@@ -1,7 +1,6 @@
 utterance,act,prediction,correct
-I do not want to try this one,deny,inform,False
 What time I can go to the restaurant that is not crowded,request,inform,False
 "We need to stay from 17 to 20 o'clock, is it possible?",confirm,null,False
 "BTW, is the restaurant not crowded at 18?",confirm,request,False
-We can to go the restaurananant you recommend. Thank you.,thankyou,inform,False
+"One of my friends said he does not like Indian food, please let me try Thai food.",inform,reqalts,False
 "Okay, we will try the first one.",affirm,null,False

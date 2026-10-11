@@ -1,4 +1,33 @@
 utterance,act,prediction,correct
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
+moderately,inform,null,False
 okay thank you and good bye,bye,thankyou,False
 okay thank you and good bye,bye,thankyou,False
 okay thank you and good bye,bye,thankyou,False
@@ -16,62 +45,57 @@ okay thank you and good bye,bye,thankyou,False
 okay thank you and good bye,bye,thankyou,False
 okay thank you and good bye,bye,thankyou,False
 okay thank you and good bye,bye,thankyou,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
-is it expensive,confirm,inform,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
+im looking for,inform,null,False
 where,request,null,False
 where,request,null,False
 where,request,null,False
 creative,inform,null,False
 creative,inform,null,False
 creative,inform,null,False
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
+if there is no such venue how about french type of food,inform,reqalts,False
 kay,ack,null,False
 kay,ack,null,False
 kay,ack,null,False
 hello and welcome to the cambridge,hello,null,False
 hello and welcome to the cambridge,hello,null,False
 hello and welcome to the cambridge,hello,null,False
-dont want that,deny,inform,False
-dont want that,deny,inform,False
-no moderately priced,negate,inform,False
-no moderately priced,negate,inform,False
-hi i want to find a moderately priced restaurant in the north part of town,hello,inform,False
-hello im looking for a cheap restaurant in the west part of town,hello,inform,False
-hi im looking for mexican food,hello,inform,False
 can you do anything else beside repeat yourself,inform,reqalts,False
 can you change romanian food to something else,deny,inform,False
 how bout asian,reqalts,inform,False
-i dont want chinese,deny,inform,False
 i dont care thank you good bye,inform,thankyou,False
 i want another restaurant that serves spanish food,reqalts,inform,False
+i want to find a moderately,inform,null,False
 if theres no persian food about about chinese,inform,reqalts,False
-is it the east part of town,confirm,inform,False
-is there a chinese restaurant,confirm,inform,False
-is there a thai restaurant in the west part of town,confirm,inform,False
-is there anything serving international food,reqalts,inform,False
+is their korean food,inform,confirm,False
+is the anything else,reqalts,null,False
 nandos restaurant type of food,request,inform,False
-no i would like a cuban restaurant,negate,inform,False
-no i am looking for a vietnamese restaurant,negate,inform,False
-no there is no such venue how about portuguese food,negate,inform,False
-okay is it in the north side of town,confirm,inform,False
 okay show me the least,ack,null,False
 are their any other restaurants that serve turkish food,inform,reqalts,False
 anything house,reqalts,inform,False
 popular dish,request,inform,False
-do they serve cuban,confirm,inform,False
+could you repeat the name,request,repeat,False
+do you have any asian oriental food,inform,reqalts,False
 and the price code,request,null,False
+does it serve,request,null,False
+the type of food is lebanese,inform,request,False
 uh im not interested in the type,inform,null,False
 uh no thats it thank you and good bye,negate,thankyou,False
-does it serve asian oriental,confirm,inform,False
 um what about chinese,reqalts,inform,False
+unintelligible east,inform,null,False
+and address,request,null,False
 well what about chinese food,inform,reqalts,False
+ah where is it,request,ack,False
 what about a modern europene type of food,reqalts,inform,False
 what about center area,reqalts,inform,False
 what about expensive,reqalts,inform,False

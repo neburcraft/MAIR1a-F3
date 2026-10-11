@@ -202,7 +202,7 @@ def evaluate(experiment_name: str, display_name: str, classifier: Classifier,
 
 
 def evaluate_all(classifiers: dict[str, Classifier], test_data: pd.DataFrame,
-                 clean_test_data: pd.DataFrame) -> pd.DataFrame:
+                 clean_test_data: pd.DataFrame, held_out: bool = False) -> pd.DataFrame:
   """
   Evaluate all given classifiers with the test data, save the results to separate folders in `EXPERIMENTS_DIR` and print summary to console
   
@@ -224,13 +224,14 @@ def evaluate_all(classifiers: dict[str, Classifier], test_data: pd.DataFrame,
   for name, classifier in classifiers.items():
     # Use clean test data for the models that used grouped split training data
     test = clean_test_data if name.startswith("clean") else test_data
-    metrics = evaluate(name, display_names[name], classifier, test)
+    metrics = evaluate(name + "_held_out" if held_out else name, display_names[name], classifier, test)
     results.append(metrics)
 
-  # Save results summary to `all_experiments_results.csv`
+  # Save results summary
   results = pd.DataFrame(results)
   results = results.sort_values(["macro_f1", "accuracy"], ascending=False)
-  results.to_csv(EXPERIMENTS_DIR / "all_experiment_results.csv", index=False)
+  target = "held_out_results.csv" if held_out else "all_experiment_results.csv"
+  results.to_csv(EXPERIMENTS_DIR / target, index=False)
 
   print(results.reset_index(drop=True))
   return results
@@ -239,7 +240,7 @@ def evaluate_all(classifiers: dict[str, Classifier], test_data: pd.DataFrame,
 def evaluate_held_out(classifiers: dict[str, Classifier], path: str) -> pd.DataFrame:
   """Evaluate the models on a held-out test data set stored at `path`"""
   held_out_data = load_data(path)
-  return evaluate_all(classifiers, held_out_data, held_out_data)
+  return evaluate_all(classifiers, held_out_data, held_out_data, held_out=True)
 
 
 def evaluate_difficult_cases(classifier: Classifier, classifier_name: str):
