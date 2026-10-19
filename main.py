@@ -6,6 +6,7 @@ Normal: Runs the full state manager from part 1b as defined in `manager.py`
 """
 
 import argparse
+from typing import Literal
 
 from classifiers import (MODEL_NAMES, Classifier, EmbeddedLRClassifier, EmbeddedMLPClassifier,
                          FrozenEmbeddingEncoder, LRClassifier, MLPClassifier, RuleClassifier)
@@ -25,6 +26,7 @@ class CLI:
     self.condition: str = args.condition
     self.explain: bool = args.explain
     self.verbose: bool = args.verbose
+    self.age_group: Literal["old", "young"] = args.age_group
 
     data = load_data()
     self.train_data, self.test_data = create_stratified_split(data)
@@ -131,7 +133,7 @@ class CLI:
 
     # Initialize logging if a participant id was given using `--participant <id>`
     logger = InteractionLogger(self.participant, self.condition) if self.participant else None
-    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None, self.explain, logger)
+    manager = Manager(self.classifier, self.extractor, self.verbose, TTS() if self.tts else None, self.explain, logger, self.age_group)
     while manager.state != State.FINISHED:
       manager.transition_state()
     manager.finish()
@@ -158,6 +160,7 @@ if __name__ == "__main__":
   parser.add_argument("--verbose", action="store_true", help="Show more detailed reasoning information")
   parser.add_argument("--participant", default=None, help="Participant id; turns logging on")
   parser.add_argument("--condition", default="default", help="Name of the experimental condition")
+  parser.add_argument("--age-group", default="old", choices=["old", "young"], help="Communication style the manager uses")
   args = parser.parse_args()
 
   cli = CLI(args)

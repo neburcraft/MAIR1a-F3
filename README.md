@@ -62,7 +62,7 @@ python -m pip install -r requirements.txt
 ## Running
 ```
 python main.py [-h] [--model {rule,lr,clean_lr,mlp,clean_mlp,embedded_lr,clean_embedded_lr,embedded_mlp,clean_embedded_mlp}]
-                    [--extractor {levenshtein,similarity}] [--classify] [--evaluate [PATH]] [--tts] [--verbose]
+                    [--extractor {levenshtein,similarity}] [--classify] [--evaluate [PATH]] [--tts] [--verbose] [--age-group [old,young]]
 
 options:
   -h, --help            show this help message and exit
@@ -79,6 +79,8 @@ options:
                         Participant id; turns logging on
   --condition CONDITION
                         Name of the experimental condition
+  --age-group [old,young]
+                        Communication style the manager uses
 ```
 
 
