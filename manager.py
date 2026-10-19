@@ -93,6 +93,9 @@ class Manager:
     except EOFError:
       return Act.BYE, ""
     act = self.classifier.run(clean_input)
+    # Falsely classified NULL acts (because classifier did not train on them) get converted to INFORM
+    if act == Act.NULL and self.extractor.extract_keywords(clean_input, "area"):
+      act = Act.INFORM
     if self.logger:
       restaurant = self.current["restaurantname"] if self.current else ""
       self.logger.log_turn(self.state.name, prompt, clean_input, act.name, dict(self.preferences), restaurant)
