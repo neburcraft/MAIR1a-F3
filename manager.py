@@ -94,7 +94,7 @@ class Manager:
       return Act.BYE, ""
     act = self.classifier.run(clean_input)
     # Falsely classified NULL acts (because classifier did not train on them) get converted to INFORM
-    if act == Act.NULL and self.extractor.extract_keywords(clean_input, "area"):
+    if act == Act.NULL and (self.extractor.extract_keywords(clean_input, "area") or self.extractor.extract_with_levenshtein(clean_input)):
       act = Act.INFORM
     if self.logger:
       restaurant = self.current["restaurantname"] if self.current else ""
@@ -364,7 +364,7 @@ class Manager:
     self.explanation = self.prompts.explanations[self.preferences.get("additions", "")]
     prompt = self.prompts.suggest_new if new else self.prompts.suggest
     if self.current["dist"] > 0:
-      prompt = self.prompts.imperfect_prefix + prompt.lower()
+      prompt = self.prompts.imperfect_prefix + prompt
     prompt = prompt.format(
         self.current["restaurantname"].capitalize(),
         self.current["pricerange"],
