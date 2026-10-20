@@ -12,7 +12,7 @@ class Prompts:
 
   welcome_old = "Welcome to MAIR - Manager of Awesome Interesting Restaurants! What kind of restaurant are you looking for?"
   welcome_young = "Welcome to MAIR - Manager of Awesome Interesting Restaurants! What kind of restaurant do you want?"
-  ask_confirm_old = "I’m sorry, I’m not sure I understood that correctly. Did you perhaps mean ‘{1}’ instead of ‘{0}’?”"
+  ask_confirm_old = "I’m sorry, I’m not sure I understood that correctly. Did you perhaps mean ‘{1}’ instead of ‘{0}’?"
   ask_confirm_young = "Did you mean '{1}' instead of '{0}'?"
   area_ask_old = "Could you tell me which part of town you would prefer?"
   area_ask_young = "Where should the restaurant be?"
@@ -31,7 +31,7 @@ class Prompts:
   additions_ask_invalid_old = "I'm sorry, I didn't quite understand your preference. Would you mind choosing from tourist-friendly, assigned seating, child-friendly, or romantic? You can also simply say 'no' if you don't have any additional preferences."
   additions_ask_invalid_young = "Oops, didn't quite catch that! Are you looking for somewhere tourist-friendly, with assigned seats, good for kids, or romantic? Or just say 'no' if none of those matter!"
   imperfect_prefix_old = "I'm sorry, I couldn't find a restaurant that perfectly matches your preferences. However, I hope you might find this alternative suitable: "
-  imperfect_prefix_young = "Couldn't find a perfect match, but here's something pretty close:  "
+  imperfect_prefix_young = "Couldn't find a perfect match, but here's something pretty close: "
   suggest_old = "I'd be happy to recommend {0}, a lovely {1} {2} restaurant in the {3}."
   suggest_young = "Check out {0}! It's a cool {1} {2} spot in the {3}."
   suggest_new_old = "If you'd like to consider another option, I would be happy to suggest {0}, a lovely {1} {2} restaurant in the {3}."
