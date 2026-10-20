@@ -26,30 +26,41 @@ class Prompts:
   price_ask_young = "What price do you want?"
   price_ask_invalid_old = "I'm sorry, I didn't quite understand your preferred price range. Would you mind choosing from cheap, moderate, or expensive?”
   price_ask_invalid_young = "Oops, didn't quite catch your budget! Are you looking for something cheap, mid-range, or pricey?"
-  additions_ask_old = "Is there anything else you would like the restaurant to have, such as being touristic, having assigned seats, being child-friendly or romantic? Feel free to say no if not."
-  additions_ask_young = "Anything else, like touristic, assigned seats, children or romantic?"
-  additions_ask_invalid_old = "I did not recognise an additional requirement. Please choose touristic, assigned seats, children or romantic, or say no."
-  additions_ask_invalid_young = "What do you mean? Touristic, assigned seats, children, romantic or nothing?"
-  imperfect_prefix_old = "I'm sorry, I couldn't find an exact match, but "
-  imperfect_prefix_young = "It isn't perfect, but "
-  suggest_old = "{0} is a nice {1} {2} restaurant in the {3}."
-  suggest_young = "{0} is a nice {1} {2} restaurant in the {3}."
-  suggest_new_old = "Another good option is {0}: a nice {1} {2} restaurant in the {3}."
-  suggest_new_young = "Maybe {0}: a nice {1} {2} restaurant in the {3}."
-  no_restaurant_old = "Sorry, there are no restaurants matching {}. Would you like to change something?"
-  no_restaurant_young = "I failed to find anything good. Do you want to change something?"
-  goodbye_old = "Thank you for using this system and goodbye!"
-  goodbye_young = "Thanks for using MAIR and bye!"
-  inform_part_old = "the {0} is {1}"
-  inform_part_young = "the {0} is {1}"
-  inform_none_old = "Sorry, that information is not available."
-  inform_none_young = "I have no clue."
-  inform_old = lambda r: f'{r["restaurantname"].capitalize()} is a{"n" if r["pricerange"] == "expensive" else ""} ' \
-      f'{r["pricerange"]} {r["food"]} restaurant in the {r["area"]}, {r["addr"]}. ' \
-      f'\nZIP code: {r["postcode"]}; phone: {r["phone"]}'.replace("nan", "unknown")
-  inform_young = lambda r: f'{r["restaurantname"].capitalize()} is a{"n" if r["pricerange"] == "expensive" else ""} ' \
-      f'{r["pricerange"]} {r["food"]} restaurant in the {r["area"]}, {r["addr"]}. ' \
-      f'\nZIP code: {r["postcode"]}; phone: {r["phone"]}'.replace("nan", "unknown")
+  additions_ask_old = "Would you like the restaurant to have any additional features, such as being tourist-friendly, offering assigned seating, being suitable for children, or having a romantic atmosphere? It's perfectly fine if you have no other preferences."
+  additions_ask_young = "Any other preferences? Maybe somewhere tourist-friendly, with reserved seats, good for kids, or perfect for a date? No worries if not!"
+  additions_ask_invalid_old = "I'm sorry, I didn't quite understand your preference. Would you mind choosing from tourist-friendly, assigned seating, child-friendly, or romantic? You can also simply say 'no' if you don't have any additional preferences."
+  additions_ask_invalid_young = "Oops, didn't quite catch that! Are you looking for somewhere tourist-friendly, with assigned seats, good for kids, or romantic? Or just say 'no' if none of those matter!"
+  imperfect_prefix_old = "I'm sorry, I couldn't find a restaurant that perfectly matches your preferences. However, I hope you might find this alternative suitable: "
+  imperfect_prefix_young = "Couldn't find a perfect match, but here's something pretty close:  "
+  suggest_old = "I'd be happy to recommend {0}, a lovely {1} {2} restaurant in the {3}."
+  suggest_young = "Check out {0}! It's a cool {1} {2} spot in the {3}."
+  suggest_new_old = "If you'd like to consider another option, I would be happy to suggest {0}, a lovely {1} {2} restaurant in the {3}."
+  suggest_new_young = "How about {0}? It's a pretty nice {1} {2} spot in the {3}!"
+  no_restaurant_old = "I'm sorry, but I couldn't find any restaurants that match {}. Would you like to adjust your preferences so I can help you find another option?"
+  no_restaurant_young = "No luck finding a match for {}! Wanna switch things up a bit?"
+  goodbye_old = "Thank you very much for using our service. It has been a pleasure assisting you. Have a wonderful day!"
+  goodbye_young = "Thanks for hanging out with MAIR! Hope you find somewhere awesome to eat. See ya!"
+  inform_part_old = "I'd be happy to let you know that the {0} is {1}."
+  inform_part_young = "Oh, the {0} is {1}!"
+  inform_none_old = "I'm very sorry, but I'm afraid that information isn't available at the moment."
+  inform_none_young = "Oops, looks like I don't have that info right now!"
+  
+inform_old = lambda r: (
+    f"I'd be happy to share some details about {r['restaurantname'].capitalize()}. "
+    f"It's a{'n' if r['pricerange'] == 'expensive' else ''} "
+    f"{r['pricerange']} {r['food']} restaurant in the {r['area']}. "
+    f"You can find it at {r['addr']}. "
+    f"\nThe postcode is {r['postcode']}, and the phone number is {r['phone']}."
+).replace("nan", "unknown")
+
+inform_young = lambda r: (
+    f"Here's the scoop on {r['restaurantname'].capitalize()}! "
+    f"It's a{'n' if r['pricerange'] == 'expensive' else ''} "
+    f"{r['pricerange']} {r['food']} spot in the {r['area']}. "
+    f"You'll find it at {r['addr']}. "
+    f"\nPostcode: {r['postcode']} | Wanna get in touch? Call {r['phone']}!"
+).replace("nan", "unknown")
+
   conflict_old = "I understand that you'd prefer both {0} and {1}. Unfortunately, these two preferences don't quite work together. May I ask which one matters more to you?"
   conflict_young = "Looks like {0} and {1} don't really go together. Which one would you rather go for?"
 
