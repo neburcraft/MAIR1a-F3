@@ -16,7 +16,7 @@ class Prompts:
   ask_confirm_young = "Did you mean '{1}' instead of '{0}'?"
   area_ask_old = "Could you tell me which part of town you would prefer?"
   area_ask_young = "Where should the restaurant be?"
-  area_ask_invalid_old = "I’m afraid that isn’t one of the areas I know. Would you prefer north, east, south, west or the centre?
+  area_ask_invalid_old = "I’m afraid that isn’t one of the areas I know. Would you prefer north, east, south, west or the centre?"
   area_ask_invalid_young = "I don't know that area. Do you mean north, east, south, west or centre?"
   food_ask_old = "What kind of food would you like?"
   food_ask_young = "What sort of food do you want?"
