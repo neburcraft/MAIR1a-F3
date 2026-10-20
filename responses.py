@@ -24,8 +24,8 @@ class Prompts:
   food_ask_invalid_young = "I don't understand. What kind of food do you mean?"
   price_ask_old = "Do you have a particular price range in mind?”
   price_ask_young = "What price do you want?"
-  price_ask_invalid_old = "Sorry, I don’t recognise that price range. Could you choose between cheap, moderate or expensive?”
-  price_ask_invalid_young = "What do you mean? Cheap, moderate or expensive?"
+  price_ask_invalid_old = "I'm sorry, I didn't quite understand your preferred price range. Would you mind choosing from cheap, moderate, or expensive?”
+  price_ask_invalid_young = "Oops, didn't quite catch your budget! Are you looking for something cheap, mid-range, or pricey?"
   additions_ask_old = "Is there anything else you would like the restaurant to have, such as being touristic, having assigned seats, being child-friendly or romantic? Feel free to say no if not."
   additions_ask_young = "Anything else, like touristic, assigned seats, children or romantic?"
   additions_ask_invalid_old = "I did not recognise an additional requirement. Please choose touristic, assigned seats, children or romantic, or say no."
