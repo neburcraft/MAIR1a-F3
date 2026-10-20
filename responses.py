@@ -45,21 +45,21 @@ class Prompts:
   inform_none_old = "I'm very sorry, but I'm afraid that information isn't available at the moment."
   inform_none_young = "Oops, looks like I don't have that info right now!"
   
-inform_old = lambda r: (
+  inform_old = lambda r: (
     f"I'd be happy to share some details about {r['restaurantname'].capitalize()}. "
     f"It's a{'n' if r['pricerange'] == 'expensive' else ''} "
     f"{r['pricerange']} {r['food']} restaurant in the {r['area']}. "
     f"You can find it at {r['addr']}. "
     f"\nThe postcode is {r['postcode']}, and the phone number is {r['phone']}."
-).replace("nan", "unknown")
+  ).replace("nan", "unknown")
 
-inform_young = lambda r: (
+  inform_young = lambda r: (
     f"Here's the scoop on {r['restaurantname'].capitalize()}! "
     f"It's a{'n' if r['pricerange'] == 'expensive' else ''} "
     f"{r['pricerange']} {r['food']} spot in the {r['area']}. "
     f"You'll find it at {r['addr']}. "
     f"\nPostcode: {r['postcode']} | Wanna get in touch? Call {r['phone']}!"
-).replace("nan", "unknown")
+  ).replace("nan", "unknown")
 
   conflict_old = "I understand that you'd prefer both {0} and {1}. Unfortunately, these two preferences don't quite work together. May I ask which one matters more to you?"
   conflict_young = "Looks like {0} and {1} don't really go together. Which one would you rather go for?"
