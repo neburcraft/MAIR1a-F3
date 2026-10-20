@@ -12,9 +12,9 @@ class Prompts:
 
   welcome_old = "Welcome to MAIR - Manager of Awesome Interesting Restaurants! What kind of restaurant are you looking for?"
   welcome_young = "Welcome to MAIR - Manager of Awesome Interesting Restaurants! What kind of restaurant do you want?"
-  ask_confirm_old = "I'm sorry, did you mean '{1}' instead of '{0}'?"
+  ask_confirm_old = "I’m sorry, I’m not sure I understood that correctly. Did you perhaps mean ‘{1}’ instead of ‘{0}’?”"
   ask_confirm_young = "Did you mean '{1}' instead of '{0}'?"
-  area_ask_old = "In what area should the restaurant be located?"
+  area_ask_old = "Could you tell me which part of town you would prefer?"
   area_ask_young = "Where should the restaurant be?"
   area_ask_invalid_old = "I don't recognize that as a valid area. Please choose north, east, south, west or centre. What area?"
   area_ask_invalid_young = "I don't know that area. Do you mean north, east, south, west or centre?"
