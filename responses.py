@@ -50,21 +50,21 @@ class Prompts:
   inform_young = lambda r: f'{r["restaurantname"].capitalize()} is a{"n" if r["pricerange"] == "expensive" else ""} ' \
       f'{r["pricerange"]} {r["food"]} restaurant in the {r["area"]}, {r["addr"]}. ' \
       f'\nZIP code: {r["postcode"]}; phone: {r["phone"]}'.replace("nan", "unknown")
-  conflict_old = "You asked for both {0} and {1}, but these requirements conflict. Which one is more important?"
-  conflict_young = "You can't have both {0} and {1}. Which one is more important?"
+  conflict_old = "I understand that you'd prefer both {0} and {1}. Unfortunately, these two preferences don't quite work together. May I ask which one matters more to you?"
+  conflict_young = "Looks like {0} and {1} don't really go together. Which one would you rather go for?"
 
   # Explanations for additional requirements from the user, (`"": ""` added to make indexing easier)
   explanations_old = {
-      "touristic": "It is touristic because it has cheap and good food.",
-      "assigned seats": "It has assigned seats because it is a busy restaurant.",
-      "children": "It is suitable for children because it is not a long stay.",
-      "romantic": "It is romantic because it is not busy and allows for a long stay.",
+      "touristic": "It's a lovely place for visitors, offering good-quality food at reasonable prices.",
+      "assigned seats": "Guests are kindly shown to their seats, especially during busy hours.",
+      "children": "It's a family-friendly restaurant where guests can enjoy a pleasant meal without spending too much time.",
+      "romantic": "It's a peaceful and charming restaurant, perfect for enjoying a relaxed dinner together.",
       "": ""
   }
   explanations_young = {
-      "touristic": "It is touristic because it has cheap and good food.",
-      "assigned seats": "It has assigned seats because it is a busy restaurant.",
-      "children": "It is suitable for children because it is not a long stay.",
-      "romantic": "It is romantic because it is not busy and allows for a long stay.",
+      "touristic": "It's a great spot for tourists because the food is tasty and affordable.",
+      "assigned seats": "They assign seats because the place gets pretty busy.",
+      "children": "It's a good place for families with kids because you can grab a quick bite.",
+      "romantic": "It's a nice place for a date because it's quiet and you can take your time.",
       "": ""
   }
