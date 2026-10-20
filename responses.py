@@ -22,9 +22,9 @@ class Prompts:
   food_ask_young = "What sort of food do you want?"
   food_ask_invalid_old = "I’m afraid that this foodtype isn't one i know. What kind of food would you prefer?"
   food_ask_invalid_young = "I don't understand. What kind of food do you mean?"
-  price_ask_old = "Do you have a particular price range in mind?”
+  price_ask_old = "Do you have a particular price range in mind?"
   price_ask_young = "What price do you want?"
-  price_ask_invalid_old = "I'm sorry, I didn't quite understand your preferred price range. Would you mind choosing from cheap, moderate, or expensive?”
+  price_ask_invalid_old = "I'm sorry, I didn't quite understand your preferred price range. Would you mind choosing from cheap, moderate, or expensive?"
   price_ask_invalid_young = "Oops, didn't quite catch your budget! Are you looking for something cheap, mid-range, or pricey?"
   additions_ask_old = "Would you like the restaurant to have any additional features, such as being tourist-friendly, offering assigned seating, being suitable for children, or having a romantic atmosphere? It's perfectly fine if you have no other preferences."
   additions_ask_young = "Any other preferences? Maybe somewhere tourist-friendly, with reserved seats, good for kids, or perfect for a date? No worries if not!"
