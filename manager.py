@@ -337,6 +337,7 @@ class Manager:
     """Update preferences when another restaurant is requested"""
     new_prefs, new_suggests = self.extractor.slot_extraction(utterance)
     self.preferences.update(new_prefs)
+    self.suggestions.update(new_suggests)
     if "additions" in new_prefs:
       return self._additions_ask(), True
     if "area" in new_suggests:
