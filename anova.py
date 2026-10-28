@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import pingouin as pg
+from scipy import stats
 
 df = pd.read_csv("resultsOrdered.csv")
 
@@ -31,6 +32,19 @@ long = df.melt(id_vars=["ID", "group"],
 print(pg.mixed_anova(data=long, dv="score", within="style",
                      subject="ID", between="group").round(3))
 
+print("std en mean van english profenciency and chatbot experience for young and old")
+print(df.groupby("group")[["EnglishProficiency", "ChatbotExperience"]].agg(["mean", "std"]).round(2))
+
+print("ttest for young and old in english proficiency")
+young = df.loc[df["group"] == "young", "EnglishProficiency"]
+old = df.loc[df["group"] == "old", "EnglishProficiency"]
+print(stats.ttest_ind(young, old))
+
+print("ttest for young and old in chatbotexperience")
+young = df.loc[df["group"] == "young", "ChatbotExperience"]
+old = df.loc[df["group"] == "old", "ChatbotExperience"]
+print(stats.ttest_ind(young, old))
+
 # StartVersion says which version was done first, so build first/second scores
 def first_second(a, b):
     first = np.where(df["StartVersion"] == "A", a, b)
@@ -50,3 +64,5 @@ def run(first, second, label):
 
 run("sat_first", "sat_second", "satisfaction by order")
 run("und_first", "und_second", "understood me well by order")
+
+
