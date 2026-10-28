@@ -21,7 +21,8 @@ df["polite_version"] = df[[i + "A" for i in items]].mean(axis=1)
 df["youthful_version"] = df[[i + "B" for i in items]].mean(axis=1)
 
 # means per group and version
-print(df.groupby("group")[["polite_version", "youthful_version"]].mean().round(2))
+print("mean and std per group and version")
+print(df.groupby("group")[["polite_version", "youthful_version"]].agg(["mean", "std"]).round(2))
 
 # long format, then the mixed anova (style within, group between)
 long = df.melt(id_vars=["ID", "group"],
@@ -29,3 +30,23 @@ long = df.melt(id_vars=["ID", "group"],
                var_name="style", value_name="score")
 print(pg.mixed_anova(data=long, dv="score", within="style",
                      subject="ID", between="group").round(3))
+
+# StartVersion says which version was done first, so build first/second scores
+def first_second(a, b):
+    first = np.where(df["StartVersion"] == "A", a, b)
+    second = np.where(df["StartVersion"] == "A", b, a)
+    return first, second
+
+df["sat_first"], df["sat_second"] = first_second(df["polite_version"], df["youthful_version"])
+df["und_first"], df["und_second"] = first_second(df["UnderstoodWellA"], df["UnderstoodWellB"])
+
+def run(first, second, label):
+    long = df.melt(id_vars=["ID", "group"], value_vars=[first, second],
+                   var_name="order", value_name="score")
+    print("\n" + label)
+    print(df.groupby("group")[[first, second]].agg(["mean", "std"]).round(2))
+    print(pg.mixed_anova(data=long, dv="score", within="order",
+                         subject="ID", between="group").round(3))
+
+run("sat_first", "sat_second", "satisfaction by order")
+run("und_first", "und_second", "understood me well by order")
