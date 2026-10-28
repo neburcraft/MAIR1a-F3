@@ -12,6 +12,8 @@ df["group"] = np.select([df["Age"].between(18, 28), df["Age"].between(55, 75)],
 # stop if someone falls outside both age ranges
 assert (df["group"] != "other").all(), df.loc[df["group"] == "other", ["ID", "Age"]]
 
+print(df.groupby("group")["Age"].agg(["count", "mean", "std", "min", "max"]).round(2))
+
 # a 0 is impossible on a 1-5 scale, so treat it as missing
 df.loc[df["PoliteA"] == 0, "PoliteA"] = np.nan
 
