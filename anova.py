@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 import pingouin as pg
 from scipy import stats
+pd.set_option("display.max_columns", None)
+pd.set_option("display.width", 200)
 
 df = pd.read_csv("results.csv")
 
