@@ -67,4 +67,5 @@ def run(first, second, label):
 run("sat_first", "sat_second", "satisfaction by order")
 run("und_first", "und_second", "understood me well by order")
 
-
+print(df["StartVersion"].value_counts())
+print(pd.crosstab(df["group"], df["StartVersion"]))
