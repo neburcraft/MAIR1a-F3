@@ -3,7 +3,7 @@ import pandas as pd
 import pingouin as pg
 from scipy import stats
 
-df = pd.read_csv("resultsOrdered.csv")
+df = pd.read_csv("results.csv")
 
 # age group as defined in the design: 18-28 young, 55-75 old
 df["group"] = np.select([df["Age"].between(18, 28), df["Age"].between(55, 75)],
